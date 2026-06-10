@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Us | PreventLoss.org</title>
+  <meta name="description" content="About PreventLoss.org. Learn about us, what we cover, why we have creadted this and our vision" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="PreventLoss.org" />
+  <link rel="canonical" href="https://www.preventloss.org/about.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Us | PreventLoss.org" />
+  <meta property="og:description" content="Learn about us, what we cover, why we have creadted this and our vision" />
+  <meta property="og:url" content="https://www.preventloss.org/about.html" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "About Us",
+    "description": "About PreventLoss.org",
+    "url": "https://www.preventloss.org/about.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "PreventLoss.org",
+      "url": "https://www.preventloss.org"
+    }
+  }
+  </script>
+
+  <style>
+    /* ─── Design tokens ────────────────────────── */
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Nav ───────────────────────────────────── */
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo {
+      font-family: var(--font-display);
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ─── Layout ────────────────────────────────── */
+    .page-wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 800px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* ─── Page header ───────────────────────────── */
+    .page-header {
+      padding: 52px 0 36px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .page-eyebrow {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--muted); margin-bottom: 14px;
+    }
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .page-header .meta {
+      display: flex; flex-wrap: wrap; gap: 20px;
+      font-size: 0.82rem; color: var(--muted);
+    }
+
+    /* ─── Last updated banner ───────────────────── */
+    .update-banner {
+      display: flex; align-items: center; gap: 12px;
+      background: #0d1f16;
+      border: 1px solid var(--success);
+      border-radius: var(--r-md);
+      padding: 14px 18px;
+      margin-bottom: 36px;
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+    .update-banner .icon { font-size: 1rem; flex-shrink: 0; }
+    .update-banner strong { color: #34d399; }
+
+    /* ─── Prose ─────────────────────────────────── */
+    .prose h2 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.02em;
+      margin: 44px 0 14px;
+      padding-top: 44px;
+      border-top: 1px solid var(--border);
+    }
+    .prose h2:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .prose h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--heading);
+      margin: 24px 0 8px;
+    }
+    .prose p {
+      margin-bottom: 18px;
+      color: var(--text);
+    }
+    .prose a {
+      color: var(--accent-lt);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .prose strong { color: var(--heading); font-weight: 600; }
+    .prose em { color: var(--muted); }
+
+    /* ─── Bullet lists ──────────────────────────── */
+    .prose ul {
+      list-style: none;
+      margin: 12px 0 20px;
+    }
+    .prose ul li {
+      display: flex;
+      gap: 10px;
+      padding: 6px 0;
+      font-size: 0.94rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+    }
+    .prose ul li:last-child { border-bottom: none; }
+    .prose ul li::before {
+      content: '–';
+      color: var(--accent-lt);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ─── Info cards ────────────────────────────── */
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 20px 22px;
+      margin: 24px 0;
+      font-size: 0.9rem;
+    }
+    .info-card .info-label {
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent-lt); margin-bottom: 10px;
+    }
+    .info-card p { margin-bottom: 8px; color: var(--muted); }
+    .info-card p:last-child { margin-bottom: 0; }
+    .info-card strong { color: var(--text); }
+
+    /* ─── Contact box ───────────────────────────── */
+    .contact-box {
+      background: linear-gradient(135deg, #0f2040 0%, #181c27 100%);
+      border: 1px solid var(--accent);
+      border-radius: var(--r-lg);
+      padding: 28px;
+      margin-top: 48px;
+      text-align: center;
+    }
+    .contact-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--heading);
+      margin-bottom: 8px;
+    }
+    .contact-box p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid var(--accent);
+      color: var(--accent-lt);
+      font-weight: 700; font-size: 0.875rem;
+      padding: 10px 24px;
+      border-radius: var(--r-sm);
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* ─── Sidebar ───────────────────────────────── */
+    .sidebar { padding-top: 52px; }
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 20px;
+      margin-bottom: 16px;
+      position: sticky;
+      top: 72px;
+    }
+    .sidebar-card h4 {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.09em;
+      color: var(--muted); margin-bottom: 14px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      font-size: 0.82rem; color: var(--muted);
+      text-decoration: none;
+      display: block; padding: 5px 0 5px 12px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    .toc-list a:hover, .toc-list a.active {
+      color: var(--text);
+      border-color: var(--accent-lt);
+    }
+    .sidebar-summary p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .sidebar-summary p:last-child { margin-bottom: 0; }
+    .sidebar-summary .bullet {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--success);
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ─── Footer ────────────────────────────────── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 80px;
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAV ──────────────────────────────────── -->
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about/">About</a></li>
+    <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── PAGE WRAP ────────────────────────────── -->
+  <div class="page-wrap">
+
+    <!-- ══════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════ -->
+    <main id="main-content">
+
+      <header class="page-header">
+        <div class="page-eyebrow">Legal</div>
+        <h1>About Us</h1>
+        <div class="meta">
+          <span>🗓 Effective date: June 1, 2026</span>
+          <span>📝 Last updated: June 1, 2026</span>
+        </div>
+      </header>
+
+      <div class="update-banner">
+        <span class="icon">✅</span>
+        <span>This was last reviewed on <strong>June 1, 2026</strong>. We will notify users of any material changes by updating the date above and, where appropriate, by email.</span>
+      </div>
+
+      <article class="prose">
+
+        <!-- 1 -->
+        <section id="introduction">
+          <h2>1. Introduction</h2>
+          <p>
+            PreventLoss.org is an independent knowledge platform focused on helping businesses reduce losses, strengthen internal controls, and improve operational performance.
+          </p>
+          <p>
+            In today's business environment, organizations face challenges ranging from theft and fraud to inventory inaccuracies, procurement risks, operational inefficiencies, and compliance failures. Our goal is to provide practical, easy-to-understand resources that help businesses address these challenges and build stronger operations.
+          </p>
+          <p>
+            We believe that knowledge should be accessible, actionable, and available to everyone—not just large organizations with dedicated specialists.
+          </p>
+        </section>
+
+        <!-- 2 -->
+        <section id="Why-We-Built-It">
+          <h2>2. Why We Built It</h2>
+          <p>PreventLoss.org was created to fill a gap in the business knowledge landscape.</p>
+          <p>While information exists across countless websites, books, and professional resources, much of it is fragmented, overly technical, or difficult for business owners and operational teams to apply in real-world situations.</p>
+          <p>We wanted to create a single destination where professionals can find practical guidance on reducing losses, improving controls, and operating more efficiently.</p>
+          <p>Our objective is simple: help organizations protect what they have worked hard to build.</p>
+      
+        </section>
+
+        <!-- 3 -->
+        <section id="Who-Is-This-For?">
+          <h2>3. Who Is This For?</h2>
+          <p>PreventLoss.org is designed for professionals across a wide range of industries, including:</p>
+          <ul>
+            <li><strong>Business Owners.</strong></li>
+            <li><strong>Operations Managers.</strong></li>
+            <li><strong>Loss Prevention Professionals.</strong></li>
+            <li><strong>Inventory Controllers.</strong></li>
+            <li><strong>Procurement Teams.</strong></li>
+            <li><strong>Internal Auditors.</strong></li>
+            <li><strong>Finance Professionals.</strong></li>
+            <li><strong>Compliance Teams.</strong></li>
+            <li><strong>Retail Managers.</strong></li>
+            <li><strong>Warehouse and Logistics Teams.</strong></li>
+            <li><strong>Anyone responsible for protecting business assets and improving operational performance.</strong></li>
+          </ul>
+          <p>
+            Whether you work for a small business or a large organization, the principles of risk management and operational excellence apply to everyone.
+          </p>
+        </section>
+
+        <!-- 4 -->
+        <section id="What-We-Cover">
+          <h2>4. What We Cover</h2>
+          <p>
+            Our content is organized around six core categories:
+          </p>
+          <ul>
+            <li><strong>Loss Prevention</strong> — Strategies to reduce theft, fraud, shrinkage, waste, and operational losses.</li>
+            <li><strong>Inventory Management</strong> — Inventory controls, stock accuracy, cycle counts, reconciliation processes, and inventory best practices.</li>
+            <li><strong>Procurement</strong> — Purchasing controls, vendor management, procurement risks, supplier fraud prevention, and sourcing best practices.</li>
+            <li><strong>Internal Audit</strong> — Internal control frameworks, audit methodologies, compliance reviews, and risk assessments.</li>
+            <li><strong>Cost Control</strong> — Expense management, waste reduction, profitability improvement, and financial efficiency.</li>
+            <li><strong>Operational Excellence</strong> — Process improvement, performance measurement, key performance indicators (KPIs), and continuous improvement practices.</li>
+          </ul>
+        </section>
+
+        <!-- 5 -->
+        <section id="Our-Approach">
+          <h2>5. Our Approach</h2>
+          <p>
+            We focus on practical knowledge rather than theory.
+          </p>
+          <p>Every article and resource is created with the intention of helping readers understand not only what should be done, but also why it matters and how it can be implemented.</p>
+          
+          <p>Our content is guided by five principles:</p>
+          <div class="info-card">
+            <div class="info-label">🍪 Cookie Types We Use</div>
+            <p><strong>Clarity over complexity</strong></p>
+            <p><strong>Practical application</strong></p>
+            <p><strong>Risk awareness</strong></p>
+            <p><strong>Continuous improvement</strong></p>
+            <p><strong>Long-term business sustainability</strong></p>
+          </div>
+
+          <p>
+            We strive to make every resource useful, actionable, and relevant to real-world business operations.
+          </p>
+        </section>
+
+        
+        <!-- 6 -->
+        <section id="Our-Vision">
+          <h2>6. Our Vision</h2>
+          <p>
+            Our vision is to become one of the most trusted free knowledge bases for loss prevention, operational controls, and business performance improvement.
+          </p>
+          <p>We aim to build a comprehensive resource that helps organizations around the world:</p>
+          <ul>
+            <li><strong>Protect assets</strong></li>
+            <li><strong>Reduce preventable losses</strong></li>
+            <li><strong>Strengthen accountability</strong></li>
+            <li><strong>Improve operational efficiency</strong></li>
+            <li><strong>Build sustainable business practices</strong></li>
+          </ul>
+          <p>
+            By sharing practical knowledge and proven best practices, we hope to contribute to stronger and more resilient organizations across every industry.
+          </p>
+        </section>
+
+        <!-- 7 -->
+        <section id="contact">
+          <h2>7. Contact Us</h2>
+          <p>
+            We welcome feedback, suggestions, and collaboration opportunities.
+          </p>
+          <p>If you would like to get in touch, please contact us at:</p>
+
+          <div class="info-card">
+            <div class="info-label">📬 Contact</div>
+            <p><strong>PreventLoss.org</strong></p>
+            <p>Email: <a href="mailto:privacy@preventloss.org" style="color:var(--accent-lt);">contact@preventloss.org</a></p>
+            <p>Website: <a href="https://www.preventloss.org" style="color:var(--accent-lt);">www.preventloss.org</a></p>
+          </div>
+
+          <div class="contact-box">
+            <h3>Have a feedback, suggestions, collaboration opportunities.?</h3>
+            <p>If you would like to get in touch, please contact us at</p>
+            <a href="mailto:contact@preventloss.org" class="btn-outline">Contact Us →</a>
+          </div>
+
+        </section>
+
+      </article>
+    </main>
+
+  <!-- ─── FOOTER ────────────────────────────────── -->
+  <footer class="site-footer">
+    <p>© 2025 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <!-- ─── TOC SCROLL HIGHLIGHTING ─────────────────── -->
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
