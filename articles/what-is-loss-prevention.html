@@ -1,1067 +1,206 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+html = """<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ═══════════════════════════════════════════
-       SEO META TAGS
-  ═══════════════════════════════════════════ -->
-  <title>What Is Loss Prevention? Complete Guide for Businesses (2026)</title>
-  <meta name="description" content="Learn what loss prevention is, why it matters across every industry, the types of losses businesses face, common causes, key controls, KPIs, and proven best practices. A complete guide for business owners, managers, and operators in retail, hospitality, healthcare, construction, and more." />
-  <meta name="keywords" content="what is loss prevention, loss prevention for businesses, loss prevention strategies, business loss prevention, employee theft prevention, loss prevention controls, loss prevention KPIs, loss prevention best practices, loss prevention program, asset protection, loss prevention manager, loss prevention in healthcare, loss prevention in hospitality, loss prevention in construction, loss prevention in finance, internal theft prevention, fraud prevention, operational loss prevention, shrinkage prevention, inventory loss, cash loss prevention, data loss prevention, loss prevention guide 2026" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="PreventLoss.org" />
-  <link rel="canonical" href="https://www.preventloss.org/articles/what-is-loss-prevention.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="What Is Loss Prevention? Complete Guide for Businesses (2026)" />
-  <meta property="og:description" content="A comprehensive guide covering loss prevention strategies across every industry — retail, hospitality, healthcare, construction, and finance. Covers types of losses, root causes, key controls, and KPIs every business should track." />
-  <meta property="og:url" content="https://www.preventloss.org/articles/what-is-loss-prevention.html" />
-  <meta property="og:site_name" content="PreventLoss.org" />
-  <meta property="article:published_time" content="2026-01-01T00:00:00Z" />
-  <meta property="article:section" content="Loss Prevention" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="What Is Loss Prevention? Complete Guide for Businesses (2026)" />
-  <meta name="twitter:description" content="Learn how to protect your business from financial losses with this complete loss prevention guide." />
-
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "What Is Loss Prevention? Complete Guide for Businesses",
-    "description": "A comprehensive guide covering what loss prevention is, why it matters, types of business losses, common causes, key controls, KPIs, and best practices.",
-    "author": {
-      "@type": "Organization",
-      "name": "PreventLoss.org",
-      "url": "https://www.preventloss.org"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "PreventLoss.org",
-      "url": "https://www.preventloss.org"
-    },
-    "datePublished": "2026-01-01",
-    "dateModified": "2026-06-01",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.preventloss.org/articles/what-is-loss-prevention.html"
-    },
-    "keywords": "loss prevention, business loss prevention, employee theft, fraud prevention, asset protection, operational loss, cash loss, data loss prevention, loss prevention healthcare, loss prevention hospitality, loss prevention construction"
-  }
-  </script>
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the main goal of loss prevention?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The main goal of loss prevention is to protect a business's assets — including inventory, cash, equipment, data, and property — from theft, fraud, damage, and operational waste. It aims to reduce financial losses and improve overall profitability, regardless of industry."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is loss prevention only for retail businesses?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Loss prevention applies to every industry including healthcare, construction, hospitality, logistics, finance, and manufacturing. Any business with assets, employees, and suppliers faces loss prevention challenges. The term originated in retail but the discipline is now cross-industry."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the most common causes of business losses?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The most common root causes are: lack of asset visibility, weak access controls, poor hiring practices, inconsistent policy enforcement, technology gaps, and insufficient vendor oversight. These vulnerabilities exist in every industry."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between loss prevention and asset protection?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Loss prevention traditionally focuses on stopping theft and shrinkage, while asset protection is a broader term that includes protecting all company assets — people, property, data, and brand reputation. Many organizations use the terms interchangeably today."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do small businesses need a loss prevention program?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Small businesses are often more vulnerable than large ones because they lack formal controls. A small business losing even 2–5% of revenue to preventable losses can face serious financial consequences. Basic measures like clear policies, dual cash controls, and regular audits can dramatically reduce risk at low cost."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <style>
-    /* ─── Design tokens ───────────────────────────── */
-    :root {
-      --bg:         #0f1117;
-      --surface:    #181c27;
-      --border:     #252a38;
-      --accent:     #2563eb;
-      --accent-lt:  #3b82f6;
-      --accent-glow:#1d4ed840;
-      --warn:       #f59e0b;
-      --success:    #10b981;
-      --text:       #e2e8f0;
-      --muted:      #94a3b8;
-      --heading:    #f8fafc;
-      --tag-bg:     #1e293b;
-
-      --font-display: 'Georgia', 'Times New Roman', serif;
-      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
-      --font-mono:    'Courier New', monospace;
-
-      --r-sm: 6px;
-      --r-md: 12px;
-      --r-lg: 20px;
-    }
-
-    /* ─── Reset ───────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font-body);
-      font-size: 17px;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ─── Top nav bar ─────────────────────────────── */
-    .site-nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(15,17,23,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 56px;
-    }
-    .site-nav .logo {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--heading);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-    .site-nav .logo span { color: var(--accent-lt); }
-    .nav-links { display: flex; gap: 24px; list-style: none; }
-    .nav-links a {
-      color: var(--muted); text-decoration: none; font-size: 0.875rem;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--text); }
-
-    /* ─── Layout ──────────────────────────────────── */
-    .page-wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 48px;
-      align-items: start;
-    }
-    @media (max-width: 840px) {
-      .page-wrap { grid-template-columns: 1fr; }
-      .sidebar { display: none; }
-    }
-
-    /* ─── Article header ──────────────────────────── */
-    .article-header {
-      padding: 56px 0 40px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 40px;
-    }
-    .article-category {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--accent-glow);
-      border: 1px solid var(--accent);
-      color: var(--accent-lt);
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      padding: 4px 12px;
-      border-radius: 999px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-family: var(--font-display);
-      font-size: clamp(1.9rem, 4vw, 2.8rem);
-      font-weight: 700;
-      color: var(--heading);
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      margin-bottom: 20px;
-    }
-    .article-meta {
-      display: flex; flex-wrap: wrap; gap: 20px;
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-    .article-meta span { display: flex; align-items: center; gap: 6px; }
-
-    /* ─── Reading time / word count bar ──────────── */
-    .article-stats {
-      display: flex; gap: 16px; flex-wrap: wrap;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--r-md);
-      padding: 14px 20px;
-      margin-bottom: 40px;
-      font-size: 0.82rem;
-    }
-    .article-stats .stat { color: var(--muted); }
-    .article-stats .stat strong { color: var(--text); }
-
-    /* ─── Prose ───────────────────────────────────── */
-    .article-body h2 {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--heading);
-      letter-spacing: -0.02em;
-      margin: 48px 0 16px;
-      padding-top: 48px;
-      border-top: 1px solid var(--border);
-    }
-    .article-body h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--heading);
-      margin: 28px 0 10px;
-    }
-    .article-body p { margin-bottom: 20px; color: var(--text); }
-    .article-body a { color: var(--accent-lt); text-decoration: underline; text-underline-offset: 3px; }
-    .article-body strong { color: var(--heading); font-weight: 600; }
-
-    /* ─── Callout boxes ───────────────────────────── */
-    .callout {
-      border-radius: var(--r-md);
-      padding: 20px 24px;
-      margin: 28px 0;
-      border-left: 4px solid;
-      font-size: 0.95rem;
-    }
-    .callout-stat {
-      background: #0f2040;
-      border-color: var(--accent);
-    }
-    .callout-stat .callout-label {
-      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.1em; color: var(--accent-lt); margin-bottom: 6px;
-    }
-    .callout-stat .callout-number {
-      font-family: var(--font-display);
-      font-size: 2.4rem; font-weight: 700;
-      color: var(--heading); line-height: 1;
-      margin-bottom: 4px;
-    }
-    .callout-tip {
-      background: #0d1f16;
-      border-color: var(--success);
-    }
-    .callout-tip .callout-label { color: var(--success); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
-    .callout-warn {
-      background: #1c1500;
-      border-color: var(--warn);
-    }
-    .callout-warn .callout-label { color: var(--warn); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
-
-    /* ─── Data table ──────────────────────────────── */
-    .data-table-wrap {
-      overflow-x: auto;
-      margin: 28px 0;
-      border: 1px solid var(--border);
-      border-radius: var(--r-md);
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
-    }
-    thead th {
-      background: var(--surface);
-      color: var(--muted);
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 12px 16px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-    tbody td {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-    }
-    tbody tr:last-child td { border-bottom: none; }
-    tbody tr:hover td { background: var(--surface); }
-    .badge {
-      display: inline-block;
-      padding: 2px 10px;
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 700;
-    }
-    .badge-high { background: #3b0c0c; color: #f87171; }
-    .badge-med  { background: #1c1500; color: #fbbf24; }
-    .badge-low  { background: #0d1f16; color: #34d399; }
-
-    /* ─── Checklist ───────────────────────────────── */
-    .checklist { list-style: none; margin: 16px 0 24px; }
-    .checklist li {
-      display: flex; gap: 12px; align-items: flex-start;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.95rem;
-    }
-    .checklist li:last-child { border-bottom: none; }
-    .checklist .icon {
-      width: 20px; height: 20px; flex-shrink: 0;
-      background: var(--accent-glow);
-      border: 1px solid var(--accent);
-      border-radius: 4px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 11px; color: var(--accent-lt);
-      margin-top: 2px;
-    }
-
-    /* ─── KPI cards ───────────────────────────────── */
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 16px;
-      margin: 24px 0;
-    }
-    .kpi-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--r-md);
-      padding: 18px;
-      transition: border-color 0.2s;
-    }
-    .kpi-card:hover { border-color: var(--accent); }
-    .kpi-card .kpi-name {
-      font-size: 0.78rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.07em;
-      color: var(--muted); margin-bottom: 8px;
-    }
-    .kpi-card .kpi-formula {
-      font-family: var(--font-mono);
-      font-size: 0.78rem; color: var(--accent-lt);
-      background: var(--bg);
-      padding: 6px 10px; border-radius: var(--r-sm);
-      margin-bottom: 8px; word-break: break-word;
-    }
-    .kpi-card .kpi-desc { font-size: 0.82rem; color: var(--muted); }
-
-    /* ─── FAQ ─────────────────────────────────────── */
-    .faq-list { margin: 16px 0; }
-    .faq-item {
-      border: 1px solid var(--border);
-      border-radius: var(--r-md);
-      margin-bottom: 10px;
-      overflow: hidden;
-    }
-    .faq-q {
-      width: 100%; background: var(--surface);
-      border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 20px;
-      font-size: 0.97rem; font-weight: 600;
-      color: var(--heading); text-align: left;
-      gap: 12px;
-    }
-    .faq-q:hover { background: #1e2535; }
-    .faq-q .arrow {
-      flex-shrink: 0; font-size: 1.1rem;
-      color: var(--muted); transition: transform 0.2s;
-    }
-    .faq-q[aria-expanded="true"] .arrow { transform: rotate(180deg); }
-    .faq-a {
-      display: none;
-      padding: 0 20px 18px;
-      font-size: 0.93rem; color: var(--muted);
-      background: var(--surface);
-    }
-    .faq-a.open { display: block; }
-
-    /* ─── Sidebar ─────────────────────────────────── */
-    .sidebar { padding-top: 56px; }
-    .sidebar-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--r-lg);
-      padding: 22px;
-      margin-bottom: 20px;
-    }
-    .sidebar-card h4 {
-      font-size: 0.8rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.09em;
-      color: var(--muted); margin-bottom: 14px;
-    }
-    .toc-list { list-style: none; }
-    .toc-list li { margin-bottom: 4px; }
-    .toc-list a {
-      font-size: 0.85rem; color: var(--muted);
-      text-decoration: none;
-      display: block; padding: 4px 0;
-      border-left: 2px solid transparent;
-      padding-left: 12px;
-      transition: all 0.15s;
-    }
-    .toc-list a:hover, .toc-list a.active {
-      color: var(--text);
-      border-color: var(--accent-lt);
-    }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag {
-      background: var(--tag-bg); color: var(--muted);
-      font-size: 0.75rem; border-radius: var(--r-sm);
-      padding: 4px 10px; text-decoration: none;
-      border: 1px solid var(--border);
-      transition: all 0.15s;
-    }
-    .tag:hover { color: var(--text); border-color: var(--muted); }
-
-    /* ─── Conclusion CTA ──────────────────────────── */
-    .conclusion-cta {
-      background: linear-gradient(135deg, #0f2040 0%, #1a0a30 100%);
-      border: 1px solid var(--accent);
-      border-radius: var(--r-lg);
-      padding: 32px;
-      text-align: center;
-      margin-top: 48px;
-    }
-    .conclusion-cta h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--heading); margin-bottom: 10px; }
-    .conclusion-cta p { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
-    .btn-primary {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      font-weight: 700; font-size: 0.9rem;
-      padding: 12px 28px;
-      border-radius: var(--r-sm);
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-    .btn-primary:hover { background: var(--accent-lt); }
-
-    /* ─── Footer ──────────────────────────────────── */
-    .site-footer {
-      border-top: 1px solid var(--border);
-      margin-top: 80px;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-    .site-footer a { color: var(--muted); text-decoration: none; }
-    .site-footer a:hover { color: var(--text); }
-
-    /* ─── Progress bar ────────────────────────────── */
-    #read-progress {
-      position: fixed; top: 56px; left: 0;
-      height: 3px; width: 0%;
-      background: linear-gradient(90deg, var(--accent), #7c3aed);
-      z-index: 99; transition: width 0.1s linear;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is Loss Prevention? | PreventLoss Research</title>
+<meta name="description" content="A practical guide to loss prevention for inventory, procurement, internal audit and operations teams.">
+<style>
+:root{
+--navy:#0F172A;--blue:#2563EB;--light:#F8FAFC;--text:#1E293B;--muted:#64748B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#fff;color:var(--text);line-height:1.8}
+.header{background:var(--navy);padding:16px 0}
+.container{max-width:1100px;margin:auto;padding:0 20px}
+.nav{display:flex;justify-content:space-between;align-items:center}
+.logo{color:#fff;font-size:28px;font-weight:bold;text-decoration:none}
+.nav a{color:#fff;text-decoration:none;margin-left:20px}
+.article{max-width:900px;margin:40px auto}
+.badge{display:inline-block;background:#DBEAFE;color:#1D4ED8;padding:8px 14px;border-radius:20px;font-size:12px;font-weight:bold}
+h1{font-size:48px;line-height:1.2;margin:20px 0}
+.meta{color:var(--muted);margin-bottom:30px}
+.summary,.toc,.insight,.framework,.checklist,.related,.author{
+padding:24px;border-radius:12px;margin:30px 0
+}
+.summary{background:#EFF6FF;border-left:5px solid var(--blue)}
+.toc{background:#F8FAFC}
+.insight{background:#F8FAFC;border-left:5px solid var(--navy)}
+.framework{background:#EEFDF5;border-left:5px solid #10B981}
+.checklist{background:#FFF7ED;border-left:5px solid #F59E0B}
+.related{background:#F8FAFC}
+.author{background:var(--navy);color:#fff}
+h2{margin:40px 0 15px;font-size:32px}
+h3{margin:25px 0 10px}
+ul,ol{margin-left:25px}
+table{width:100%;border-collapse:collapse;margin:20px 0}
+th,td{border:1px solid #E2E8F0;padding:12px;text-align:left}
+th{background:#F8FAFC}
+.footer{margin-top:50px;padding:30px;text-align:center;border-top:1px solid #E2E8F0}
+</style>
 </head>
 <body>
+<header class="header">
+<div class="container nav">
+<a href="/" class="logo">PreventLoss</a>
+<div>
+<a href="/">Home</a>
+<a href="/articles/">Articles</a>
+<a href="/categories/">Categories</a>
+</div>
+</div>
+</header>
 
-  <!-- Reading progress -->
-  <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+<main class="article">
+<span class="badge">LOSS PREVENTION</span>
+<h1>What Is Loss Prevention? A Practical Guide for Inventory, Procurement and Operations Teams</h1>
+<p class="meta">Published: June 2026 • 12 min read • PreventLoss Research</p>
 
-  <!-- ─── NAV ─────────────────────────────────────── -->
-  <nav class="site-nav" aria-label="Site navigation">
-    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
-    <ul class="nav-links">
-      <li><a href="/articles/">Articles</a></li>
-      <li><a href="/guides/">Guides</a></li>
-      <li><a href="/tools/">Tools</a></li>
-    </ul>
-  </nav>
+<div class="summary">
+<h3>Executive Summary</h3>
+<ul>
+<li>Loss prevention reduces inventory, procurement and operational losses.</li>
+<li>Strong controls improve profitability and accountability.</li>
+<li>Inventory accuracy is a key performance driver.</li>
+<li>Procurement controls help prevent leakage and fraud.</li>
+<li>Internal audits identify weaknesses before they become costly.</li>
+</ul>
+</div>
 
-  <!-- ─── PAGE WRAP ────────────────────────────────── -->
-  <div class="page-wrap">
+<div class="toc">
+<h3>Contents</h3>
+<ol>
+<li>Introduction</li>
+<li>What Is Loss Prevention?</li>
+<li>Why It Matters</li>
+<li>Types of Business Losses</li>
+<li>Key Controls</li>
+<li>KPIs</li>
+<li>Best Practices</li>
+<li>FAQ</li>
+<li>Conclusion</li>
+</ol>
+</div>
 
-    <!-- ════════════════════════════════════════════
-         MAIN ARTICLE
-    ════════════════════════════════════════════ -->
-    <main id="main-content">
+<h2>Introduction</h2>
+<p>Loss prevention is the process of identifying, reducing and preventing losses that negatively impact an organization's profitability and operational performance. Modern loss prevention extends beyond theft prevention and includes inventory management, procurement controls, internal audits, compliance monitoring and operational excellence.</p>
 
-      <!-- Header -->
-      <header class="article-header">
-        <div class="article-category">📋 Loss Prevention </div>
-        <h1>What Is Loss Prevention?</h1>
-        <p style="font-size:1.1rem; color:var(--muted); margin-bottom:20px; line-height:1.6;">A complete guide for businesses across every industry — not just retail.</p>
-        <div class="article-meta">
-          <span>🗓 Last updated: June 2026</span>
-          <span>⏱ 8 min read</span>
-          <span>📝 ~1,900 words</span>
-        </div>
-      </header>
+<div class="insight">
+<strong>Key Insight:</strong> Most organizations lose more money through process failures, inventory inaccuracies and procurement leakages than through theft alone.
+</div>
 
-      <!-- Quick-stats bar -->
-      <div class="article-stats">
-        <div class="stat"><strong>$4.7T+</strong> lost globally each year to fraud &amp; financial crime</div>
-        <div class="stat"><strong>~65%</strong> of losses are preventable with proper controls</div>
-        <div class="stat"><strong>Every industry</strong> faces theft, fraud, waste &amp; error</div>
-      </div>
+<h2>What Is Loss Prevention?</h2>
+<p>Loss prevention refers to the systematic approach used to protect assets, inventory, cash, information and operational resources. The objective is to identify risks early and implement controls that minimize losses while improving efficiency.</p>
 
-      <!-- ─────────── ARTICLE BODY ──────────────── -->
-      <article class="article-body" itemscope itemtype="https://schema.org/Article">
-        <meta itemprop="headline" content="What Is Loss Prevention? Complete Guide for Businesses" />
-        <meta itemprop="datePublished" content="2026-01-01" />
-        <meta itemprop="dateModified" content="2026-06-01" />
+<h2>Why Loss Prevention Matters</h2>
+<p>Organizations operate with thin margins. Even small leakages across receiving, inventory, procurement or finance can accumulate into significant financial losses over time.</p>
 
-        <!-- INTRODUCTION -->
-        <section id="introduction" aria-labelledby="intro-heading">
-          <h2 id="intro-heading" style="border-top:none; margin-top:0; padding-top:0;">Introduction</h2>
-          <p>
-            Every year, businesses around the world lose trillions of dollars to theft, fraud, administrative errors, and operational waste. These losses don't only happen on shop floors — they occur in hospital supply rooms, restaurant kitchens, construction sites, corporate finance departments, warehouses, and data centers.
-          </p>
-          <p>
-            Loss prevention is the discipline dedicated to stopping those losses before they happen. It is often associated with retail, but the principles — and the stakes — apply equally to any business that handles money, inventory, equipment, data, or people.
-          </p>
-          <p>
-            Whether you run a restaurant chain, a healthcare clinic, a logistics company, a hotel, or a construction firm, understanding loss prevention is one of the highest-ROI investments you can make. This complete guide explains what loss prevention is, how it applies across industries, the different types of losses your business faces, the controls you can put in place, and the key metrics you should be tracking right now.
-          </p>
-        </section>
+<table>
+<tr><th>Area</th><th>Potential Loss</th></tr>
+<tr><td>Inventory</td><td>Shrinkage, damage, counting errors</td></tr>
+<tr><td>Procurement</td><td>Duplicate payments, overbilling</td></tr>
+<tr><td>Operations</td><td>Process inefficiencies, waste</td></tr>
+<tr><td>Finance</td><td>Fraud, control failures</td></tr>
+</table>
 
-        <!-- WHAT IS LOSS PREVENTION -->
-        <section id="what-is-loss-prevention" aria-labelledby="def-heading">
-          <h2 id="def-heading">What Is Loss Prevention?</h2>
-          <p>
-            <strong>Loss prevention (LP)</strong> is the set of practices, policies, technologies, and processes that a business uses to reduce financial losses caused by theft, fraud, damage, waste, and human error. While the term originated in retail security, it has expanded into a discipline that applies to virtually every industry and business type.
-          </p>
-          <p>
-            At its core, loss prevention answers one question: <em>How do we stop value from leaving the business without authorization or justification?</em> That value can take many forms — physical merchandise, cash, equipment, materials, proprietary data, intellectual property, or billable time.
-          </p>
+<h2>Types of Business Losses</h2>
+<ul>
+<li>Inventory Shrinkage</li>
+<li>Vendor Leakage</li>
+<li>Duplicate Payments</li>
+<li>Operational Waste</li>
+<li>Fraud and Misconduct</li>
+<li>Control Failures</li>
+</ul>
 
-          <h3>Loss Prevention Across Industries</h3>
-          <p>
-            Each industry has its own version of loss prevention, shaped by the assets it protects and the threats it faces:
-          </p>
+<h2>Key Loss Prevention Controls</h2>
+<ul>
+<li>Cycle Counts</li>
+<li>Inventory Reconciliations</li>
+<li>Three-Way Matching</li>
+<li>Segregation of Duties</li>
+<li>Vendor Reviews</li>
+<li>Internal Audits</li>
+</ul>
 
-          <div class="data-table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Industry</th>
-                  <th>Primary Assets at Risk</th>
-                  <th>Common LP Focus Areas</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Retail</strong></td>
-                  <td>Merchandise, cash, inventory</td>
-                  <td>Shoplifting, employee theft, shrinkage tracking, POS fraud</td>
-                </tr>
-                <tr>
-                  <td><strong>Hospitality &amp; Food Service</strong></td>
-                  <td>Cash, food inventory, alcohol, tips</td>
-                  <td>Cash skimming, portion waste, comp abuse, supplier fraud</td>
-                </tr>
-                <tr>
-                  <td><strong>Healthcare</strong></td>
-                  <td>Medical supplies, pharmaceuticals, equipment, billing</td>
-                  <td>Drug diversion, billing fraud, supply theft, regulatory compliance</td>
-                </tr>
-                <tr>
-                  <td><strong>Construction</strong></td>
-                  <td>Materials, tools, heavy equipment, fuel</td>
-                  <td>Job-site theft, material wastage, equipment misuse, vendor overbilling</td>
-                </tr>
-                <tr>
-                  <td><strong>Warehousing &amp; Logistics</strong></td>
-                  <td>Goods in transit, inventory, vehicles</td>
-                  <td>Cargo theft, receiving discrepancies, driver fraud, damaged goods</td>
-                </tr>
-                <tr>
-                  <td><strong>Financial Services</strong></td>
-                  <td>Cash, customer data, digital assets</td>
-                  <td>Internal fraud, cyber theft, unauthorized transactions, identity fraud</td>
-                </tr>
-                <tr>
-                  <td><strong>Manufacturing</strong></td>
-                  <td>Raw materials, finished goods, IP</td>
-                  <td>Raw material theft, production waste, IP theft, time fraud</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+<div class="framework">
+<h3>Loss Prevention Framework</h3>
+<ol>
+<li>Identify Risks</li>
+<li>Assess Controls</li>
+<li>Monitor KPIs</li>
+<li>Investigate Variances</li>
+<li>Implement Corrective Actions</li>
+<li>Review Performance</li>
+</ol>
+</div>
 
-          <div class="callout callout-tip">
-            <div class="callout-label">💡 Key Distinction</div>
-            <p style="margin:0;">
-              <strong>Loss prevention</strong> focuses on stopping losses proactively. <strong>Asset protection</strong> is a broader, more modern term that extends this to protecting all company assets — people, property, data, and brand. Many organizations use the terms interchangeably today. Regardless of label, the discipline has grown far beyond retail security guards.
-            </p>
-          </div>
-        </section>
+<h2>Loss Prevention KPIs</h2>
+<table>
+<tr><th>KPI</th><th>Purpose</th></tr>
+<tr><td>Inventory Accuracy %</td><td>Measures stock accuracy</td></tr>
+<tr><td>Inventory Shrinkage %</td><td>Measures inventory losses</td></tr>
+<tr><td>Vendor Compliance %</td><td>Tracks supplier performance</td></tr>
+<tr><td>Duplicate Payment Rate</td><td>Measures payment errors</td></tr>
+<tr><td>Audit Closure Rate</td><td>Tracks issue resolution</td></tr>
+</table>
 
-        <!-- WHY IT MATTERS -->
-        <section id="why-loss-prevention-matters" aria-labelledby="why-heading">
-          <h2 id="why-heading">Why Loss Prevention Matters</h2>
-          <p>
-            The financial case for loss prevention is straightforward: losses come directly out of profit. A business with a 5% net profit margin that loses $50,000 to preventable losses must generate an additional <strong>$1,000,000 in revenue</strong> just to break even. No marketing campaign or new product line recovers losses as efficiently as simply preventing them.
-          </p>
+<div class="checklist">
+<h3>Loss Prevention Checklist</h3>
+<ul>
+<li>☐ Cycle counts completed</li>
+<li>☐ Inventory reconciled</li>
+<li>☐ Vendor invoices reviewed</li>
+<li>☐ Three-way matching performed</li>
+<li>☐ Audit findings tracked</li>
+<li>☐ Root causes documented</li>
+</ul>
+</div>
 
-          <div class="callout callout-stat">
-            <div class="callout-label">Industry Benchmark</div>
-            <div class="callout-number">$4.7T+</div>
-            <p style="margin:0; color: var(--muted); font-size: 0.9rem;">
-              Estimated annual global losses from fraud, theft, and financial crime across industries, according to the Association of Certified Fraud Examiners (ACFE). The average organization loses approximately 5% of its annual revenue to fraud alone.
-            </p>
-          </div>
+<h2>Best Practices</h2>
+<ul>
+<li>Establish clear procedures.</li>
+<li>Perform regular audits.</li>
+<li>Use data-driven monitoring.</li>
+<li>Investigate root causes.</li>
+<li>Continuously improve controls.</li>
+</ul>
 
-          <p>The financial hit is just the beginning. Poor loss prevention creates a cascade of secondary consequences across every type of business:</p>
-          <ul class="checklist">
-            <li><div class="icon">✓</div><div><strong>Reduced investment capacity</strong> — money lost to preventable losses can't go to staff, technology, or growth.</div></li>
-            <li><div class="icon">✓</div><div><strong>Operational disruption</strong> — missing inventory, tools, or supplies causes delays, service failures, and customer complaints.</div></li>
-            <li><div class="icon">✓</div><div><strong>Employee morale damage</strong> — a culture where theft or fraud goes unaddressed demoralizes honest employees and signals poor leadership.</div></li>
-            <li><div class="icon">✓</div><div><strong>Regulatory and legal exposure</strong> — in healthcare, finance, and food service especially, loss events can trigger compliance violations and penalties.</div></li>
-            <li><div class="icon">✓</div><div><strong>Reputational damage</strong> — data breaches, billing fraud, or publicized theft incidents erode customer and partner trust.</div></li>
-            <li><div class="icon">✓</div><div><strong>Higher costs passed on</strong> — businesses that absorb losses without addressing them inevitably raise prices, reducing competitiveness.</div></li>
-          </ul>
-        </section>
+<h2>Frequently Asked Questions</h2>
+<h3>Is loss prevention only about theft?</h3>
+<p>No. It includes inventory management, procurement controls, internal audits and operational improvements.</p>
 
-        <!-- TYPES OF BUSINESS LOSSES -->
-        <section id="types-of-business-losses" aria-labelledby="types-heading">
-          <h2 id="types-heading">Types of Business Losses</h2>
-          <p>
-            Losses take many forms depending on your industry and business model. Understanding the full spectrum — not just theft — is essential for building a comprehensive prevention strategy.
-          </p>
+<h3>What industries need loss prevention?</h3>
+<p>Retail, manufacturing, logistics, hospitality, healthcare and many other industries.</p>
 
-          <div class="data-table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Loss Type</th>
-                  <th>Description &amp; Examples</th>
-                  <th>Industries Most Affected</th>
-                  <th>Risk Level</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Internal Theft</strong></td>
-                  <td>Employees stealing merchandise, cash, supplies, equipment, data, or time. Includes management fraud and payroll schemes.</td>
-                  <td>All industries</td>
-                  <td><span class="badge badge-high">High</span></td>
-                </tr>
-                <tr>
-                  <td><strong>External Theft</strong></td>
-                  <td>Shoplifting, organized retail crime (ORC), job-site theft, cargo theft, burglary, or robbery by outside parties.</td>
-                  <td>Retail, construction, logistics</td>
-                  <td><span class="badge badge-high">High</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Administrative &amp; Process Errors</strong></td>
-                  <td>Pricing mistakes, billing errors, receiving discrepancies, data entry errors, and paperwork miscounts that cause financial leakage.</td>
-                  <td>All industries</td>
-                  <td><span class="badge badge-med">Medium</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Vendor &amp; Supplier Fraud</strong></td>
-                  <td>Short shipments, overbilling, invoice fraud, counterfeit goods, and kickback schemes involving suppliers or contractors.</td>
-                  <td>Retail, construction, healthcare, hospitality</td>
-                  <td><span class="badge badge-med">Medium</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Operational Waste &amp; Shrinkage</strong></td>
-                  <td>Food spoilage, material overuse, over-portioning, expired goods, and inefficient processes that destroy value.</td>
-                  <td>Food service, manufacturing, healthcare</td>
-                  <td><span class="badge badge-med">Medium</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Cyber &amp; Data Loss</strong></td>
-                  <td>Data breaches, ransomware, phishing attacks, unauthorized system access, and insider data theft.</td>
-                  <td>Finance, healthcare, tech, all sectors</td>
-                  <td><span class="badge badge-high">High</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Billing &amp; Revenue Leakage</strong></td>
-                  <td>Unbilled services, undercharging, discount abuse, fraudulent refunds, and revenue that leaves without proper record.</td>
-                  <td>Healthcare, hospitality, professional services</td>
-                  <td><span class="badge badge-med">Medium</span></td>
-                </tr>
-                <tr>
-                  <td><strong>Property &amp; Equipment Loss</strong></td>
-                  <td>Theft or misuse of vehicles, tools, machinery, furniture, or technology assets.</td>
-                  <td>Construction, logistics, healthcare, field services</td>
-                  <td><span class="badge badge-low">Variable</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
+<h2>Conclusion</h2>
+<p>Loss prevention is a strategic discipline that helps organizations reduce waste, improve controls, strengthen accountability and increase profitability. Effective programs combine inventory controls, procurement governance, operational monitoring and internal audits.</p>
 
-        <!-- COMMON CAUSES OF LOSS -->
-        <section id="common-causes-of-loss" aria-labelledby="causes-heading">
-          <h2 id="causes-heading">Common Causes of Loss</h2>
-          <p>
-            Knowing the <em>types</em> of loss helps. But understanding the <em>root causes</em> — why those losses happen — is what enables lasting prevention. Most losses share the same underlying vulnerabilities, regardless of industry.
-          </p>
+<div class="related">
+<h3>Related Articles</h3>
+<ul>
+<li>Inventory Shrinkage Explained</li>
+<li>Inventory Accuracy Formula</li>
+<li>Cycle Count vs Physical Count</li>
+<li>Vendor Leakage Detection</li>
+<li>Procurement Audit Checklist</li>
+</ul>
+</div>
 
-          <h3>1. Lack of Visibility</h3>
-          <p>
-            Businesses that don't track assets accurately — whether that's retail inventory, hospital supply rooms, restaurant food costs, or construction materials — are flying blind. Losses can accumulate for months or years before detection. Real-time tracking systems, regular audits, and reconciliation processes are the foundation of visibility in any industry.
-          </p>
+<div class="author">
+<h3>About PreventLoss Research</h3>
+<p>PreventLoss Research publishes practical guides, frameworks, audit checklists and operational insights focused on Loss Prevention, Inventory Management, Procurement, Internal Audit, Cost Control and Operations Excellence.</p>
+</div>
+</main>
 
-          <h3>2. Poor Hiring and Onboarding Practices</h3>
-          <p>
-            Internal theft is often preventable at the hiring stage. This is true whether you're staffing a warehouse, a hospital ward, a restaurant, or a financial services firm. Businesses that skip background checks, references, or structured onboarding introduce unnecessary risk. Clear ethical standards — communicated from day one — reduce both opportunistic theft and gray-area behavior.
-          </p>
-
-          <h3>3. Weak Access Controls</h3>
-          <p>
-            When too many people have access to cash registers, pharmaceutical supplies, client financial accounts, or sensitive data systems, the surface area for loss expands dramatically. Role-based access control, manager approvals for high-risk actions, and separation of duties are fundamental safeguards across every sector.
-          </p>
-
-          <h3>4. No Clear Policies or Accountability</h3>
-          <p>
-            Employees need to know what is expected of them and what the consequences of violations are. A restaurant with no documented comp policy, a construction firm with no tool checkout procedure, or a healthcare provider with no pharmaceutical handling protocol — all create environments where small rule-bending escalates into significant loss.
-          </p>
-
-          <h3>5. Technology Gaps</h3>
-          <p>
-            Outdated or disconnected systems create blind spots. A POS system that doesn't integrate with inventory, a construction site with no equipment tracking, a hospital without medication dispensing logs — these are all technology gaps that create loss opportunities. Modern loss prevention increasingly relies on integrated, data-connected systems that surface anomalies automatically.
-          </p>
-
-          <h3>6. Supply Chain and Vendor Exposure</h3>
-          <p>
-            Loss doesn't only happen inside your business. Vendors, contractors, and suppliers represent a significant exposure for companies in construction, manufacturing, hospitality, and healthcare. Overbilling, short deliveries, substituted materials, and kickback arrangements are all supplier-side loss risks that require procurement controls and verification procedures.
-          </p>
-
-          <div class="callout callout-warn">
-            <div class="callout-label">⚠️ Industry-Specific Watch-Outs</div>
-            <p style="margin:0 0 8px;">
-              <strong>Healthcare:</strong> Drug diversion — when pharmaceutical supplies are stolen or misused by employees — is one of the most serious and underreported loss problems in the sector, carrying both financial and patient safety consequences.
-            </p>
-            <p style="margin:0 0 8px;">
-              <strong>Construction:</strong> Tool and material theft from job sites costs the U.S. construction industry an estimated $1 billion annually, with recovery rates below 25%.
-            </p>
-            <p style="margin:0;">
-              <strong>Food Service:</strong> Cash skimming and "sweethearting" (giving free items to friends) are among the most common — and hardest to detect — forms of employee theft in restaurants and cafes.
-            </p>
-          </div>
-        </section>
-
-        <!-- KEY LP CONTROLS -->
-        <section id="key-loss-prevention-controls" aria-labelledby="controls-heading">
-          <h2 id="controls-heading">Key Loss Prevention Controls</h2>
-          <p>
-            Effective loss prevention programs layer multiple types of controls — physical, procedural, and technological — to create overlapping safeguards. No single control is foolproof; the goal is to make losses difficult, detectable, and costly to commit. These controls apply across industries, though the specific tools vary.
-          </p>
-
-          <h3>Physical Controls</h3>
-          <ul class="checklist">
-            <li><div class="icon">✓</div><div><strong>CCTV / video surveillance</strong> — monitored coverage of high-risk areas: sales floors, stockrooms, cash handling areas, job sites, loading docks, server rooms.</div></li>
-            <li><div class="icon">✓</div><div><strong>Controlled access areas</strong> — locked stockrooms, pharmaceutical cabinets, server rooms, cash offices, and tool storage sheds with logged entry.</div></li>
-            <li><div class="icon">✓</div><div><strong>Asset tagging and tracking</strong> — RFID, GPS, or barcode tagging of equipment, inventory, vehicles, and high-value items.</div></li>
-            <li><div class="icon">✓</div><div><strong>Secure perimeters</strong> — fencing, lighting, and access control for warehouses, construction sites, and multi-location facilities.</div></li>
-            <li><div class="icon">✓</div><div><strong>Retail-specific: EAS tags</strong> — Electronic Article Surveillance tags on merchandise with alarmed exit points.</div></li>
-          </ul>
-
-          <h3>Procedural Controls</h3>
-          <ul class="checklist">
-            <li><div class="icon">✓</div><div><strong>Dual control for cash and high-value items</strong> — two employees verify cash drawers, medication counts, or valuable inventory at key points.</div></li>
-            <li><div class="icon">✓</div><div><strong>Regular and random audits</strong> — scheduled cycle counts plus surprise spot checks to deter and detect discrepancies.</div></li>
-            <li><div class="icon">✓</div><div><strong>Receiving verification</strong> — every delivery is verified against the purchase order before being signed off and entered into the system.</div></li>
-            <li><div class="icon">✓</div><div><strong>Documented policies and training</strong> — every employee, regardless of role, understands LP expectations and consequences from day one.</div></li>
-            <li><div class="icon">✓</div><div><strong>Anonymous tip lines</strong> — internal fraud reporting hotlines that protect whistleblowers and surface issues early.</div></li>
-          </ul>
-
-          <h3>Technology Controls</h3>
-          <ul class="checklist">
-            <li><div class="icon">✓</div><div><strong>Exception reporting</strong> — automated flags on unusual transactions, voids, refunds, or access events for manager review.</div></li>
-            <li><div class="icon">✓</div><div><strong>Asset management software</strong> — real-time tracking of inventory, equipment, and materials across locations.</div></li>
-            <li><div class="icon">✓</div><div><strong>Role-based access control (RBAC)</strong> — employees can only access the systems, data, and physical areas their role requires.</div></li>
-            <li><div class="icon">✓</div><div><strong>Video analytics and AI detection</strong> — automated alerts for unusual behavior patterns in surveillance footage.</div></li>
-            <li><div class="icon">✓</div><div><strong>Cybersecurity tools</strong> — endpoint protection, multi-factor authentication, data loss prevention (DLP) software, and network monitoring.</div></li>
-          </ul>
-        </section>
-
-        <!-- KPIs -->
-        <section id="loss-prevention-kpis" aria-labelledby="kpi-heading">
-          <h2 id="kpi-heading">Loss Prevention KPIs</h2>
-          <p>
-            You can't manage what you don't measure. The following Key Performance Indicators (KPIs) are used by loss prevention professionals to evaluate program effectiveness. While some are retail-specific, most apply across industries — simply swap "inventory" for "materials," "equipment," or "supplies" as relevant to your business.
-          </p>
-
-          <div class="kpi-grid">
-            <div class="kpi-card">
-              <div class="kpi-name">Shrink / Loss Rate</div>
-              <div class="kpi-formula">(Asset Loss ÷ Total Value) × 100</div>
-              <div class="kpi-desc">Your primary loss metric. Applies to inventory, materials, cash, or any tracked asset category.</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-name">Loss as % of Revenue</div>
-              <div class="kpi-formula">($ Total Loss ÷ $ Net Revenue) × 100</div>
-              <div class="kpi-desc">Normalizes losses across locations or business units with different revenue volumes.</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-name">Internal Case Rate</div>
-              <div class="kpi-formula">Internal Fraud Cases ÷ Total Employees</div>
-              <div class="kpi-desc">Benchmarks internal theft and fraud frequency. Critical in every industry, not just retail.</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-name">Cash Discrepancy Rate</div>
-              <div class="kpi-formula">$ Discrepancy ÷ $ Total Cash Handled</div>
-              <div class="kpi-desc">Tracks cash handling accuracy. Relevant for retail, hospitality, healthcare, and any cash-handling operation.</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-name">Vendor Overbilling Rate</div>
-              <div class="kpi-formula">$ Overbilled ÷ $ Total Vendor Spend</div>
-              <div class="kpi-desc">Measures supplier-side loss. Especially important in construction, manufacturing, and healthcare procurement.</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-name">LP ROI</div>
-              <div class="kpi-formula">(Loss Recovered − LP Costs) ÷ LP Costs</div>
-              <div class="kpi-desc">Demonstrates the financial return on your loss prevention investment to leadership and stakeholders.</div>
-            </div>
-          </div>
-        </section>
-
-        <!-- BEST PRACTICES -->
-        <section id="best-practices" aria-labelledby="bp-heading">
-          <h2 id="bp-heading">Loss Prevention Best Practices</h2>
-          <p>
-            Building an effective loss prevention program is not about picking one tactic — it requires a layered, systematic approach that fits your specific industry and business model. Here are the best practices adopted by organizations across sectors:
-          </p>
-
-          <h3>1. Make Loss Prevention a Culture, Not Just a Department</h3>
-          <p>
-            The most effective LP programs involve every employee, not just security or audit staff. A restaurant server who understands how over-comping hurts the business, a nurse who reports a medication discrepancy, a construction foreman who enforces tool sign-out procedures — these people are your front line. Train every new hire on LP principles from day one, regardless of role.
-          </p>
-
-          <h3>2. Know Which Losses Are Unique to Your Industry</h3>
-          <p>
-            A one-size-fits-all approach to loss prevention is a recipe for gaps. A healthcare provider needs pharmaceutical diversion protocols. A restaurant needs food cost controls and cash handling procedures. A construction company needs equipment tracking and vendor oversight. Start by mapping the specific loss risks that your industry faces, then build your controls around them.
-          </p>
-
-          <h3>3. Use Data to Prioritize Risk</h3>
-          <p>
-            Not all locations, asset categories, or time windows carry equal risk. Use transaction data, inventory reports, exception logs, and audit findings to identify where losses concentrate. Direct your resources — cameras, audits, staffing, system controls — toward high-risk areas first.
-          </p>
-
-          <h3>4. Separate Duties for High-Risk Functions</h3>
-          <p>
-            The person who receives inventory should not also record it in the system. The cashier should not reconcile the till. The procurement manager should not also approve invoices for payment. Separation of duties is one of the oldest and most effective internal controls — and one of the most commonly ignored in small and mid-sized businesses across every industry.
-          </p>
-
-          <h3>5. Audit Regularly and Randomly</h3>
-          <p>
-            Scheduled audits are useful, but random audits are far more powerful as a deterrent. When employees know that audits can happen at any time — whether that's a cash count, a stock check, a medication reconciliation, or a materials inventory — behavior adjusts. Combine regular scheduled audits with surprise spot checks for maximum effect.
-          </p>
-
-          <h3>6. Respond Consistently to Violations</h3>
-          <p>
-            Inconsistent enforcement destroys loss prevention culture across every industry. If small violations go unpunished while major ones are addressed, the implicit message is that the policy isn't real. Establish clear, graduated consequences and apply them consistently — regardless of seniority, tenure, or relationships.
-          </p>
-        </section>
-
-        <!-- FAQ -->
-        <section id="frequently-asked-questions" aria-labelledby="faq-heading">
-          <h2 id="faq-heading">Frequently Asked Questions</h2>
-          <div class="faq-list">
-
-            <div class="faq-item">
-              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
-                What is the main goal of loss prevention?
-                <span class="arrow">▾</span>
-              </button>
-              <div class="faq-a">
-                The main goal of loss prevention is to protect a business's assets — including inventory, cash, equipment, data, and property — from theft, fraud, damage, and operational waste. It aims to reduce financial losses and improve overall profitability, regardless of industry.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
-                Is loss prevention only for retail businesses?
-                <span class="arrow">▾</span>
-              </button>
-              <div class="faq-a">
-                No — loss prevention applies to every industry. While the term originated in retail, the discipline has grown to cover healthcare (drug diversion, billing fraud), construction (job-site theft, material waste), hospitality (cash skimming, food cost), logistics (cargo theft), finance (internal fraud, cyber theft), and manufacturing (raw material loss, time fraud). Any business with assets, employees, and suppliers faces loss prevention challenges.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
-                What are the most common causes of business losses?
-                <span class="answer">▾</span>
-              </button>
-              <div class="faq-a">
-                The most common root causes are: lack of asset visibility, weak access controls, poor hiring practices, inconsistent policy enforcement, technology gaps, and insufficient vendor oversight. These vulnerabilities exist in every industry and allow theft, fraud, and waste to occur and go undetected.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
-                What is the difference between loss prevention and asset protection?
-                <span class="arrow">▾</span>
-              </button>
-              <div class="faq-a">
-                Loss prevention traditionally focuses on stopping theft and shrinkage, while asset protection is a broader term that includes protecting all company assets — people, property, data, and brand reputation. Many organizations use the terms interchangeably today, and the discipline has evolved significantly beyond retail security.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
-                Do small businesses need a loss prevention program?
-                <span class="arrow">▾</span>
-              </button>
-              <div class="faq-a">
-                Absolutely — and small businesses are often <em>more</em> vulnerable than large ones because they lack formal controls. A small business losing even 2–5% of revenue to preventable losses can face serious consequences at thin profit margins. Even basic measures — clear policies, dual cash controls, regular audits, and access controls — can dramatically reduce risk at low cost.
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- CONCLUSION -->
-        <section id="conclusion" aria-labelledby="conclusion-heading">
-          <h2 id="conclusion-heading">Conclusion</h2>
-          <p>
-            Loss prevention is not a retail-only discipline, and it is not a luxury reserved for large organizations with dedicated security teams. It is a fundamental business practice that every company — regardless of size, sector, or structure — needs to take seriously.
-          </p>
-          <p>
-            Whether you manage a restaurant, a hospital supply chain, a construction company, a warehouse, or a financial services firm, the same truths apply: losses are often preventable, they compound over time, and the businesses that address them systematically outperform those that don't.
-          </p>
-          <p>
-            The most effective loss prevention programs are not the most expensive or the most complex — they are the most <strong>consistent</strong>. They embed controls into daily operations, measure what matters, and create a culture where everyone takes responsibility for protecting the business.
-          </p>
-          <p>
-            Start where you are. Identify your highest-risk loss categories. Put the basic procedural controls in place. Measure your losses. Then build from there — because every dollar you keep is a dollar that compounds.
-          </p>
-
-          <div class="conclusion-cta">
-            <h3>Build Your Loss Prevention Program</h3>
-            <p>Explore our guides, tools, and templates — designed for businesses in every industry, not just retail.</p>
-            <a href="/guides/" class="btn-primary">Browse All Guides →</a>
-          </div>
-        </section>
-
-      </article>
-    </main>
-
-    <!-- ════════════════════════════════════════════
-         SIDEBAR
-    ════════════════════════════════════════════ -->
-    <aside class="sidebar" aria-label="Article sidebar">
-
-      <div class="sidebar-card">
-        <h4>Table of Contents</h4>
-        <ul class="toc-list">
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#what-is-loss-prevention">What Is Loss Prevention?</a></li>
-          <li><a href="#why-loss-prevention-matters">Why It Matters</a></li>
-          <li><a href="#types-of-business-losses">Types of Business Losses</a></li>
-          <li><a href="#common-causes-of-loss">Common Causes of Loss</a></li>
-          <li><a href="#key-loss-prevention-controls">Key LP Controls</a></li>
-          <li><a href="#loss-prevention-kpis">KPIs to Track</a></li>
-          <li><a href="#best-practices">Best Practices</a></li>
-          <li><a href="#frequently-asked-questions">FAQ</a></li>
-          <li><a href="#conclusion">Conclusion</a></li>
-        </ul>
-      </div>
-
-      <div class="sidebar-card">
-        <h4>Related Topics</h4>
-        <div class="tag-list">
-          <a class="tag" href="#">Employee Theft</a>
-          <a class="tag" href="#">Internal Fraud</a>
-          <a class="tag" href="#">Asset Protection</a>
-          <a class="tag" href="#">Internal Audit</a>
-          <a class="tag" href="#">Cash Management</a>
-          <a class="tag" href="#">Vendor Fraud</a>
-          <a class="tag" href="#">Healthcare LP</a>
-          <a class="tag" href="#">Construction LP</a>
-          <a class="tag" href="#">Hospitality LP</a>
-          <a class="tag" href="#">Cyber Loss</a>
-          <a class="tag" href="#">Retail Shrinkage</a>
-        </div>
-      </div>
-
-      <div class="sidebar-card" style="background: #0f2040; border-color: var(--accent);">
-        <h4 style="color: var(--accent-lt);">Quick Stat</h4>
-        <p style="font-size: 2rem; font-weight: 700; color: var(--heading); font-family: var(--font-display); line-height:1; margin: 8px 0 4px;">~65%</p>
-        <p style="font-size: 0.82rem; color: var(--muted); margin:0;">of business losses are preventable with basic controls in place.</p>
-      </div>
-
-    </aside>
-
-  </div><!-- /page-wrap -->
-
-  <!-- ─── FOOTER ────────────────────────────────── -->
-  <footer class="site-footer">
-    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
-    <p style="margin-top:8px;">
-      <a href="/privacy/">Privacy</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a>
-    </p>
-  </footer>
-
-  <!-- ─── SCRIPTS ───────────────────────────────── -->
-  <script>
-    // Reading progress bar
-    window.addEventListener('scroll', () => {
-      const doc = document.documentElement;
-      const scrolled = doc.scrollTop;
-      const total = doc.scrollHeight - doc.clientHeight;
-      document.getElementById('read-progress').style.width = ((scrolled / total) * 100) + '%';
-    });
-
-    // FAQ accordion
-    function toggleFaq(btn) {
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
-      // Close all
-      document.querySelectorAll('.faq-q').forEach(b => {
-        b.setAttribute('aria-expanded', 'false');
-        b.nextElementSibling.classList.remove('open');
-      });
-      // Open clicked if it wasn't open
-      if (!isOpen) {
-        btn.setAttribute('aria-expanded', 'true');
-        btn.nextElementSibling.classList.add('open');
-      }
-    }
-
-    // TOC active state on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const tocLinks = document.querySelectorAll('.toc-list a');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          tocLinks.forEach(l => l.classList.remove('active'));
-          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
-          if (active) active.classList.add('active');
-        }
-      });
-    }, { rootMargin: '-20% 0px -70% 0px' });
-    sections.forEach(s => observer.observe(s));
-  </script>
-
+<footer class="footer">
+© 2026 PreventLoss.org
+</footer>
 </body>
 </html>
+"""
+path = "/mnt/data/what-is-loss-prevention.html"
+Path(path).write_text(html, encoding="utf-8")
+print(path)
