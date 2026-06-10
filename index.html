@@ -1,171 +1,357 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+html = """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PreventLoss Research | Operational Controls. Inventory Intelligence. Audit Insights.</title>
+<meta name="description" content="Research, frameworks, audit checklists and operational guides for Inventory, Procurement, Internal Audit and Operations teams.">
 
-<title>PreventLoss.org | Loss Prevention, Audit & Operations Excellence</title>
+<style>
+:root{
+--navy:#0F172A;
+--blue:#2563EB;
+--white:#FFFFFF;
+--light:#F8FAFC;
+--text:#334155;
+--border:#E2E8F0;
+}
 
-<meta name="description" content="Professional insights, frameworks, audit checklists, inventory controls and operational excellence resources for business leaders.">
+*{margin:0;padding:0;box-sizing:border-box}
 
-<link rel="stylesheet" href="assets/css/style.css">
+body{
+font-family:Inter,Arial,sans-serif;
+background:#fff;
+color:var(--text);
+line-height:1.7;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+header{
+background:var(--navy);
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+color:#fff;
+font-size:28px;
+font-weight:800;
+text-decoration:none;
+}
+
+.logo span{
+color:#60A5FA;
+}
+
+.nav-links a{
+color:#CBD5E1;
+text-decoration:none;
+margin-left:24px;
+}
+
+.hero{
+background:var(--navy);
+padding:120px 20px;
+text-align:center;
+}
+
+.badge{
+display:inline-block;
+padding:8px 16px;
+border:1px solid var(--blue);
+color:#60A5FA;
+border-radius:999px;
+margin-bottom:25px;
+}
+
+.hero h1{
+color:#fff;
+font-size:64px;
+line-height:1.1;
+margin-bottom:25px;
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+font-size:22px;
+color:#CBD5E1;
+}
+
+.hero-buttons{
+margin-top:40px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+border-radius:10px;
+text-decoration:none;
+font-weight:700;
+margin:8px;
+}
+
+.btn-primary{
+background:var(--blue);
+color:#fff;
+}
+
+.btn-secondary{
+border:1px solid #475569;
+color:#fff;
+}
+
+.section{
+padding:80px 0;
+}
+
+.section-title{
+font-size:40px;
+color:var(--navy);
+margin-bottom:15px;
+}
+
+.section-subtitle{
+color:#64748B;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
+
+.card{
+background:#fff;
+border:1px solid var(--border);
+border-radius:16px;
+padding:24px;
+transition:.2s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card h3{
+color:var(--navy);
+margin-bottom:10px;
+}
+
+.card a{
+color:var(--blue);
+text-decoration:none;
+font-weight:600;
+}
+
+.newsletter{
+background:var(--navy);
+padding:80px 20px;
+text-align:center;
+}
+
+.newsletter h2{
+color:#fff;
+font-size:40px;
+margin-bottom:15px;
+}
+
+.newsletter p{
+color:#CBD5E1;
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.newsletter input{
+padding:14px;
+width:320px;
+max-width:90%;
+border-radius:10px;
+border:none;
+}
+
+.newsletter button{
+padding:14px 24px;
+border:none;
+background:var(--blue);
+color:#fff;
+border-radius:10px;
+font-weight:700;
+margin-left:10px;
+}
+
+footer{
+background:#020617;
+color:#94A3B8;
+padding:50px 20px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+footer a{
+color:#CBD5E1;
+text-decoration:none;
+display:block;
+margin-bottom:10px;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:42px;}
+.nav-links{display:none;}
+}
+</style>
 </head>
-
 <body>
 
-<header class="header">
-    <div class="container nav">
-        <div class="logo">PreventLoss</div>
-
-        <nav>
-            <a href="/">Home</a>
-            <a href="/articles/">Articles</a>
-            <a href="/categories/">Categories</a>
-            <a href="/about/">About</a>
-            <a href="/contact/">Contact</a>
-        </nav>
-    </div>
+<header>
+<div class="container nav">
+<a href="/" class="logo">Prevent<span>Loss</span></a>
+<div class="nav-links">
+<a href="/articles/">Articles</a>
+<a href="/categories/">Categories</a>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+</div>
+</div>
 </header>
 
 <section class="hero">
-    <div class="container">
-        <span class="badge">Industry Research & Insights</span>
+<div class="container">
+<span class="badge">PreventLoss Research</span>
+<h1>Operational Controls.<br>Inventory Intelligence.<br>Audit Insights.</h1>
+<p>Practical research, frameworks, audit checklists and operational guides for Inventory, Procurement, Internal Audit and Operations teams.</p>
 
-        <h1>
-            Prevent Loss Through Better Controls,
-            Audits & Operations
-        </h1>
-
-        <p>
-            Practical guides, templates, checklists and frameworks
-            for business leaders, auditors, procurement teams and
-            operations professionals.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="/articles/" class="btn-primary">Browse Articles</a>
-            <a href="/categories/" class="btn-secondary">Explore Categories</a>
-        </div>
-    </div>
+<div class="hero-buttons">
+<a href="/articles/" class="btn btn-primary">Browse Research</a>
+<a href="/categories/" class="btn btn-secondary">Explore Categories</a>
+</div>
+</div>
 </section>
 
 <section class="section">
-    <div class="container">
+<div class="container">
+<h2 class="section-title">Featured Research</h2>
+<p class="section-subtitle">Popular guides from PreventLoss Research.</p>
 
-        <h2>Featured Categories</h2>
+<div class="grid">
+<div class="card">
+<h3>What Is Loss Prevention?</h3>
+<p>Complete guide to reducing inventory, procurement and operational losses.</p>
+<a href="/articles/what-is-loss-prevention.html">Read Article →</a>
+</div>
 
-        <div class="grid-3">
+<div class="card">
+<h3>Inventory Shrinkage Explained</h3>
+<p>Understand causes, examples and prevention methods.</p>
+<a href="#">Coming Soon →</a>
+</div>
 
-            <div class="card">
-                <h3>Loss Prevention</h3>
-                <p>Controls, fraud prevention and leakage reduction.</p>
-            </div>
-
-            <div class="card">
-                <h3>Inventory Management</h3>
-                <p>Inventory accuracy, shrinkage and reconciliation.</p>
-            </div>
-
-            <div class="card">
-                <h3>Procurement</h3>
-                <p>Vendor controls, purchasing and compliance.</p>
-            </div>
-
-            <div class="card">
-                <h3>Internal Audit</h3>
-                <p>Audit frameworks and control assessments.</p>
-            </div>
-
-            <div class="card">
-                <h3>Cost Control</h3>
-                <p>Leakage identification and margin protection.</p>
-            </div>
-
-            <div class="card">
-                <h3>Operations Excellence</h3>
-                <p>Continuous improvement and operational performance.</p>
-            </div>
-
-        </div>
-
-    </div>
+<div class="card">
+<h3>Procurement Audit Checklist</h3>
+<p>Critical controls every organization should review.</p>
+<a href="#">Coming Soon →</a>
+</div>
+</div>
+</div>
 </section>
 
-<section class="section gray">
-    <div class="container">
+<section class="section" style="background:#F8FAFC;">
+<div class="container">
+<h2 class="section-title">Research Categories</h2>
 
-        <h2>Latest Articles</h2>
+<div class="grid">
+<div class="card"><h3>Loss Prevention</h3></div>
+<div class="card"><h3>Inventory Management</h3></div>
+<div class="card"><h3>Procurement</h3></div>
+<div class="card"><h3>Internal Audit</h3></div>
+<div class="card"><h3>Cost Control</h3></div>
+<div class="card"><h3>Operations Excellence</h3></div>
+</div>
+</div>
+</section>
 
-        <div class="grid-3">
+<section class="section">
+<div class="container">
+<h2 class="section-title">Latest Articles</h2>
 
-            <div class="article-card">
-                <h3>What Is Loss Prevention?</h3>
-            </div>
+<div class="grid">
+<div class="card"><h3>What Is Loss Prevention?</h3></div>
+<div class="card"><h3>Inventory Shrinkage Explained</h3></div>
+<div class="card"><h3>Inventory Accuracy Formula</h3></div>
+</div>
+</div>
+</section>
 
-            <div class="article-card">
-                <h3>Inventory Shrinkage Explained</h3>
-            </div>
+<section class="section" style="background:#F8FAFC;">
+<div class="container">
+<h2 class="section-title">Popular Frameworks</h2>
 
-            <div class="article-card">
-                <h3>Inventory Accuracy Formula</h3>
-            </div>
-
-            <div class="article-card">
-                <h3>Cycle Count vs Physical Count</h3>
-            </div>
-
-            <div class="article-card">
-                <h3>Warehouse Loss Prevention Guide</h3>
-            </div>
-
-            <div class="article-card">
-                <h3>Vendor Leakage Detection</h3>
-            </div>
-
-        </div>
-
-    </div>
+<div class="grid">
+<div class="card"><h3>Root Cause Analysis</h3></div>
+<div class="card"><h3>CAPA Framework</h3></div>
+<div class="card"><h3>Operational Risk Assessment</h3></div>
+</div>
+</div>
 </section>
 
 <section class="newsletter">
-    <div class="container">
-
-        <h2>Stay Ahead of Operational Risks</h2>
-
-        <p>
-            Get new audit guides, operational frameworks,
-            inventory control resources and best practices.
-        </p>
-
-        <button>Coming Soon</button>
-
-    </div>
+<h2>Join PreventLoss Research</h2>
+<p>Get practical guides, frameworks and audit insights delivered to your inbox.</p>
+<input type="email" placeholder="Enter your email">
+<button>Subscribe</button>
 </section>
 
 <footer>
-    <div class="container footer">
+<div class="container footer-grid">
+<div>
+<h3>PreventLoss Research</h3>
+<p>Research and insights for operational excellence.</p>
+</div>
 
-        <div>
-            <h3>PreventLoss</h3>
-            <p>Professional publication for operational controls and risk reduction.</p>
-        </div>
+<div>
+<h3>Pages</h3>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+<a href="/articles/">Articles</a>
+</div>
 
-        <div>
-            <a href="/about/">About</a>
-            <a href="/contact/">Contact</a>
-        </div>
+<div>
+<h3>Legal</h3>
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms/">Terms</a>
+</div>
+</div>
 
-        <div>
-            <a href="/privacy-policy/">Privacy Policy</a>
-            <a href="/terms/">Terms</a>
-        </div>
-
-    </div>
-
-    <div class="copyright">
-        © 2026 PreventLoss.org
-    </div>
+<p style="margin-top:40px;">© 2026 PreventLoss.org</p>
 </footer>
 
 </body>
 </html>
+"""
+
+path = "/mnt/data/index.html"
+Path(path).write_text(html, encoding="utf-8")
+print(path)
