@@ -1,1 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Privacy Policy | PreventLoss.org</title>
+  <meta name="description" content="Privacy Policy for PreventLoss.org. Learn how we collect, use, and protect your personal information when you visit our website." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="PreventLoss.org" />
+  <link rel="canonical" href="https://www.preventloss.org/privacy/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Privacy Policy | PreventLoss.org" />
+  <meta property="og:description" content="Learn how PreventLoss.org collects, uses, and protects your personal information." />
+  <meta property="og:url" content="https://www.preventloss.org/privacy/" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy",
+    "description": "Privacy Policy for PreventLoss.org",
+    "url": "https://www.preventloss.org/privacy/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "PreventLoss.org",
+      "url": "https://www.preventloss.org"
+    }
+  }
+  </script>
+
+  <style>
+    /* ─── Design tokens ────────────────────────── */
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Nav ───────────────────────────────────── */
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo {
+      font-family: var(--font-display);
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ─── Layout ────────────────────────────────── */
+    .page-wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 800px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* ─── Page header ───────────────────────────── */
+    .page-header {
+      padding: 52px 0 36px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .page-eyebrow {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--muted); margin-bottom: 14px;
+    }
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .page-header .meta {
+      display: flex; flex-wrap: wrap; gap: 20px;
+      font-size: 0.82rem; color: var(--muted);
+    }
+
+    /* ─── Last updated banner ───────────────────── */
+    .update-banner {
+      display: flex; align-items: center; gap: 12px;
+      background: #0d1f16;
+      border: 1px solid var(--success);
+      border-radius: var(--r-md);
+      padding: 14px 18px;
+      margin-bottom: 36px;
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+    .update-banner .icon { font-size: 1rem; flex-shrink: 0; }
+    .update-banner strong { color: #34d399; }
+
+    /* ─── Prose ─────────────────────────────────── */
+    .prose h2 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.02em;
+      margin: 44px 0 14px;
+      padding-top: 44px;
+      border-top: 1px solid var(--border);
+    }
+    .prose h2:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .prose h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--heading);
+      margin: 24px 0 8px;
+    }
+    .prose p {
+      margin-bottom: 18px;
+      color: var(--text);
+    }
+    .prose a {
+      color: var(--accent-lt);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .prose strong { color: var(--heading); font-weight: 600; }
+    .prose em { color: var(--muted); }
+
+    /* ─── Bullet lists ──────────────────────────── */
+    .prose ul {
+      list-style: none;
+      margin: 12px 0 20px;
+    }
+    .prose ul li {
+      display: flex;
+      gap: 10px;
+      padding: 6px 0;
+      font-size: 0.94rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+    }
+    .prose ul li:last-child { border-bottom: none; }
+    .prose ul li::before {
+      content: '–';
+      color: var(--accent-lt);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ─── Info cards ────────────────────────────── */
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 20px 22px;
+      margin: 24px 0;
+      font-size: 0.9rem;
+    }
+    .info-card .info-label {
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent-lt); margin-bottom: 10px;
+    }
+    .info-card p { margin-bottom: 8px; color: var(--muted); }
+    .info-card p:last-child { margin-bottom: 0; }
+    .info-card strong { color: var(--text); }
+
+    /* ─── Contact box ───────────────────────────── */
+    .contact-box {
+      background: linear-gradient(135deg, #0f2040 0%, #181c27 100%);
+      border: 1px solid var(--accent);
+      border-radius: var(--r-lg);
+      padding: 28px;
+      margin-top: 48px;
+      text-align: center;
+    }
+    .contact-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--heading);
+      margin-bottom: 8px;
+    }
+    .contact-box p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid var(--accent);
+      color: var(--accent-lt);
+      font-weight: 700; font-size: 0.875rem;
+      padding: 10px 24px;
+      border-radius: var(--r-sm);
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* ─── Sidebar ───────────────────────────────── */
+    .sidebar { padding-top: 52px; }
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 20px;
+      margin-bottom: 16px;
+      position: sticky;
+      top: 72px;
+    }
+    .sidebar-card h4 {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.09em;
+      color: var(--muted); margin-bottom: 14px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      font-size: 0.82rem; color: var(--muted);
+      text-decoration: none;
+      display: block; padding: 5px 0 5px 12px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    .toc-list a:hover, .toc-list a.active {
+      color: var(--text);
+      border-color: var(--accent-lt);
+    }
+    .sidebar-summary p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .sidebar-summary p:last-child { margin-bottom: 0; }
+    .sidebar-summary .bullet {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--success);
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* ─── Footer ────────────────────────────────── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 80px;
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAV ──────────────────────────────────── -->
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about/">About</a></li>
+    <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── PAGE WRAP ────────────────────────────── -->
+  <div class="page-wrap">
+
+    <!-- ══════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════ -->
+    <main id="main-content">
+
+      <header class="page-header">
+        <div class="page-eyebrow">Legal</div>
+        <h1>Privacy Policy</h1>
+        <div class="meta">
+          <span>🗓 Effective date: January 1, 2025</span>
+          <span>📝 Last updated: June 1, 2025</span>
+        </div>
+      </header>
+
+      <div class="update-banner">
+        <span class="icon">✅</span>
+        <span>This policy was last reviewed on <strong>June 1, 2025</strong>. We will notify users of any material changes by updating the date above and, where appropriate, by email.</span>
+      </div>
+
+      <article class="prose">
+
+        <!-- 1 -->
+        <section id="introduction">
+          <h2>1. Introduction</h2>
+          <p>
+            Welcome to <strong>PreventLoss.org</strong> ("we," "us," or "our"). We are committed to protecting your privacy and being transparent about how we collect, use, and share information when you visit our website at <a href="https://www.preventloss.org">preventloss.org</a> (the "Site").
+          </p>
+          <p>
+            This Privacy Policy explains what personal data we collect, why we collect it, how we use it, and the rights and choices you have regarding your information. By using the Site, you agree to the practices described in this policy.
+          </p>
+          <p>
+            If you have questions or concerns about this policy, please contact us at <a href="mailto:privacy@preventloss.org">privacy@preventloss.org</a>.
+          </p>
+        </section>
+
+        <!-- 2 -->
+        <section id="information-we-collect">
+          <h2>2. Information We Collect</h2>
+          <p>We collect information in the following ways:</p>
+
+          <h3>2.1 Information You Provide Directly</h3>
+          <p>
+            When you interact with us — for example, by subscribing to our newsletter, submitting a contact form, or creating an account — we may collect:
+          </p>
+          <ul>
+            <li>Your name</li>
+            <li>Your email address</li>
+            <li>Any message or content you submit to us</li>
+            <li>Your business name or industry (if provided voluntarily)</li>
+          </ul>
+
+          <h3>2.2 Information Collected Automatically</h3>
+          <p>
+            When you visit the Site, we and our third-party service providers automatically collect certain technical information, including:
+          </p>
+          <ul>
+            <li>IP address and approximate geographic location (country/region)</li>
+            <li>Browser type and version</li>
+            <li>Operating system</li>
+            <li>Pages visited, time spent on pages, and navigation paths</li>
+            <li>Referring website or search query that brought you to the Site</li>
+            <li>Device type (desktop, mobile, tablet)</li>
+          </ul>
+          <p>
+            This information is collected through <strong>cookies, web beacons, and similar tracking technologies</strong>. See Section 5 for more detail on cookies.
+          </p>
+
+          <h3>2.3 Information from Third Parties</h3>
+          <p>
+            We may receive information about you from third-party services we use, such as analytics platforms, email marketing providers, or advertising networks. This information is used only in accordance with this policy and the terms of those services.
+          </p>
+        </section>
+
+        <!-- 3 -->
+        <section id="how-we-use-your-information">
+          <h2>3. How We Use Your Information</h2>
+          <p>We use the information we collect for the following purposes:</p>
+          <ul>
+            <li><strong>To operate and improve the Site</strong> — including analyzing traffic, fixing bugs, and improving content and performance.</li>
+            <li><strong>To communicate with you</strong> — responding to inquiries, sending newsletters or updates you have opted into, and providing customer support.</li>
+            <li><strong>To personalize your experience</strong> — understanding how our content is used so we can publish more of what is valuable to our readers.</li>
+            <li><strong>To comply with legal obligations</strong> — meeting applicable laws, regulations, and lawful requests from public authorities.</li>
+            <li><strong>To protect the Site and our users</strong> — detecting, investigating, and preventing fraud, abuse, and security incidents.</li>
+          </ul>
+          <p>
+            We do <strong>not</strong> sell your personal information to third parties. We do not use your personal data for automated decision-making or profiling in ways that produce legal or similarly significant effects.
+          </p>
+        </section>
+
+        <!-- 4 -->
+        <section id="legal-basis">
+          <h2>4. Legal Basis for Processing (EEA / UK Visitors)</h2>
+          <p>
+            If you are located in the European Economic Area (EEA) or the United Kingdom, our legal basis for processing your personal data depends on the data and context:
+          </p>
+          <ul>
+            <li><strong>Legitimate interests</strong> — operating and improving the Site, analytics, and security.</li>
+            <li><strong>Consent</strong> — sending marketing emails or newsletters; using non-essential cookies. You may withdraw consent at any time.</li>
+            <li><strong>Contract</strong> — fulfilling any service agreement or transaction you enter with us.</li>
+            <li><strong>Legal obligation</strong> — complying with applicable laws.</li>
+          </ul>
+        </section>
+
+        <!-- 5 -->
+        <section id="cookies">
+          <h2>5. Cookies and Tracking Technologies</h2>
+          <p>
+            We use cookies and similar technologies to enhance your experience, understand how the Site is used, and — where applicable — deliver relevant content. Here is an overview of the types we use:
+          </p>
+
+          <div class="info-card">
+            <div class="info-label">🍪 Cookie Types We Use</div>
+            <p><strong>Essential cookies</strong> — Required for the Site to function. These cannot be disabled.</p>
+            <p><strong>Analytics cookies</strong> — Help us understand how visitors navigate the Site (e.g., Google Analytics). These are only set with your consent where required by law.</p>
+            <p><strong>Preference cookies</strong> — Remember settings like your preferred display mode or dismissed banners.</p>
+            <p><strong>Marketing cookies</strong> — Used to deliver relevant advertisements. Only applied where you have given consent.</p>
+          </div>
+
+          <p>
+            You can control or disable cookies through your browser settings at any time. Note that disabling certain cookies may affect Site functionality. You can also opt out of Google Analytics tracking by using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.
+          </p>
+        </section>
+
+        <!-- 6 -->
+        <section id="data-sharing">
+          <h2>6. How We Share Your Information</h2>
+          <p>We do not sell, rent, or trade your personal information. We may share your data only in the following limited circumstances:</p>
+          <ul>
+            <li><strong>Service providers</strong> — Trusted third-party vendors who assist us in operating the Site (e.g., hosting, email delivery, analytics). These providers are contractually bound to protect your data and may not use it for their own purposes.</li>
+            <li><strong>Legal requirements</strong> — We may disclose information if required to do so by law, court order, or governmental authority, or if we believe disclosure is necessary to protect our rights, your safety, or the safety of others.</li>
+            <li><strong>Business transfers</strong> — In the event of a merger, acquisition, or sale of assets, your information may be transferred. We will notify you via email and/or prominent notice on the Site if this occurs.</li>
+          </ul>
+        </section>
+
+        <!-- 7 -->
+        <section id="data-retention">
+          <h2>7. Data Retention</h2>
+          <p>
+            We retain personal data only for as long as necessary to fulfill the purposes described in this policy, or as required by law. Specifically:
+          </p>
+          <ul>
+            <li>Email subscribers: retained until you unsubscribe or request deletion.</li>
+            <li>Contact form submissions: retained for up to 24 months for customer support purposes.</li>
+            <li>Analytics data: aggregated and anonymized; typically retained for up to 26 months per our analytics provider's defaults.</li>
+            <li>Server logs: retained for up to 90 days for security purposes.</li>
+          </ul>
+          <p>
+            When data is no longer needed, we securely delete or anonymize it.
+          </p>
+        </section>
+
+        <!-- 8 -->
+        <section id="your-rights">
+          <h2>8. Your Privacy Rights</h2>
+          <p>
+            Depending on your location, you may have the following rights regarding your personal data:
+          </p>
+          <ul>
+            <li><strong>Access</strong> — Request a copy of the personal data we hold about you.</li>
+            <li><strong>Correction</strong> — Request that we correct inaccurate or incomplete data.</li>
+            <li><strong>Deletion</strong> — Request that we delete your personal data ("right to be forgotten").</li>
+            <li><strong>Restriction</strong> — Request that we limit how we process your data in certain circumstances.</li>
+            <li><strong>Portability</strong> — Request a machine-readable copy of your data to transfer to another service.</li>
+            <li><strong>Objection</strong> — Object to processing based on legitimate interests or for direct marketing.</li>
+            <li><strong>Withdraw consent</strong> — Where processing is based on consent, withdraw it at any time without affecting prior processing.</li>
+          </ul>
+          <p>
+            To exercise any of these rights, please contact us at <a href="mailto:privacy@preventloss.org">privacy@preventloss.org</a>. We will respond within 30 days. We may need to verify your identity before fulfilling a request.
+          </p>
+          <p>
+            If you are in the EEA or UK and believe we have not handled your data appropriately, you have the right to lodge a complaint with your local data protection authority.
+          </p>
+        </section>
+
+        <!-- 9 -->
+        <section id="data-security">
+          <h2>9. Data Security</h2>
+          <p>
+            We implement reasonable technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These include:
+          </p>
+          <ul>
+            <li>HTTPS encryption on all pages of the Site</li>
+            <li>Access controls that limit who can view personal data internally</li>
+            <li>Regular security reviews of our hosting and third-party services</li>
+          </ul>
+          <p>
+            However, no method of transmission over the internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security. In the event of a data breach that affects your rights, we will notify you as required by applicable law.
+          </p>
+        </section>
+
+        <!-- 10 -->
+        <section id="third-party-links">
+          <h2>10. Third-Party Links</h2>
+          <p>
+            Our Site may contain links to third-party websites, tools, and services. These are provided for your convenience and do not signify our endorsement. We have no control over, and accept no responsibility for, the content or privacy practices of those sites.
+          </p>
+          <p>
+            We encourage you to review the privacy policy of any third-party site you visit.
+          </p>
+        </section>
+
+        <!-- 11 -->
+        <section id="children">
+          <h2>11. Children's Privacy</h2>
+          <p>
+            PreventLoss.org is intended for general business audiences and is <strong>not directed at children under the age of 16</strong>. We do not knowingly collect personal information from children. If we become aware that we have inadvertently collected data from a child, we will delete it promptly. If you believe we have collected data from a child, please contact us at <a href="mailto:privacy@preventloss.org">privacy@preventloss.org</a>.
+          </p>
+        </section>
+
+        <!-- 12 -->
+        <section id="international-transfers">
+          <h2>12. International Data Transfers</h2>
+          <p>
+            PreventLoss.org is operated from [your country]. If you access the Site from outside this country, your information may be transferred to and processed in countries with different data protection laws than your own.
+          </p>
+          <p>
+            Where we transfer personal data internationally — for example, to service providers in the United States — we ensure appropriate safeguards are in place, such as Standard Contractual Clauses (SCCs) approved by the European Commission, or equivalent mechanisms under applicable law.
+          </p>
+        </section>
+
+        <!-- 13 -->
+        <section id="changes">
+          <h2>13. Changes to This Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will update the "Last updated" date at the top of this page and, where appropriate, notify you by email or a prominent notice on the Site.
+          </p>
+          <p>
+            We encourage you to review this policy periodically to stay informed about how we protect your information. Your continued use of the Site after changes become effective constitutes acceptance of the revised policy.
+          </p>
+        </section>
+
+        <!-- 14 -->
+        <section id="contact">
+          <h2>14. Contact Us</h2>
+          <p>
+            If you have any questions, requests, or concerns about this Privacy Policy or your personal data, please reach out:
+          </p>
+
+          <div class="info-card">
+            <div class="info-label">📬 Data Controller Contact</div>
+            <p><strong>PreventLoss.org</strong></p>
+            <p>Email: <a href="mailto:privacy@preventloss.org" style="color:var(--accent-lt);">privacy@preventloss.org</a></p>
+            <p>Website: <a href="https://www.preventloss.org" style="color:var(--accent-lt);">www.preventloss.org</a></p>
+          </div>
+
+          <div class="contact-box">
+            <h3>Have a Privacy Request?</h3>
+            <p>To request access, correction, or deletion of your personal data, email us directly and we'll respond within 30 days.</p>
+            <a href="mailto:privacy@preventloss.org" class="btn-outline">Contact Privacy Team →</a>
+          </div>
+
+        </section>
+
+      </article>
+    </main>
+
+    <!-- ══════════════════════════════
+         SIDEBAR
+    ══════════════════════════════ -->
+    <aside class="sidebar" aria-label="Page navigation">
+
+      <div class="sidebar-card">
+        <h4>On This Page</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction">1. Introduction</a></li>
+          <li><a href="#information-we-collect">2. Information We Collect</a></li>
+          <li><a href="#how-we-use-your-information">3. How We Use It</a></li>
+          <li><a href="#legal-basis">4. Legal Basis (EEA/UK)</a></li>
+          <li><a href="#cookies">5. Cookies</a></li>
+          <li><a href="#data-sharing">6. Data Sharing</a></li>
+          <li><a href="#data-retention">7. Data Retention</a></li>
+          <li><a href="#your-rights">8. Your Rights</a></li>
+          <li><a href="#data-security">9. Security</a></li>
+          <li><a href="#third-party-links">10. Third-Party Links</a></li>
+          <li><a href="#children">11. Children's Privacy</a></li>
+          <li><a href="#international-transfers">12. International Transfers</a></li>
+          <li><a href="#changes">13. Policy Changes</a></li>
+          <li><a href="#contact">14. Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Quick Summary</h4>
+        <div class="sidebar-summary">
+          <p><span class="bullet"></span>We do not sell your personal data.</p>
+          <p><span class="bullet"></span>Analytics only with consent where required.</p>
+          <p><span class="bullet"></span>You can request deletion anytime.</p>
+          <p><span class="bullet"></span>Secure HTTPS on all pages.</p>
+          <p><span class="bullet"></span>We respond to privacy requests within 30 days.</p>
+        </div>
+      </div>
+
+    </aside>
+
+  </div><!-- /page-wrap -->
+
+  <!-- ─── FOOTER ────────────────────────────────── -->
+  <footer class="site-footer">
+    <p>© 2025 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a>
+    </p>
+  </footer>
+
+  <!-- ─── TOC SCROLL HIGHLIGHTING ─────────────────── -->
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
