@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Terms of Use | PreventLoss.org</title>
+  <meta name="description" content="Terms of Use for PreventLoss.org. Read the terms governing your use of our website, content, and resources." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="PreventLoss.org" />
+  <link rel="canonical" href="https://www.preventloss.org/terms/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Terms of Use | PreventLoss.org" />
+  <meta property="og:description" content="Terms governing your use of PreventLoss.org, its content, and resources." />
+  <meta property="og:url" content="https://www.preventloss.org/terms/" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms of Use",
+    "description": "Terms of Use for PreventLoss.org",
+    "url": "https://www.preventloss.org/terms/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "PreventLoss.org",
+      "url": "https://www.preventloss.org"
+    }
+  }
+  </script>
+
+  <style>
+    /* ─── Design tokens ────────────────────────── */
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --warn:        #f59e0b;
+      --warn-bg:     #1c1500;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent-lt); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--text); }
+
+    /* ─── Nav ───────────────────────────────────── */
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo {
+      font-family: var(--font-display);
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ─── Layout ────────────────────────────────── */
+    .page-wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 800px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* ─── Page header ───────────────────────────── */
+    .page-header {
+      padding: 52px 0 36px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .page-eyebrow {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--muted); margin-bottom: 14px;
+    }
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .page-header .meta {
+      display: flex; flex-wrap: wrap; gap: 20px;
+      font-size: 0.82rem; color: var(--muted);
+    }
+
+    /* ─── Important notice banner ───────────────── */
+    .notice-banner {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: var(--warn-bg);
+      border: 1px solid var(--warn);
+      border-radius: var(--r-md);
+      padding: 16px 18px;
+      margin-bottom: 36px;
+      font-size: 0.875rem;
+    }
+    .notice-banner .icon { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+    .notice-banner p { color: var(--text); line-height: 1.55; margin: 0; }
+    .notice-banner strong { color: var(--warn); }
+
+    /* ─── Prose ─────────────────────────────────── */
+    .prose h2 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.02em;
+      margin: 44px 0 14px;
+      padding-top: 44px;
+      border-top: 1px solid var(--border);
+    }
+    .prose h2:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .prose h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--heading);
+      margin: 24px 0 8px;
+    }
+    .prose p {
+      margin-bottom: 18px;
+      color: var(--text);
+    }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { color: var(--heading); font-weight: 600; }
+
+    /* ─── Lists ─────────────────────────────────── */
+    .prose ul {
+      list-style: none;
+      margin: 12px 0 20px;
+    }
+    .prose ul li {
+      display: flex;
+      gap: 10px;
+      padding: 7px 0;
+      font-size: 0.94rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+    }
+    .prose ul li:last-child { border-bottom: none; }
+    .prose ul li::before {
+      content: '–';
+      color: var(--accent-lt);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .prose ol {
+      counter-reset: ol-counter;
+      list-style: none;
+      margin: 12px 0 20px;
+    }
+    .prose ol li {
+      counter-increment: ol-counter;
+      display: flex;
+      gap: 12px;
+      padding: 8px 0;
+      font-size: 0.94rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+    }
+    .prose ol li:last-child { border-bottom: none; }
+    .prose ol li::before {
+      content: counter(ol-counter);
+      font-size: 0.72rem; font-weight: 800;
+      color: var(--accent-lt);
+      background: var(--accent-glow);
+      border: 1px solid var(--accent);
+      border-radius: 4px;
+      min-width: 22px; height: 22px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ─── Info / highlight cards ────────────────── */
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 20px 22px;
+      margin: 24px 0;
+      font-size: 0.9rem;
+    }
+    .info-card .info-label {
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent-lt); margin-bottom: 10px;
+    }
+    .info-card p {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+    .info-card p:last-child { margin-bottom: 0; }
+    .info-card strong { color: var(--text); }
+
+    .highlight-card {
+      background: #0f2040;
+      border: 1px solid var(--accent);
+      border-radius: var(--r-md);
+      padding: 20px 22px;
+      margin: 24px 0;
+      font-size: 0.9rem;
+    }
+    .highlight-card .info-label {
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent-lt); margin-bottom: 10px;
+    }
+    .highlight-card p { color: var(--muted); margin-bottom: 8px; }
+    .highlight-card p:last-child { margin-bottom: 0; }
+    .highlight-card strong { color: var(--text); }
+
+    /* ─── Contact box ───────────────────────────── */
+    .contact-box {
+      background: linear-gradient(135deg, #0f2040 0%, #181c27 100%);
+      border: 1px solid var(--accent);
+      border-radius: var(--r-lg);
+      padding: 28px;
+      margin-top: 48px;
+      text-align: center;
+    }
+    .contact-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--heading);
+      margin-bottom: 8px;
+    }
+    .contact-box p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid var(--accent);
+      color: var(--accent-lt);
+      font-weight: 700; font-size: 0.875rem;
+      padding: 10px 24px;
+      border-radius: var(--r-sm);
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* ─── Sidebar ───────────────────────────────── */
+    .sidebar { padding-top: 52px; }
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 20px;
+      margin-bottom: 16px;
+      position: sticky;
+      top: 72px;
+    }
+    .sidebar-card h4 {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.09em;
+      color: var(--muted); margin-bottom: 14px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      font-size: 0.82rem; color: var(--muted);
+      text-decoration: none;
+      display: block; padding: 5px 0 5px 12px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    .toc-list a:hover, .toc-list a.active {
+      color: var(--text);
+      border-color: var(--accent-lt);
+    }
+    .legal-links { list-style: none; }
+    .legal-links li { margin-bottom: 6px; }
+    .legal-links a {
+      font-size: 0.82rem; color: var(--muted);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: color 0.15s;
+    }
+    .legal-links a:hover { color: var(--text); }
+    .legal-links .active-page {
+      color: var(--accent-lt) !important;
+      font-weight: 600;
+    }
+
+    /* ─── Footer ────────────────────────────────── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 80px;
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAV ──────────────────────────────────── -->
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── PAGE WRAP ────────────────────────────── -->
+  <div class="page-wrap">
+
+    <main id="main-content">
+
+      <header class="page-header">
+        <div class="page-eyebrow">Legal</div>
+        <h1>Terms of Use</h1>
+        <div class="meta">
+          <span>🗓 Effective date: January 1, 2026</span>
+          <span>📝 Last updated: June 1, 2026</span>
+        </div>
+      </header>
+
+      <div class="notice-banner">
+        <span class="icon">⚠️</span>
+        <p>
+          <strong>Please read these terms carefully before using this website.</strong> By accessing or using PreventLoss.org, you agree to be bound by these Terms of Use. If you do not agree with any part of these terms, please discontinue use of the Site immediately.
+        </p>
+      </div>
+
+      <article class="prose">
+
+        <!-- 1 -->
+        <section id="acceptance">
+          <h2>1. Acceptance of Terms</h2>
+          <p>
+            These Terms of Use ("Terms") govern your access to and use of the website located at <strong>preventloss.org</strong> (the "Site"), operated by PreventLoss.org ("we," "us," or "our"). By visiting, reading, or otherwise using any part of the Site, you confirm that you have read, understood, and agree to be legally bound by these Terms and our <a href="/privacy.html">Privacy Policy</a>, which is incorporated herein by reference.
+          </p>
+          <p>
+            We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the Site following any changes constitutes your acceptance of the revised Terms. The "Last updated" date at the top of this page reflects the most recent revision.
+          </p>
+        </section>
+
+        <!-- 2 -->
+        <section id="use-of-site">
+          <h2>2. Use of the Site</h2>
+          <h3>2.1 Permitted Use</h3>
+          <p>
+            You may use the Site for lawful, personal, and non-commercial purposes — including reading articles, downloading publicly available resources, and sharing links to our content. You must be at least 16 years of age to use this Site.
+          </p>
+
+          <h3>2.2 Prohibited Conduct</h3>
+          <p>You agree that you will not:</p>
+          <ul>
+            <li>Use the Site in any way that violates applicable local, national, or international laws or regulations</li>
+            <li>Reproduce, duplicate, copy, sell, or exploit any portion of the Site's content for commercial purposes without our prior written consent</li>
+            <li>Use automated tools (bots, scrapers, crawlers) to extract content from the Site in bulk without permission</li>
+            <li>Attempt to gain unauthorized access to any part of the Site, its servers, or any related systems or networks</li>
+            <li>Transmit any unsolicited or unauthorized advertising or promotional material (spam)</li>
+            <li>Introduce any viruses, trojans, worms, or other malicious or harmful material</li>
+            <li>Impersonate any person or entity, or misrepresent your affiliation with any person or entity</li>
+            <li>Use the Site in a way that could damage, disable, overburden, or impair its functionality</li>
+          </ul>
+          <p>
+            We reserve the right to restrict, suspend, or terminate your access to the Site at any time if we believe you have violated these Terms or for any other reason at our sole discretion.
+          </p>
+        </section>
+
+        <!-- 3 -->
+        <section id="informational-content">
+          <h2>3. Informational Content Only</h2>
+          <div class="highlight-card">
+            <div class="info-label">📌 Important</div>
+            <p>
+              All content published on PreventLoss.org is provided for <strong>general informational and educational purposes only</strong>. It does not constitute professional legal, financial, accounting, security, compliance, or business advice.
+            </p>
+            <p>
+              No content on this Site creates a professional-client relationship of any kind between you and PreventLoss.org.
+            </p>
+          </div>
+          <p>
+            Loss prevention practices, regulations, and best standards vary significantly by industry, jurisdiction, and business type. Information that is accurate and appropriate for one business may not apply to another. You should always consult a qualified professional — such as a licensed attorney, certified accountant, fraud examiner, or security consultant — before implementing any controls, policies, or procedures based on content you read on this Site.
+          </p>
+          <p>
+            We make reasonable efforts to keep our content accurate and up to date, but we make no warranties or representations that any content on the Site is complete, current, or error-free.
+          </p>
+        </section>
+
+        <!-- 4 -->
+        <section id="intellectual-property">
+          <h2>4. Intellectual Property</h2>
+          <p>
+            Unless otherwise stated, all content on this Site — including but not limited to text, articles, guides, graphics, logos, icons, and page layouts — is the property of PreventLoss.org and is protected by applicable copyright, trademark, and intellectual property laws.
+          </p>
+
+          <h3>4.1 What You May Do</h3>
+          <ul>
+            <li>Read, print, or download content for your own personal, non-commercial use</li>
+            <li>Share links to individual pages or articles on social media or via email</li>
+            <li>Quote brief excerpts (under 50 words) in your own work, provided you clearly attribute PreventLoss.org and include a link to the original source</li>
+          </ul>
+
+          <h3>4.2 What You May Not Do</h3>
+          <ul>
+            <li>Reproduce or republish full articles or substantial portions of content on any other website, publication, or platform without our written permission</li>
+            <li>Sell, license, or commercially exploit any content from this Site</li>
+            <li>Remove or alter any copyright, trademark, or other proprietary notices from content you access on the Site</li>
+            <li>Claim ownership of, or represent our content as your own original work</li>
+          </ul>
+          <p>
+            Requests for permission to reproduce content in full should be directed to <a href="mailto:legal@preventloss.org">legal@preventloss.org</a>.
+          </p>
+        </section>
+
+        <!-- 5 -->
+        <section id="third-party-links">
+          <h2>5. Third-Party Links and Resources</h2>
+          <p>
+            The Site may contain links to third-party websites, tools, publications, and resources. These links are provided for your convenience and reference only. We do not control, endorse, or accept responsibility for the content, privacy practices, or terms of any third-party sites.
+          </p>
+          <p>
+            The inclusion of any link does not imply our endorsement of the linked site or its operator. We strongly encourage you to review the terms and privacy policy of any third-party site you visit. Your use of third-party sites is entirely at your own risk.
+          </p>
+        </section>
+
+        <!-- 6 -->
+        <section id="disclaimers">
+          <h2>6. Disclaimers</h2>
+          <h3>6.1 No Warranty</h3>
+          <p>
+            The Site and all content are provided on an <strong>"as is" and "as available"</strong> basis, without any warranties of any kind, either express or implied. To the fullest extent permitted by law, we disclaim all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
+          </p>
+          <p>
+            We do not warrant that the Site will be uninterrupted, error-free, secure, or free of viruses or other harmful components. We do not warrant the accuracy, completeness, or reliability of any content on the Site.
+          </p>
+
+          <h3>6.2 Results Not Guaranteed</h3>
+          <p>
+            Any examples, case studies, statistics, or outcomes mentioned on the Site are illustrative only. We make no guarantee or representation that following any guidance, checklist, or framework published on this Site will result in the prevention of any particular loss, reduction of risk, or improvement in business performance. Results will vary based on your specific business, industry, and circumstances.
+          </p>
+        </section>
+
+        <!-- 7 -->
+        <section id="limitation-of-liability">
+          <h2>7. Limitation of Liability</h2>
+          <p>
+            To the fullest extent permitted by applicable law, PreventLoss.org, its owners, contributors, and affiliates shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages arising out of or in connection with:
+          </p>
+          <ul>
+            <li>Your use of, or inability to use, the Site or its content</li>
+            <li>Any reliance placed on information published on the Site</li>
+            <li>Any errors, omissions, or inaccuracies in the content</li>
+            <li>Unauthorized access to or alteration of your data</li>
+            <li>Any interruption or cessation of transmission to or from the Site</li>
+            <li>Losses or damages of any kind incurred as a result of your business decisions</li>
+          </ul>
+          <p>
+            This limitation applies regardless of whether such damages are based on warranty, contract, tort (including negligence), or any other legal theory, and even if we have been advised of the possibility of such damages.
+          </p>
+          <p>
+            Some jurisdictions do not allow the exclusion or limitation of certain types of liability. In such jurisdictions, our liability shall be limited to the maximum extent permitted by law.
+          </p>
+        </section>
+
+        <!-- 8 -->
+        <section id="indemnification">
+          <h2>8. Indemnification</h2>
+          <p>
+            You agree to defend, indemnify, and hold harmless PreventLoss.org and its owners, contributors, and affiliates from and against any claims, liabilities, damages, losses, and expenses — including reasonable legal fees — arising out of or in any way connected with:
+          </p>
+          <ul>
+            <li>Your access to or use of the Site</li>
+            <li>Your violation of these Terms</li>
+            <li>Your violation of any third-party rights, including intellectual property or privacy rights</li>
+            <li>Any content or material you submit or transmit through the Site</li>
+          </ul>
+        </section>
+
+        <!-- 9 -->
+        <section id="user-submissions">
+          <h2>9. User Submissions and Comments</h2>
+          <p>
+            If the Site offers comment sections, contact forms, or other means by which you may submit content, feedback, or suggestions ("Submissions"), you grant PreventLoss.org a non-exclusive, royalty-free, perpetual, irrevocable, worldwide licence to use, reproduce, modify, publish, and distribute such Submissions in any medium and for any purpose.
+          </p>
+          <p>
+            You represent that any Submission you make is your original work or that you have the right to share it, and that it does not infringe any third-party rights or violate any applicable laws. We reserve the right to remove any Submission at our sole discretion without notice.
+          </p>
+          <p>
+            You must not submit content that is unlawful, defamatory, harassing, abusive, obscene, or otherwise objectionable.
+          </p>
+        </section>
+
+        <!-- 10 -->
+        <section id="privacy">
+          <h2>10. Privacy</h2>
+          <p>
+            Your use of the Site is also governed by our <a href="/privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference. Please review it carefully to understand our data practices. By using the Site, you consent to the collection and use of your information as described in the Privacy Policy.
+          </p>
+        </section>
+
+        <!-- 11 -->
+        <section id="cookies">
+          <h2>11. Cookies</h2>
+          <p>
+            We use cookies and similar tracking technologies as described in our <a href="/privacy.html">Privacy Policy</a>. By continuing to use the Site, you consent to our use of cookies in accordance with that policy. You can adjust your cookie preferences at any time through your browser settings.
+          </p>
+        </section>
+
+        <!-- 12 -->
+        <section id="modifications-to-site">
+          <h2>12. Modifications to the Site</h2>
+          <p>
+            We reserve the right to modify, suspend, or discontinue the Site — or any part of it — at any time and without notice. We will not be liable to you or any third party for any modification, suspension, or discontinuation of the Site or any content on it.
+          </p>
+          <p>
+            We may also update, revise, or remove any content on the Site at any time without notice or obligation to notify you of such changes.
+          </p>
+        </section>
+
+        <!-- 13 -->
+        <section id="governing-law">
+          <h2>13. Governing Law and Jurisdiction</h2>
+          <p>
+            These Terms shall be governed by and construed in accordance with the laws of <strong>[your jurisdiction]</strong>, without regard to its conflict of law provisions.
+          </p>
+          <p>
+            Any dispute arising out of or relating to these Terms or your use of the Site shall be subject to the exclusive jurisdiction of the courts located in <strong>[your jurisdiction]</strong>. If you are accessing the Site from outside this jurisdiction, you do so on your own initiative and are responsible for compliance with local laws.
+          </p>
+
+          <div class="info-card">
+            <div class="info-label">📌 Note for International Users</div>
+            <p>
+              If you access the Site from the European Economic Area (EEA) or the United Kingdom, additional consumer protection rights may apply to you under local law. Nothing in these Terms is intended to limit rights that cannot be waived or excluded under applicable law.
+            </p>
+          </div>
+        </section>
+
+        <!-- 14 -->
+        <section id="severability">
+          <h2>14. Severability and Waiver</h2>
+          <p>
+            If any provision of these Terms is found to be unlawful, void, or unenforceable for any reason, that provision shall be deemed severable from the remaining Terms and shall not affect the validity and enforceability of the remaining provisions.
+          </p>
+          <p>
+            Our failure to enforce any right or provision of these Terms shall not constitute a waiver of that right or provision. A waiver of any breach of these Terms shall not be construed as a waiver of any subsequent breach.
+          </p>
+        </section>
+
+        <!-- 15 -->
+        <section id="entire-agreement">
+          <h2>15. Entire Agreement</h2>
+          <p>
+            These Terms, together with our <a href="/privacy.html">Privacy Policy</a> and any other legal notices published by us on the Site, constitute the entire agreement between you and PreventLoss.org with respect to your use of the Site. They supersede all prior agreements, representations, and understandings between you and us relating to the same subject matter.
+          </p>
+        </section>
+
+        <!-- 16 -->
+        <section id="contact">
+          <h2>16. Contact Us</h2>
+          <p>
+            If you have any questions about these Terms of Use, please contact us:
+          </p>
+
+          <div class="info-card">
+            <div class="info-label">📬 Legal Contact</div>
+            <p><strong>PreventLoss.org</strong></p>
+            <p>Email: <a href="mailto:legal@preventloss.org">legal@preventloss.org</a></p>
+            <p>Website: <a href="https://www.preventloss.org">www.preventloss.org</a></p>
+          </div>
+
+          <div class="contact-box">
+            <h3>Questions About These Terms?</h3>
+            <p>We're happy to clarify any part of this agreement. Reach out and we'll respond promptly.</p>
+            <a href="mailto:legal@preventloss.org" class="btn-outline">Contact Us →</a>
+          </div>
+
+        </section>
+
+      </article>
+    </main>
+
+    <!-- ─── SIDEBAR ───────────────────────────── -->
+    <aside class="sidebar" aria-label="Page navigation">
+
+      <div class="sidebar-card">
+        <h4>On This Page</h4>
+        <ul class="toc-list">
+          <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+          <li><a href="#use-of-site">2. Use of the Site</a></li>
+          <li><a href="#informational-content">3. Informational Content</a></li>
+          <li><a href="#intellectual-property">4. Intellectual Property</a></li>
+          <li><a href="#third-party-links">5. Third-Party Links</a></li>
+          <li><a href="#disclaimers">6. Disclaimers</a></li>
+          <li><a href="#limitation-of-liability">7. Limitation of Liability</a></li>
+          <li><a href="#indemnification">8. Indemnification</a></li>
+          <li><a href="#user-submissions">9. User Submissions</a></li>
+          <li><a href="#privacy">10. Privacy</a></li>
+          <li><a href="#cookies">11. Cookies</a></li>
+          <li><a href="#modifications-to-site">12. Modifications</a></li>
+          <li><a href="#governing-law">13. Governing Law</a></li>
+          <li><a href="#severability">14. Severability</a></li>
+          <li><a href="#entire-agreement">15. Entire Agreement</a></li>
+          <li><a href="#contact">16. Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Legal Pages</h4>
+        <ul class="legal-links">
+          <li><a class="active-page" href="/terms/">📄 Terms of Use</a></li>
+          <li><a href="/privacy.html">🔒 Privacy Policy</a></li>
+          <li><a href="mailto:contact@preventloss.org">✉️ Contact Us</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div><!-- /page-wrap -->
+
+  <!-- ─── FOOTER ────────────────────────────────── -->
+  <footer class="site-footer">
+    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/termshtml">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <!-- ─── TOC SCROLL HIGHLIGHTING ──────────────── -->
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
