@@ -1,1 +1,14 @@
+# robots.txt for PreventLoss.org
+# https://preventloss.org/robots.txt
 
+# ─── All crawlers ───────────────────────────────
+User-agent: *
+Allow: /
+
+# Block non-public utility paths (add more as your site grows)
+Disallow: /cdn-cgi/
+Disallow: /tmp/
+Disallow: /*.json$
+
+# ─── Sitemap ────────────────────────────────────
+Sitemap: https://preventloss.org/sitemap.xml
