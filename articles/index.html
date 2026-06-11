@@ -59,6 +59,7 @@
       --c-ia:   #a78bfa;   /* Internal Audit    — violet */
       --c-cc:   #f87171;   /* Cost Control      — rose   */
       --c-oe:   #38bdf8;   /* Operations Excel  — sky    */
+      --c-cs:   #F54927;   /* Real Case Study  — Red    */
 
       --font-display: 'Georgia', 'Times New Roman', serif;
       --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -224,6 +225,7 @@
     .cat-pill[data-cat="internal-audit"].active       { background: var(--c-ia); color: #1a1030; }
     .cat-pill[data-cat="cost-control"].active         { background: var(--c-cc); color: #2a0808; }
     .cat-pill[data-cat="operations-excellence"].active{ background: var(--c-oe); color: #001a28; }
+    .cat-pill[data-cat="Real-case-study"].active      { background: var(--c-cs); }
 
     /* Result count */
     .result-count {
@@ -287,6 +289,7 @@
     .article-card[data-cat="internal-audit"]::before        { background: var(--c-ia); }
     .article-card[data-cat="cost-control"]::before          { background: var(--c-cc); }
     .article-card[data-cat="operations-excellence"]::before { background: var(--c-oe); }
+    .article-card[data-cat="Real-case-study"]::before       { background: var(--c-cs); }
 
     .article-card[data-cat="loss-prevention"]:hover       { border-color: var(--c-lp); }
     .article-card[data-cat="inventory-management"]:hover  { border-color: var(--c-im); }
@@ -294,6 +297,7 @@
     .article-card[data-cat="internal-audit"]:hover        { border-color: var(--c-ia); }
     .article-card[data-cat="cost-control"]:hover          { border-color: var(--c-cc); }
     .article-card[data-cat="operations-excellence"]:hover { border-color: var(--c-oe); }
+    .article-card[data-cat="Real-case-study"]::hover      { background: var(--c-cs); }
 
     /* Card category badge */
     .card-cat {
@@ -310,6 +314,7 @@
     .article-card[data-cat="internal-audit"]        .card-cat { color: var(--c-ia); }
     .article-card[data-cat="cost-control"]          .card-cat { color: var(--c-cc); }
     .article-card[data-cat="operations-excellence"] .card-cat { color: var(--c-oe); }
+    .article-card[data-cat="Real-case-study"] .card-cat { color: var(--c-cs); }
 
     .article-card[data-cat="loss-prevention"]       .dot { background: var(--c-lp); }
     .article-card[data-cat="inventory-management"]  .dot { background: var(--c-im); }
@@ -317,6 +322,7 @@
     .article-card[data-cat="internal-audit"]        .dot { background: var(--c-ia); }
     .article-card[data-cat="cost-control"]          .dot { background: var(--c-cc); }
     .article-card[data-cat="operations-excellence"] .dot { background: var(--c-oe); }
+    .article-card[data-cat="Real-case-study"]        .dot { background: var(--c-cs); }
 
     /* Card title */
     .card-title {
@@ -504,6 +510,11 @@
             <span class="dot" style="background:var(--c-oe)"></span>Operations Excellence
           </button>
         </li>
+        <li>
+          <button class="cat-pill" data-cat="operations-excellence" role="tab" aria-selected="false">
+            <span class="dot" style="background:var(--c-cs)"></span>Real Case Study
+          </button>
+        </li>
       </ul>
 
       <!-- Result count -->
@@ -545,12 +556,13 @@
       </a>
 
       <a class="article-card"
-         href="/articles/loss-prevention-program.html"
-         data-cat="loss-prevention"
+         href="/articles/airport-chocolate-store-fraud-case-study.html"
+         data-cat="loss-prevention,Real-case-study"
          data-title="How to Build a Loss Prevention Program from Scratch"
          role="listitem">
         <div class="card-cat"><span class="dot"></span>Loss Prevention</div>
-        <div class="card-title">How to Build a Loss Prevention Program from Scratch</div>
+        <div class="card-cat"><span class="dot"></span>Real case study</div>
+        <div class="card-title">The Airport Chocolate Store Fraud: How a Manager Turned Promotional Offers into a Personal Business</div>
         <div class="card-excerpt">Step-by-step framework for designing and launching a loss prevention program — whether you're a solo operator or a multi-site business with no formal LP function yet.</div>
         <div class="card-meta">
           <div class="card-meta-left">
