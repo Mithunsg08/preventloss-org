@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>How a Airport Retail Manager Stole ₹8L Using Offer Billing Fraud — A Real LP Case Study</title>
+  <meta name="description" content="A real loss prevention case study: how a store manager at an airport chocolate retail outlet exploited promotional offers to steal over ₹5 lakh in stock — and how the LP team cracked it using CCTV cross-checks, billing pattern analysis, and a silent investigation." />
+  <meta name="keywords" content="retail fraud case study, airport retail theft, employee theft investigation, loss prevention case study, offer billing fraud, promotional fraud retail, store manager fraud, inventory theft investigation, real loss prevention story, LP investigation, internal theft retail, CCTV investigation retail, loss prevention India, shrinkage investigation, employee fraud detection" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="PreventLoss.org" />
+  <link rel="canonical" href="https://www.preventloss.org/articles/airport-chocolate-store-fraud-case-study.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How a Airport Store Manager Ran a ₹8L Offer Billing Fraud — Real LP Case Study" />
+  <meta property="og:description" content="A real-world loss prevention investigation at an airport retail outlet. How promotional offers were exploited, how the fraud went undetected for 2 months, and how the LP team recovered ₹3.5L." />
+  <meta property="og:url" content="https://www.preventloss.org/articles/airport-chocolate-store-fraud-case-study.html" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+  <meta property="article:published_time" content="2026-06-11T00:00:00Z" />
+  <meta property="article:section" content="Loss Prevention" />
+  <meta property="article:tag" content="Case Study" />
+  <meta property="article:tag" content="Internal Theft" />
+  <meta property="article:tag" content="Retail Fraud" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Airport Retail Fraud: How an Offer Billing Scheme Stole ₹8L" />
+  <meta name="twitter:description" content="A real LP case study — silent investigation, CCTV cross-checks, billing pattern analysis, and a midnight stock count that cracked the case." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How a Airport Store Manager Ran a ₹8L Offer Billing Fraud — Real LP Case Study",
+    "description": "A real-world loss prevention investigation at an airport chocolate retail outlet. How a store manager exploited promotional offers, how the fraud went undetected for 2 months, and how the LP team cracked it.",
+    "author": {
+      "@type": "Organization",
+      "name": "PreventLoss.org",
+      "url": "https://www.preventloss.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "PreventLoss.org",
+      "url": "https://www.preventloss.org"
+    },
+    "datePublished": "2026-06-11",
+    "dateModified": "2026-06-11",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.preventloss.org/articles/airport-chocolate-store-fraud-case-study.html"
+    },
+    "keywords": "retail fraud, airport theft, offer billing fraud, loss prevention case study, store manager theft, employee fraud investigation"
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+      --warn:        #f59e0b;
+      --danger:      #f87171;
+      --c-lp:        #3b82f6;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono:    'Courier New', monospace;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Nav ───────────────────────────────────── */
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo {
+      font-family: var(--font-display);
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ─── Progress bar ──────────────────────────── */
+    #read-progress {
+      position: fixed; top: 56px; left: 0;
+      height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--c-lp), #a78bfa);
+      z-index: 99; transition: width 0.1s linear;
+    }
+
+    /* ─── Layout ────────────────────────────────── */
+    .page-wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 52px;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* ─── Article header ────────────────────────── */
+    .article-header {
+      padding: 52px 0 36px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 36px;
+    }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--border); }
+    .article-category {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent);
+      color: var(--accent-lt);
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 4px 12px; border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    .case-study-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #1c0a0a;
+      border: 1px solid var(--danger);
+      color: var(--danger);
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 4px 12px; border-radius: 999px;
+      margin-bottom: 18px;
+      margin-left: 8px;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.8vw, 2.6rem);
+      font-weight: 700;
+      color: var(--heading);
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .article-deck {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 22px;
+      max-width: 680px;
+    }
+    .article-meta {
+      display: flex; flex-wrap: wrap; gap: 18px;
+      font-size: 0.8rem; color: var(--muted);
+    }
+
+    /* ─── Article stats strip ───────────────────── */
+    .article-stats {
+      display: flex; gap: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      margin-bottom: 40px;
+      overflow: hidden;
+    }
+    .stat-item {
+      flex: 1;
+      padding: 16px 18px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-item .s-val {
+      font-family: var(--font-display);
+      font-size: 1.5rem; font-weight: 700;
+      color: var(--heading); line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-item .s-val.red   { color: var(--danger); }
+    .stat-item .s-val.green { color: var(--success); }
+    .stat-item .s-val.amber { color: var(--warn); }
+    .stat-item .s-lbl {
+      font-size: 0.7rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.07em;
+      font-weight: 600;
+    }
+    @media (max-width: 600px) {
+      .article-stats { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); }
+    }
+
+    /* ─── Prose ─────────────────────────────────── */
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.02em;
+      margin: 52px 0 16px;
+      padding-top: 52px;
+      border-top: 1px solid var(--border);
+    }
+    .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .article-body h3 {
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); margin: 28px 0 10px;
+    }
+    .article-body p { margin-bottom: 20px; color: var(--text); }
+    .article-body a { color: var(--accent-lt); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body strong { color: var(--heading); font-weight: 600; }
+    .article-body em { color: var(--muted); font-style: italic; }
+
+    /* ─── Callout boxes ─────────────────────────── */
+    .callout {
+      border-radius: var(--r-md);
+      padding: 18px 22px;
+      margin: 28px 0;
+      border-left: 4px solid;
+    }
+    .callout-label {
+      font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .callout p { margin-bottom: 6px; font-size: 0.94rem; }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .callout-danger  { background: #1c0808; border-color: var(--danger); }
+    .callout-danger .callout-label { color: var(--danger); }
+
+    .callout-warn    { background: #1c1500; border-color: var(--warn); }
+    .callout-warn .callout-label { color: var(--warn); }
+
+    .callout-tip     { background: #0d1f16; border-color: var(--success); }
+    .callout-tip .callout-label { color: var(--success); }
+
+    .callout-info    { background: var(--accent-glow); border-color: var(--accent); }
+    .callout-info .callout-label { color: var(--accent-lt); }
+
+    /* ─── Timeline ──────────────────────────────── */
+    .timeline {
+      position: relative;
+      margin: 28px 0 36px;
+      padding-left: 28px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute; left: 8px; top: 0; bottom: 0;
+      width: 2px; background: var(--border);
+    }
+    .tl-item {
+      position: relative;
+      margin-bottom: 28px;
+    }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-dot {
+      position: absolute; left: -24px; top: 4px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      border: 2px solid var(--bg);
+      z-index: 1;
+    }
+    .tl-item.red    .tl-dot { background: var(--danger); box-shadow: 0 0 0 3px #f8717120; }
+    .tl-item.amber  .tl-dot { background: var(--warn);   box-shadow: 0 0 0 3px #f59e0b20; }
+    .tl-item.blue   .tl-dot { background: var(--accent-lt); box-shadow: 0 0 0 3px #3b82f620; }
+    .tl-item.green  .tl-dot { background: var(--success); box-shadow: 0 0 0 3px #10b98120; }
+    .tl-item.purple .tl-dot { background: #a78bfa; box-shadow: 0 0 0 3px #a78bfa20; }
+    .tl-phase {
+      font-size: 0.68rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+    .tl-item.red    .tl-phase { color: var(--danger); }
+    .tl-item.amber  .tl-phase { color: var(--warn); }
+    .tl-item.blue   .tl-phase { color: var(--accent-lt); }
+    .tl-item.green  .tl-phase { color: var(--success); }
+    .tl-item.purple .tl-phase { color: #a78bfa; }
+    .tl-title {
+      font-weight: 700; color: var(--heading);
+      font-size: 0.95rem; margin-bottom: 6px;
+    }
+    .tl-body { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+
+    /* ─── How the scheme worked diagram ────────── */
+    .scheme-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 24px 0;
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    .scheme-step {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      transition: background 0.15s;
+    }
+    .scheme-step:last-child { border-bottom: none; }
+    .scheme-step:hover { background: var(--surface-2, #1e2535); }
+    .step-num {
+      width: 28px; height: 28px; flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent);
+      color: var(--accent-lt);
+      font-size: 0.75rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .step-text strong { color: var(--heading); display: block; margin-bottom: 3px; font-size: 0.9rem; }
+    .step-text span { font-size: 0.83rem; color: var(--muted); line-height: 1.5; }
+
+    /* ─── Evidence table ────────────────────────── */
+    .evidence-table-wrap {
+      overflow-x: auto;
+      margin: 24px 0;
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    thead th {
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 11px 14px; text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top; color: var(--text);
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--surface); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.68rem; font-weight: 700; }
+    .badge-red    { background: #3b0c0c; color: var(--danger); }
+    .badge-green  { background: #0d2018; color: #34d399; }
+    .badge-amber  { background: #1c1500; color: #fbbf24; }
+
+    /* ─── Lessons learned grid ──────────────────── */
+    .lessons-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0;
+    }
+    @media (max-width: 600px) { .lessons-grid { grid-template-columns: 1fr; } }
+    .lesson-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 18px;
+      border-top: 3px solid;
+    }
+    .lesson-card.blue   { border-top-color: var(--accent-lt); }
+    .lesson-card.green  { border-top-color: var(--success); }
+    .lesson-card.amber  { border-top-color: var(--warn); }
+    .lesson-card.purple { border-top-color: #a78bfa; }
+    .lesson-card.red    { border-top-color: var(--danger); }
+    .lesson-card.sky    { border-top-color: #38bdf8; }
+    .lesson-num {
+      font-size: 0.68rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--muted); margin-bottom: 8px;
+    }
+    .lesson-title {
+      font-size: 0.9rem; font-weight: 700;
+      color: var(--heading); margin-bottom: 6px; line-height: 1.3;
+    }
+    .lesson-body { font-size: 0.82rem; color: var(--muted); line-height: 1.55; }
+
+    /* ─── Checklist ─────────────────────────────── */
+    .checklist { list-style: none; margin: 16px 0 24px; }
+    .checklist li {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 8px 0; border-bottom: 1px solid var(--border);
+      font-size: 0.94rem;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist .ck-icon {
+      width: 20px; height: 20px; flex-shrink: 0;
+      background: var(--accent-glow); border: 1px solid var(--accent);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; color: var(--accent-lt); margin-top: 2px;
+    }
+
+    /* ─── Quote / pull quote ────────────────────── */
+    .pull-quote {
+      border-left: 4px solid var(--accent);
+      padding: 16px 24px;
+      margin: 32px 0;
+      background: var(--accent-glow);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+    }
+    .pull-quote p {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--heading);
+      line-height: 1.55;
+      font-style: italic;
+      margin: 0;
+    }
+    .pull-quote cite {
+      display: block;
+      font-size: 0.75rem; color: var(--muted);
+      margin-top: 10px; font-style: normal;
+      font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    /* ─── CTA ───────────────────────────────────── */
+    .article-cta {
+      background: linear-gradient(135deg, #0f2040 0%, #1a0a30 100%);
+      border: 1px solid var(--accent);
+      border-radius: var(--r-lg);
+      padding: 28px 32px;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .article-cta h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); margin-bottom: 8px; }
+    .article-cta p  { color: var(--muted); font-size: 0.875rem; margin-bottom: 18px; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent); color: #fff;
+      font-weight: 700; font-size: 0.875rem;
+      padding: 11px 26px; border-radius: var(--r-sm);
+      text-decoration: none; transition: background 0.18s;
+    }
+    .btn-primary:hover { background: var(--accent-lt); }
+
+    /* ─── Sidebar ───────────────────────────────── */
+    .sidebar { padding-top: 52px; }
+
+    /* Case summary card */
+    .case-summary {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      margin-bottom: 18px;
+      position: sticky;
+      top: 72px;
+    }
+    .cs-header {
+      background: #1c0808;
+      border-bottom: 1px solid var(--danger);
+      padding: 14px 18px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .cs-header h4 {
+      font-size: 0.72rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--danger);
+    }
+    .cs-body { padding: 0; }
+    .cs-row {
+      display: flex; align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8rem;
+    }
+    .cs-row:last-child { border-bottom: none; }
+    .cs-key { color: var(--muted); flex-shrink: 0; }
+    .cs-val { color: var(--heading); font-weight: 600; text-align: right; }
+    .cs-val.red    { color: var(--danger); }
+    .cs-val.green  { color: var(--success); }
+    .cs-val.amber  { color: var(--warn); }
+
+    /* TOC card */
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+    .sidebar-card h4 {
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.09em;
+      color: var(--muted); margin-bottom: 12px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      font-size: 0.8rem; color: var(--muted);
+      text-decoration: none;
+      display: block; padding: 4px 0 4px 12px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s; line-height: 1.35;
+    }
+    .toc-list a:hover, .toc-list a.active {
+      color: var(--text); border-color: var(--accent-lt);
+    }
+
+    /* Tags */
+    .tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      background: #1e293b; color: var(--muted);
+      font-size: 0.72rem; border-radius: var(--r-sm);
+      padding: 4px 10px; text-decoration: none;
+      border: 1px solid var(--border); transition: all 0.15s;
+    }
+    .tag:hover { color: var(--text); border-color: var(--muted); }
+
+    /* ─── Footer ────────────────────────────────── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 80px; padding: 32px 24px;
+      text-align: center; color: var(--muted); font-size: 0.82rem;
+    }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <!-- NAV -->
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <!-- ═══════════════════════════════════
+         MAIN ARTICLE
+    ═══════════════════════════════════ -->
+    <main id="main-content">
+
+      <header class="article-header">
+        <div class="breadcrumb">
+          <a href="/">Home</a><span>›</span>
+          <a href="/articles/">Articles</a><span>›</span>
+          <a href="/articles/?cat=loss-prevention">Loss Prevention</a>
+        </div>
+        <div>
+          <span class="article-category">🛡️ Loss Prevention</span>
+          <span class="case-study-badge">🔴 Real Case Study</span>
+        </div>
+        <h1>The Airport Chocolate Store Fraud: How a Manager Turned Promotional Offers into a Personal Business</h1>
+        <p class="article-deck">
+          A real-world LP investigation from my time as a regional loss prevention manager — how a store team exploited buy-free offers to siphon stock for two months, and how a whistleblower tip, silent CCTV cross-checks, and a late-night stock count cracked the whole thing open.
+        </p>
+        <div class="article-meta">
+          <span>🗓 June 2026</span>
+          <span>⏱ 10 min read</span>
+          <span>✍️ Mithun GS</span>
+          <span>📂 Loss Prevention · Case Study</span>
+        </div>
+      </header>
+
+      <!-- Stats strip -->
+      <div class="article-stats">
+        <div class="stat-item">
+          <div class="s-val red">₹8L</div>
+          <div class="s-lbl">Total stock missing</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val amber">2 months</div>
+          <div class="s-lbl">Fraud duration before tip</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val red">5</div>
+          <div class="s-lbl">People involved</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val green">₹3.5L</div>
+          <div class="s-lbl">Value recovered</div>
+        </div>
+      </div>
+
+      <article class="article-body" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="The Airport Chocolate Store Fraud: How a Manager Turned Promotional Offers into a Personal Business" />
+        <meta itemprop="datePublished" content="2026-06-11" />
+
+        <!-- INTRO -->
+        <section id="introduction">
+          <h2 style="border-top:none; padding-top:0; margin-top:0;">Setting the Scene</h2>
+          <p>
+            As a regional loss prevention manager, I oversee a cluster of retail outlets across multiple locations — airports, malls, and transit hubs. One of those stores was a premium imported chocolate outlet inside a busy domestic airport terminal. Foot traffic was high, the average basket value was significant, and the store ran several aggressive promotional offers to drive volume.
+          </p>
+          <p>
+            On paper, the store was performing. Sales numbers looked healthy. The team seemed to be running smoothly. But underneath that surface, something had been quietly running for two months that would eventually add up to <strong>₹8 lakh in missing stock</strong>.
+          </p>
+          <p>
+            This is the story of how we found it, how we built the case, and — just as importantly — what every loss prevention professional and business owner can learn from it.
+          </p>
+        </section>
+
+        <!-- THE SCHEME -->
+        <section id="the-scheme">
+          <h2>Understanding the Scheme: Exploiting the Offer Structure</h2>
+          <p>
+            To understand how the fraud worked, you first need to understand the promotional structure that made it possible. The store was running several buy-free offer combinations simultaneously:
+          </p>
+
+          <div class="callout callout-info">
+            <div class="callout-label">🎁 Active Promotional Offers at the Time</div>
+            <p><strong>Buy 1 Get 1 Free</strong> &nbsp;·&nbsp; <strong>Buy 2 Get 2 Free</strong> &nbsp;·&nbsp; <strong>Buy 3 Get 2 Free</strong></p>
+            <p><strong>Buy 3 Get 3 Free</strong> &nbsp;·&nbsp; <strong>Buy 6 Get 10 Free</strong></p>
+            <p>These were legitimate promotional offers designed to increase volume and clear seasonal stock.</p>
+          </div>
+
+          <p>
+            The offers were perfectly legitimate. The problem was what the store manager and his team did with them. Here is how the scheme worked, step by step:
+          </p>
+
+          <div class="scheme-steps">
+            <div class="scheme-step">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <strong>Serve the customer, collect the cash — but don't bill yet</strong>
+                <span>Airport customers are always in a hurry. They pay, collect their chocolates, and rush to their gate. The team exploited this by not raising the bill at the point of sale. Since the customer had already left, there was no one to cross-check the receipt.</span>
+              </div>
+            </div>
+            <div class="scheme-step">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <strong>Accumulate multiple unbilled sales</strong>
+                <span>Throughout the day, multiple customers were served without bills being raised. During quiet periods — typically every 5 to 6 hours — the manager would sit down and "catch up" on billing.</span>
+              </div>
+            </div>
+            <div class="scheme-step">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <strong>Combine orders to maximize the "free" quantity</strong>
+                <span>Rather than billing each customer's order individually, the team combined multiple orders into single transactions. For example, three separate "Buy 1 Get 1" sales would be collapsed into one "Buy 6 Get 10" transaction — dramatically inflating the number of "free" units the system released.</span>
+              </div>
+            </div>
+            <div class="scheme-step">
+              <div class="step-num">4</div>
+              <div class="step-text">
+                <strong>Pocket the excess "free" stock</strong>
+                <span>The inflated free-unit quantities were physically removed from the store in personal bags at the end of each shift — daily. Staff would simply walk out with the stock that the system had legitimately allocated as "free," but which customers had never actually received.</span>
+              </div>
+            </div>
+            <div class="scheme-step">
+              <div class="step-num">5</div>
+              <div class="step-text">
+                <strong>Use a single phone number to mask the pattern</strong>
+                <span>To avoid the billing pattern triggering system alerts, the manager used his wife's phone number for all bundled transactions. This created an illusion of a single loyal high-frequency customer rather than revealing the pattern of combined billing.</span>
+              </div>
+            </div>
+            <div class="scheme-step">
+              <div class="step-num">6</div>
+              <div class="step-text">
+                <strong>Sell the stolen stock outside the store network</strong>
+                <span>The accumulated stock was being sold outside the official retail channel — effectively a parallel grey-market operation running alongside the legitimate store. The plan was to slowly "clear" the stock discrepancy by billing it against future offers.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pull-quote">
+            <p>"The brilliance — and the arrogance — of this scheme was that it looked legitimate at every individual step. It was only when you zoomed out and looked at the pattern that the whole picture became visible."</p>
+            <cite>— Regional LP, PreventLoss.org</cite>
+          </div>
+        </section>
+
+        <!-- THE TIP -->
+        <section id="the-tip">
+          <h2>Month Two: The Tip That Broke the Silence</h2>
+          <p>
+            For two months, this scheme ran without anyone raising a flag internally. The stock was leaving the store every single day. The billing was being done — just not the way it should have been. And for everyone involved, it had simply become routine.
+          </p>
+          <p>
+            Then one of the store's junior staff members came to us.
+          </p>
+          <p>
+            He told us what had been happening. He'd known since nearly the beginning. We asked him the obvious question: <em>"Why didn't you tell us in the first week?"</em>
+          </p>
+          <p>
+            His answer was telling: <strong>"The person doing this was my store manager. And above him, the cluster manager was also aware. I had no one above them I felt safe going to."</strong>
+          </p>
+          <p>
+            So we asked what had finally changed. The answer was almost mundane: the manager had been scolding him regularly. The relationship had broken down. And resentment had finally outweighed fear.
+          </p>
+
+          <div class="callout callout-warn">
+            <div class="callout-label">⚠️ LP Lesson: Fear and Hierarchy Silence Witnesses</div>
+            <p>
+              Two months of daily fraud went unreported because the only people who knew were either involved or afraid. <strong>A whistleblower channel that employees genuinely trust — anonymous, with senior oversight — is not optional.</strong> It is often the single fastest path to early detection.
+            </p>
+          </div>
+        </section>
+
+        <!-- INVESTIGATION -->
+        <section id="investigation">
+          <h2>The Silent Investigation: Building the Case Before Moving</h2>
+          <p>
+            The first rule when you receive a tip like this: <strong>do not move immediately</strong>. Moving too fast alerts the subjects, destroys evidence, and gives them time to cover their tracks or rehearse explanations. Our approach was to work silently, systematically, and without any visible change in behaviour toward the store.
+          </p>
+
+          <h3>Phase 1 — CCTV Cross-Check</h3>
+          <p>
+            The most direct way to validate the claim was to cross-reference billing records against physical presence in the store. Airport CCTV access required a formal request to the airport authority — which we submitted with the appropriate justification. Once granted, we pulled the footage.
+          </p>
+          <p>
+            We randomly selected <strong>10 billing timestamps</strong> from the store's transaction log and checked each one against the CCTV footage of the store entrance and sales floor.
+          </p>
+
+          <div class="callout callout-danger">
+            <div class="callout-label">🔴 Finding: No Customers Present at Billing Time</div>
+            <p>
+              Across all 10 checks, the footage consistently showed no customer in the store at the time the transaction was raised. The manager was sitting at the counter, entering bills — but the store was empty.
+            </p>
+            <p>
+              This was our first hard confirmation. We now knew the billing was fabricated. The tip was credible.
+            </p>
+          </div>
+
+          <h3>Phase 2 — System and Billing Pattern Analysis</h3>
+          <p>
+            With CCTV confirmation in hand, we went deep into the transaction data. We were looking for patterns — not just confirming that fraud existed, but understanding exactly how it was structured.
+          </p>
+
+          <div class="evidence-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Evidence Type</th>
+                  <th>What We Found</th>
+                  <th>Significance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Billing frequency</strong></td>
+                  <td>Transactions clustered every 5–6 hours per shift</td>
+                  <td><span class="badge badge-red">High</span> — matches "batch billing" pattern</td>
+                </tr>
+                <tr>
+                  <td><strong>Customer phone number</strong></td>
+                  <td>Same number used repeatedly across high-value bundled bills</td>
+                  <td><span class="badge badge-red">High</span> — one number, implausible frequency</td>
+                </tr>
+                <tr>
+                  <td><strong>Number identity</strong></td>
+                  <td>Number traced to manager's wife</td>
+                  <td><span class="badge badge-red">High</span> — establishes direct connection</td>
+                </tr>
+                <tr>
+                  <td><strong>Offer utilization</strong></td>
+                  <td>Disproportionate use of highest-multiplier offers (B6G10)</td>
+                  <td><span class="badge badge-amber">Medium</span> — inflated free-unit extraction</td>
+                </tr>
+                <tr>
+                  <td><strong>Transaction timing vs. CCTV</strong></td>
+                  <td>10/10 checked transactions had no customer present</td>
+                  <td><span class="badge badge-red">High</span> — direct evidence of ghost billing</td>
+                </tr>
+                <tr>
+                  <td><strong>Staff involvement</strong></td>
+                  <td>4 additional staff members identified in footage assisting</td>
+                  <td><span class="badge badge-red">High</span> — organized group activity</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            One detail stood out as particularly clever: the <strong>5-to-6-hour billing interval</strong>. This was not accidental. Airport passengers who enter the secure zone cannot re-enter from outside within that window. A real customer buying chocolates at 8am couldn't plausibly be back at 2pm. The interval was calibrated to make each batch of combined orders look like a different set of customers — just in case anyone ever spot-checked.
+          </p>
+
+          <h3>Phase 3 — The Midnight Stock Count</h3>
+          <p>
+            By this point we had strong documentary and visual evidence. But to build the complete financial picture — and to give the manager no time to adjust — we needed a physical count. We chose to do it at night, unannounced in spirit but with a cover reason: we called the manager and told him to come in for a night shift, giving no hint of the real purpose.
+          </p>
+          <p>
+            He came. And he came prepared — which told us something. He knew why we were there. But preparation wasn't enough.
+          </p>
+          <p>
+            We conducted a full physical count of everything in the store and everything logged as in-transit stock.
+          </p>
+
+          <div class="callout callout-danger">
+            <div class="callout-label">🔴 Stock Count Findings</div>
+            <p><strong>Store stock variance:</strong> ₹5,00,000 (5 lakh) worth of stock unaccounted for</p>
+            <p><strong>In-transit stock discrepancy:</strong> ₹3,00,000 (3 lakh) worth of stock irregularly logged as in-transit</p>
+            <p><strong>Total exposure at cost price:</strong> ₹8,00,000 (8 lakh)</p>
+          </div>
+
+          <p>
+            When confronted with the numbers, the manager ultimately disclosed what had been happening. The stolen stock had been taken out of the store gradually — every shift, in personal bags — and was being sold through an informal channel outside the store network. The in-transit stock was being used as a buffer to slow down the discrepancy becoming visible in system reports.
+          </p>
+        </section>
+
+        <!-- OUTCOME -->
+        <section id="outcome">
+          <h2>The Outcome: Recovery, Action, and Consequences</h2>
+
+          <div class="timeline">
+
+            <div class="tl-item blue">
+              <div class="tl-dot"></div>
+              <div class="tl-phase">Month 0–2</div>
+              <div class="tl-title">Fraud in progress</div>
+              <div class="tl-body">Daily stock extraction using offer-bundling method. Approximately ₹8L in stock removed over the period. No internal flag raised due to management hierarchy controlling the silence.</div>
+            </div>
+
+            <div class="tl-item amber">
+              <div class="tl-dot"></div>
+              <div class="tl-phase">Trigger</div>
+              <div class="tl-title">Whistleblower tip received</div>
+              <div class="tl-body">Junior staff member comes forward after relationship breakdown with the manager. Tip is treated as credible but unconfirmed — silent investigation begins immediately.</div>
+            </div>
+
+            <div class="tl-item blue">
+              <div class="tl-dot"></div>
+              <div class="tl-phase">Investigation — Week 1</div>
+              <div class="tl-title">CCTV cross-verification completed</div>
+              <div class="tl-body">Airport authority access granted. 10 random billing timestamps checked. 10/10 show no customer present. Tip confirmed as credible. System analysis begins.</div>
+            </div>
+
+            <div class="tl-item blue">
+              <div class="tl-dot"></div>
+              <div class="tl-phase">Investigation — Week 2</div>
+              <div class="tl-title">Billing pattern and phone number analysis</div>
+              <div class="tl-body">Wife's phone number identified as the billing vehicle. 5–6 hour interval pattern confirmed as deliberate. Four additional staff members identified. Full evidence dossier assembled.</div>
+            </div>
+
+            <div class="tl-item purple">
+              <div class="tl-dot"></div>
+              <div class="tl-phase">Confrontation</div>
+              <div class="tl-title">Midnight stock count conducted</div>
+              <div class="tl-body">Manager called in under cover of a night shift. Physical count reveals ₹5L store variance and ₹3L in-transit discrepancy. Manager discloses the operation when presented with the evidence.</div>
+            </div>
+
+            <div class="tl-item green">
+              <div class="tl-dot"></div>
+              <div class="tl-phase">Resolution</div>
+              <div class="tl-title">₹3.5L recovered — all five personnel removed</div>
+              <div class="tl-body">₹3.5 lakh recovered at cost price. The store manager and all four involved staff members were removed from their positions. Formal proceedings initiated.</div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- WHAT WE LEARNED -->
+        <section id="lessons-learned">
+          <h2>What We Learned: 6 LP Lessons from This Case</h2>
+          <p>
+            Every case teaches you something. Some lessons confirm what you already know. Others catch you off guard. Here is what this investigation reinforced for me and my team.
+          </p>
+
+          <div class="lessons-grid">
+            <div class="lesson-card blue">
+              <div class="lesson-num">Lesson 01</div>
+              <div class="lesson-title">Promotional offers are a fraud surface area — treat them as one</div>
+              <div class="lesson-body">High-multiplier offers like Buy 6 Get 10 are magnets for exploitation. Any offer that creates a large gap between billed quantity and total units dispensed needs its own audit trail and exception monitoring.</div>
+            </div>
+            <div class="lesson-card amber">
+              <div class="lesson-num">Lesson 02</div>
+              <div class="lesson-title">Billing intervals are a behavioral signal, not just a data point</div>
+              <div class="lesson-body">A store that bills in batches every 5–6 hours rather than in real time should immediately raise a flag. POS exception reports should track transaction timing patterns, not just transaction values.</div>
+            </div>
+            <div class="lesson-card green">
+              <div class="lesson-num">Lesson 03</div>
+              <div class="lesson-title">A single phone number appearing across multiple large transactions is a red flag</div>
+              <div class="lesson-body">In any retail environment — especially airports where repeat customers are rare — the same number appearing on bundled high-value bills multiple times a day defies logic. This should be an automated alert.</div>
+            </div>
+            <div class="lesson-card purple">
+              <div class="lesson-num">Lesson 04</div>
+              <div class="lesson-title">Hierarchy silences witnesses — your reporting channel must bypass it</div>
+              <div class="lesson-body">Two months of daily fraud went unreported because the witness had no safe path around the people involved. Anonymous LP hotlines, direct LP reporting lines, and clear protections for reporters are non-negotiable.</div>
+            </div>
+            <div class="lesson-card red">
+              <div class="lesson-num">Lesson 05</div>
+              <div class="lesson-title">In-transit stock is a hiding place — don't let it be</div>
+              <div class="lesson-body">Logging excess stolen stock as "in-transit" is a classic obfuscation tactic. In-transit reconciliation should be regular, cross-referenced against actual logistics records, and included in every stock count.</div>
+            </div>
+            <div class="lesson-card sky">
+              <div class="lesson-num">Lesson 06</div>
+              <div class="lesson-title">Silent investigation protects the case — resist the urge to act early</div>
+              <div class="lesson-body">Moving too fast would have given the manager time to cover his tracks. Every week of silent analysis added another layer of evidence. Patience in investigation is discipline, not delay.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RED FLAGS CHECKLIST -->
+        <section id="red-flags">
+          <h2>Red Flags to Watch For in Your Own Operation</h2>
+          <p>
+            Based on this case, here is a checklist of warning signals that should trigger an immediate review in any retail operation running promotional offers:
+          </p>
+          <ul class="checklist">
+            <li><div class="ck-icon">!</div><div><strong>Batch billing patterns</strong> — transactions clustered in periodic bursts rather than distributed throughout trading hours.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>Same customer number on multiple large bills</strong> — especially in locations where repeat customers are statistically improbable (airports, transit hubs).</div></li>
+            <li><div class="ck-icon">!</div><div><strong>Disproportionate use of the highest-multiplier offers</strong> — if your B6G10 offer is being used far more than your B1G1, ask why.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>Stock discrepancies appearing in in-transit logs</strong> — in-transit is often used to park unaccounted stock.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>No real-time billing at point of sale</strong> — every sale should be billed as it happens. No exceptions.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>Teams that appear unusually cohesive about process</strong> — close-knit teams can be healthy, or they can signal a shared secret. Watch for both.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>Management resistance to unannounced audits</strong> — legitimate stores welcome surprise counts. Reluctance is a signal.</div></li>
+          </ul>
+        </section>
+
+        <!-- CLOSING -->
+        <section id="closing-thoughts">
+          <h2>Closing Thoughts: The Scheme Was Smart. The Controls Were Smarter.</h2>
+          <p>
+            What made this case memorable — and frustrating — was that the scheme was genuinely well-constructed. The manager understood the offer structure deeply. He understood the airport environment, the customer behaviour, and the system logic well enough to exploit all three simultaneously. For two months, the numbers held together on the surface.
+          </p>
+          <p>
+            But fraud always leaves traces. The billing timestamps didn't match the customer flow. One phone number didn't match the customer profile. The stock levels didn't add up. And one person — eventually — had had enough.
+          </p>
+          <p>
+            Loss prevention is not about assuming the worst of your people. Most people in most stores are honest. But it is about building systems that make it hard to steal, easy to detect, and certain to be caught. This case cost the business ₹8 lakh and could not be fully recovered. The controls that should have flagged it earlier — real-time billing enforcement, offer utilization monitoring, anonymous reporting — cost a fraction of that to implement.
+          </p>
+
+          <div class="pull-quote">
+            <p>"The question after every investigation is never just 'how do we prosecute this?' It's always 'what did the system miss, and how do we make sure it doesn't miss it again?'"</p>
+            <cite>— Regional LP, PreventLoss.org</cite>
+          </div>
+
+          <div class="article-cta">
+            <h3>Want to Read More Real LP Case Studies?</h3>
+            <p>We publish investigations, breakdowns, and lessons from real-world loss prevention. Browse the full article library.</p>
+            <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- ═══════════════════════════════════
+         SIDEBAR
+    ═══════════════════════════════════ -->
+    <aside class="sidebar" aria-label="Article sidebar">
+
+      <!-- Case Summary Card -->
+      <div class="case-summary">
+        <div class="cs-header">
+          <span>📋</span>
+          <h4>Case Summary</h4>
+        </div>
+        <div class="cs-body">
+          <div class="cs-row">
+            <span class="cs-key">Location</span>
+            <span class="cs-val">Airport retail outlet</span>
+          </div>
+          <div class="cs-row">
+            <span class="cs-key">Store type</span>
+            <span class="cs-val">Imported chocolates</span>
+          </div>
+          <div class="cs-row">
+            <span class="cs-key">Fraud type</span>
+            <span class="cs-val red">Offer billing + stock theft</span>
+          </div>
+          <div class="cs-row">
+            <span class="cs-key">Duration</span>
+            <span class="cs-val amber">~2 months</span>
+          </div>
+          <div class="cs-row">
+            <span class="cs-key">People involved</span>
+            <span class="cs-val red">5 (manager + 4 staff)</span>
+          </div>
+          <div class="cs-row">
+            <span class="cs-key">Stock missing</span>
+            <span class="cs-val red">₹5,00,000</span>
+          </div>
+          <div class="cs-row">
+            <span class="cs-key">In-transit variance</span>
+            <span class="cs-val red">₹3,00,000</span>
+          </div>
+          <div class="cs-row">
+            <span class="cs-key">Total exposure</span>
+            <span class="cs-val red">₹8,00,000</span>
+          </div>
+          <div class="cs-row">
+            <span class="cs-key">Amount recovered</span>
+            <span class="cs-val green">₹3,50,000</span>
+          </div>
+          <div class="cs-row">
+            <span class="cs-key">Detection method</span>
+            <span class="cs-val">Whistleblower + CCTV</span>
+          </div>
+          <div class="cs-row">
+            <span class="cs-key">Outcome</span>
+            <span class="cs-val red">All 5 removed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOC -->
+      <div class="sidebar-card">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction">Setting the Scene</a></li>
+          <li><a href="#the-scheme">How the Scheme Worked</a></li>
+          <li><a href="#the-tip">The Tip That Broke the Silence</a></li>
+          <li><a href="#investigation">The Silent Investigation</a></li>
+          <li><a href="#outcome">The Outcome</a></li>
+          <li><a href="#lessons-learned">6 LP Lessons</a></li>
+          <li><a href="#red-flags">Red Flags to Watch For</a></li>
+          <li><a href="#closing-thoughts">Closing Thoughts</a></li>
+        </ul>
+      </div>
+
+      <!-- Tags -->
+      <div class="sidebar-card">
+        <h4>Tags</h4>
+        <div class="tag-list">
+          <a class="tag" href="#">Case Study</a>
+          <a class="tag" href="#">Internal Theft</a>
+          <a class="tag" href="#">Offer Fraud</a>
+          <a class="tag" href="#">Airport Retail</a>
+          <a class="tag" href="#">Billing Fraud</a>
+          <a class="tag" href="#">CCTV Investigation</a>
+          <a class="tag" href="#">Whistleblower</a>
+          <a class="tag" href="#">Stock Count</a>
+          <a class="tag" href="#">Promotional Abuse</a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div><!-- /page-wrap -->
+
+  <footer class="site-footer">
+    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    // Reading progress
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      document.getElementById('read-progress').style.width =
+        ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+    });
+
+    // TOC highlight
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks  = document.querySelectorAll('.toc-list a');
+    new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const a = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+          if (a) a.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' }).observe
+      ? sections.forEach(s => new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              tocLinks.forEach(l => l.classList.remove('active'));
+              const a = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+              if (a) a.classList.add('active');
+            }
+          });
+        }, { rootMargin: '-20% 0px -70% 0px' }).observe(s))
+      : null;
+  </script>
+
+</body>
+</html>
