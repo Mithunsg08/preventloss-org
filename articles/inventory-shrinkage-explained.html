@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <title>Inventory Shrinkage Explained: Causes, Calculation & How to Reduce It</title>
+  <meta name="description" content="Inventory shrinkage explained in plain English — what it actually is, how to calculate your shrink rate, the real-world causes behind it, and practical steps any business can take to bring it down." />
+  <meta name="keywords" content="inventory shrinkage, what is inventory shrinkage, shrinkage rate formula, how to calculate shrinkage, inventory shrinkage causes, reduce inventory shrinkage, retail shrinkage, stock loss, shrink percentage, inventory shrinkage examples, shrinkage management, stock variance" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mithun GS" />
+  <link rel="canonical" href="https://www.preventloss.org/articles/inventory-shrinkage-explained.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Inventory Shrinkage Explained: Causes, Calculation & How to Reduce It" />
+  <meta property="og:description" content="A plain-English breakdown of inventory shrinkage — what it is, how to calculate it, why it happens, and how to bring it down." />
+  <meta property="og:url" content="https://www.preventloss.org/articles/inventory-shrinkage-explained.html" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+  <meta property="article:published_time" content="2026-06-12T00:00:00Z" />
+  <meta property="article:section" content="Inventory Management" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Inventory Shrinkage Explained" />
+  <meta name="twitter:description" content="What shrinkage actually is, how to calculate your shrink rate, and how to start reducing it — explained in plain English." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Inventory Shrinkage Explained: Causes, Calculation & How to Reduce It",
+    "description": "A plain-English breakdown of inventory shrinkage — what it is, how to calculate it, why it happens, and how to bring it down.",
+    "author": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+    "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+    "datePublished": "2026-06-12",
+    "dateModified": "2026-06-12",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/inventory-shrinkage-explained.html" },
+    "keywords": "inventory shrinkage, shrink rate, stock loss, retail shrinkage, shrinkage causes"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good shrinkage rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most retail businesses, a shrink rate below 1% of sales is considered good, 1-2% is average, and anything above 2-3% signals a real problem that needs investigation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you calculate inventory shrinkage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inventory shrinkage is calculated by subtracting your actual physical stock count from your recorded book inventory, then dividing that difference by the recorded book inventory (or by sales) and multiplying by 100 to get a percentage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between shrinkage and theft?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Theft is one cause of shrinkage, but not the only one. Shrinkage also includes administrative errors, damage, spoilage, and vendor fraud. Theft (employee and external) typically accounts for the largest share, but rarely all of it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should you check for shrinkage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most businesses benefit from a combination of continuous cycle counts on high-risk items, monthly category-level checks, and at least one full physical inventory count per year."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+      --warn:        #f59e0b;
+      --danger:      #f87171;
+      --c-im:        #10b981;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono:    'Courier New', monospace;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo {
+      font-family: var(--font-display);
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Progress bar */
+    #read-progress {
+      position: fixed; top: 56px; left: 0;
+      height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--c-im), var(--accent-lt));
+      z-index: 99; transition: width 0.1s linear;
+    }
+
+    /* Layout */
+    .page-wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 52px;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* Header */
+    .article-header {
+      padding: 52px 0 36px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 36px;
+    }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--border); }
+    .article-category {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #0d2018;
+      border: 1px solid var(--c-im);
+      color: var(--c-im);
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 4px 12px; border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.8vw, 2.7rem);
+      font-weight: 700;
+      color: var(--heading);
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .article-deck {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 22px;
+      max-width: 680px;
+    }
+    .article-meta {
+      display: flex; flex-wrap: wrap; gap: 18px;
+      font-size: 0.8rem; color: var(--muted);
+    }
+
+    /* Stats strip */
+    .article-stats {
+      display: flex; gap: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      margin-bottom: 40px;
+      overflow: hidden;
+    }
+    .stat-item {
+      flex: 1; padding: 16px 18px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-item .s-val {
+      font-family: var(--font-display);
+      font-size: 1.5rem; font-weight: 700;
+      color: var(--heading); line-height: 1; margin-bottom: 4px;
+    }
+    .stat-item .s-val.green { color: var(--success); }
+    .stat-item .s-val.amber { color: var(--warn); }
+    .stat-item .s-val.red   { color: var(--danger); }
+    .stat-item .s-lbl {
+      font-size: 0.7rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600;
+    }
+    @media (max-width: 600px) {
+      .article-stats { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); }
+    }
+
+    /* Prose */
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.45rem; font-weight: 700;
+      color: var(--heading); letter-spacing: -0.02em;
+      margin: 52px 0 16px; padding-top: 52px;
+      border-top: 1px solid var(--border);
+    }
+    .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .article-body h3 {
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); margin: 28px 0 10px;
+    }
+    .article-body p { margin-bottom: 20px; color: var(--text); }
+    .article-body a { color: var(--accent-lt); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body strong { color: var(--heading); font-weight: 600; }
+    .article-body em { color: var(--muted); font-style: italic; }
+
+    /* Callouts */
+    .callout {
+      border-radius: var(--r-md);
+      padding: 18px 22px;
+      margin: 28px 0;
+      border-left: 4px solid;
+    }
+    .callout-label {
+      font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .callout p { margin-bottom: 6px; font-size: 0.94rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout-tip   { background: #0d1f16; border-color: var(--success); }
+    .callout-tip .callout-label { color: var(--success); }
+    .callout-warn  { background: #1c1500; border-color: var(--warn); }
+    .callout-warn .callout-label { color: var(--warn); }
+    .callout-info  { background: var(--accent-glow); border-color: var(--accent); }
+    .callout-info .callout-label { color: var(--accent-lt); }
+
+    /* Formula box */
+    .formula-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 24px 28px;
+      margin: 24px 0;
+      text-align: center;
+    }
+    .formula-box .f-label {
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--muted); margin-bottom: 12px;
+    }
+    .formula-box .f-expr {
+      font-family: var(--font-mono);
+      font-size: 1.1rem; color: var(--c-im);
+      background: var(--bg);
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--border);
+    }
+    .formula-box .f-note {
+      font-size: 0.82rem; color: var(--muted);
+      margin-top: 14px;
+    }
+
+    /* Worked example card */
+    .example-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 22px 24px;
+      margin: 24px 0;
+    }
+    .example-card .ex-label {
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--c-im); margin-bottom: 14px;
+    }
+    .ex-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+    .ex-row:last-child { border-bottom: none; }
+    .ex-row.total { font-weight: 700; color: var(--heading); }
+    .ex-row .ex-key { color: var(--muted); }
+    .ex-row .ex-val { font-family: var(--font-mono); color: var(--text); }
+    .ex-row.total .ex-val { color: var(--success); }
+
+    /* Causes grid */
+    .causes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 24px 0;
+    }
+    @media (max-width: 600px) { .causes-grid { grid-template-columns: 1fr; } }
+    .cause-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 18px;
+      border-top: 3px solid;
+    }
+    .cause-card.c1 { border-top-color: var(--danger); }
+    .cause-card.c2 { border-top-color: var(--warn); }
+    .cause-card.c3 { border-top-color: var(--accent-lt); }
+    .cause-card.c4 { border-top-color: var(--c-im); }
+    .cause-card .c-pct {
+      font-family: var(--font-display);
+      font-size: 1.6rem; font-weight: 700;
+      color: var(--heading); margin-bottom: 4px;
+    }
+    .cause-card .c-name { font-size: 0.9rem; font-weight: 700; color: var(--heading); margin-bottom: 6px; }
+    .cause-card .c-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.55; }
+
+    /* Bench table */
+    .data-table-wrap {
+      overflow-x: auto; margin: 24px 0;
+      border: 1px solid var(--border); border-radius: var(--r-md);
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    thead th {
+      background: var(--surface); color: var(--muted);
+      font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 11px 14px; text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text); }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--surface); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.68rem; font-weight: 700; }
+    .badge-green { background: #0d2018; color: #34d399; }
+    .badge-amber { background: #1c1500; color: #fbbf24; }
+    .badge-red   { background: #3b0c0c; color: var(--danger); }
+
+    /* Checklist */
+    .checklist { list-style: none; margin: 16px 0 24px; }
+    .checklist li {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.94rem;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist .ck-icon {
+      width: 20px; height: 20px; flex-shrink: 0;
+      background: #0d2018; border: 1px solid var(--c-im);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: var(--c-im); margin-top: 2px;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 4px solid var(--c-im);
+      padding: 16px 24px; margin: 32px 0;
+      background: #0d2018;
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+    }
+    .pull-quote p {
+      font-family: var(--font-display);
+      font-size: 1.1rem; color: var(--heading);
+      line-height: 1.55; font-style: italic; margin: 0;
+    }
+    .pull-quote cite {
+      display: block; font-size: 0.75rem; color: var(--muted);
+      margin-top: 10px; font-style: normal;
+      font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em;
+    }
+
+    /* FAQ */
+    .faq-list { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 10px; overflow: hidden; }
+    .faq-q {
+      width: 100%; background: var(--surface); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px; font-size: 0.95rem; font-weight: 600;
+      color: var(--heading); text-align: left; gap: 12px;
+    }
+    .faq-q:hover { background: var(--surface-2); }
+    .faq-q .arrow { flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 0.92rem; color: var(--muted); background: var(--surface); }
+    .faq-a.open { display: block; }
+
+    /* CTA */
+    .article-cta {
+      background: linear-gradient(135deg, #0d2018 0%, #181c27 100%);
+      border: 1px solid var(--c-im);
+      border-radius: var(--r-lg);
+      padding: 28px 32px; text-align: center; margin-top: 48px;
+    }
+    .article-cta h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); margin-bottom: 8px; }
+    .article-cta p  { color: var(--muted); font-size: 0.875rem; margin-bottom: 18px; }
+    .btn-primary {
+      display: inline-block; background: var(--c-im); color: #06281c;
+      font-weight: 700; font-size: 0.875rem;
+      padding: 11px 26px; border-radius: var(--r-sm);
+      text-decoration: none; transition: opacity 0.18s;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+
+    /* Sidebar */
+    .sidebar { padding-top: 52px; }
+    .sidebar-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 18px; margin-bottom: 18px;
+    }
+    .sidebar-card h4 {
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.09em;
+      color: var(--muted); margin-bottom: 12px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      font-size: 0.8rem; color: var(--muted); text-decoration: none;
+      display: block; padding: 4px 0 4px 12px;
+      border-left: 2px solid transparent; transition: all 0.15s; line-height: 1.35;
+    }
+    .toc-list a:hover, .toc-list a.active { color: var(--text); border-color: var(--c-im); }
+
+    /* Quick reference card */
+    .quickref { position: sticky; top: 72px; }
+    .qr-header {
+      background: #0d2018; border-bottom: 1px solid var(--c-im);
+      padding: 14px 18px; display: flex; align-items: center; gap: 8px;
+    }
+    .qr-header h4 { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-im); }
+    .qr-body { padding: 0; }
+    .qr-row {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 10px;
+      padding: 12px 18px; border-bottom: 1px solid var(--border); font-size: 0.8rem;
+    }
+    .qr-row:last-child { border-bottom: none; }
+    .qr-key { color: var(--muted); flex-shrink: 0; }
+    .qr-val { color: var(--heading); font-weight: 600; text-align: right; }
+    .qr-val.green { color: var(--success); }
+    .qr-val.amber { color: var(--warn); }
+    .qr-val.red   { color: var(--danger); }
+
+    .tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      background: #1e293b; color: var(--muted);
+      font-size: 0.72rem; border-radius: var(--r-sm);
+      padding: 4px 10px; text-decoration: none;
+      border: 1px solid var(--border); transition: all 0.15s;
+    }
+    .tag:hover { color: var(--text); border-color: var(--muted); }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 80px; padding: 32px 24px;
+      text-align: center; color: var(--muted); font-size: 0.82rem;
+    }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <main id="main-content">
+
+      <header class="article-header">
+        <div class="breadcrumb">
+          <a href="/">Home</a><span>›</span>
+          <a href="/articles/">Articles</a><span>›</span>
+          <a href="/articles/?cat=inventory-management">Inventory Management</a>
+        </div>
+        <span class="article-category">📦 Inventory Management</span>
+        <h1>Inventory Shrinkage Explained: Causes, Calculation & How to Reduce It</h1>
+        <p class="article-deck">
+          If you've ever counted your stock and found less than your system says you should have, you've experienced shrinkage. Here's what it actually is, why it happens, how to calculate it properly, and — most importantly — what you can do about it.
+        </p>
+        <div class="article-meta">
+          <span>🗓 June 2026</span>
+          <span>⏱ 9 min read</span>
+          <span>✍️ PreventLoss.org</span>
+          <span>📂 Inventory Management</span>
+        </div>
+      </header>
+
+      <!-- Stats strip -->
+      <div class="article-stats">
+        <div class="stat-item">
+          <div class="s-val amber">1.5–2%</div>
+          <div class="s-lbl">Average shrink rate (retail)</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val red">~30%</div>
+          <div class="s-lbl">Caused by employee theft</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val green">4</div>
+          <div class="s-lbl">Main root causes</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val">$100B+</div>
+          <div class="s-lbl">Lost globally each year</div>
+        </div>
+      </div>
+
+      <article class="article-body" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="Inventory Shrinkage Explained: Causes, Calculation & How to Reduce It" />
+        <meta itemprop="datePublished" content="2026-06-12" />
+
+        <!-- INTRO -->
+        <section id="introduction">
+          <h2 style="border-top:none; padding-top:0; margin-top:0;">Introduction: The Gap Nobody Likes Talking About</h2>
+          <p>
+            Picture this. It's the end of the month, and someone on your team finishes a stock count. The system says you should have 500 units of a particular item. The shelf says you have 472. Where did the other 28 go?
+          </p>
+          <p>
+            Nobody stole anything dramatic. No alarms went off. But that gap — 28 units, multiplied across hundreds of SKUs, month after month — adds up to real money disappearing from your business. That gap has a name: <strong>inventory shrinkage</strong>.
+          </p>
+          <p>
+            If you run a business that holds physical stock — a shop, a warehouse, a restaurant, a pharmacy — shrinkage is something you're already dealing with, whether you've measured it or not. This guide breaks down what it is, how to measure it properly, why it happens, and what you can actually do to bring the number down.
+          </p>
+        </section>
+
+        <!-- WHAT IS SHRINKAGE -->
+        <section id="what-is-shrinkage">
+          <h2>What Is Inventory Shrinkage, Exactly?</h2>
+          <p>
+            <strong>Inventory shrinkage</strong> is the difference between the stock your records say you should have (your "book inventory") and the stock you actually have when you physically count it. It's called "shrinkage" because, from the business's perspective, inventory seems to shrink on its own — even though, in reality, something specific happened to every single unit that's missing.
+          </p>
+          <p>
+            Shrinkage is usually expressed as a percentage — either as a percentage of your total inventory value, or as a percentage of sales. That percentage is your <strong>shrink rate</strong>, and it's one of the most important numbers in inventory management because it tells you, in a single figure, how much value is leaking out of your operation that you're not accounting for.
+          </p>
+
+          <div class="callout callout-info">
+            <div class="callout-label">💡 A Simple Way to Think About It</div>
+            <p>
+              If your accounting records and your physical stock always matched perfectly, your shrink rate would be 0%. In the real world, that almost never happens — but the goal is to get as close to zero as possible, and to understand exactly where the gap is coming from.
+            </p>
+          </div>
+        </section>
+
+        <!-- HOW TO CALCULATE -->
+        <section id="how-to-calculate">
+          <h2>How to Calculate Your Shrink Rate</h2>
+          <p>
+            There are two common ways to calculate shrinkage, depending on what you want to compare it against. Both are useful — they just answer slightly different questions.
+          </p>
+
+          <h3>Method 1: Shrinkage as a Percentage of Book Inventory</h3>
+          <div class="formula-box">
+            <div class="f-label">Formula</div>
+            <div class="f-expr">Shrink Rate = ((Book Inventory − Physical Inventory) ÷ Book Inventory) × 100</div>
+            <div class="f-note">This tells you what percentage of your recorded stock is unaccounted for.</div>
+          </div>
+
+          <h3>Method 2: Shrinkage as a Percentage of Sales</h3>
+          <div class="formula-box">
+            <div class="f-label">Formula</div>
+            <div class="f-expr">Shrink Rate = (Dollar Value of Shrinkage ÷ Total Sales) × 100</div>
+            <div class="f-note">This is the version most commonly used in retail benchmarking, because it lets you compare shrinkage across stores or periods regardless of inventory size.</div>
+          </div>
+
+          <h3>Worked Example</h3>
+          <p>
+            Let's make this concrete. Say you run a small electronics store. At the end of the quarter, your records say you should have $250,000 worth of inventory on hand. You do a full physical count and find $242,500 worth of stock actually on the shelves and in the back room.
+          </p>
+
+          <div class="example-card">
+            <div class="ex-label">📊 Example Calculation</div>
+            <div class="ex-row">
+              <span class="ex-key">Book inventory (what records say)</span>
+              <span class="ex-val">$250,000</span>
+            </div>
+            <div class="ex-row">
+              <span class="ex-key">Physical inventory (what you counted)</span>
+              <span class="ex-val">$242,500</span>
+            </div>
+            <div class="ex-row">
+              <span class="ex-key">Shrinkage (the gap)</span>
+              <span class="ex-val">$7,500</span>
+            </div>
+            <div class="ex-row total">
+              <span class="ex-key">Shrink rate (% of book inventory)</span>
+              <span class="ex-val">3.0%</span>
+            </div>
+          </div>
+
+          <p>
+            A 3% shrink rate on $250,000 of inventory is $7,500 quietly gone — every quarter, if nothing changes, that's $30,000 a year. For a small business, that's not a rounding error. That's real profit.
+          </p>
+        </section>
+
+        <!-- BENCHMARKS -->
+        <section id="benchmarks">
+          <h2>Is Your Shrink Rate Normal? Industry Benchmarks</h2>
+          <p>
+            Once you've calculated your number, the natural next question is: <em>is this bad?</em> Here's a general guide for retail and similar inventory-heavy businesses:
+          </p>
+
+          <div class="data-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Shrink Rate</th>
+                  <th>What It Means</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Below 1%</strong></td>
+                  <td>Strong inventory control. Common in well-managed operations with tight processes.</td>
+                  <td><span class="badge badge-green">Good</span></td>
+                </tr>
+                <tr>
+                  <td><strong>1% – 2%</strong></td>
+                  <td>Typical for most retail businesses. Worth monitoring but not alarming on its own.</td>
+                  <td><span class="badge badge-amber">Average</span></td>
+                </tr>
+                <tr>
+                  <td><strong>2% – 3%</strong></td>
+                  <td>Above average. Usually indicates a specific, fixable issue — worth investigating.</td>
+                  <td><span class="badge badge-amber">Watch</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Above 3%</strong></td>
+                  <td>Significant. At this level, shrinkage is materially affecting profitability and needs a focused response.</td>
+                  <td><span class="badge badge-red">Action needed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            These numbers vary by industry — high-value, easily concealable items (cosmetics, electronics accessories, alcohol, pharmaceuticals) tend to run higher than bulky, low-value items. The point of a benchmark isn't to hit a magic number; it's to give you a sense of whether your situation is normal or worth a closer look.
+          </p>
+        </section>
+
+        <!-- THE FOUR CAUSES -->
+        <section id="causes">
+          <h2>The Four Main Causes of Shrinkage</h2>
+          <p>
+            Shrinkage isn't one thing — it's a bucket that several different problems fall into. Understanding the breakdown matters because each cause needs a different fix. Here's how shrinkage typically splits across most retail and inventory-based businesses:
+          </p>
+
+          <div class="causes-grid">
+            <div class="cause-card c1">
+              <div class="c-pct">~30%</div>
+              <div class="c-name">Employee Theft</div>
+              <div class="c-desc">Stock taken by staff — through direct theft, fraudulent returns, discount abuse, or "sweethearting" (giving away free items to friends and family).</div>
+            </div>
+            <div class="cause-card c2">
+              <div class="c-pct">~35%</div>
+              <div class="c-name">External Theft / Shoplifting</div>
+              <div class="c-desc">Stock taken by customers or outside individuals — ranging from opportunistic shoplifting to organized retail crime targeting specific high-value SKUs.</div>
+            </div>
+            <div class="cause-card c3">
+              <div class="c-pct">~20%</div>
+              <div class="c-name">Administrative & Paperwork Errors</div>
+              <div class="c-desc">Receiving errors, mislabeled products, incorrect counts, data entry mistakes, and pricing errors that cause your records to drift from reality.</div>
+            </div>
+            <div class="cause-card c4">
+              <div class="c-pct">~15%</div>
+              <div class="c-name">Vendor Fraud, Damage & Waste</div>
+              <div class="c-desc">Short shipments from suppliers, products damaged in transit or storage, spoilage of perishable goods, and breakage that's never properly recorded.</div>
+            </div>
+          </div>
+
+          <div class="callout callout-warn">
+            <div class="callout-label">⚠️ A Note on These Numbers</div>
+            <p>
+              These percentages are general industry patterns, not universal laws. A grocery store will see more spoilage-related shrinkage; a jewelry store will see more theft-related shrinkage; a warehouse with poor receiving processes will see more administrative shrinkage. <strong>The real value of understanding these categories is knowing what to look for in your own numbers.</strong>
+            </p>
+          </div>
+        </section>
+
+        <!-- WHY SHRINKAGE MATTERS -->
+        <section id="why-it-matters">
+          <h2>Why Shrinkage Hits Harder Than the Number Suggests</h2>
+          <p>
+            A 2% shrink rate sounds small. But shrinkage doesn't come out of your revenue — it comes out of your <strong>profit margin</strong>, and those are very different things.
+          </p>
+          <p>
+            If your business operates on a 10% net profit margin and you lose 2% of your inventory value to shrinkage, you're not losing "2% of the business." You're losing a fifth of your actual profit. To put it another way: a business with $1,000,000 in annual sales and a 2% shrink rate on a 40% cost-of-goods ratio is losing roughly $8,000 a year in pure profit — money that would otherwise go straight to the bottom line.
+          </p>
+
+          <div class="pull-quote">
+            <p>"Shrinkage is the only line item on your P&L that nobody intentionally created, nobody approved, and nobody can fully explain — until you go looking."</p>
+            <cite>— PreventLoss.org</cite>
+          </div>
+
+          <p>
+            That's what makes shrinkage different from other costs. A rent increase is visible and predictable. Shrinkage is invisible until you measure it — and by the time you measure it, the loss has already happened. The only way to control it going forward is to understand where it's coming from.
+          </p>
+        </section>
+
+        <!-- HOW TO REDUCE -->
+        <section id="how-to-reduce">
+          <h2>How to Start Reducing Shrinkage</h2>
+          <p>
+            You don't need a massive overhaul to start moving your shrink rate in the right direction. Most meaningful improvements come from a handful of consistent practices, applied well:
+          </p>
+
+          <ul class="checklist">
+            <li><div class="ck-icon">✓</div><div><strong>Start with a baseline count.</strong> You can't reduce what you haven't measured. Do a full physical count and calculate your current shrink rate before changing anything — this becomes your benchmark.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Break shrinkage down by category and location.</strong> An overall shrink rate hides where the problem actually is. Look at shrinkage by department, by SKU, and by store or shift — patterns usually point straight at the cause.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Tighten receiving procedures.</strong> A large share of "mystery" shrinkage starts the moment stock arrives. Every delivery should be checked against the purchase order, signed off, and entered into the system before it reaches the floor.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Run cycle counts on high-risk items.</strong> Instead of waiting for an annual count, regularly spot-check the SKUs most prone to shrinkage — small, high-value, easily concealed items especially.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Watch for patterns in returns, voids, and discounts.</strong> These transaction types are common cover for both employee and customer-related shrinkage. Exception reports that flag unusual frequency are one of the highest-value tools available.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Make random audits part of the culture.</strong> Scheduled counts can be prepared for. Unannounced spot checks — done respectfully and consistently — are one of the strongest deterrents available, and they don't need to feel like an accusation.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Re-measure regularly.</strong> Shrinkage isn't a one-time fix. Track your rate over time, the same way you'd track any other KPI — and treat sudden changes as a signal worth investigating, not just a number to note.</div></li>
+          </ul>
+
+          <div class="callout callout-tip">
+            <div class="callout-label">✅ The Honest Starting Point</div>
+            <p>
+              You will never get your shrink rate to exactly zero — and chasing perfection isn't the goal. The goal is to know your number, understand what's driving it, and make sure it's trending in the right direction. A business that measures shrinkage and improves steadily is in a completely different position than one that doesn't measure it at all.
+            </p>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What is a good shrinkage rate?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                For most retail businesses, a shrink rate below 1% of sales is considered good, 1–2% is average, and anything above 2–3% signals a real problem worth investigating. The "right" number does vary by industry — businesses dealing in small, high-value, or perishable goods often run higher than average.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                How do you calculate inventory shrinkage?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Subtract your physical stock count from your recorded book inventory to find the shrinkage amount. Then divide that figure by your book inventory (or by total sales) and multiply by 100 to express it as a percentage — your shrink rate.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What is the difference between shrinkage and theft?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Theft is one cause of shrinkage, but not the only one. Shrinkage also includes administrative errors, damage, spoilage, and vendor fraud. Employee and external theft together usually account for the largest share of shrinkage — but rarely all of it, which is why a full breakdown matters.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                How often should you check for shrinkage?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                A good rhythm combines continuous cycle counts on your highest-risk items, monthly or quarterly category-level checks, and at least one full physical inventory count per year. The more frequently you check, the faster you'll catch a developing problem before it becomes a large one.
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section id="conclusion">
+          <h2>Conclusion: Measure It, Understand It, Then Improve It</h2>
+          <p>
+            Inventory shrinkage isn't a mystery you have to live with — it's a measurable, manageable part of running a business that holds stock. The businesses that handle it well aren't the ones with zero shrinkage. They're the ones that know their number, understand where it comes from, and treat it as a metric worth improving — the same way they would treat sales, margins, or labor costs.
+          </p>
+          <p>
+            If you've never calculated your shrink rate, that's the best place to start. One physical count, one calculation, and you'll have a number you can actually work with — and a much clearer picture of where your business stands.
+          </p>
+
+          <div class="article-cta">
+            <h3>Want More Inventory Management Guides?</h3>
+            <p>Explore practical articles on inventory audits, cycle counts, and loss prevention controls across every industry.</p>
+            <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Article sidebar">
+
+      <!-- Quick Reference -->
+      <div class="sidebar-card quickref">
+        <div class="qr-header">
+          <span>📊</span>
+          <h4>Quick Reference</h4>
+        </div>
+        <div class="qr-body">
+          <div class="qr-row">
+            <span class="qr-key">Good shrink rate</span>
+            <span class="qr-val green">Below 1%</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Average shrink rate</span>
+            <span class="qr-val amber">1% – 2%</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Needs attention</span>
+            <span class="qr-val red">Above 2–3%</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Top cause (external)</span>
+            <span class="qr-val">Shoplifting (~35%)</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Top cause (internal)</span>
+            <span class="qr-val">Employee theft (~30%)</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Formula basis</span>
+            <span class="qr-val">Book − Physical</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Measured as</span>
+            <span class="qr-val">% of inventory or sales</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Recommended check</span>
+            <span class="qr-val">Cycle counts + annual count</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOC -->
+      <div class="sidebar-card">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#what-is-shrinkage">What Is Shrinkage?</a></li>
+          <li><a href="#how-to-calculate">How to Calculate It</a></li>
+          <li><a href="#benchmarks">Industry Benchmarks</a></li>
+          <li><a href="#causes">The 4 Main Causes</a></li>
+          <li><a href="#why-it-matters">Why It Matters</a></li>
+          <li><a href="#how-to-reduce">How to Reduce It</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </div>
+
+      <!-- Tags -->
+      <div class="sidebar-card">
+        <h4>Tags</h4>
+        <div class="tag-list">
+          <a class="tag" href="#">Inventory Shrinkage</a>
+          <a class="tag" href="#">Stock Loss</a>
+          <a class="tag" href="#">Shrink Rate</a>
+          <a class="tag" href="#">Cycle Counts</a>
+          <a class="tag" href="#">Retail Inventory</a>
+          <a class="tag" href="#">Employee Theft</a>
+          <a class="tag" href="#">KPIs</a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    // Reading progress
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      document.getElementById('read-progress').style.width =
+        ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+    });
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    }
+
+    // TOC highlight
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
