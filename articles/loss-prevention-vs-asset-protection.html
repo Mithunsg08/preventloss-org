@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <title>Loss Prevention vs Asset Protection: What's the Difference? (2026 Guide)</title>
+  <meta name="description" content="Loss prevention and asset protection get used like they're the same thing, but they're not quite. Here's the real difference, why the industry shifted terms, and which one your business actually needs." />
+  <meta name="keywords" content="loss prevention vs asset protection, what is asset protection, asset protection vs loss prevention, difference between loss prevention and asset protection, retail asset protection, LP vs AP, loss prevention manager, asset protection manager, AP department retail" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mithun GS" />
+  <link rel="canonical" href="https://www.preventloss.org/articles/loss-prevention-vs-asset-protection.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Loss Prevention vs Asset Protection: What's the Difference?" />
+  <meta property="og:description" content="The real difference between loss prevention and asset protection, why the industry started using both terms, and which one actually matters for your business." />
+  <meta property="og:url" content="https://www.preventloss.org/articles/loss-prevention-vs-asset-protection.html" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+  <meta property="article:published_time" content="2026-06-13T00:00:00Z" />
+  <meta property="article:modified_time" content="2026-06-13T00:00:00Z" />
+  <meta property="article:section" content="Loss Prevention" />
+  <meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Loss Prevention vs Asset Protection: What's the Difference?" />
+  <meta name="twitter:description" content="They're used interchangeably, but they're not quite the same thing. Here's the real difference." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Loss Prevention vs Asset Protection: What's the Difference?",
+    "description": "The real difference between loss prevention and asset protection, why the industry started using both terms, and which one actually matters for your business.",
+    "author": {
+      "@type": "Person",
+      "name": "Mithun GS",
+      "url": "https://www.linkedin.com/in/mithun-gs/",
+      "jobTitle": "Regional Loss Prevention Manager"
+    },
+    "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+    "datePublished": "2026-06-13",
+    "dateModified": "2026-06-13",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/loss-prevention-vs-asset-protection.html" },
+    "keywords": "loss prevention vs asset protection, asset protection, loss prevention, retail security"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is asset protection the same as loss prevention?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "They overlap heavily and many companies use the terms interchangeably. The distinction, where it exists, is that loss prevention traditionally focuses on shrinkage, theft, and inventory loss, while asset protection covers a broader scope including safety, brand protection, data security, and risk management."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why did retailers start using 'asset protection' instead of 'loss prevention'?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Large retailers began adopting 'asset protection' as their role expanded beyond theft and shrinkage into workplace safety, organized retail crime, cybersecurity, and brand risk. The new title better reflected the broader scope of the job and carried less of the security-guard connotation associated with 'loss prevention'."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which term should a small business use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most small and mid-sized businesses, the terminology doesn't matter much. What matters is whether someone is responsible for monitoring shrinkage, internal controls, and risk. 'Loss prevention' is often the more familiar and accessible term for smaller operations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does a business need both a loss prevention and an asset protection function?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not necessarily as separate departments. In most businesses, one person or team handles both loss prevention and broader asset protection responsibilities. Only larger organizations tend to split these into distinct functions with separate reporting lines."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+      --warn:        #f59e0b;
+      --danger:      #f87171;
+      --c-lp:        #3b82f6;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono:    'Courier New', monospace;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: var(--font-body); font-size: 17px; line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo {
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); text-decoration: none; letter-spacing: -0.02em;
+    }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Progress bar */
+    #read-progress {
+      position: fixed; top: 56px; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--c-lp), #a78bfa);
+      z-index: 99; transition: width 0.1s linear;
+    }
+
+    /* Layout */
+    .page-wrap {
+      max-width: 1140px; margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 300px; gap: 52px; align-items: start;
+    }
+    @media (max-width: 860px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* Header */
+    .article-header { padding: 52px 0 36px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--muted); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--border); }
+    .article-category {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--accent-glow); border: 1px solid var(--accent); color: var(--accent-lt);
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 18px;
+    }
+    h1 {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 3.8vw, 2.7rem);
+      font-weight: 700; color: var(--heading); line-height: 1.18; letter-spacing: -0.03em; margin-bottom: 18px;
+    }
+    .article-deck { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 22px; max-width: 680px; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.8rem; color: var(--muted); }
+
+    /* Stats strip */
+    .article-stats {
+      display: flex; gap: 0; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-md); margin-bottom: 40px; overflow: hidden;
+    }
+    .stat-item { flex: 1; padding: 16px 18px; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-item .s-val {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 700;
+      color: var(--heading); line-height: 1; margin-bottom: 4px;
+    }
+    .stat-item .s-val.amber { color: var(--warn); }
+    .stat-item .s-val.green { color: var(--success); }
+    .stat-item .s-lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; }
+    @media (max-width: 600px) {
+      .article-stats { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); }
+    }
+
+    /* Prose */
+    .article-body h2 {
+      font-family: var(--font-display); font-size: 1.45rem; font-weight: 700;
+      color: var(--heading); letter-spacing: -0.02em;
+      margin: 52px 0 16px; padding-top: 52px; border-top: 1px solid var(--border);
+    }
+    .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--heading); margin: 28px 0 10px; }
+    .article-body p { margin-bottom: 20px; color: var(--text); }
+    .article-body a { color: var(--accent-lt); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body strong { color: var(--heading); font-weight: 600; }
+    .article-body em { color: var(--muted); font-style: italic; }
+
+    /* Callouts */
+    .callout { border-radius: var(--r-md); padding: 18px 22px; margin: 28px 0; border-left: 4px solid; }
+    .callout-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .callout p { margin-bottom: 6px; font-size: 0.94rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout-tip   { background: #0d1f16; border-color: var(--success); }
+    .callout-tip .callout-label { color: var(--success); }
+    .callout-warn  { background: #1c1500; border-color: var(--warn); }
+    .callout-warn .callout-label { color: var(--warn); }
+    .callout-info  { background: var(--accent-glow); border-color: var(--accent); }
+    .callout-info .callout-label { color: var(--accent-lt); }
+
+    /* Comparison table */
+    .data-table-wrap { overflow-x: auto; margin: 24px 0; border: 1px solid var(--border); border-radius: var(--r-md); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    thead th {
+      background: var(--surface); color: var(--muted); font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 11px 14px; text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--surface); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.68rem; font-weight: 700; }
+    .badge-blue { background: var(--accent-glow); color: var(--accent-lt); }
+    .badge-purple { background: #1e1340; color: #a78bfa; }
+
+    /* Venn-ish overlap cards */
+    .overlap-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
+      margin: 24px 0; border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden;
+    }
+    @media (max-width: 700px) { .overlap-grid { grid-template-columns: 1fr; } }
+    .overlap-col { padding: 22px 20px; background: var(--surface); }
+    .overlap-col + .overlap-col { border-left: 1px solid var(--border); }
+    @media (max-width: 700px) {
+      .overlap-col + .overlap-col { border-left: none; border-top: 1px solid var(--border); }
+    }
+    .overlap-col h4 {
+      font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .overlap-col.lp h4 { color: var(--accent-lt); }
+    .overlap-col.both h4 { color: #a78bfa; }
+    .overlap-col.ap h4 { color: var(--success); }
+    .overlap-col.both { background: #1a1530; }
+    .overlap-col ul { list-style: none; }
+    .overlap-col li {
+      font-size: 0.84rem; color: var(--muted); padding: 5px 0;
+      display: flex; gap: 8px; align-items: flex-start;
+    }
+    .overlap-col li::before { content: '–'; color: var(--border); flex-shrink: 0; }
+
+    /* Checklist */
+    .checklist { list-style: none; margin: 16px 0 24px; }
+    .checklist li {
+      display: flex; gap: 12px; align-items: flex-start; padding: 8px 0;
+      border-bottom: 1px solid var(--border); font-size: 0.94rem;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist .ck-icon {
+      width: 20px; height: 20px; flex-shrink: 0; background: var(--accent-glow); border: 1px solid var(--accent);
+      border-radius: 4px; display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: var(--accent-lt); margin-top: 2px;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 4px solid var(--c-lp); padding: 16px 24px; margin: 32px 0;
+      background: var(--accent-glow); border-radius: 0 var(--r-md) var(--r-md) 0;
+    }
+    .pull-quote p {
+      font-family: var(--font-display); font-size: 1.1rem; color: var(--heading);
+      line-height: 1.55; font-style: italic; margin: 0;
+    }
+    .pull-quote cite {
+      display: block; font-size: 0.75rem; color: var(--muted); margin-top: 10px;
+      font-style: normal; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em;
+    }
+
+    /* FAQ */
+    .faq-list { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 10px; overflow: hidden; }
+    .faq-q {
+      width: 100%; background: var(--surface); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px; font-size: 0.95rem; font-weight: 600; color: var(--heading);
+      text-align: left; gap: 12px;
+    }
+    .faq-q:hover { background: var(--surface-2); }
+    .faq-q .arrow { flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 0.92rem; color: var(--muted); background: var(--surface); }
+    .faq-a.open { display: block; }
+
+    /* Author box */
+    .author-box { display:flex; gap:16px; align-items:flex-start; }
+    .author-box .av { font-size:2rem; line-height:1; }
+
+    /* CTA */
+    .article-cta {
+      background: linear-gradient(135deg, #0f2040 0%, #1a0a30 100%);
+      border: 1px solid var(--accent); border-radius: var(--r-lg);
+      padding: 28px 32px; text-align: center; margin-top: 48px;
+    }
+    .article-cta h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); margin-bottom: 8px; }
+    .article-cta p  { color: var(--muted); font-size: 0.875rem; margin-bottom: 18px; }
+    .btn-primary {
+      display: inline-block; background: var(--accent); color: #fff;
+      font-weight: 700; font-size: 0.875rem; padding: 11px 26px; border-radius: var(--r-sm);
+      text-decoration: none; transition: background 0.18s;
+    }
+    .btn-primary:hover { background: var(--accent-lt); }
+
+    /* Sidebar */
+    .sidebar { padding-top: 52px; }
+    .sidebar-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 18px; margin-bottom: 18px;
+    }
+    .sidebar-card h4 {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+      color: var(--muted); margin-bottom: 12px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      font-size: 0.8rem; color: var(--muted); text-decoration: none;
+      display: block; padding: 4px 0 4px 12px; border-left: 2px solid transparent;
+      transition: all 0.15s; line-height: 1.35;
+    }
+    .toc-list a:hover, .toc-list a.active { color: var(--text); border-color: var(--accent-lt); }
+
+    /* Quick reference */
+    .quickref { position: sticky; top: 72px; }
+    .qr-header {
+      background: var(--accent-glow); border-bottom: 1px solid var(--accent);
+      padding: 14px 18px; display: flex; align-items: center; gap: 8px;
+    }
+    .qr-header h4 { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-lt); }
+    .qr-body { padding: 0; }
+    .qr-row {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 10px;
+      padding: 12px 18px; border-bottom: 1px solid var(--border); font-size: 0.8rem;
+    }
+    .qr-row:last-child { border-bottom: none; }
+    .qr-key { color: var(--muted); flex-shrink: 0; }
+    .qr-val { color: var(--heading); font-weight: 600; text-align: right; }
+    .qr-val.purple { color: #a78bfa; }
+    .qr-val.green { color: var(--success); }
+
+    .tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      background: #1e293b; color: var(--muted); font-size: 0.72rem; border-radius: var(--r-sm);
+      padding: 4px 10px; text-decoration: none; border: 1px solid var(--border); transition: all 0.15s;
+    }
+    .tag:hover { color: var(--text); border-color: var(--muted); }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border); margin-top: 80px; padding: 32px 24px;
+      text-align: center; color: var(--muted); font-size: 0.82rem;
+    }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <main id="main-content">
+
+      <header class="article-header">
+        <div class="breadcrumb">
+          <a href="/">Home</a><span>›</span>
+          <a href="/articles/">Articles</a><span>›</span>
+          <a href="/articles/?cat=loss-prevention">Loss Prevention</a>
+        </div>
+        <span class="article-category">🛡️ Loss Prevention</span>
+        <h1>Loss Prevention vs Asset Protection: What's the Difference?</h1>
+        <p class="article-deck">
+          If you've noticed some companies call the role "Loss Prevention" and others call it "Asset Protection" and wondered if that's just a fancier name for the same job — you're not wrong, but you're not entirely right either. Here's what's actually going on.
+        </p>
+        <div class="article-meta">
+          <span>🗓 June 13, 2026</span>
+          <span>⏱ 7 min read</span>
+          <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-lt); text-decoration:underline; text-underline-offset:3px;">Mithun GS</a></span>
+          <span>📂 Loss Prevention</span>
+        </div>
+      </header>
+
+      <div class="article-stats">
+        <div class="stat-item">
+          <div class="s-val">2 terms</div>
+          <div class="s-lbl">Same job postings, different titles</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val amber">~70%</div>
+          <div class="s-lbl">Job overlap, by most estimates</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val green">1</div>
+          <div class="s-lbl">Real shift: scope, not the title</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val">Both</div>
+          <div class="s-lbl">Care about the same bottom line</div>
+        </div>
+      </div>
+
+      <article class="article-body" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="Loss Prevention vs Asset Protection: What's the Difference?" />
+        <meta itemprop="datePublished" content="2026-06-13" />
+
+        <!-- INTRO -->
+        <section id="introduction">
+          <h2 style="border-top:none; padding-top:0; margin-top:0;">A Question I Get a Lot</h2>
+          <p>
+            People ask me this more often than you'd think, usually after seeing two job postings that read almost identically except for the title at the top. One says "Loss Prevention Manager." The other says "Asset Protection Manager." Same bullet points, same salary range, same general vibe. So... what's the actual difference?
+          </p>
+          <p>
+            Short answer: less than the titles suggest, but not nothing. The honest answer takes a few minutes, and it's worth knowing — not just if you're job hunting, but if you're a business owner trying to figure out what kind of role you actually need to hire for, or what to call the function you already have.
+          </p>
+          <p>
+            I've worked under both titles at different points. Here's how I'd explain the difference to someone sitting across the table from me.
+          </p>
+        </section>
+
+        <!-- WHERE LP CAME FROM -->
+        <section id="origins">
+          <h2>Where "Loss Prevention" Came From</h2>
+          <p>
+            Loss prevention, as a term, is old — it goes back decades in retail, and it grew out of a pretty narrow job: stop shoplifting, catch employees stealing, and keep an eye on the numbers that showed stock disappearing. The classic image is the guy in the back office watching CCTV monitors, or walking the floor in plain clothes. That image isn't wrong, exactly. It's just incomplete now, and it was always a little incomplete even back then.
+          </p>
+          <p>
+            Because even in the "watch for shoplifters" era, the job quietly included things like reviewing cash handling procedures, checking receiving processes, and looking at why certain stores had higher shrink than others. The title was narrow. The actual work was already broader than the title suggested.
+          </p>
+        </section>
+
+        <!-- WHERE AP CAME FROM -->
+        <section id="ap-origins">
+          <h2>Then "Asset Protection" Showed Up</h2>
+          <p>
+            Sometime in the last couple of decades — and you'll see different timelines depending on who you ask — bigger retailers started rebranding their loss prevention departments as "asset protection." Target, Walmart, Home Depot, and a bunch of others made this shift, and it wasn't just a coat of paint.
+          </p>
+          <p>
+            The reasoning, as I understand it, was that the job had genuinely outgrown the old title. By this point, the people in these roles weren't just dealing with shoplifting and employee theft. They were dealing with:
+          </p>
+          <ul class="checklist">
+            <li><div class="ck-icon">✓</div><div><strong>Organized retail crime</strong> — coordinated theft rings that operate very differently from a single shoplifter, and need a different response entirely.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Workplace safety</strong> — slip-and-fall claims, workers' comp issues, OSHA compliance. Not traditionally "LP," but the same team often ended up handling it.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Cyber and data risk</strong> — as retail became more digital, protecting customer data and payment systems became part of "protecting assets" in a way that had nothing to do with a physical shelf.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Brand and reputational risk</strong> — a viral video of a bad incident in-store can cost a company more than a year of shrinkage. That's an "asset" too, just not one you can put on a shelf.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Crisis and emergency response</strong> — severe weather, civil unrest, active threats. Increasingly part of the role at larger organizations.</div></li>
+          </ul>
+          <p>
+            "Loss prevention" never really described all of that well. "Asset protection" was a broader umbrella that fit better — and, if I'm honest, it also sounded a bit less like a security guard job and a bit more like a strategic one. That mattered for hiring, pay grades, and how the function was perceived internally.
+          </p>
+        </section>
+
+        <!-- THE OVERLAP -->
+        <section id="overlap">
+          <h2>So How Much Actually Overlaps?</h2>
+          <p>
+            A lot. If you stripped the titles off two job descriptions — one for an LP role at a mid-size retailer, one for an AP role at a big-box chain — you'd probably struggle to tell which was which for most of the document. The core, day-to-day work is genuinely similar. The difference shows up more at the edges.
+          </p>
+
+          <div class="overlap-grid">
+            <div class="overlap-col lp">
+              <h4>Mostly "Loss Prevention"</h4>
+              <ul>
+                <li>Shrinkage tracking and reduction</li>
+                <li>Shoplifting response</li>
+                <li>Employee theft investigations</li>
+                <li>Cash handling audits</li>
+                <li>Exception reporting (refunds, voids)</li>
+              </ul>
+            </div>
+            <div class="overlap-col both">
+              <h4>Shared by Both</h4>
+              <ul>
+                <li>Internal investigations</li>
+                <li>CCTV and surveillance oversight</li>
+                <li>Inventory audits</li>
+                <li>Policy and procedure development</li>
+                <li>Staff training on theft awareness</li>
+                <li>Working with law enforcement</li>
+              </ul>
+            </div>
+            <div class="overlap-col ap">
+              <h4>Mostly "Asset Protection"</h4>
+              <ul>
+                <li>Organized retail crime strategy</li>
+                <li>Workplace safety / OSHA</li>
+                <li>Emergency and crisis response</li>
+                <li>Data and cyber risk coordination</li>
+                <li>Brand and reputational risk</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout-info">
+            <div class="callout-label">💡 The honest version</div>
+            <p>
+              In most companies — especially anything below "large national chain" size — one person or one small team does all of this regardless of what their job title says. The title tells you more about how the company sees the role (and sometimes how they pay for it) than it tells you about what the person actually does day to day.
+            </p>
+          </div>
+        </section>
+
+        <!-- WHICH TERM SHOULD YOU USE -->
+        <section id="which-term">
+          <h2>Which Term Should Your Business Use?</h2>
+          <p>
+            If you're a small or mid-sized business trying to figure out what to call this function — or whether you even need a dedicated person for it — here's how I'd think about it.
+          </p>
+
+          <h3>Use "Loss Prevention" if...</h3>
+          <p>
+            Your main concern is shrinkage, theft, and the numbers not adding up at the end of the month. This is where most small and mid-sized retail and hospitality businesses start, and honestly where most of them stay. It's also the more familiar term — candidates know what it means, and customers and staff understand it without explanation.
+          </p>
+
+          <h3>Use "Asset Protection" if...</h3>
+          <p>
+            You're operating across multiple locations, you're dealing with organized theft (not just opportunistic shoplifting), or the role is genuinely expected to cover safety and risk topics beyond inventory. Larger businesses, or ones in higher-risk environments — airports, transit hubs, big-box retail — tend to gravitate here because the scope justifies it.
+          </p>
+
+          <div class="pull-quote">
+            <p>"Don't pick the title first and then figure out the job. Figure out what you actually need someone to own, and the right title will be obvious."</p>
+            <cite>— Mithun GS</cite>
+          </div>
+
+          <p>
+            And honestly? For a lot of businesses, this entire question is academic. What matters isn't whether the business card says "Loss Prevention Manager" or "Asset Protection Manager" — it's whether <em>someone</em> is responsible for shrinkage, internal controls, investigations, and risk. The title is a label for an org chart. The job is the job.
+          </p>
+        </section>
+
+        <!-- COMPARISON TABLE -->
+        <section id="comparison-table">
+          <h2>Side by Side</h2>
+          <p>
+            If you want the short version to refer back to, here's how the two terms generally line up:
+          </p>
+
+          <div class="data-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Loss Prevention</th>
+                  <th>Asset Protection</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Primary focus</strong></td>
+                  <td>Shrinkage, theft, inventory loss</td>
+                  <td>All of LP, plus safety, risk, brand, data</td>
+                </tr>
+                <tr>
+                  <td><strong>Typical company size</strong></td>
+                  <td><span class="badge badge-blue">Small – Mid</span></td>
+                  <td><span class="badge badge-purple">Mid – Large</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Common in</strong></td>
+                  <td>Independent retail, hospitality, small chains</td>
+                  <td>National retail chains, airports, big-box</td>
+                </tr>
+                <tr>
+                  <td><strong>Scope of "asset"</strong></td>
+                  <td>Inventory, cash</td>
+                  <td>Inventory, cash, people, data, brand</td>
+                </tr>
+                <tr>
+                  <td><strong>Day-to-day work</strong></td>
+                  <td>Largely the same</td>
+                  <td>Largely the same</td>
+                </tr>
+                <tr>
+                  <td><strong>How candidates search</strong></td>
+                  <td>Still the more commonly searched term</td>
+                  <td>Growing, especially at larger employers</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- CLOSING -->
+        <section id="closing-thoughts">
+          <h2>Why This Matters More Than It Seems</h2>
+          <p>
+            I've seen business owners get genuinely stuck on this — not sure whether to advertise for "loss prevention" or "asset protection," worried that picking the wrong term will either undersell the role or oversell it to candidates who expect a bigger scope than the job actually has.
+          </p>
+          <p>
+            My honest take: write the job description first. List what you actually need this person to do — shrink tracking, audits, investigations, maybe some safety oversight if that's realistic for your size. Once that list exists, the title picks itself. If the list is mostly inventory and cash, call it loss prevention. If it's got safety, brand, and multi-site risk on it too, asset protection fits better and will attract candidates with the right expectations.
+          </p>
+          <p>
+            Either way, the goal hasn't changed in fifty years: protect what the business owns, however broad or narrow that turns out to be in your case.
+          </p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Want More Loss Prevention Guides?</h3>
+            <p>Explore practical articles on shrinkage, internal controls, investigations, and operations across every industry.</p>
+            <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                Is asset protection the same as loss prevention?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                They overlap heavily, and a lot of companies use the terms interchangeably without thinking much about it. Where there's a real distinction, loss prevention tends to focus on shrinkage, theft, and inventory loss, while asset protection covers that plus safety, brand risk, data security, and broader risk management.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                Why did retailers start using "asset protection" instead of "loss prevention"?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Mostly because the job had grown beyond what "loss prevention" described. Organized retail crime, workplace safety, cybersecurity, and brand risk all became part of the role at larger companies, and "asset protection" was a better umbrella term — and arguably sounded more strategic than the old "security guard" connotation of LP.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                Which term should a small business use?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                For most small and mid-sized businesses, it honestly doesn't matter much. "Loss prevention" tends to be the more familiar, accessible term, and it fits well if your main concern is shrinkage and inventory. What matters more than the title is whether someone is actually responsible for these things.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                Does a business need both a loss prevention and an asset protection function?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Not as separate departments, in most cases. One person or team typically handles both sets of responsibilities. It's usually only larger organizations — multi-state or national chains — that split these into distinct functions with their own reporting lines.
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Article sidebar">
+
+      <div class="sidebar-card quickref">
+        <div class="qr-header">
+          <span>🛡️</span>
+          <h4>Quick Reference</h4>
+        </div>
+        <div class="qr-body">
+          <div class="qr-row">
+            <span class="qr-key">LP core focus</span>
+            <span class="qr-val">Shrinkage & theft</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">AP core focus</span>
+            <span class="qr-val purple">LP + safety, data, brand</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Day-to-day overlap</span>
+            <span class="qr-val green">~70%</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Term origin</span>
+            <span class="qr-val">LP = older, retail</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">AP popularized by</span>
+            <span class="qr-val">Big-box retailers</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Best fit for SMBs</span>
+            <span class="qr-val">Loss Prevention</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Best fit for multi-site</span>
+            <span class="qr-val purple">Asset Protection</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">What matters most</span>
+            <span class="qr-val">The job, not the title</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#origins">Where LP Came From</a></li>
+          <li><a href="#ap-origins">Where AP Came From</a></li>
+          <li><a href="#overlap">How Much Overlaps?</a></li>
+          <li><a href="#which-term">Which Term to Use</a></li>
+          <li><a href="#comparison-table">Side-by-Side Table</a></li>
+          <li><a href="#closing-thoughts">Why It Matters</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Tags</h4>
+        <div class="tag-list">
+          <a class="tag" href="#">Loss Prevention</a>
+          <a class="tag" href="#">Asset Protection</a>
+          <a class="tag" href="#">Retail Security</a>
+          <a class="tag" href="#">Career</a>
+          <a class="tag" href="#">Organized Retail Crime</a>
+          <a class="tag" href="#">Industry Terms</a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      document.getElementById('read-progress').style.width =
+        ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+    });
+
+    function toggleFaq(btn) {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    }
+
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
