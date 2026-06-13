@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <title>Vendor Fraud Prevention: How to Protect Your Supply Chain (2026 Guide)</title>
+  <meta name="description" content="Vendor fraud quietly drains more money than most businesses realize. Here's how overbilling, short shipments, and kickback schemes actually happen — and the practical controls that catch them. Written by a working loss prevention manager." />
+  <meta name="keywords" content="vendor fraud, vendor fraud prevention, procurement fraud, supplier fraud, invoice fraud, overbilling, short shipments, kickback schemes, three-way matching, procurement controls, vendor audit, supply chain fraud, accounts payable fraud, vendor fraud examples USA, small business procurement fraud" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mithun GS" />
+  <link rel="canonical" href="https://www.preventloss.org/articles/vendor-fraud-prevention.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Vendor Fraud Prevention: How to Protect Your Supply Chain" />
+  <meta property="og:description" content="How overbilling, short shipments, and kickback schemes actually happen — and the controls that catch them before they become a habit." />
+  <meta property="og:url" content="https://www.preventloss.org/articles/vendor-fraud-prevention.html" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+  <meta property="article:published_time" content="2026-06-13T00:00:00Z" />
+  <meta property="article:modified_time" content="2026-06-13T00:00:00Z" />
+  <meta property="article:section" content="Procurement" />
+  <meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vendor Fraud Prevention: How to Protect Your Supply Chain" />
+  <meta name="twitter:description" content="The quiet ways vendor fraud happens, and the controls that catch it." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Vendor Fraud Prevention: How to Protect Your Supply Chain",
+    "description": "How overbilling, short shipments, and kickback schemes actually happen, and the practical controls that catch them.",
+    "author": {
+      "@type": "Person",
+      "name": "Mithun GS",
+      "url": "https://www.linkedin.com/in/mithun-gs/",
+      "jobTitle": "Regional Loss Prevention Manager"
+    },
+    "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+    "datePublished": "2026-06-13",
+    "dateModified": "2026-06-13",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/vendor-fraud-prevention.html" },
+    "keywords": "vendor fraud, procurement fraud, supplier fraud, overbilling, kickback schemes"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the most common type of vendor fraud?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Overbilling and short shipments are the most common forms of vendor fraud — charging for a higher quantity, grade, or price than what was actually delivered. Kickback schemes between employees and vendors are less frequent but tend to involve much larger amounts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is three-way matching?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Three-way matching is a procurement control that compares the purchase order, the goods receipt note, and the supplier invoice before payment is approved. If the quantities or prices on all three documents don't match, the invoice is flagged for review rather than paid automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you spot a kickback scheme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common signs include one vendor consistently winning bids despite higher prices, a buyer who resists rotating vendors or competitive quotes, vendors with addresses that match employee addresses, and pricing that is consistently just under approval thresholds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can small businesses implement vendor fraud controls?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Even basic steps like checking deliveries against purchase orders, separating the person who orders from the person who approves payment, and occasionally rotating who handles vendor relationships can significantly reduce vendor fraud risk without expensive systems."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+      --warn:        #f59e0b;
+      --danger:      #f87171;
+      --c-pr:        #f59e0b;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono:    'Courier New', monospace;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: var(--font-body); font-size: 17px; line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo {
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); text-decoration: none; letter-spacing: -0.02em;
+    }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Progress bar */
+    #read-progress {
+      position: fixed; top: 56px; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--c-pr), var(--danger));
+      z-index: 99; transition: width 0.1s linear;
+    }
+
+    /* Layout */
+    .page-wrap {
+      max-width: 1140px; margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 300px; gap: 52px; align-items: start;
+    }
+    @media (max-width: 860px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* Header */
+    .article-header { padding: 52px 0 36px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--muted); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--border); }
+    .article-category {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #2a1d00; border: 1px solid var(--c-pr); color: var(--c-pr);
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 18px;
+    }
+    h1 {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 3.8vw, 2.7rem);
+      font-weight: 700; color: var(--heading); line-height: 1.18; letter-spacing: -0.03em; margin-bottom: 18px;
+    }
+    .article-deck { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 22px; max-width: 680px; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.8rem; color: var(--muted); }
+
+    /* Stats strip */
+    .article-stats {
+      display: flex; gap: 0; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-md); margin-bottom: 40px; overflow: hidden;
+    }
+    .stat-item { flex: 1; padding: 16px 18px; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-item .s-val {
+      font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;
+      color: var(--heading); line-height: 1; margin-bottom: 4px;
+    }
+    .stat-item .s-val.amber { color: var(--warn); }
+    .stat-item .s-val.red { color: var(--danger); }
+    .stat-item .s-val.green { color: var(--success); }
+    .stat-item .s-lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; }
+    @media (max-width: 600px) {
+      .article-stats { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); }
+    }
+
+    /* Prose */
+    .article-body h2 {
+      font-family: var(--font-display); font-size: 1.45rem; font-weight: 700;
+      color: var(--heading); letter-spacing: -0.02em;
+      margin: 52px 0 16px; padding-top: 52px; border-top: 1px solid var(--border);
+    }
+    .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--heading); margin: 28px 0 10px; }
+    .article-body p { margin-bottom: 20px; color: var(--text); }
+    .article-body a { color: var(--accent-lt); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body strong { color: var(--heading); font-weight: 600; }
+    .article-body em { color: var(--muted); font-style: italic; }
+
+    /* Callouts */
+    .callout { border-radius: var(--r-md); padding: 18px 22px; margin: 28px 0; border-left: 4px solid; }
+    .callout-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .callout p { margin-bottom: 6px; font-size: 0.94rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout-tip   { background: #0d1f16; border-color: var(--success); }
+    .callout-tip .callout-label { color: var(--success); }
+    .callout-warn  { background: #1c1500; border-color: var(--warn); }
+    .callout-warn .callout-label { color: var(--warn); }
+    .callout-danger { background: #1c0808; border-color: var(--danger); }
+    .callout-danger .callout-label { color: var(--danger); }
+    .callout-info  { background: var(--accent-glow); border-color: var(--accent); }
+    .callout-info .callout-label { color: var(--accent-lt); }
+
+    /* Scheme-style steps */
+    .scheme-steps {
+      display: flex; flex-direction: column; gap: 0; margin: 24px 0;
+      border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden;
+    }
+    .scheme-step {
+      display: flex; align-items: flex-start; gap: 16px; padding: 16px 20px;
+      border-bottom: 1px solid var(--border); background: var(--surface); transition: background 0.15s;
+    }
+    .scheme-step:last-child { border-bottom: none; }
+    .scheme-step:hover { background: var(--surface-2); }
+    .step-num {
+      width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%;
+      background: #2a1d00; border: 1px solid var(--c-pr); color: var(--c-pr);
+      font-size: 0.75rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    }
+    .step-text strong { color: var(--heading); display: block; margin-bottom: 3px; font-size: 0.9rem; }
+    .step-text span { font-size: 0.83rem; color: var(--muted); line-height: 1.5; }
+
+    /* Table */
+    .data-table-wrap { overflow-x: auto; margin: 24px 0; border: 1px solid var(--border); border-radius: var(--r-md); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    thead th {
+      background: var(--surface); color: var(--muted); font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 11px 14px; text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--surface); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.68rem; font-weight: 700; }
+    .badge-green { background: #0d2018; color: #34d399; }
+    .badge-amber { background: #1c1500; color: #fbbf24; }
+    .badge-red   { background: #3b0c0c; color: var(--danger); }
+
+    /* Checklist */
+    .checklist { list-style: none; margin: 16px 0 24px; }
+    .checklist li {
+      display: flex; gap: 12px; align-items: flex-start; padding: 8px 0;
+      border-bottom: 1px solid var(--border); font-size: 0.94rem;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist .ck-icon {
+      width: 20px; height: 20px; flex-shrink: 0; background: #2a1d00; border: 1px solid var(--c-pr);
+      border-radius: 4px; display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: var(--c-pr); margin-top: 2px;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 4px solid var(--c-pr); padding: 16px 24px; margin: 32px 0;
+      background: #2a1d00; border-radius: 0 var(--r-md) var(--r-md) 0;
+    }
+    .pull-quote p {
+      font-family: var(--font-display); font-size: 1.1rem; color: var(--heading);
+      line-height: 1.55; font-style: italic; margin: 0;
+    }
+    .pull-quote cite {
+      display: block; font-size: 0.75rem; color: var(--muted); margin-top: 10px;
+      font-style: normal; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em;
+    }
+
+    /* FAQ */
+    .faq-list { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 10px; overflow: hidden; }
+    .faq-q {
+      width: 100%; background: var(--surface); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px; font-size: 0.95rem; font-weight: 600; color: var(--heading);
+      text-align: left; gap: 12px;
+    }
+    .faq-q:hover { background: var(--surface-2); }
+    .faq-q .arrow { flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 0.92rem; color: var(--muted); background: var(--surface); }
+    .faq-a.open { display: block; }
+
+    /* CTA */
+    .article-cta {
+      background: linear-gradient(135deg, #2a1d00 0%, #181c27 100%);
+      border: 1px solid var(--c-pr); border-radius: var(--r-lg);
+      padding: 28px 32px; text-align: center; margin-top: 48px;
+    }
+    .article-cta h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); margin-bottom: 8px; }
+    .article-cta p  { color: var(--muted); font-size: 0.875rem; margin-bottom: 18px; }
+    .btn-primary {
+      display: inline-block; background: var(--c-pr); color: #2a1500;
+      font-weight: 700; font-size: 0.875rem; padding: 11px 26px; border-radius: var(--r-sm);
+      text-decoration: none; transition: opacity 0.18s;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+
+    /* Sidebar */
+    .sidebar { padding-top: 52px; }
+    .sidebar-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 18px; margin-bottom: 18px;
+    }
+    .sidebar-card h4 {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+      color: var(--muted); margin-bottom: 12px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      font-size: 0.8rem; color: var(--muted); text-decoration: none;
+      display: block; padding: 4px 0 4px 12px; border-left: 2px solid transparent;
+      transition: all 0.15s; line-height: 1.35;
+    }
+    .toc-list a:hover, .toc-list a.active { color: var(--text); border-color: var(--c-pr); }
+
+    /* Quick reference */
+    .quickref { position: sticky; top: 72px; }
+    .qr-header {
+      background: #2a1d00; border-bottom: 1px solid var(--c-pr);
+      padding: 14px 18px; display: flex; align-items: center; gap: 8px;
+    }
+    .qr-header h4 { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-pr); }
+    .qr-body { padding: 0; }
+    .qr-row {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 10px;
+      padding: 12px 18px; border-bottom: 1px solid var(--border); font-size: 0.8rem;
+    }
+    .qr-row:last-child { border-bottom: none; }
+    .qr-key { color: var(--muted); flex-shrink: 0; }
+    .qr-val { color: var(--heading); font-weight: 600; text-align: right; }
+    .qr-val.green { color: var(--success); }
+    .qr-val.amber { color: var(--warn); }
+    .qr-val.red { color: var(--danger); }
+
+    .tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      background: #1e293b; color: var(--muted); font-size: 0.72rem; border-radius: var(--r-sm);
+      padding: 4px 10px; text-decoration: none; border: 1px solid var(--border); transition: all 0.15s;
+    }
+    .tag:hover { color: var(--text); border-color: var(--muted); }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border); margin-top: 80px; padding: 32px 24px;
+      text-align: center; color: var(--muted); font-size: 0.82rem;
+    }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <main id="main-content">
+
+      <header class="article-header">
+        <div class="breadcrumb">
+          <a href="/">Home</a><span>›</span>
+          <a href="/articles/">Articles</a><span>›</span>
+          <a href="/articles/?cat=procurement">Procurement</a>
+        </div>
+        <span class="article-category">🤝 Procurement</span>
+        <h1>Vendor Fraud Prevention: How to Protect Your Supply Chain</h1>
+        <p class="article-deck">
+          Most businesses watch the front door closely and barely glance at the back one — the loading dock, the invoices, the vendor relationships that have been "fine for years." That's usually where the slow leaks are. Here's how vendor fraud actually happens, and what closes the gap.
+        </p>
+        <div class="article-meta">
+          <span>🗓 June 13, 2026</span>
+          <span>⏱ 8 min read</span>
+          <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-lt); text-decoration:underline; text-underline-offset:3px;">Mithun GS</a></span>
+          <span>📂 Procurement</span>
+        </div>
+      </header>
+
+      <div class="article-stats">
+        <div class="stat-item">
+          <div class="s-val amber">5%</div>
+          <div class="s-lbl">Avg. revenue lost to fraud (ACFE)</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val red">3</div>
+          <div class="s-lbl">Most common vendor fraud types</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val green">3-way</div>
+          <div class="s-lbl">Matching catches most of it</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val">Years</div>
+          <div class="s-lbl">Typical time before detection</div>
+        </div>
+      </div>
+
+      <article class="article-body" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="Vendor Fraud Prevention: How to Protect Your Supply Chain" />
+        <meta itemprop="datePublished" content="2025-06-13" />
+
+        <!-- INTRO -->
+        <section id="introduction">
+          <h2 style="border-top:none; padding-top:0; margin-top:0;">The Relationship That's "Been Fine for Years"</h2>
+          <p>
+            Every business has at least one vendor relationship that nobody really questions anymore. They've been around longer than half the staff. Invoices come in, get approved, get paid. Nobody reads the line items closely because, well, it's <em>that</em> vendor — they're reliable.
+          </p>
+          <p>
+            That comfort is exactly the environment vendor fraud thrives in. Not dramatic heists. Just small, repeated gaps — a slightly inflated invoice here, a shipment that's a few units short there — that nobody's incentivized to notice because checking takes time and the relationship "works."
+          </p>
+          <p>
+            I want to walk through the three ways this most commonly plays out, why they're so hard to spot from the inside, and the handful of controls that actually catch them — most of which don't require new software, just a different habit.
+          </p>
+        </section>
+
+        <!-- THE THREE PATTERNS -->
+        <section id="patterns">
+          <h2>The Three Patterns That Show Up Again and Again</h2>
+          <p>
+            Vendor fraud takes a lot of shapes on paper, but in practice almost all of it falls into three buckets. Once you can name the pattern, it's a lot easier to spot.
+          </p>
+
+          <div class="scheme-steps">
+            <div class="scheme-step">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <strong>Overbilling</strong>
+                <span>The invoice says more than what was actually agreed or delivered — a higher quantity, a higher grade of material, or a price that's quietly crept up from the original quote. On its own, one overbilled invoice looks like an error. Repeated over months, it's a pattern that adds up fast and rarely gets challenged because each individual instance feels too small to flag.</span>
+              </div>
+            </div>
+            <div class="scheme-step">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <strong>Short shipments</strong>
+                <span>The invoice matches what was ordered, but the delivery doesn't. Ten units billed, eight units arrive — and unless someone is physically counting against the purchase order at the dock, this goes completely unnoticed. It's especially common with bulk goods, raw materials, or anything sold by weight or volume where a small shortfall is hard to eyeball.</span>
+              </div>
+            </div>
+            <div class="scheme-step">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <strong>Kickback schemes</strong>
+                <span>This one involves someone on the inside. A buyer or procurement employee steers business toward a particular vendor — even when better quotes exist — in exchange for a personal payment. These tend to be less frequent than the first two, but when they're found, the numbers involved are usually much larger, and they've often been running for years.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout callout-info">
+            <div class="callout-label">💡 Why these stay hidden</div>
+            <p>
+              None of these require anything dramatic. Overbilling and short shipments often look exactly like "normal" errors — the kind every business writes off occasionally. Kickbacks hide behind a relationship that looks completely professional from the outside. That's the whole point. Fraud that looks unusual gets caught fast. Fraud that looks routine doesn't.
+            </p>
+          </div>
+        </section>
+
+        <!-- HOW IT ADDS UP -->
+        <section id="how-it-adds-up">
+          <h2>Why a "Small" Gap Is Never Actually Small</h2>
+          <p>
+            Here's the thing about vendor fraud — it's rarely a single big number. It's a small percentage, repeated across every invoice, for as long as nobody's checking. And procurement spend tends to be one of the largest line items on a business's books, which means even a tiny percentage translates into real money.
+          </p>
+
+          <div class="data-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Annual Procurement Spend</th>
+                  <th>If 1% Is Lost to Vendor Fraud</th>
+                  <th>If 3% Is Lost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>$500,000</td>
+                  <td>$5,000 / year</td>
+                  <td>$15,000 / year</td>
+                </tr>
+                <tr>
+                  <td>$2,000,000</td>
+                  <td>$20,000 / year</td>
+                  <td>$60,000 / year</td>
+                </tr>
+                <tr>
+                  <td>$10,000,000</td>
+                  <td>$100,000 / year</td>
+                  <td>$300,000 / year</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            And that's before you account for how long it usually runs before anyone notices. Fraud surveys consistently find that procurement and billing schemes run for <strong>years</strong>, on average, before detection — partly because the amounts are small enough each time to stay under the radar, and partly because nobody's specifically looking.
+          </p>
+
+          <div class="pull-quote">
+            <p>"The math on vendor fraud isn't about one bad invoice. It's about what happens when the same small gap repeats fifty times a year, for three years, and nobody ever added it up."</p>
+            <cite>— PreventLoss.org</cite>
+          </div>
+        </section>
+
+        <!-- THREE WAY MATCHING -->
+        <section id="three-way-matching">
+          <h2>The Single Control That Catches Most of This</h2>
+          <p>
+            If there's one thing worth implementing before anything else, it's <strong>three-way matching</strong>. It sounds technical, but it's a simple idea: before any invoice gets paid, three documents have to agree.
+          </p>
+
+          <div class="data-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Document</th>
+                  <th>What It Confirms</th>
+                  <th>Created By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Purchase Order</strong></td>
+                  <td>What was actually agreed — quantity, price, terms</td>
+                  <td>Your procurement team</td>
+                </tr>
+                <tr>
+                  <td><strong>Goods Receipt Note</strong></td>
+                  <td>What was actually received — checked at the dock</td>
+                  <td>Your warehouse / receiving team</td>
+                </tr>
+                <tr>
+                  <td><strong>Supplier Invoice</strong></td>
+                  <td>What the vendor is asking to be paid for</td>
+                  <td>The vendor</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            When all three line up, the invoice gets paid without anyone needing to think twice. When they don't — say the invoice says 100 units but the receiving note says 92 — the payment gets held until someone explains the gap. That's it. No new software is strictly required; even a simple paper-based version of this, done consistently, closes most of the overbilling and short-shipment gap on its own.
+          </p>
+
+          <p>
+            The reason this works so well is that it removes the need for anyone to "remember" to check. The check is built into the process. Nobody has to be suspicious of anyone — the documents either agree or they don't.
+          </p>
+        </section>
+
+        <!-- KICKBACKS -->
+        <section id="kickbacks">
+          <h2>Spotting a Kickback Without Becoming Paranoid</h2>
+          <p>
+            Kickbacks are the tricky one, and honestly the one I've seen people misjudge most. They don't show up as a mismatch on paper — the invoice, the receipt, everything lines up perfectly fine. What's wrong isn't the documents. It's the decision behind the relationship, and that's a lot harder to put your finger on.
+          </p>
+          <p>
+            Still, over the years a few patterns keep showing up enough that I've stopped calling them coincidences.
+          </p>
+
+          <ul class="checklist">
+            <li><div class="ck-icon">!</div><div><strong>One vendor keeps winning, even when they're not the cheapest.</strong> Sometimes that's totally fine — quality, reliability, or speed can justify a higher price. But if it's the same vendor winning across every category one particular buyer handles, that's worth a second look.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>Pushback on getting competitive quotes.</strong> There's always a reason ready — "they're the only ones who can deliver on time," "we tried someone else before and it was a mess." Could be true. I've also heard that exact line used to shut down a conversation that needed to happen.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>Vendor details that overlap with someone's personal details.</strong> A registered address that happens to match an employee's home address. A phone number one digit off from someone on the procurement team. Sounds far-fetched until you actually run the check and find it.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>Invoices that land suspiciously close to the approval limit.</strong> If your sign-off threshold is $10,000 and a vendor's bills keep coming in around $9,800–$9,950, that's either a wild coincidence or it isn't.</div></li>
+          </ul>
+
+          <div class="callout callout-warn">
+            <div class="callout-label">⚠️ A word of caution</div>
+            <p>
+              None of this proves anything by itself, and I want to be clear about that. Long vendor relationships are often genuinely valuable — loyalty isn't a red flag on its own. These signals exist so you know when a relationship deserves a closer, friendly look. Most of the time that look turns up nothing, and that's a good outcome too. Occasionally it turns up something worth knowing now instead of in three years.
+            </p>
+          </div>
+        </section>
+
+        <!-- PRACTICAL CONTROLS -->
+        <section id="controls">
+          <h2>What Actually Helps — Without Slowing Everything Down</h2>
+          <p>
+            None of this needs to turn procurement into a bureaucratic maze. The goal is a handful of habits that make fraud hard to hide, not a process so heavy that legitimate vendors start avoiding you.
+          </p>
+
+          <ul class="checklist">
+            <li><div class="ck-icon">✓</div><div><strong>Separate who orders from who approves payment.</strong> If the same person can raise a purchase order, receive the goods, and approve the invoice, there's no check at all — just one person's word. Splitting these across two people, even in a small team, closes the biggest gap.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Check deliveries against the order — every time.</strong> Not just signing for "a box arrived," but actually counting against the PO before it's logged as received. This is the single habit that catches short shipments.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Rotate who manages key vendor relationships occasionally.</strong> Not because anyone's assumed to be doing anything wrong — but a fresh set of eyes on a long-standing relationship sometimes notices something a familiar one stopped seeing.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Spot-check invoices against actual contracts and quotes.</strong> Pull a handful of invoices each quarter and check the pricing against what was originally agreed. Price creep is common, rarely malicious, and almost never caught unless someone looks.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Get competitive quotes periodically, even for "reliable" vendors.</strong> You don't have to switch. But knowing what the market actually charges keeps everyone — including good-faith vendors — honest.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Make it easy and safe to raise a concern.</strong> If someone on the receiving team notices a pattern of short deliveries, or someone in finance notices odd pricing, they need a way to say so that doesn't feel like accusing a colleague of something serious.</div></li>
+          </ul>
+
+          <div class="callout callout-tip">
+            <div class="callout-label">✅ Where to start if this all feels like a lot</div>
+            <p>
+              If you do nothing else, do two things: make sure deliveries are checked against purchase orders before being logged as received, and make sure the person approving an invoice isn't the same person who placed the order. Those two habits alone close most of the gap — and they cost nothing to implement.
+            </p>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What is the most common type of vendor fraud?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Overbilling and short shipments are by far the most common — charging for more than what was agreed, or delivering less than what was billed. Kickback schemes happen less often, but tend to involve much larger sums and run for longer before anyone notices.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What is three-way matching?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                It's a simple check before any invoice gets paid: the purchase order, the goods receipt note, and the supplier invoice all have to agree on quantity and price. If they don't line up, the payment gets held until someone explains why — instead of being paid automatically.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                How do you spot a kickback scheme?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                A few patterns are worth watching: one vendor consistently winning despite not being the cheapest, resistance to getting competitive quotes, vendor details that overlap with an employee's personal details, and invoice amounts that conveniently sit just under approval thresholds. None of these prove anything on their own — they're just worth a closer, friendly look.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                Can small businesses implement vendor fraud controls?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Yes — and often more easily than larger ones. Checking deliveries against purchase orders, splitting the "who orders" and "who approves payment" roles between two people, and occasionally getting a competitive quote are all things a small team can do without any new systems. The habits matter more than the tools.
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section id="conclusion">
+          <h2>The Vendors You Trust Most Are the Ones Worth a Second Look</h2>
+          <p>
+            None of this is about distrust. Most vendor relationships are exactly what they appear to be — reliable, fairly priced, and worth keeping. But the comfort that comes with a long relationship is precisely what creates blind spots, on both sides. A vendor who's been "fine for years" is also a vendor whose invoices haven't been closely checked for years.
+          </p>
+          <p>
+            The fix isn't suspicion. It's structure — a process that checks itself, so nobody has to rely on memory, trust, or the assumption that everything's still fine just because it has been so far.
+          </p>
+          
+          <div class="article-cta">
+            <h3>Want More Procurement Guides?</h3>
+            <p>Explore practical articles on purchase order controls, vendor audits, and procurement best practices.</p>
+            <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Article sidebar">
+
+      <div class="sidebar-card quickref">
+        <div class="qr-header">
+          <span>🤝</span>
+          <h4>Quick Reference</h4>
+        </div>
+        <div class="qr-body">
+          <div class="qr-row">
+            <span class="qr-key">Top fraud pattern</span>
+            <span class="qr-val">Overbilling</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">2nd most common</span>
+            <span class="qr-val">Short shipments</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Highest-value risk</span>
+            <span class="qr-val red">Kickback schemes</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Best single control</span>
+            <span class="qr-val green">3-way matching</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Avg revenue lost to fraud</span>
+            <span class="qr-val amber">~5% (ACFE)</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Free starting fix</span>
+            <span class="qr-val">Separate order & approval</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Detection lag</span>
+            <span class="qr-val red">Often years</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#patterns">3 Common Patterns</a></li>
+          <li><a href="#how-it-adds-up">Why It Adds Up Fast</a></li>
+          <li><a href="#three-way-matching">Three-Way Matching</a></li>
+          <li><a href="#kickbacks">Spotting Kickbacks</a></li>
+          <li><a href="#controls">Practical Controls</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Tags</h4>
+        <div class="tag-list">
+          <a class="tag" href="#">Vendor Fraud</a>
+          <a class="tag" href="#">Procurement</a>
+          <a class="tag" href="#">Three-Way Matching</a>
+          <a class="tag" href="#">Overbilling</a>
+          <a class="tag" href="#">Kickback Schemes</a>
+          <a class="tag" href="#">Supply Chain</a>
+          <a class="tag" href="#">Accounts Payable</a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      document.getElementById('read-progress').style.width =
+        ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+    });
+
+    function toggleFaq(btn) {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    }
+
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
