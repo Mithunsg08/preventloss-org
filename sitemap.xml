@@ -57,4 +57,21 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Article: vendor-fraud-prevention.html -->
+  <url>
+    <loc>https://preventloss.org/articles/vendor-fraud-prevention.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article: inventory-shrinkage-explained.html -->
+  <url>
+    <loc>https://preventloss.org/articles/inventory-shrinkage-explained.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+
 </urlset>
