@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <title>Retail Loss Prevention: Complete Guide for 2026 (Strategies, Examples & Tools)</title>
+  <meta name="description" content="A complete, no-fluff guide to retail loss prevention — what it covers, real examples of shrinkage and theft, the controls that actually work, and how to build a program that fits a store of any size." />
+  <meta name="keywords" content="retail loss prevention, retail loss prevention guide, retail loss prevention strategies, how to reduce retail shrinkage, retail theft prevention, loss prevention for small retail stores, retail loss prevention examples, loss prevention manager retail, retail security best practices, employee theft retail, shoplifting prevention tips, retail loss prevention checklist USA" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mithun GS" />
+  <link rel="canonical" href="https://www.preventloss.org/articles/retail-loss-prevention-complete-guide.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Retail Loss Prevention: Complete Guide for 2026" />
+  <meta property="og:description" content="What retail loss prevention actually covers, real examples, and the controls that work — written by a working loss prevention manager." />
+  <meta property="og:url" content="https://www.preventloss.org/articles/retail-loss-prevention-complete-guide.html" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+  <meta property="article:published_time" content="2026-06-13T00:00:00Z" />
+  <meta property="article:modified_time" content="2026-06-13T00:00:00Z" />
+  <meta property="article:section" content="Loss Prevention" />
+  <meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Retail Loss Prevention: Complete Guide for 2026" />
+  <meta name="twitter:description" content="Real examples, practical controls, and what actually works — for stores of any size." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Retail Loss Prevention: Complete Guide for 2026",
+    "description": "A complete guide to retail loss prevention — what it covers, real examples of shrinkage and theft, and the controls that actually work for stores of any size.",
+    "author": {
+      "@type": "Person",
+      "name": "Mithun GS",
+      "url": "https://www.linkedin.com/in/mithun-gs/",
+      "jobTitle": "Regional Loss Prevention Manager"
+    },
+    "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+    "datePublished": "2026-06-13",
+    "dateModified": "2026-06-13",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/retail-loss-prevention-complete-guide.html" },
+    "keywords": "retail loss prevention, retail shrinkage, retail theft, employee theft retail, shoplifting prevention"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is retail loss prevention?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Retail loss prevention is the set of practices a store uses to reduce losses from theft, fraud, errors, and waste, with the goal of protecting profit margins. It covers everything from cash handling and receiving procedures to surveillance, staff training, and inventory audits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the biggest causes of retail shrinkage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The biggest causes are typically external theft (shoplifting and organized retail crime), employee theft, administrative and paperwork errors, and vendor or supplier issues. Employee theft and shoplifting together usually account for the majority of shrinkage in most retail businesses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can a small retail store prevent shoplifting on a limited budget?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Low-cost steps include improving store layout so staff can see most of the floor, greeting customers as they enter, keeping high-value items near the register or behind glass, training staff to recognize common shoplifting techniques, and doing regular cycle counts on high-risk items."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should small retail businesses hire a dedicated loss prevention person?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most small retail businesses don't need a full-time loss prevention hire. A manager or owner can handle the core responsibilities — audits, exception reports, cash reconciliation — with a few hours a week, as long as those tasks are assigned to someone specific and done consistently."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+      --warn:        #f59e0b;
+      --danger:      #f87171;
+      --c-lp:        #3b82f6;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono:    'Courier New', monospace;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: var(--font-body); font-size: 17px; line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo {
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); text-decoration: none; letter-spacing: -0.02em;
+    }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    #read-progress {
+      position: fixed; top: 56px; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--c-lp), #a78bfa);
+      z-index: 99; transition: width 0.1s linear;
+    }
+
+    .page-wrap {
+      max-width: 1140px; margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 300px; gap: 52px; align-items: start;
+    }
+    @media (max-width: 860px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    .article-header { padding: 52px 0 36px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--muted); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--border); }
+    .article-category {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--accent-glow); border: 1px solid var(--accent); color: var(--accent-lt);
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 18px;
+    }
+    h1 {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 3.8vw, 2.7rem);
+      font-weight: 700; color: var(--heading); line-height: 1.18; letter-spacing: -0.03em; margin-bottom: 18px;
+    }
+    .article-deck { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 22px; max-width: 680px; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.8rem; color: var(--muted); }
+
+    .article-stats {
+      display: flex; gap: 0; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-md); margin-bottom: 40px; overflow: hidden;
+    }
+    .stat-item { flex: 1; padding: 16px 18px; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-item .s-val {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 700;
+      color: var(--heading); line-height: 1; margin-bottom: 4px;
+    }
+    .stat-item .s-val.amber { color: var(--warn); }
+    .stat-item .s-val.red { color: var(--danger); }
+    .stat-item .s-val.green { color: var(--success); }
+    .stat-item .s-lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; }
+    @media (max-width: 600px) {
+      .article-stats { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); }
+    }
+
+    .article-body h2 {
+      font-family: var(--font-display); font-size: 1.45rem; font-weight: 700;
+      color: var(--heading); letter-spacing: -0.02em;
+      margin: 48px 0 16px; padding-top: 48px; border-top: 1px solid var(--border);
+    }
+    .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--heading); margin: 26px 0 10px; }
+    .article-body p { margin-bottom: 18px; color: var(--text); }
+    .article-body a { color: var(--accent-lt); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body strong { color: var(--heading); font-weight: 600; }
+    .article-body em { color: var(--muted); font-style: italic; }
+
+    .callout { border-radius: var(--r-md); padding: 18px 22px; margin: 24px 0; border-left: 4px solid; }
+    .callout-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .callout p { margin-bottom: 6px; font-size: 0.94rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout-tip   { background: #0d1f16; border-color: var(--success); }
+    .callout-tip .callout-label { color: var(--success); }
+    .callout-warn  { background: #1c1500; border-color: var(--warn); }
+    .callout-warn .callout-label { color: var(--warn); }
+    .callout-danger { background: #1c0808; border-color: var(--danger); }
+    .callout-danger .callout-label { color: var(--danger); }
+    .callout-info  { background: var(--accent-glow); border-color: var(--accent); }
+    .callout-info .callout-label { color: var(--accent-lt); }
+
+    /* Example cards */
+    .example-box {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md);
+      padding: 16px 20px; margin: 18px 0;
+    }
+    .example-box .ex-tag {
+      display: inline-flex; font-size: 0.66rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent-lt); background: var(--accent-glow);
+      border: 1px solid var(--accent); border-radius: 999px; padding: 2px 10px; margin-bottom: 10px;
+    }
+    .example-box p { font-size: 0.92rem; color: var(--muted); margin-bottom: 0; }
+
+    /* Causes grid */
+    .causes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 24px 0; }
+    @media (max-width: 600px) { .causes-grid { grid-template-columns: 1fr; } }
+    .cause-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: 18px; border-top: 3px solid; }
+    .cause-card.c1 { border-top-color: var(--danger); }
+    .cause-card.c2 { border-top-color: var(--warn); }
+    .cause-card.c3 { border-top-color: var(--accent-lt); }
+    .cause-card.c4 { border-top-color: var(--success); }
+    .cause-card .c-pct { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--heading); margin-bottom: 4px; }
+    .cause-card .c-name { font-size: 0.9rem; font-weight: 700; color: var(--heading); margin-bottom: 6px; }
+    .cause-card .c-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.55; }
+
+    /* Checklist */
+    .checklist { list-style: none; margin: 14px 0 22px; }
+    .checklist li {
+      display: flex; gap: 12px; align-items: flex-start; padding: 7px 0;
+      border-bottom: 1px solid var(--border); font-size: 0.93rem;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist .ck-icon {
+      width: 20px; height: 20px; flex-shrink: 0; background: var(--accent-glow); border: 1px solid var(--accent);
+      border-radius: 4px; display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: var(--accent-lt); margin-top: 2px;
+    }
+
+    /* Table */
+    .data-table-wrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--border); border-radius: var(--r-md); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    thead th {
+      background: var(--surface); color: var(--muted); font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 10px 14px; text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--surface); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.68rem; font-weight: 700; }
+    .badge-green { background: #0d2018; color: #34d399; }
+    .badge-amber { background: #1c1500; color: #fbbf24; }
+    .badge-red   { background: #3b0c0c; color: var(--danger); }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 4px solid var(--c-lp); padding: 16px 24px; margin: 28px 0;
+      background: var(--accent-glow); border-radius: 0 var(--r-md) var(--r-md) 0;
+    }
+    .pull-quote p {
+      font-family: var(--font-display); font-size: 1.08rem; color: var(--heading);
+      line-height: 1.55; font-style: italic; margin: 0;
+    }
+    .pull-quote cite {
+      display: block; font-size: 0.75rem; color: var(--muted); margin-top: 10px;
+      font-style: normal; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em;
+    }
+
+    /* FAQ */
+    .faq-list { margin: 14px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 10px; overflow: hidden; }
+    .faq-q {
+      width: 100%; background: var(--surface); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px; font-size: 0.95rem; font-weight: 600; color: var(--heading);
+      text-align: left; gap: 12px;
+    }
+    .faq-q:hover { background: var(--surface-2); }
+    .faq-q .arrow { flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 0.92rem; color: var(--muted); background: var(--surface); }
+    .faq-a.open { display: block; }
+
+    .author-box { display:flex; gap:16px; align-items:flex-start; }
+    .author-box .av { font-size:2rem; line-height:1; }
+
+    .article-cta {
+      background: linear-gradient(135deg, #0f2040 0%, #1a0a30 100%);
+      border: 1px solid var(--accent); border-radius: var(--r-lg);
+      padding: 28px 32px; text-align: center; margin-top: 44px;
+    }
+    .article-cta h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); margin-bottom: 8px; }
+    .article-cta p  { color: var(--muted); font-size: 0.875rem; margin-bottom: 18px; }
+    .btn-primary {
+      display: inline-block; background: var(--accent); color: #fff;
+      font-weight: 700; font-size: 0.875rem; padding: 11px 26px; border-radius: var(--r-sm);
+      text-decoration: none; transition: background 0.18s;
+    }
+    .btn-primary:hover { background: var(--accent-lt); }
+
+    /* Sidebar */
+    .sidebar { padding-top: 52px; }
+    .sidebar-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 18px; margin-bottom: 18px;
+    }
+    .sidebar-card h4 {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+      color: var(--muted); margin-bottom: 12px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      font-size: 0.8rem; color: var(--muted); text-decoration: none;
+      display: block; padding: 4px 0 4px 12px; border-left: 2px solid transparent;
+      transition: all 0.15s; line-height: 1.35;
+    }
+    .toc-list a:hover, .toc-list a.active { color: var(--text); border-color: var(--accent-lt); }
+
+    .quickref { position: sticky; top: 72px; }
+    .qr-header {
+      background: var(--accent-glow); border-bottom: 1px solid var(--accent);
+      padding: 14px 18px; display: flex; align-items: center; gap: 8px;
+    }
+    .qr-header h4 { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-lt); }
+    .qr-body { padding: 0; }
+    .qr-row {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 10px;
+      padding: 12px 18px; border-bottom: 1px solid var(--border); font-size: 0.8rem;
+    }
+    .qr-row:last-child { border-bottom: none; }
+    .qr-key { color: var(--muted); flex-shrink: 0; }
+    .qr-val { color: var(--heading); font-weight: 600; text-align: right; }
+    .qr-val.green { color: var(--success); }
+    .qr-val.amber { color: var(--warn); }
+    .qr-val.red { color: var(--danger); }
+
+    .tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      background: #1e293b; color: var(--muted); font-size: 0.72rem; border-radius: var(--r-sm);
+      padding: 4px 10px; text-decoration: none; border: 1px solid var(--border); transition: all 0.15s;
+    }
+    .tag:hover { color: var(--text); border-color: var(--muted); }
+
+    .site-footer {
+      border-top: 1px solid var(--border); margin-top: 80px; padding: 32px 24px;
+      text-align: center; color: var(--muted); font-size: 0.82rem;
+    }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <main id="main-content">
+
+      <header class="article-header">
+        <div class="breadcrumb">
+          <a href="/">Home</a><span>›</span>
+          <a href="/articles/">Articles</a><span>›</span>
+          <a href="/articles/?cat=loss-prevention">Loss Prevention</a>
+        </div>
+        <span class="article-category">🛡️ Loss Prevention</span>
+        <h1>Retail Loss Prevention: Complete Guide</h1>
+        <p class="article-deck">
+          Everything I'd tell a new store owner or manager about loss prevention if they sat down with me for an hour — what it actually covers, real examples of how money disappears, and the specific things worth doing about it. No padding, no theory for theory's sake.
+        </p>
+        <div class="article-meta">
+          <span>🗓 June 13, 2026</span>
+          <span>⏱ 9 min read</span>
+          <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-lt); text-decoration:underline; text-underline-offset:3px;">Mithun GS</a></span>
+          <span>📂 Loss Prevention</span>
+        </div>
+      </header>
+
+      <div class="article-stats">
+        <div class="stat-item">
+          <div class="s-val amber">1.5–2%</div>
+          <div class="s-lbl">Typical retail shrink rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val red">~60%</div>
+          <div class="s-lbl">Shrink from theft (internal + external)</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val green">5</div>
+          <div class="s-lbl">Core areas this guide covers</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val">Any size</div>
+          <div class="s-lbl">Works for 1 store or 100</div>
+        </div>
+      </div>
+
+      <article class="article-body" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="Retail Loss Prevention: Complete Guide" />
+        <meta itemprop="datePublished" content="2026-06-13" />
+
+        <!-- INTRO -->
+        <section id="introduction">
+          <h2 style="border-top:none; padding-top:0; margin-top:0;">Let's Start With What This Actually Means</h2>
+          <p>
+            When people hear "loss prevention," a lot of them picture a guy in a polo shirt watching a bank of CCTV monitors, waiting to chase someone out the door. That's part of it, sure. But honestly? That's the smallest part of the job, and if that's all your store is doing, you're probably missing most of where the money actually goes.
+          </p>
+          <p>
+            Retail loss prevention, in practice, is just this: making sure the money and stock that come into your store also get accounted for properly on the way out — whether "out" means a sale, a return, a damaged item written off, or something that shouldn't have left at all. It's less about catching criminals and more about closing small gaps before they become big ones.
+          </p>
+          <p>
+            I've put together this guide the way I'd actually explain it to a new store manager — starting with what causes losses, then walking through real examples, and ending with what's actually worth doing about each one. Nine minutes, no fluff.
+          </p>
+        </section>
+
+        <!-- WHERE IT GOES -->
+        <section id="where-it-goes">
+          <h2>Where the Money Actually Goes</h2>
+          <p>
+            Before getting into solutions, it helps to know what you're actually solving for. In most retail businesses, shrinkage — the gap between what your books say and what's really on the shelf — breaks down into roughly four buckets. The exact split varies by store type, but the categories themselves show up almost everywhere.
+          </p>
+
+          <div class="causes-grid">
+            <div class="cause-card c1">
+              <div class="c-pct">~30%</div>
+              <div class="c-name">Employee Theft</div>
+              <div class="c-desc">Staff taking cash or stock directly, abusing discounts, processing fake returns, or giving away merchandise to friends ("sweethearting").</div>
+            </div>
+            <div class="cause-card c2">
+              <div class="c-pct">~30%</div>
+              <div class="c-name">Shoplifting & External Theft</div>
+              <div class="c-desc">Everything from someone slipping a small item into a pocket to organized groups that target specific stores and products systematically.</div>
+            </div>
+            <div class="cause-card c3">
+              <div class="c-pct">~20%</div>
+              <div class="c-name">Administrative Errors</div>
+              <div class="c-desc">Receiving mistakes, pricing errors, miscounted deliveries, and data entry slips that quietly pull your records away from reality.</div>
+            </div>
+            <div class="cause-card c4">
+              <div class="c-pct">~20%</div>
+              <div class="c-name">Vendor Issues & Damage</div>
+              <div class="c-desc">Short shipments from suppliers, products damaged in transit or on the shelf, and breakage that never gets written off properly.</div>
+            </div>
+          </div>
+
+          <p>
+            Notice that two of these four — admin errors and vendor issues — have nothing to do with anyone stealing anything. That's worth sitting with for a second. A huge chunk of "loss prevention" is really just <em>better record-keeping</em>, and that's good news, because it's the easiest part to fix.
+          </p>
+        </section>
+
+        <!-- REAL EXAMPLES -->
+        <section id="real-examples">
+          <h2>What This Actually Looks Like (Real Examples)</h2>
+          <p>
+            Numbers and percentages are fine, but they don't really land until you see what they look like on the floor. Here are a few scenarios I've personally seen play out — slightly generalized, but each one is based on something real.
+          </p>
+
+          <div class="example-box">
+            <span class="ex-tag">Employee Theft</span>
+            <p>
+              A cashier at a convenience store starts processing "returns" for items that were never actually purchased — small amounts, $5 to $15, a couple of times per shift. Individually, each one looks like a normal customer return. Over three months, it adds up to several hundred dollars, and nobody noticed because nobody was looking at return frequency per employee.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <span class="ex-tag">Shoplifting</span>
+            <p>
+              A clothing store keeps losing small, high-value accessories — sunglasses, scarves, the kind of thing that's easy to palm. The store has cameras, but nobody's reviewing footage unless something is reported. By the time anyone notices the SKU has a shrink problem, months of footage has already been overwritten.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <span class="ex-tag">Administrative Error</span>
+            <p>
+              A delivery of 50 units arrives, but the receiving staff — busy, short-handed, end of shift — logs it as received without actually counting it. The supplier actually sent 44. Six units are now "missing" from a store that never had them in the first place, and the investigation that follows is looking for theft that doesn't exist.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <span class="ex-tag">Vendor / Supplier Issue</span>
+            <p>
+              A grocery store's produce supplier has been slightly under-delivering on weight for months — invoices say 50 lbs, actual deliveries run closer to 47. Nobody's weighing deliveries, so it shows up as "spoilage" or "shrink" on the books instead of what it actually is: a vendor problem.
+            </p>
+          </div>
+
+          <div class="callout callout-info">
+            <div class="callout-label">💡 What these examples have in common</div>
+            <p>
+              None of these are dramatic. No alarms, no confrontations, nothing that would make the news. That's exactly why they're so common — and exactly why "loss prevention" mostly isn't about catching dramatic crimes. It's about noticing patterns in things that look completely normal on their own.
+            </p>
+          </div>
+        </section>
+
+        <!-- THE FIVE AREAS -->
+        <section id="five-areas">
+          <h2>The Five Areas Worth Focusing On</h2>
+          <p>
+            If you're starting from scratch — or starting over — here's how I'd prioritize. These five areas cover the large majority of retail shrinkage, and you don't need to tackle all of them at once.
+          </p>
+
+          <h3>1. Cash Handling</h3>
+          <p>
+            Cash is the easiest thing to lose track of and the easiest thing to take. The fix isn't complicated: counts at the start and end of every shift, two people involved in any drawer reconciliation when possible, and deposits that get made consistently rather than "whenever someone gets to it." Most cash discrepancies aren't dramatic theft — they're small, repeated gaps that nobody's tracking closely enough to notice a pattern.
+          </p>
+
+          <h3>2. Receiving</h3>
+          <p>
+            This is the most underrated area in retail loss prevention, full stop. If stock isn't counted accurately when it arrives, every single number after that point is wrong — your inventory system, your shrink reports, your reorder quantities, everything. Every delivery should be checked against the purchase order before anyone signs for it. This alone resolves a huge share of "mystery" shrinkage.
+          </p>
+
+          <h3>3. The Sales Floor</h3>
+          <p>
+            This is the part most people think of first — shoplifting, suspicious behavior, store layout. And it matters, but the fixes are often simpler than people expect: better sightlines (fewer blind spots, mirrors in corners), staff who actually greet and acknowledge customers (this alone deters a meaningful amount of opportunistic theft), and keeping small high-value items near the register rather than near the door.
+          </p>
+
+          <h3>4. Returns, Voids & Discounts</h3>
+          <p>
+            These three transaction types are where a lot of employee-related shrinkage hides, because they're designed to be flexible — and flexibility is exactly what gets exploited. The fix is visibility: a simple report showing who's processing unusually high numbers of returns, voids, or discounts compared to their peers. You're not accusing anyone by running this report. You're just making the pattern visible if one exists.
+          </p>
+
+          <h3>5. Inventory Counts</h3>
+          <p>
+            You can't manage shrinkage you haven't measured. A full count once or twice a year is the baseline, but the real value comes from <strong>cycle counts</strong> — regularly counting your highest-risk items (small, expensive, easy to conceal) more often than everything else. This turns shrinkage from an annual surprise into something you can actually track and react to.
+          </p>
+        </section>
+
+        <!-- WHAT MOST STORES GET WRONG -->
+        <section id="common-mistakes">
+          <h2>What Most Stores Get Wrong</h2>
+          <p>
+            A few patterns come up again and again when I look at stores that are struggling with shrinkage — and almost none of them are about a lack of effort. They're usually about where the effort goes.
+          </p>
+
+          <ul class="checklist">
+            <li><div class="ck-icon">!</div><div><strong>All the focus goes to shoplifting, none to receiving.</strong> Cameras pointed at the entrance, nobody checking what comes off the delivery truck. Both matter — but receiving errors are often the bigger, easier-to-fix problem.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>Cameras exist, but nobody watches them until something's already wrong.</strong> Footage that's only reviewed after a complaint is mostly useless for prevention — by definition, it's reactive.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>One annual count, and that's it.</strong> A once-a-year count tells you shrinkage happened sometime in the last twelve months. It doesn't tell you when, where, or why — which is the information you actually need.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>Policies exist on paper but aren't enforced consistently.</strong> A "no employee may process their own return" policy that gets quietly ignored when things are busy isn't really a policy — it's a suggestion.</div></li>
+            <li><div class="ck-icon">!</div><div><strong>Nobody owns it.</strong> In small stores especially, loss prevention often isn't anyone's specific job — it's vaguely "everyone's responsibility," which in practice means it's nobody's.</div></li>
+          </ul>
+        </section>
+
+        <!-- BUDGET TABLE -->
+        <section id="by-size">
+          <h2>What This Looks Like at Different Store Sizes</h2>
+          <p>
+            One of the most common questions I get is some version of "okay, but I'm not Target — what does this actually look like for a store like mine?" Fair question. Here's roughly how the approach scales.
+          </p>
+
+          <div class="data-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Store Type</th>
+                  <th>Realistic LP Approach</th>
+                  <th>Time Investment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Single small store</strong></td>
+                  <td>Owner/manager runs weekly cash checks, monthly spot counts on key items, basic camera coverage</td>
+                  <td><span class="badge badge-green">2–3 hrs/week</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Small chain (2–10 stores)</strong></td>
+                  <td>One person oversees LP across locations part-time, standardized receiving checklist, exception reports reviewed monthly</td>
+                  <td><span class="badge badge-amber">Part-time role</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Mid-size chain (10–50 stores)</strong></td>
+                  <td>Dedicated LP manager, regional coverage, cycle counts on schedule, formal investigation process</td>
+                  <td><span class="badge badge-amber">Full-time role</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Large chain / national</strong></td>
+                  <td>Full LP/AP department, dedicated investigators, data analytics, organized crime response</td>
+                  <td><span class="badge badge-red">Full department</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            The point isn't that small stores need to do less — it's that they need to do the <em>same things</em>, just at a scale that fits a smaller team. A weekly cash count takes ten minutes. A monthly spot count on your top 20 SKUs by value takes maybe an hour. None of this requires hiring anyone new; it requires assigning it to someone and actually doing it.
+          </p>
+
+          <div class="pull-quote">
+            <p>"The stores that struggle most with shrinkage usually aren't doing nothing — they're doing a little bit of everything, inconsistently. Consistency on a few things beats effort spread across everything."</p>
+            <cite>— Mithun GS</cite>
+          </div>
+        </section>
+
+        <!-- WHERE TO START -->
+        <section id="where-to-start">
+          <h2>If You're Starting Today, Start Here</h2>
+          <p>
+            If all of this feels like a lot, here's the honest, condensed version — the three things I'd do first if I walked into a store with no loss prevention program at all.
+          </p>
+
+          <ul class="checklist">
+            <li><div class="ck-icon">✓</div><div><strong>Do one full inventory count, properly.</strong> Not a quick guess — an actual count. This gives you a real baseline number instead of a feeling. Everything else builds from here.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Start checking deliveries against purchase orders, every time, no exceptions.</strong> This is the single highest-impact habit on this entire list, and it costs nothing.</div></li>
+            <li><div class="ck-icon">✓</div><div><strong>Assign someone to review returns, voids, and discounts monthly.</strong> Even a basic spreadsheet showing who processed what, compared month to month, surfaces patterns that would otherwise stay invisible for years.</div></li>
+          </ul>
+
+          <div class="callout callout-tip">
+            <div class="callout-label">✅ The realistic goal</div>
+            <p>
+              You're not trying to get to zero shrinkage — nobody does. You're trying to know your number, understand roughly where it's coming from, and watch it move in the right direction over time. A store that does these three things consistently is in a completely different position than one that does nothing, even if neither one has a "loss prevention department."
+            </p>
+          </div>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section id="conclusion">
+          <h2>The Bottom Line</h2>
+          <p>
+            Retail loss prevention isn't really a department, a job title, or a set of cameras — though it can involve all three. At its core, it's just paying attention to the gap between what should be happening and what actually is, in the handful of places where that gap tends to open up: the register, the back door, the sales floor, and the paperwork.
+          </p>
+          <p>
+            None of this is glamorous. Most of the wins are quiet — a discrepancy that gets caught early, a pattern that gets noticed before it becomes a habit, a delivery that gets counted properly instead of just signed for. But quiet wins, repeated every week, are what actually move a shrink number over a year. That's the whole job, really.
+          </p>
+  
+          </div>
+
+          <div class="article-cta">
+            <h3>Want More Practical LP Guides?</h3>
+            <p>Explore real case studies, inventory management guides, and procurement controls across every industry.</p>
+            <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What is retail loss prevention?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                It's the set of practices a store uses to reduce losses from theft, fraud, errors, and waste — basically anything that causes the books and the shelves to disagree. It covers cash handling, receiving, the sales floor, returns and discounts, and inventory counts.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What are the biggest causes of retail shrinkage?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Most retail shrinkage comes from a mix of employee theft, shoplifting and external theft, administrative errors (receiving mistakes, pricing slips), and vendor or supplier issues. Theft — internal and external combined — usually makes up the majority, but errors and vendor issues are often bigger than people assume.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                How can a small retail store prevent shoplifting on a limited budget?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Some of the most effective steps cost nothing: rearranging the floor to remove blind spots, greeting customers when they walk in, keeping small high-value items near the register instead of near the entrance, and training staff on common shoplifting techniques. Cameras help, but staff awareness and store layout often matter more.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                Should small retail businesses hire a dedicated loss prevention person?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Usually not a full-time hire — but the responsibilities still need to belong to someone specific. A manager or owner spending two to three hours a week on cash checks, receiving verification, and exception reviews covers most of what a small store needs. The key is consistency, not headcount.
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Article sidebar">
+
+      <div class="sidebar-card quickref">
+        <div class="qr-header">
+          <span>🛡️</span>
+          <h4>Quick Reference</h4>
+        </div>
+        <div class="qr-body">
+          <div class="qr-row">
+            <span class="qr-key">Typical shrink rate</span>
+            <span class="qr-val amber">1.5% – 2%</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Top cause</span>
+            <span class="qr-val red">Theft (internal + external)</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Most underrated area</span>
+            <span class="qr-val">Receiving checks</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">5 focus areas</span>
+            <span class="qr-val">Cash, Receiving, Floor, Returns, Counts</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">First action</span>
+            <span class="qr-val green">One full inventory count</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Highest-impact habit</span>
+            <span class="qr-val green">PO vs delivery checks</span>
+          </div>
+          <div class="qr-row">
+            <span class="qr-key">Small store time cost</span>
+            <span class="qr-val">~2–3 hrs/week</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#where-it-goes">Where the Money Goes</a></li>
+          <li><a href="#real-examples">Real Examples</a></li>
+          <li><a href="#five-areas">5 Focus Areas</a></li>
+          <li><a href="#common-mistakes">Common Mistakes</a></li>
+          <li><a href="#by-size">By Store Size</a></li>
+          <li><a href="#where-to-start">Where to Start</a></li>
+          <li><a href="#conclusion">Bottom Line</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Tags</h4>
+        <div class="tag-list">
+          <a class="tag" href="#">Retail Loss Prevention</a>
+          <a class="tag" href="#">Shrinkage</a>
+          <a class="tag" href="#">Shoplifting</a>
+          <a class="tag" href="#">Employee Theft</a>
+          <a class="tag" href="#">Cash Handling</a>
+          <a class="tag" href="#">Receiving</a>
+          <a class="tag" href="#">Inventory Counts</a>
+          <a class="tag" href="#">Small Business</a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      document.getElementById('read-progress').style.width =
+        ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+    });
+
+    function toggleFaq(btn) {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    }
+
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
