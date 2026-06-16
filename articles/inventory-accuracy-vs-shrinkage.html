@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <title>Inventory Accuracy vs Inventory Shrinkage: What's the Difference and Why Both Matter (2026)</title>
+  <meta name="description" content="Inventory accuracy and inventory shrinkage sound like the same problem — they're not. Here's the real difference between the two, why confusing them leads to the wrong fixes, and how to track both properly." />
+  <meta name="keywords" content="inventory accuracy vs inventory shrinkage, difference between inventory accuracy and shrinkage, what is inventory accuracy, inventory accuracy rate, how to improve inventory accuracy, inventory shrinkage vs accuracy, inventory record accuracy, stock accuracy vs shrinkage, inventory discrepancy causes, how to measure inventory accuracy, inventory management best practices USA, inventory accuracy formula, shrinkage vs record error" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mithun GS" />
+  <link rel="canonical" href="https://www.preventloss.org/articles/inventory-accuracy-vs-shrinkage.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Inventory Accuracy vs Inventory Shrinkage: Understanding the Difference" />
+  <meta property="og:description" content="Two numbers, two different problems. Here's what inventory accuracy and inventory shrinkage actually measure, why they're often confused, and how fixing one doesn't automatically fix the other." />
+  <meta property="og:url" content="https://www.preventloss.org/articles/inventory-accuracy-vs-shrinkage.html" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+  <meta property="article:published_time" content="2026-06-16T00:00:00Z" />
+  <meta property="article:modified_time" content="2026-06-16T00:00:00Z" />
+  <meta property="article:section" content="Inventory Management" />
+  <meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Inventory Accuracy vs Inventory Shrinkage: What's the Difference?" />
+  <meta name="twitter:description" content="They sound like the same problem. They're not. Here's the distinction that most businesses miss — and why it matters for getting the fixes right." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Inventory Accuracy vs Inventory Shrinkage: Understanding the Difference",
+    "description": "The real difference between inventory accuracy and inventory shrinkage — what each one measures, why they're often confused, and how to track both properly.",
+    "author": {
+      "@type": "Person",
+      "name": "Mithun GS",
+      "url": "https://www.linkedin.com/in/mithun-gs/"
+    },
+    "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+    "datePublished": "2026-06-16",
+    "dateModified": "2026-06-16",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/inventory-accuracy-vs-shrinkage.html" },
+    "keywords": "inventory accuracy, inventory shrinkage, inventory accuracy vs shrinkage, stock accuracy, inventory management"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between inventory accuracy and inventory shrinkage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inventory accuracy measures how closely your system records match physical reality — it tells you how reliable your data is. Inventory shrinkage measures the financial value of stock that is lost, stolen, damaged, or unaccounted for. High shrinkage always causes accuracy problems, but poor accuracy doesn't always mean high shrinkage — it can also come from data entry errors, system mismatches, and process gaps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good inventory accuracy rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most well-run retail operations aim for 95% or higher inventory accuracy. Best-in-class operations, particularly those using RFID or real-time tracking, often achieve 98 to 99%. Accuracy below 90% typically means there are significant process or system gaps that need addressing before shrinkage can be meaningfully reduced."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you have high inventory accuracy and still have shrinkage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If shrinkage events are being properly recorded — breakage logged, write-offs processed, theft reported — your records can accurately reflect the reality of reduced stock. Accuracy measures whether your records match what's there. Shrinkage measures the financial impact of what's gone. Accurate records of a loss are still a loss."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you calculate inventory accuracy rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inventory accuracy rate is calculated by dividing the number of SKUs where your physical count matches your system record by the total number of SKUs counted, then multiplying by 100. For example, if you count 500 SKUs and 465 match the system, your accuracy rate is 93%."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+      --warn:        #f59e0b;
+      --danger:      #f87171;
+      --c-im:        #10b981;
+      --c-acc:       #38bdf8;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono:    'Courier New', monospace;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: var(--font-body); font-size: 17px; line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo {
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); text-decoration: none; letter-spacing: -0.02em;
+    }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    #read-progress {
+      position: fixed; top: 56px; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--c-acc), var(--c-im));
+      z-index: 99; transition: width 0.1s linear;
+    }
+
+    .page-wrap {
+      max-width: 1140px; margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 300px; gap: 52px; align-items: start;
+    }
+    @media (max-width: 860px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    .article-header { padding: 52px 0 36px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--muted); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--border); }
+    .article-category {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #0d2018; border: 1px solid var(--c-im); color: var(--c-im);
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 18px;
+    }
+    h1 {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 3.8vw, 2.65rem);
+      font-weight: 700; color: var(--heading); line-height: 1.18; letter-spacing: -0.03em; margin-bottom: 18px;
+    }
+    .article-deck { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 22px; max-width: 680px; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.8rem; color: var(--muted); }
+
+    /* Stats */
+    .article-stats {
+      display: flex; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-md); margin-bottom: 40px; overflow: hidden;
+    }
+    .stat-item { flex: 1; padding: 16px 18px; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-item .s-val {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 700;
+      color: var(--heading); line-height: 1; margin-bottom: 4px;
+    }
+    .stat-item .s-val.sky   { color: var(--c-acc); }
+    .stat-item .s-val.green { color: var(--success); }
+    .stat-item .s-val.amber { color: var(--warn); }
+    .stat-item .s-val.red   { color: var(--danger); }
+    .stat-item .s-lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; }
+    @media (max-width: 600px) {
+      .article-stats { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); }
+    }
+
+    /* Prose */
+    .article-body h2 {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 700;
+      color: var(--heading); letter-spacing: -0.02em;
+      margin: 48px 0 14px; padding-top: 48px; border-top: 1px solid var(--border);
+    }
+    .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--heading); margin: 26px 0 10px; }
+    .article-body p { margin-bottom: 18px; color: var(--text); }
+    .article-body a { color: var(--c-im); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body strong { color: var(--heading); font-weight: 600; }
+    .article-body em { font-style: italic; color: var(--muted); }
+
+    /* Callouts */
+    .callout { border-radius: var(--r-md); padding: 18px 22px; margin: 24px 0; border-left: 4px solid; }
+    .callout-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .callout p { margin-bottom: 6px; font-size: 0.94rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout-tip    { background: #0d1f16; border-color: var(--c-im); }
+    .callout-tip .callout-label  { color: var(--c-im); }
+    .callout-info   { background: var(--accent-glow); border-color: var(--accent); }
+    .callout-info .callout-label { color: var(--accent-lt); }
+    .callout-warn   { background: #1c1500; border-color: var(--warn); }
+    .callout-warn .callout-label { color: var(--warn); }
+    .callout-sky    { background: #001e30; border-color: var(--c-acc); }
+    .callout-sky .callout-label  { color: var(--c-acc); }
+
+    /* Side-by-side comparison */
+    .compare-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0;
+    }
+    @media (max-width: 640px) { .compare-grid { grid-template-columns: 1fr; } }
+    .compare-col {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    .compare-col .col-header {
+      padding: 14px 18px; font-size: 0.8rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border);
+    }
+    .compare-col.acc .col-header { background: #001e30; color: var(--c-acc); border-bottom-color: var(--c-acc); }
+    .compare-col.shr .col-header { background: #0d2018; color: var(--c-im); border-bottom-color: var(--c-im); }
+    .compare-col ul { list-style: none; padding: 0; }
+    .compare-col ul li {
+      padding: 10px 18px; border-bottom: 1px solid var(--border);
+      font-size: 0.87rem; color: var(--muted); display: flex; gap: 8px; align-items: flex-start;
+    }
+    .compare-col ul li:last-child { border-bottom: none; }
+    .compare-col.acc ul li::before { content: '→'; color: var(--c-acc); flex-shrink: 0; }
+    .compare-col.shr ul li::before { content: '→'; color: var(--c-im); flex-shrink: 0; }
+    .compare-col ul li strong { color: var(--text); }
+
+    /* Formula box */
+    .formula-box {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+      padding: 24px 28px; margin: 24px 0;
+    }
+    .formula-box .f-label {
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+    .formula-box.acc .f-label { color: var(--c-acc); }
+    .formula-box.shr .f-label { color: var(--c-im); }
+    .formula-box .f-expr {
+      font-family: var(--font-mono); font-size: 1rem;
+      padding: 12px 16px; border-radius: var(--r-sm); border: 1px solid var(--border);
+      background: var(--bg); display: block; margin-bottom: 12px; word-break: break-word;
+    }
+    .formula-box.acc .f-expr { color: var(--c-acc); }
+    .formula-box.shr .f-expr { color: var(--c-im); }
+    .formula-box .f-example {
+      font-size: 0.85rem; color: var(--muted); padding: 10px 14px;
+      background: var(--bg); border-radius: var(--r-sm); border: 1px dashed var(--border);
+    }
+    .formula-box .f-example strong { color: var(--text); }
+
+    /* Scenario cards */
+    .scenario-grid { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+    .scenario-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md);
+      padding: 18px 20px;
+    }
+    .sc-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+    .sc-label {
+      font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 3px 10px; border-radius: 999px; flex-shrink: 0; margin-top: 1px;
+    }
+    .sc-label.both-bad  { background: #3b0c0c; color: var(--danger); }
+    .sc-label.acc-bad   { background: #001e30; color: var(--c-acc); }
+    .sc-label.shr-bad   { background: #0d2018; color: var(--c-im); }
+    .sc-label.both-good { background: #0d2018; color: var(--success); }
+    .sc-title { font-weight: 700; color: var(--heading); font-size: 0.95rem; line-height: 1.3; }
+    .sc-body { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+    .sc-body strong { color: var(--text); }
+
+    /* Table */
+    .data-table-wrap { overflow-x: auto; margin: 24px 0; border: 1px solid var(--border); border-radius: var(--r-md); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    thead th {
+      background: var(--surface); color: var(--muted); font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 11px 14px; text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--surface); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.68rem; font-weight: 700; }
+    .badge-sky   { background: #001e30; color: var(--c-acc); }
+    .badge-green { background: #0d2018; color: #34d399; }
+    .badge-amber { background: #1c1500; color: #fbbf24; }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 4px solid var(--c-acc); padding: 16px 24px; margin: 30px 0;
+      background: #001e30; border-radius: 0 var(--r-md) var(--r-md) 0;
+    }
+    .pull-quote p {
+      font-family: var(--font-display); font-size: 1.08rem; color: var(--heading);
+      line-height: 1.55; font-style: italic; margin: 0;
+    }
+    .pull-quote cite {
+      display: block; font-size: 0.75rem; color: var(--muted); margin-top: 10px;
+      font-style: normal; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em;
+    }
+
+    /* FAQ */
+    .faq-list { margin: 14px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 10px; overflow: hidden; }
+    .faq-q {
+      width: 100%; background: var(--surface); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px; font-size: 0.95rem; font-weight: 600; color: var(--heading);
+      text-align: left; gap: 12px;
+    }
+    .faq-q:hover { background: var(--surface-2); }
+    .faq-q .arrow { flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 0.92rem; color: var(--muted); background: var(--surface); }
+    .faq-a.open { display: block; }
+
+    /* Related articles */
+    .related-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+    .related-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md);
+      padding: 16px 18px; text-decoration: none; display: flex; gap: 12px; align-items: flex-start;
+      transition: border-color 0.18s, background 0.15s;
+    }
+    .related-card:hover { border-color: var(--c-im); background: var(--surface-2); }
+    .related-card .rc-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .related-card .rc-cat {
+      font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+      color: var(--c-im); margin-bottom: 4px;
+    }
+    .related-card .rc-title { font-size: 0.9rem; font-weight: 600; color: var(--heading); line-height: 1.35; }
+
+    /* CTA */
+    .article-cta {
+      background: linear-gradient(135deg, #0d2018 0%, #181c27 100%);
+      border: 1px solid var(--c-im); border-radius: var(--r-lg);
+      padding: 28px 32px; text-align: center; margin-top: 44px;
+    }
+    .article-cta h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); margin-bottom: 8px; }
+    .article-cta p  { color: var(--muted); font-size: 0.875rem; margin-bottom: 18px; }
+    .btn-primary {
+      display: inline-block; background: var(--c-im); color: #06281c;
+      font-weight: 700; font-size: 0.875rem; padding: 11px 26px; border-radius: var(--r-sm);
+      text-decoration: none; transition: opacity 0.18s;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+
+    /* Sidebar */
+    .sidebar { padding-top: 52px; }
+    .sidebar-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 18px; margin-bottom: 18px;
+    }
+    .sidebar-card h4 {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+      color: var(--muted); margin-bottom: 12px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      font-size: 0.79rem; color: var(--muted); text-decoration: none;
+      display: block; padding: 4px 0 4px 12px; border-left: 2px solid transparent;
+      transition: all 0.15s; line-height: 1.35;
+    }
+    .toc-list a:hover, .toc-list a.active { color: var(--text); border-color: var(--c-im); }
+
+    .quickref { position: sticky; top: 72px; }
+    .qr-header {
+      background: #0d2018; border-bottom: 1px solid var(--c-im);
+      padding: 14px 18px; display: flex; align-items: center; gap: 8px;
+    }
+    .qr-header h4 { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-im); }
+    .qr-row {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 10px;
+      padding: 11px 18px; border-bottom: 1px solid var(--border); font-size: 0.79rem;
+    }
+    .qr-row:last-child { border-bottom: none; }
+    .qr-key { color: var(--muted); flex-shrink: 0; font-size: 0.75rem; }
+    .qr-val { color: var(--heading); font-weight: 600; text-align: right; font-size: 0.75rem; }
+    .qr-val.green { color: var(--success); }
+    .qr-val.sky   { color: var(--c-acc); }
+    .qr-val.amber { color: var(--warn); }
+
+    .site-footer {
+      border-top: 1px solid var(--border); margin-top: 80px; padding: 32px 24px;
+      text-align: center; color: var(--muted); font-size: 0.82rem;
+    }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <main id="main-content">
+
+      <header class="article-header">
+        <div class="breadcrumb">
+          <a href="/">Home</a><span>›</span>
+          <a href="/articles/">Articles</a><span>›</span>
+          <a href="/articles/?cat=inventory-management">Inventory Management</a>
+        </div>
+        <span class="article-category">📦 Inventory Management</span>
+        <h1>Inventory Accuracy vs Inventory Shrinkage: Understanding the Difference</h1>
+        <p class="article-deck">
+          These two terms get used almost interchangeably in a lot of inventory conversations — and that's exactly where the confusion starts. They're related, but they measure different things, they point to different causes, and they need different fixes. Getting them mixed up is how businesses end up solving the wrong problem.
+        </p>
+        <div class="article-meta">
+          <span>🗓 June 16, 2026</span>
+          <span>⏱ 8 min read</span>
+          <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--c-im); text-decoration:underline; text-underline-offset:3px;">Mithun GS</a></span>
+          <span>📂 Inventory Management</span>
+        </div>
+      </header>
+
+      <div class="article-stats">
+        <div class="stat-item">
+          <div class="s-val sky">Accuracy</div>
+          <div class="s-lbl">How reliable is your data?</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val green">Shrinkage</div>
+          <div class="s-lbl">How much is actually gone?</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val amber">95%+</div>
+          <div class="s-lbl">Target inventory accuracy rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val red">&lt;1%</div>
+          <div class="s-lbl">Target shrinkage rate</div>
+        </div>
+      </div>
+
+      <article class="article-body" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="Inventory Accuracy vs Inventory Shrinkage: Understanding the Difference" />
+        <meta itemprop="datePublished" content="2026-06-16" />
+
+        <!-- INTRO -->
+        <section id="introduction">
+          <h2 style="border-top:none; padding-top:0; margin-top:0;">Two Terms, Two Different Problems</h2>
+          <p>
+            Here's a situation I've seen more times than I can count. A business does a stock count, finds a significant gap, and immediately concludes they have a shrinkage problem. They install cameras, increase staff bag checks, and review CCTV footage for weeks. The number barely moves.
+          </p>
+          <p>
+            What they actually had was an accuracy problem — their records didn't reflect reality because of data entry errors, missing write-offs, and slipshod receiving processes, not because stock was disappearing. The gap in the count was real. The cause wasn't what they assumed.
+          </p>
+          <p>
+            That's the mistake this article is trying to prevent. Inventory accuracy and inventory shrinkage are not the same measurement. They're connected, but they're asking different questions. Once you understand which question each one is answering, you can stop guessing at solutions and start diagnosing the actual problem.
+          </p>
+        </section>
+
+        <!-- DEFINITIONS -->
+        <section id="definitions">
+          <h2>What Each One Actually Measures</h2>
+
+          <h3>Inventory Accuracy</h3>
+          <p>
+            Inventory accuracy is about <strong>how well your records reflect reality</strong>. It asks: does your system — your spreadsheet, your POS, your inventory software — agree with what's physically on the shelf when you count it? If your system says you have 40 units of a product and the shelf has 40 units, that's accurate. If the system says 40 and the shelf has 35, that's an accuracy gap — regardless of <em>why</em> those five units aren't there.
+          </p>
+          <p>
+            Accuracy is typically expressed as a percentage. If you count 500 SKUs and 470 match the system exactly, your accuracy rate is 94%. The 6% gap could be caused by theft, or by data entry errors, or by damage that was never recorded, or by a system import that went wrong. Accuracy doesn't tell you which — it just tells you how bad the gap is.
+          </p>
+
+          <h3>Inventory Shrinkage</h3>
+          <p>
+            Inventory shrinkage is about <strong>what's actually gone</strong>. It's the financial value of stock that has left your business without a corresponding sale, write-off, or transfer — lost to theft, spoilage, damage, vendor fraud, or waste. It answers a different question: not "does the record match the shelf?" but "how much has the business lost?"
+          </p>
+          <p>
+            Shrinkage is typically measured as a percentage of sales or inventory value. If you have $200,000 worth of inventory and $6,000 is unaccounted for at count time, that's 3% shrinkage. That stock is genuinely gone — it was either taken, spoiled, or consumed without being recorded — and the business can't recover it.
+          </p>
+
+          <div class="callout callout-info">
+            <div class="callout-label">💡 The core distinction</div>
+            <p><strong>Accuracy</strong> is a data quality problem. It measures whether your records can be trusted. <strong>Shrinkage</strong> is a financial loss problem. It measures how much value has left the business. You can fix an accuracy problem without reducing shrinkage. And you can have accurate records that perfectly document a shrinkage problem you haven't solved yet.</p>
+          </div>
+        </section>
+
+        <!-- COMPARISON -->
+        <section id="comparison">
+          <h2>Side by Side</h2>
+          <div class="compare-grid">
+            <div class="compare-col acc">
+              <div class="col-header">📊 Inventory Accuracy</div>
+              <ul>
+                <li><strong>Measures:</strong> How well records match physical stock</li>
+                <li><strong>Expressed as:</strong> % of SKUs that match system</li>
+                <li><strong>Target:</strong> 95% or higher</li>
+                <li><strong>Caused by:</strong> Data entry errors, system gaps, missing write-offs, transfer mistakes</li>
+                <li><strong>Fixed by:</strong> Better processes, system audits, training</li>
+                <li><strong>Impact:</strong> Poor decisions, stock-outs, over-ordering</li>
+              </ul>
+            </div>
+            <div class="compare-col shr">
+              <div class="col-header">📉 Inventory Shrinkage</div>
+              <ul>
+                <li><strong>Measures:</strong> Financial value of missing stock</li>
+                <li><strong>Expressed as:</strong> % of sales or inventory value</li>
+                <li><strong>Target:</strong> Below 1% (well-controlled)</li>
+                <li><strong>Caused by:</strong> Theft, fraud, spoilage, damage, vendor issues</li>
+                <li><strong>Fixed by:</strong> Controls, surveillance, audits, vendor checks</li>
+                <li><strong>Impact:</strong> Direct profit loss, cash flow, pricing</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- HOW TO CALCULATE -->
+        <section id="formulas">
+          <h2>How to Calculate Each One</h2>
+
+          <div class="formula-box acc">
+            <div class="f-label">📊 Inventory Accuracy Rate</div>
+            <code class="f-expr">Accuracy Rate = (SKUs Matching System ÷ Total SKUs Counted) × 100</code>
+            <div class="f-example">
+              <strong>Example:</strong> You count 500 SKUs. 462 match what the system says exactly. Your accuracy rate is (462 ÷ 500) × 100 = <strong>92.4%</strong>. This means roughly 1 in 13 product records has an error — which is significant enough to affect ordering decisions.
+            </div>
+          </div>
+
+          <div class="formula-box shr">
+            <div class="f-label">📉 Inventory Shrinkage Rate</div>
+            <code class="f-expr">Shrink Rate = ((Book Inventory − Physical Count) ÷ Book Inventory) × 100</code>
+            <div class="f-example">
+              <strong>Example:</strong> Your system shows $180,000 in inventory. The physical count adds up to $174,600. Shrinkage = ($180,000 − $174,600) ÷ $180,000 × 100 = <strong>3%</strong>. That $5,400 is gone — not a record error, genuinely missing stock.
+            </div>
+          </div>
+
+          <div class="callout callout-warn">
+            <div class="callout-label">⚠️ Where people get confused</div>
+            <p>A gap between book inventory and physical count shows up in both calculations — but it means different things. An accuracy gap might be caused by a data entry error that can be corrected. A shrinkage gap is actual missing value that can't be recovered. Before you act on a number, make sure you know which type of gap you're looking at.</p>
+          </div>
+        </section>
+
+        <!-- THE RELATIONSHIP -->
+        <section id="relationship">
+          <h2>How the Two Are Connected — And Where They Diverge</h2>
+          <p>
+            Here's where it gets interesting. The two are related, but the relationship isn't as simple as most people assume.
+          </p>
+          <p>
+            <strong>Shrinkage always hurts accuracy.</strong> When stock disappears due to theft, spoilage, or vendor short-shipments, your physical count falls below your system record. That creates an accuracy gap. So high shrinkage is always a contributor to poor accuracy.
+          </p>
+          <p>
+            <strong>But poor accuracy doesn't always mean high shrinkage.</strong> Your records can be terrible — full of data entry mistakes, missing write-offs, uncounted transfers — without any theft happening at all. You can have a 20% inaccuracy rate driven entirely by process failures, with a shrinkage rate that's well within normal range once the data errors are corrected.
+          </p>
+          <p>
+            And here's the really important part: <strong>you can have accurate records and still have shrinkage</strong>. If your team properly logs every damaged item, every expired product, every write-off — your accuracy rate could be excellent while your shrinkage rate is high. The records are accurate. The losses are still real.
+          </p>
+
+          <div class="pull-quote">
+            <p>"Accurate records of a loss are still a loss. Getting the data right doesn't make the stock come back — but it tells you exactly how much is gone and where to look."</p>
+            <cite>— PreventLoss.org</cite>
+          </div>
+        </section>
+
+        <!-- FOUR SCENARIOS -->
+        <section id="scenarios">
+          <h2>The Four Scenarios Your Business Might Be In</h2>
+          <p>
+            Putting accuracy and shrinkage together creates four distinct situations, each one requiring a different response. Work out which quadrant your business is in — that's where your diagnosis starts.
+          </p>
+
+          <div class="scenario-grid">
+            <div class="scenario-card">
+              <div class="sc-header">
+                <span class="sc-label both-bad">High Shrink + Low Accuracy</span>
+                <div class="sc-title">The Full Mess — Fix Records and Find the Losses</div>
+              </div>
+              <div class="sc-body">
+                This is the most common state for businesses that haven't paid serious attention to either metric. Your data can't be trusted, and there's genuine financial loss on top of that. The first priority is getting your records clean — because until they are, you can't tell how much of the gap is data error and how much is real shrinkage. Fix accuracy first, then investigate what's left.
+              </div>
+            </div>
+            <div class="scenario-card">
+              <div class="sc-header">
+                <span class="sc-label shr-bad">High Shrink + High Accuracy</span>
+                <div class="sc-title">You Know Exactly What You're Losing — Now Stop It</div>
+              </div>
+              <div class="sc-body">
+                This is actually a good position to investigate from, because your records are reliable. You know the number is real. You can break it down by SKU, location, time period, and transaction type with confidence. The problem is clearly operational — theft, vendor fraud, damage — not a data problem. Investigation can go straight to the cause.
+              </div>
+            </div>
+            <div class="scenario-card">
+              <div class="sc-header">
+                <span class="sc-label acc-bad">Low Shrink + Low Accuracy</span>
+                <div class="sc-title">Data Chaos, But Maybe No Major Theft</div>
+              </div>
+              <div class="sc-body">
+                Your records are a mess, but when you dig into it, most of the gap might be correctable — receiving errors, missing write-offs, system mismatches. You could clean up your accuracy significantly without finding any theft at all. Don't jump to a loss prevention investigation until you've ruled out the data problems first.
+              </div>
+            </div>
+            <div class="scenario-card">
+              <div class="sc-header">
+                <span class="sc-label both-good">Low Shrink + High Accuracy</span>
+                <div class="sc-title">Where Every Business Should Be Aiming</div>
+              </div>
+              <div class="sc-body">
+                Your records match reality, and your losses are within a normal, manageable range. This doesn't mean nothing is happening — it means your controls are working well enough that losses are small and well-documented. The job here is maintaining this, not rebuilding from scratch. Regular cycle counts and exception reporting keep it here.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- EXAMPLE -->
+        <section id="real-example">
+          <h2>A Real Example of Getting Them Mixed Up</h2>
+          <p>
+            Let me give you a concrete situation. A general merchandise store runs their annual count and finds a $12,000 gap between book inventory and physical count. That's about 2.4% shrinkage on their inventory value, which sounds bad.
+          </p>
+          <p>
+            Management assumes theft. They upgrade the camera system, run two weeks of intensive CCTV review, and interview half the staff. Nothing surfaces. The gap in next month's spot count is nearly identical.
+          </p>
+          <p>
+            Then someone starts auditing the receiving records. What they find: over the past six months, the store has received 23 deliveries that were never formally receipted in the system — staff members accepted boxes, put stock on the shelf, and never updated the inventory record. The system still shows the purchase orders as pending. The missing $12,000 isn't missing at all — it's on the shelves, properly sold, just never entered into the system correctly. The "shrinkage" was a data accuracy problem masquerading as a financial loss.
+          </p>
+
+          <div class="callout callout-sky">
+            <div class="callout-label">📌 The lesson</div>
+            <p>Before concluding that a count gap represents actual shrinkage, check whether it could be an accuracy problem first. Receiving records, pending transfers, unprocessed write-offs, and system errors can all create gaps that look like shrinkage but aren't. Fix the data, then re-measure.</p>
+          </div>
+        </section>
+
+        <!-- HOW TO IMPROVE BOTH -->
+        <section id="how-to-improve">
+          <h2>How to Improve Both — Without Conflating Them</h2>
+
+          <h3>Improving Inventory Accuracy</h3>
+          <p>
+            Accuracy is a discipline problem more than a resource problem. It's about making sure every movement of stock — in, out, between locations, written off, returned — is recorded at the time it happens, correctly. The habits that matter most are:
+          </p>
+
+          <div class="data-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Area</th>
+                  <th>The Habit That Fixes It</th>
+                  <th>Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Receiving</strong></td>
+                  <td>Count every delivery against the PO before it's entered into the system</td>
+                  <td><span class="badge badge-green">Free</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Write-offs</strong></td>
+                  <td>Log damage, spoilage, and breakage at the time it happens — not during the count</td>
+                  <td><span class="badge badge-green">Free</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Transfers</strong></td>
+                  <td>Require signed documentation at both sending and receiving locations</td>
+                  <td><span class="badge badge-green">Free</span></td>
+                </tr>
+                <tr>
+                  <td><strong>System setup</strong></td>
+                  <td>Audit new SKU entries — wrong unit-of-measure settings compound fast</td>
+                  <td><span class="badge badge-green">Free</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Counting methodology</strong></td>
+                  <td>Freeze system during counts, account for all stock locations, do blind counts</td>
+                  <td><span class="badge badge-green">Free</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Technology</strong></td>
+                  <td>Barcode scanning or RFID dramatically reduce entry errors at receiving</td>
+                  <td><span class="badge badge-amber">Investment</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Reducing Inventory Shrinkage</h3>
+          <p>
+            Once your records are reliable enough to trust, shrinkage investigation becomes meaningful. You're not chasing a ghost — you're working from a data set you believe. At that point, the right approach is to break shrinkage down by category, location, shift, and transaction type to find the pattern. The pattern tells you the cause. The cause tells you the fix.
+          </p>
+          <p>
+            For a full breakdown of shrinkage causes and their specific fixes, read our <a href="/articles/causes-of-inventory-shrinkage.html">Top 10 Causes of Inventory Shrinkage</a> guide. For the controls that address the most common ones, the <a href="/articles/loss-prevention-strategies.html">Loss Prevention Strategies</a> article covers fifteen specific methods with real examples.
+          </p>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What is the difference between inventory accuracy and inventory shrinkage?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Inventory accuracy measures how closely your records match physical reality — it's a data quality issue. Inventory shrinkage measures the financial value of stock that's actually gone from the business — it's a financial loss issue. High shrinkage always damages accuracy, but poor accuracy doesn't always mean high shrinkage — it can come from data errors alone.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What is a good inventory accuracy rate?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Most well-managed retail operations aim for 95% or higher. Best-in-class operations — particularly those using RFID or real-time tracking — often achieve 98 to 99%. Below 90% typically means there are meaningful process gaps that are making your inventory data unreliable enough to affect decisions.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                Can you have high inventory accuracy and still have shrinkage?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Yes — and this is an important distinction. If your team properly records every breakage, write-off, and theft incident, your records can be very accurate while still reflecting significant losses. Accurate records of a loss are still a loss. Good accuracy just means you know exactly what you've lost, which is the starting point for actually fixing it.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                How do you calculate inventory accuracy rate?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Count the number of SKUs where your physical count exactly matches your system record, divide by the total number of SKUs you counted, and multiply by 100. If you count 500 SKUs and 465 match exactly, your accuracy rate is 93%. Note that "exact match" is strict — even a 1-unit difference on a SKU counts as a mismatch.
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- RELATED ARTICLES -->
+        <section id="related-articles">
+          <h2>Related Articles</h2>
+          <div class="related-grid">
+            <a class="related-card" href="/articles/loss-prevention-strategies.html">
+              <span class="rc-icon">🛡️</span>
+              <div>
+                <div class="rc-cat">Loss Prevention</div>
+                <div class="rc-title">Loss Prevention Strategies: 15 Proven Methods to Reduce Business Losses</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/causes-of-inventory-shrinkage.html">
+              <span class="rc-icon">📦</span>
+              <div>
+                <div class="rc-cat">Inventory Management</div>
+                <div class="rc-title">Top 10 Causes of Inventory Shrinkage and How to Prevent Each One</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/inventory-shrinkage-explained.html">
+              <span class="rc-icon">📉</span>
+              <div>
+                <div class="rc-cat">Inventory Management</div>
+                <div class="rc-title">Inventory Shrinkage Explained: Causes, Calculation &amp; How to Reduce It</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/what-is-loss-prevention.html">
+              <span class="rc-icon">📋</span>
+              <div>
+                <div class="rc-cat">Loss Prevention</div>
+                <div class="rc-title">What Is Loss Prevention? Complete Guide for Businesses</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/airport-chocolate-store-fraud-case-study.html">
+              <span class="rc-icon">🔴</span>
+              <div>
+                <div class="rc-cat">Real Case Study</div>
+                <div class="rc-title">The Airport Chocolate Store Fraud: How a Manager Turned Promotional Offers into a Personal Business</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="article-cta">
+            <h3>Explore the Full Knowledge Base</h3>
+            <p>More guides on inventory management, loss prevention, procurement controls, and internal audit — all free, no sign-up needed.</p>
+            <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Article sidebar">
+
+      <div class="sidebar-card quickref">
+        <div class="qr-header">
+          <span>📦</span>
+          <h4>Quick Reference</h4>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Accuracy measures</span>
+          <span class="qr-val sky">Data reliability</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Shrinkage measures</span>
+          <span class="qr-val green">Financial loss</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Accuracy formula</span>
+          <span class="qr-val">Matches ÷ Total × 100</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Shrinkage formula</span>
+          <span class="qr-val">Book − Physical ÷ Book</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Target accuracy</span>
+          <span class="qr-val green">95%+</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Good shrink rate</span>
+          <span class="qr-val green">Below 1%</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Fix accuracy with</span>
+          <span class="qr-val">Process &amp; training</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Fix shrinkage with</span>
+          <span class="qr-val">Controls &amp; investigation</span>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#definitions">What Each One Measures</a></li>
+          <li><a href="#comparison">Side by Side</a></li>
+          <li><a href="#formulas">How to Calculate Each</a></li>
+          <li><a href="#relationship">How They're Connected</a></li>
+          <li><a href="#scenarios">The 4 Scenarios</a></li>
+          <li><a href="#real-example">A Real Example</a></li>
+          <li><a href="#how-to-improve">How to Improve Both</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#related-articles">Related Articles</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      document.getElementById('read-progress').style.width =
+        ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+    });
+
+    function toggleFaq(btn) {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    }
+
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const a = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (a) a.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -75% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
