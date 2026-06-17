@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <title>What Is Internal Audit? A Complete Beginner's Guide (2026) — Types, Process & Examples</title>
+  <meta name="description" content="Internal audit explained from scratch — what it actually is, how it's different from external audit, what internal auditors do, real examples, and how businesses of every size can benefit from it." />
+  <meta name="keywords" content="what is internal audit, internal audit explained, internal audit for beginners, internal audit definition, what does an internal auditor do, internal audit vs external audit, internal audit process steps, internal audit examples, internal audit types, purpose of internal audit, internal audit in small business, how internal audit works USA, internal audit function, internal audit best practices, why internal audit matters" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mithun GS" />
+  <link rel="canonical" href="https://www.preventloss.org/articles/what-is-internal-audit.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is Internal Audit? A Complete Beginner's Guide (2026)" />
+  <meta property="og:description" content="Internal audit explained plainly — what it is, what internal auditors actually do, how it differs from external audit, and real examples across industries." />
+  <meta property="og:url" content="https://www.preventloss.org/articles/what-is-internal-audit.html" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+  <meta property="article:published_time" content="2026-06-18T00:00:00Z" />
+  <meta property="article:modified_time" content="2026-06-18T00:00:00Z" />
+  <meta property="article:section" content="Internal Audit" />
+  <meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is Internal Audit? A Complete Beginner's Guide" />
+  <meta name="twitter:description" content="What internal audit actually is, how it works, real examples — and why it matters for businesses of every size." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is Internal Audit? A Complete Beginner's Guide",
+    "description": "Internal audit explained from scratch — definition, types, process, examples, and how it differs from external audit.",
+    "author": {
+      "@type": "Person",
+      "name": "Mithun GS",
+      "url": "https://www.linkedin.com/in/mithun-gs/"
+    },
+    "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/what-is-internal-audit.html" },
+    "keywords": "internal audit, what is internal audit, internal audit definition, internal auditor, internal audit process"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an internal audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An internal audit is an independent, objective review of a business's processes, controls, and risk management conducted by people within the organization. It examines whether operations are running as intended, whether risks are being managed properly, and whether financial and operational data can be relied on — then reports findings to management or the board."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between internal audit and external audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "External audit is conducted by an independent outside firm to verify that financial statements are accurate — it's primarily for shareholders and regulators. Internal audit is conducted by people inside the organization (or contracted to serve that role) to evaluate controls, identify risks, and improve operations — it's primarily for management and the board."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do small businesses need an internal audit function?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Small businesses rarely need a formal internal audit department, but they do benefit from the practices internal audit brings — periodic review of cash handling, vendor controls, inventory processes, and compliance with internal policies. A manager or owner conducting structured reviews of these areas two to four times a year achieves the same protective benefit without a dedicated team."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the main types of internal audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The main types are: financial audit (checking accuracy of financial records), operational audit (evaluating efficiency of business processes), compliance audit (checking adherence to laws and policies), IT audit (reviewing technology systems and data security), and fraud audit (investigating suspected or potential fraudulent activity)."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+      --warn:        #f59e0b;
+      --danger:      #f87171;
+      --c-ia:        #a78bfa;
+      --c-ia-bg:     #1e1340;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono:    'Courier New', monospace;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: var(--font-body); font-size: 17px; line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Nav ───────────────────────────────── */
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo {
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); text-decoration: none; letter-spacing: -0.02em;
+    }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    #read-progress {
+      position: fixed; top: 56px; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--c-ia), var(--accent-lt));
+      z-index: 99; transition: width 0.1s linear;
+    }
+
+    /* ─── Layout ─────────────────────────────── */
+    .page-wrap {
+      max-width: 1140px; margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 300px; gap: 52px; align-items: start;
+    }
+    @media (max-width: 860px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* ─── Header ─────────────────────────────── */
+    .article-header { padding: 52px 0 36px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--muted); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--border); }
+    .article-category {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--c-ia-bg); border: 1px solid var(--c-ia); color: var(--c-ia);
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 18px;
+    }
+    h1 {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 3.8vw, 2.65rem);
+      font-weight: 700; color: var(--heading); line-height: 1.18; letter-spacing: -0.03em; margin-bottom: 18px;
+    }
+    .article-deck { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 22px; max-width: 680px; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.8rem; color: var(--muted); }
+
+    /* ─── Stats strip ────────────────────────── */
+    .article-stats {
+      display: flex; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-md); margin-bottom: 40px; overflow: hidden;
+    }
+    .stat-item { flex: 1; padding: 16px 18px; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-item .s-val {
+      font-family: var(--font-display); font-size: 1.35rem; font-weight: 700;
+      color: var(--heading); line-height: 1; margin-bottom: 4px;
+    }
+    .stat-item .s-val.purple { color: var(--c-ia); }
+    .stat-item .s-val.green  { color: var(--success); }
+    .stat-item .s-val.amber  { color: var(--warn); }
+    .stat-item .s-lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; }
+    @media (max-width: 600px) {
+      .article-stats { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); }
+    }
+
+    /* ─── Prose ──────────────────────────────── */
+    .article-body h2 {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 700;
+      color: var(--heading); letter-spacing: -0.02em;
+      margin: 48px 0 14px; padding-top: 48px; border-top: 1px solid var(--border);
+    }
+    .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--heading); margin: 28px 0 10px; }
+    .article-body p { margin-bottom: 18px; color: var(--text); }
+    .article-body a { color: var(--c-ia); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body strong { color: var(--heading); font-weight: 600; }
+    .article-body em { font-style: italic; color: var(--muted); }
+
+    /* ─── Callouts ───────────────────────────── */
+    .callout { border-radius: var(--r-md); padding: 18px 22px; margin: 24px 0; border-left: 4px solid; }
+    .callout-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .callout p { margin-bottom: 6px; font-size: 0.94rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout-purple { background: var(--c-ia-bg); border-color: var(--c-ia); }
+    .callout-purple .callout-label { color: var(--c-ia); }
+    .callout-tip    { background: #0d1f16; border-color: var(--success); }
+    .callout-tip .callout-label { color: var(--success); }
+    .callout-info   { background: var(--accent-glow); border-color: var(--accent); }
+    .callout-info .callout-label { color: var(--accent-lt); }
+    .callout-warn   { background: #1c1500; border-color: var(--warn); }
+    .callout-warn .callout-label { color: var(--warn); }
+
+    /* ─── Audit types grid ───────────────────── */
+    .types-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 24px 0; }
+    .type-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md);
+      padding: 18px; border-top: 3px solid var(--c-ia);
+      transition: border-color 0.18s, box-shadow 0.15s;
+    }
+    .type-card:hover { border-color: var(--c-ia); box-shadow: 0 4px 20px rgba(167,139,250,0.1); }
+    .type-card .tc-icon { font-size: 1.4rem; margin-bottom: 10px; display: block; }
+    .type-card .tc-name { font-size: 0.9rem; font-weight: 700; color: var(--heading); margin-bottom: 6px; }
+    .type-card .tc-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.55; }
+
+    /* ─── IA vs EA comparison ────────────────── */
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px 0; }
+    @media (max-width: 640px) { .compare-grid { grid-template-columns: 1fr; } }
+    .compare-col { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+    .compare-col .col-hdr { padding: 14px 18px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .compare-col.ia .col-hdr { background: var(--c-ia-bg); color: var(--c-ia); border-bottom-color: var(--c-ia); }
+    .compare-col.ea .col-hdr { background: var(--accent-glow); color: var(--accent-lt); border-bottom-color: var(--accent); }
+    .compare-col ul { list-style: none; }
+    .compare-col ul li { padding: 9px 18px; border-bottom: 1px solid var(--border); font-size: 0.87rem; color: var(--muted); display: flex; gap: 8px; }
+    .compare-col ul li:last-child { border-bottom: none; }
+    .compare-col.ia ul li::before { content: '→'; color: var(--c-ia); flex-shrink: 0; font-weight: 800; }
+    .compare-col.ea ul li::before { content: '→'; color: var(--accent-lt); flex-shrink: 0; font-weight: 800; }
+    .compare-col ul li strong { color: var(--text); }
+
+    /* ─── Process steps ──────────────────────── */
+    .process-steps { display: flex; flex-direction: column; gap: 0; margin: 24px 0; }
+    .process-step { display: flex; gap: 20px; align-items: flex-start; padding: 22px 0; border-bottom: 1px solid var(--border); }
+    .process-step:last-child { border-bottom: none; }
+    .ps-num-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+    .ps-num {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--c-ia-bg); border: 2px solid var(--c-ia);
+      color: var(--c-ia); font-family: var(--font-mono);
+      font-size: 0.82rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ps-line { width: 2px; background: var(--border); flex: 1; min-height: 20px; margin-top: 4px; }
+    .process-step:last-child .ps-line { display: none; }
+    .ps-content { flex: 1; padding-top: 4px; }
+    .ps-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--heading); margin-bottom: 8px; }
+    .ps-body { font-size: 0.92rem; color: var(--muted); line-height: 1.7; }
+    .ps-body strong { color: var(--text); }
+
+    /* ─── Real-world examples ────────────────── */
+    .example-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+      overflow: hidden; margin: 18px 0;
+    }
+    .ex-header { padding: 14px 20px; border-bottom: 1px solid var(--border); background: var(--surface-2); display: flex; align-items: center; gap: 12px; }
+    .ex-type { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.09em; color: var(--c-ia); background: var(--c-ia-bg); border: 1px solid var(--c-ia); padding: 3px 10px; border-radius: 999px; }
+    .ex-name { font-weight: 700; color: var(--heading); font-size: 0.95rem; }
+    .ex-body { padding: 18px 22px; }
+    .ex-body .ex-finding { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 12px 16px; margin-bottom: 12px; }
+    .ex-body .ef-label { font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-ia); margin-bottom: 6px; }
+    .ex-body p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; margin-bottom: 12px; }
+    .ex-body p:last-child { margin-bottom: 0; }
+    .ex-body p strong { color: var(--text); }
+
+    /* ─── Checklist ──────────────────────────── */
+    .check-list { list-style: none; margin: 14px 0 22px; }
+    .check-list li { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.93rem; }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list .ck { width: 20px; height: 20px; flex-shrink: 0; background: var(--c-ia-bg); border: 1px solid var(--c-ia); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--c-ia); margin-top: 2px; }
+
+    /* ─── Table ──────────────────────────────── */
+    .data-table-wrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--border); border-radius: var(--r-md); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    thead th { background: var(--surface); color: var(--muted); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--surface); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.68rem; font-weight: 700; }
+    .badge-purple { background: var(--c-ia-bg); color: #c4b5fd; }
+    .badge-green  { background: #0d2018; color: #34d399; }
+    .badge-amber  { background: #1c1500; color: #fbbf24; }
+
+    /* ─── Pull quote ──────────────────────────── */
+    .pull-quote {
+      border-left: 4px solid var(--c-ia); padding: 16px 24px; margin: 30px 0;
+      background: var(--c-ia-bg); border-radius: 0 var(--r-md) var(--r-md) 0;
+    }
+    .pull-quote p { font-family: var(--font-display); font-size: 1.08rem; color: var(--heading); line-height: 1.55; font-style: italic; margin: 0; }
+    .pull-quote cite { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 10px; font-style: normal; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; }
+
+    /* ─── FAQ ────────────────────────────────── */
+    .faq-list { margin: 14px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 10px; overflow: hidden; }
+    .faq-q { width: 100%; background: var(--surface); border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; font-size: 0.95rem; font-weight: 600; color: var(--heading); text-align: left; gap: 12px; }
+    .faq-q:hover { background: var(--surface-2); }
+    .faq-q .arrow { flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 0.92rem; color: var(--muted); background: var(--surface); }
+    .faq-a.open { display: block; }
+
+    /* ─── Related ─────────────────────────────── */
+    .related-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+    .related-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: 16px 18px; text-decoration: none; display: flex; gap: 12px; align-items: flex-start; transition: border-color 0.18s, background 0.15s; }
+    .related-card:hover { border-color: var(--c-ia); background: var(--surface-2); }
+    .related-card .rc-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .related-card .rc-cat { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--c-ia); margin-bottom: 4px; }
+    .related-card .rc-title { font-size: 0.9rem; font-weight: 600; color: var(--heading); line-height: 1.35; }
+
+    /* ─── CTA ────────────────────────────────── */
+    .article-cta { background: linear-gradient(135deg, var(--c-ia-bg) 0%, #181c27 100%); border: 1px solid var(--c-ia); border-radius: var(--r-lg); padding: 28px 32px; text-align: center; margin-top: 44px; }
+    .article-cta h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); margin-bottom: 8px; }
+    .article-cta p  { color: var(--muted); font-size: 0.875rem; margin-bottom: 18px; }
+    .btn-primary { display: inline-block; background: var(--c-ia); color: #0e0830; font-weight: 700; font-size: 0.875rem; padding: 11px 26px; border-radius: var(--r-sm); text-decoration: none; transition: opacity 0.18s; }
+    .btn-primary:hover { opacity: 0.85; }
+
+    /* ─── Sidebar ─────────────────────────────── */
+    .sidebar { padding-top: 52px; }
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 18px; margin-bottom: 18px; }
+    .sidebar-card h4 { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--muted); margin-bottom: 12px; }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a { font-size: 0.79rem; color: var(--muted); text-decoration: none; display: block; padding: 4px 0 4px 12px; border-left: 2px solid transparent; transition: all 0.15s; line-height: 1.35; }
+    .toc-list a:hover, .toc-list a.active { color: var(--text); border-color: var(--c-ia); }
+    .quickref { position: sticky; top: 72px; }
+    .qr-header { background: var(--c-ia-bg); border-bottom: 1px solid var(--c-ia); padding: 14px 18px; display: flex; align-items: center; gap: 8px; }
+    .qr-header h4 { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-ia); }
+    .qr-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding: 11px 18px; border-bottom: 1px solid var(--border); font-size: 0.79rem; }
+    .qr-row:last-child { border-bottom: none; }
+    .qr-key { color: var(--muted); flex-shrink: 0; font-size: 0.75rem; }
+    .qr-val { color: var(--heading); font-weight: 600; text-align: right; font-size: 0.75rem; }
+    .qr-val.purple { color: var(--c-ia); }
+    .qr-val.green  { color: var(--success); }
+
+    /* ─── Footer ─────────────────────────────── */
+    .site-footer { border-top: 1px solid var(--border); margin-top: 80px; padding: 32px 24px; text-align: center; color: var(--muted); font-size: 0.82rem; }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <main id="main-content">
+
+      <header class="article-header">
+        <div class="breadcrumb">
+          <a href="/">Home</a><span>›</span>
+          <a href="/articles/">Articles</a><span>›</span>
+          <a href="/articles/?cat=internal-audit">Internal Audit</a>
+        </div>
+        <span class="article-category">🔍 Internal Audit</span>
+        <h1>What Is Internal Audit? A Complete Beginner's Guide</h1>
+        <p class="article-deck">
+          Internal audit is one of those terms that sounds more intimidating than it is. Strip away the jargon and it's actually a pretty logical thing: someone inside the organization takes an independent look at how things are running and tells management what they find. Here's what that actually means in practice, why it matters, and what it looks like in businesses of different sizes.
+        </p>
+        <div class="article-meta">
+          <span>🗓 June 18, 2026</span>
+          <span>⏱ 10 min read</span>
+          <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--c-ia); text-decoration:underline; text-underline-offset:3px;">Mithun GS</a></span>
+          <span>📂 Internal Audit</span>
+        </div>
+      </header>
+
+      <div class="article-stats">
+        <div class="stat-item">
+          <div class="s-val purple">5</div>
+          <div class="s-lbl">Types of internal audit</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val green">6</div>
+          <div class="s-lbl">Step audit process</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val">4</div>
+          <div class="s-lbl">Real-world examples</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val amber">Any size</div>
+          <div class="s-lbl">Works for solo ops to enterprises</div>
+        </div>
+      </div>
+
+      <article class="article-body" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="What Is Internal Audit? A Complete Beginner's Guide" />
+        <meta itemprop="datePublished" content="2026-06-18" />
+
+        <!-- INTRO -->
+        <section id="introduction">
+          <h2 style="border-top:none; padding-top:0; margin-top:0;">Why So Many People Are Confused About What Internal Audit Actually Does</h2>
+          <p>
+            If you ask ten people what internal audit is, you'll probably get eight different answers. Some will say it's about checking the books — which is sort of right but not really the full picture. Some will say it's the same as an external audit — which it isn't. Some will say it's a compliance function, or a risk function, or a fraud investigation team, and all of those are partially true in different organizations.
+          </p>
+          <p>
+            The confusion is understandable. Internal audit has evolved a lot over the past few decades. It used to be mostly about financial checks. Now it covers operational efficiency, risk management, technology systems, compliance, and yes, still financial controls. Depending on the organization, it could look like almost anything.
+          </p>
+          <p>
+            But underneath all of that, the core idea is simple. This guide explains it from the ground up — what internal audit is, what it isn't, the different types, how the process works, and what it looks like for a business that isn't a large corporation.
+          </p>
+        </section>
+
+        <!-- DEFINITION -->
+        <section id="definition">
+          <h2>What Internal Audit Actually Is</h2>
+          <p>
+            <strong>Internal audit</strong> is an independent, objective function within an organization that evaluates whether the business's processes, controls, and risk management are working as intended. It's conducted by people within the organization — or by external consultants serving in that role — and it reports findings to senior management or the board of directors.
+          </p>
+          <p>
+            The key word there is <em>independent</em>. An internal audit isn't the same as a manager reviewing their own team's work. The people conducting the audit need to be independent from the areas they're reviewing — otherwise, you're not getting an objective assessment, you're getting a self-assessment, which is a different and less useful thing.
+          </p>
+          <p>
+            Internal audit asks questions like: Are our cash handling procedures being followed consistently? Is the purchasing process creating opportunities for vendor fraud? Are there gaps in our IT controls that someone could exploit? Are we actually complying with the regulations we're supposed to comply with? Are our operations as efficient as we think they are?
+          </p>
+
+          <div class="callout callout-purple">
+            <div class="callout-label">📌 Definition in one sentence</div>
+            <p>Internal audit is an independent review function that helps a business understand whether its controls, processes, and risk management are working — and tells management what it finds so they can fix what isn't.</p>
+          </div>
+        </section>
+
+        <!-- IA VS EA -->
+        <section id="internal-vs-external">
+          <h2>Internal Audit vs External Audit: The Key Differences</h2>
+          <p>
+            These get confused constantly, even by people who work in finance. They share the word "audit" but they're fundamentally different things serving different purposes.
+          </p>
+
+          <div class="compare-grid">
+            <div class="compare-col ia">
+              <div class="col-hdr">🔍 Internal Audit</div>
+              <ul>
+                <li><strong>Conducted by:</strong> Employees or contractors serving the organization</li>
+                <li><strong>Primary audience:</strong> Management and board of directors</li>
+                <li><strong>Main purpose:</strong> Improve controls, operations, and risk management</li>
+                <li><strong>Scope:</strong> Broad — operational, financial, compliance, IT, fraud</li>
+                <li><strong>Frequency:</strong> Ongoing throughout the year</li>
+                <li><strong>Required by law?</strong> Usually not — but recommended and common</li>
+                <li><strong>Reports to:</strong> Senior management, audit committee, or board</li>
+              </ul>
+            </div>
+            <div class="compare-col ea">
+              <div class="col-hdr">📋 External Audit</div>
+              <ul>
+                <li><strong>Conducted by:</strong> Independent outside firm (CPA firm)</li>
+                <li><strong>Primary audience:</strong> Shareholders, regulators, lenders</li>
+                <li><strong>Main purpose:</strong> Verify that financial statements are materially correct</li>
+                <li><strong>Scope:</strong> Primarily financial statements</li>
+                <li><strong>Frequency:</strong> Annual (typically)</li>
+                <li><strong>Required by law?</strong> Often yes — for public companies and regulated entities</li>
+                <li><strong>Reports to:</strong> Shareholders and regulatory bodies</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>
+            The simplest way to remember the difference: external audit tells shareholders whether the financial statements can be trusted. Internal audit tells management whether the business is running the way it should be.
+          </p>
+
+          <div class="pull-quote">
+            <p>"External audit looks backward at the financial statements and confirms they're accurate. Internal audit looks forward at the processes that produced them and asks whether those processes are actually working."</p>
+            <cite>— PreventLoss.org</cite>
+          </div>
+        </section>
+
+        <!-- TYPES -->
+        <section id="types">
+          <h2>The 5 Main Types of Internal Audit</h2>
+          <p>
+            "Internal audit" isn't one single activity — it's a range of review types that all fall under the same function. Knowing which type you need depends on what question you're trying to answer.
+          </p>
+
+          <div class="types-grid">
+            <div class="type-card">
+              <span class="tc-icon">💰</span>
+              <div class="tc-name">Financial Audit</div>
+              <div class="tc-desc">Checks the accuracy and integrity of financial records — account balances, transaction recording, reconciliations, and whether the numbers can be trusted. Not the same as external audit, but covers similar ground from an internal perspective.</div>
+            </div>
+            <div class="type-card">
+              <span class="tc-icon">⚙️</span>
+              <div class="tc-name">Operational Audit</div>
+              <div class="tc-desc">Reviews business processes for efficiency, effectiveness, and control gaps. Asks: are we doing things the right way? Are there steps that create unnecessary risk or waste? Could this process be done better?</div>
+            </div>
+            <div class="type-card">
+              <span class="tc-icon">📜</span>
+              <div class="tc-name">Compliance Audit</div>
+              <div class="tc-desc">Checks whether the organization is following applicable laws, regulations, and internal policies. Critical in healthcare, financial services, food service, and any regulated industry.</div>
+            </div>
+            <div class="type-card">
+              <span class="tc-icon">💻</span>
+              <div class="tc-name">IT / Technology Audit</div>
+              <div class="tc-desc">Reviews systems, data security, access controls, and technology risk. Increasingly important as more business functions become digital — checks whether systems are secure and data is protected.</div>
+            </div>
+            <div class="type-card">
+              <span class="tc-icon">🕵️</span>
+              <div class="tc-name">Fraud / Investigative Audit</div>
+              <div class="tc-desc">A targeted investigation triggered by a suspicion or allegation of fraud. Different from a regular audit — this one starts with a specific concern and works to confirm or rule it out with evidence.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- THE PROCESS -->
+        <section id="the-process">
+          <h2>How an Internal Audit Actually Works: 6 Steps</h2>
+          <p>
+            A well-run internal audit follows a structured process. Skipping steps — especially planning and follow-up — is one of the main reasons audits don't find what they should, or find things but nothing changes as a result.
+          </p>
+
+          <div class="process-steps">
+
+            <div class="process-step">
+              <div class="ps-num-wrap"><div class="ps-num">01</div><div class="ps-line"></div></div>
+              <div class="ps-content">
+                <div class="ps-title">Define the Scope and Objectives</div>
+                <div class="ps-body">Before an audit starts, someone needs to decide exactly what it's looking at and why. Is this a cash handling review? A vendor controls check? A compliance sweep? <strong>A well-scoped audit is more useful than a broad one</strong> — it produces specific findings about specific processes rather than a vague overview of everything. The scope also determines how long the audit will take and what data and access the auditor needs.</div>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="ps-num-wrap"><div class="ps-num">02</div><div class="ps-line"></div></div>
+              <div class="ps-content">
+                <div class="ps-title">Gather Background Information and Risk Assessment</div>
+                <div class="ps-body">Before visiting or reviewing anything, the auditor should pull available data — previous audit results, exception reports, transaction data, complaints, near-misses, and any known risk indicators. <strong>This shapes where the audit focuses its attention.</strong> A location with an unexplained spike in returns and a high void rate should get more scrutiny on cash and register procedures than a clean-data location.</div>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="ps-num-wrap"><div class="ps-num">03</div><div class="ps-line"></div></div>
+              <div class="ps-content">
+                <div class="ps-title">Fieldwork — Testing and Evidence Gathering</div>
+                <div class="ps-body">This is the part most people picture when they think of an audit — actually going through records, observing processes, testing controls, and interviewing people. The auditor looks for evidence that controls are working as designed: not just that policies exist, but that they're being followed. <strong>The method is always "show me" rather than "tell me."</strong> A policy that says cash is counted by two people means nothing unless the count records show two signatures.</div>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="ps-num-wrap"><div class="ps-num">04</div><div class="ps-line"></div></div>
+              <div class="ps-content">
+                <div class="ps-title">Analysis and Finding Development</div>
+                <div class="ps-body">What the fieldwork finds gets turned into structured findings: what was expected, what was found, the gap between them, the risk that gap creates, and a recommendation for what should change. <strong>A finding without a recommendation is just an observation.</strong> Good internal audit findings are specific enough to be acted on — not "cash controls need improvement" but "till reconciliation records are missing for 12 of 30 shifts reviewed in June."</div>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="ps-num-wrap"><div class="ps-num">05</div><div class="ps-line"></div></div>
+              <div class="ps-content">
+                <div class="ps-title">Report to Management</div>
+                <div class="ps-body">Findings are presented to management in a formal report that includes the scope of the audit, findings rated by severity, recommendations for each finding, and management's response. <strong>The management response is important</strong> — it confirms that findings have been seen, that someone owns the fix, and that there's a timeline. An audit report without management responses sitting in a file is evidence of a process that has no teeth.</div>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="ps-num-wrap"><div class="ps-num">06</div><div class="ps-line"></div></div>
+              <div class="ps-content">
+                <div class="ps-title">Follow-Up — The Step That Actually Makes It Work</div>
+                <div class="ps-body">An audit finding that gets fixed is a success. An audit finding that gets an "agreed — will address" response and is never revisited is just paperwork. <strong>Follow-up — checking that agreed actions have actually been taken — is what separates an internal audit function that improves things from one that produces reports.</strong> This should happen within a defined timeframe: critical findings within two to four weeks, others within the agreed deadline.</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- REAL EXAMPLES -->
+        <section id="real-examples">
+          <h2>What Internal Audit Looks Like in Practice</h2>
+          <p>
+            Internal audit means different things in different organizations. Here are four realistic examples of what it actually finds and what changes as a result.
+          </p>
+
+          <!-- Example 1 -->
+          <div class="example-card">
+            <div class="ex-header">
+              <span class="ex-type">Retail Chain</span>
+              <span class="ex-name">Operational Audit — Cash & Register Controls</span>
+            </div>
+            <div class="ex-body">
+              <p>An internal audit of a six-store convenience chain's cash handling procedures is scoped after headquarters notices one location consistently reports higher-than-average cash discrepancies.</p>
+              <div class="ex-finding">
+                <div class="ef-label">⚡ What the audit found</div>
+                <p>At three of the six locations, till reconciliation was happening once per day rather than at every shift change — meaning discrepancies couldn't be traced to specific shifts or staff members. At one location, the same manager was both setting the float and reconciling the till, eliminating any independent check. <strong>No theft was confirmed, but the absence of controls meant theft could have been happening undetected for months without surfacing.</strong></p>
+              </div>
+              <p>Recommendations: mandatory shift-by-shift reconciliation across all locations, dual-sign-off requirement for till counts, monthly exception report review by someone outside the store management team. All three implemented within three weeks of the report.</p>
+            </div>
+          </div>
+
+          <!-- Example 2 -->
+          <div class="example-card">
+            <div class="ex-header">
+              <span class="ex-type">Healthcare Clinic</span>
+              <span class="ex-name">Compliance Audit — Medical Supply Procurement</span>
+            </div>
+            <div class="ex-body">
+              <p>A regional healthcare group conducts a compliance audit of pharmaceutical and supply procurement across four clinic locations after a routine variance report flags one location running 28% over supply budget.</p>
+              <div class="ex-finding">
+                <div class="ef-label">⚡ What the audit found</div>
+                <p>At the flagged location, three employees had the ability to both order supplies and approve the corresponding invoices — no separation of duties. Two supplier invoices over the past six months showed line-item charges for items not on the original purchase orders, approved and paid without question. A third supplier's pricing had increased 14% above contract rate; the increases had been invoiced, processed, and paid without anyone checking against the contract. <strong>Total over-payments identified: approximately $31,000 over six months.</strong></p>
+              </div>
+              <p>Procurement controls were restructured, dual authorization implemented, and contract prices locked into the payment approval system so variances trigger automatic holds.</p>
+            </div>
+          </div>
+
+          <!-- Example 3 -->
+          <div class="example-card">
+            <div class="ex-header">
+              <span class="ex-type">Restaurant Group</span>
+              <span class="ex-name">Financial Audit — Food Cost and Receiving</span>
+            </div>
+            <div class="ex-body">
+              <p>A restaurant chain with 14 locations has seen food cost creep from 29% to 33% of revenue over eight months. An internal audit of receiving and food cost controls is commissioned.</p>
+              <div class="ex-finding">
+                <div class="ef-label">⚡ What the audit found</div>
+                <p>Across six audited locations, deliveries were being signed for without physical verification — staff were accepting sealed boxes and trusting the count on the delivery note. When auditors weighed and counted incoming protein deliveries against invoices at three locations over two weeks, actual delivery quantities averaged 7.2% below what was invoiced. Additionally, recipes had not been updated after a menu redesign, meaning actual portion sizes were being calculated against outdated standards. <strong>Two unrelated issues combining to produce a 4-point food cost increase.</strong></p>
+              </div>
+              <p>Mandatory incoming goods verification implemented. Recipes updated and portion checks made part of weekly operations review. Food cost returned toward 30% within six weeks.</p>
+            </div>
+          </div>
+
+          <!-- Example 4 -->
+          <div class="example-card">
+            <div class="ex-header">
+              <span class="ex-type">Small Business</span>
+              <span class="ex-name">What Internal Audit Looks Like Without a Formal Team</span>
+            </div>
+            <div class="ex-body">
+              <p>A single-location hair salon with 8 staff has no internal audit function — but the owner introduces a quarterly structured review after reading about the concept. No auditors, no formal report. Just a checklist and two hours, four times a year.</p>
+              <div class="ex-finding">
+                <div class="ef-label">⚡ What the review found (first one)</div>
+                <p>Three staff members shared the same POS login, meaning individual transaction patterns couldn't be tracked. One supplier had been invoicing at a price that was $0.80 per unit above the agreed rate for four months — overlooked because invoices were approved on the basis of "does this look right?" rather than against a purchase order. A subscription service for salon software had auto-renewed at a price 40% above the previous year's rate and nobody had noticed. <strong>None of these required an investigation or confrontation. They were just gaps nobody had checked.</strong></p>
+              </div>
+              <p>Individual POS logins assigned. Purchase orders introduced for the top three suppliers. Subscription renewals added to a calendar review. Total annual savings identified: roughly $6,200.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SMALL BUSINESS -->
+        <section id="small-business">
+          <h2>Internal Audit Without a Team: What It Looks Like for Small Businesses</h2>
+          <p>
+            Most small businesses hear "internal audit" and assume it's something for corporations with a dedicated department and a budget line. That's the formal version. The underlying practice — someone independent reviewing how things are running and reporting findings honestly — is something any business can do.
+          </p>
+          <p>
+            For a small business, this might look like:
+          </p>
+
+          <ul class="check-list">
+            <li><div class="ck">✓</div><div>A quarterly structured review of cash handling records, till reconciliation logs, and exception reports — done by the owner or a senior manager not directly responsible for those processes</div></li>
+            <li><div class="ck">✓</div><div>An annual review of vendor contracts and pricing against what's actually being charged — the "internal audit" of procurement that most small businesses never do and almost always find something in</div></li>
+            <li><div class="ck">✓</div><div>A periodic walkthrough of key operational processes — receiving, returns, discount approvals — to check whether policies are being followed in practice, not just on paper</div></li>
+            <li><div class="ck">✓</div><div>A review of staff access levels across systems — who can approve returns, who can access the safe, who can modify prices — at least once a year</div></li>
+            <li><div class="ck">✓</div><div>Comparing inventory counts against expectations by category — not just an annual full count but periodic spot checks on high-risk items</div></li>
+          </ul>
+
+          <p>
+            None of this requires a dedicated team. It requires someone to own the schedule, block the time, and actually follow through on what's found.
+          </p>
+
+          <div class="callout callout-tip">
+            <div class="callout-label">✅ The honest version for small businesses</div>
+            <p>You don't need an internal audit department. You need someone to look at the things nobody normally looks at, on a regular schedule, and to tell someone what they find. That's 80% of what internal audit is — the rest is structure and documentation.</p>
+          </div>
+        </section>
+
+        <!-- WHY IT MATTERS -->
+        <section id="why-it-matters">
+          <h2>Why Internal Audit Matters — Beyond Catching Fraud</h2>
+          <p>
+            The most common assumption about internal audit is that it's primarily about catching fraud or theft. That's understandable — fraud investigations are dramatic and memorable. But the day-to-day value of internal audit is mostly quieter than that.
+          </p>
+
+          <div class="data-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>What Internal Audit Does</th>
+                  <th>Why It Matters</th>
+                  <th>Frequency Benefit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Identifies control gaps</strong></td>
+                  <td>Gaps in controls create opportunities for error and fraud — even when nobody's exploiting them yet</td>
+                  <td><span class="badge badge-purple">Ongoing</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Catches cost drift early</strong></td>
+                  <td>Vendor price creep, unused subscriptions, and over-ordering often go undetected without a periodic review</td>
+                  <td><span class="badge badge-green">Quarterly</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Confirms policies are followed</strong></td>
+                  <td>The gap between written policy and actual practice is where most losses happen</td>
+                  <td><span class="badge badge-purple">Ongoing</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Provides management assurance</strong></td>
+                  <td>Leadership needs confidence that operations are running as intended — audit provides evidence rather than assumption</td>
+                  <td><span class="badge badge-amber">Annual</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Supports external audit</strong></td>
+                  <td>Good internal controls reduce the scope and cost of external audit — because the external auditors rely on internal work</td>
+                  <td><span class="badge badge-amber">Annual</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Deters misconduct</strong></td>
+                  <td>The knowledge that internal reviews happen regularly discourages opportunistic theft and policy shortcuts</td>
+                  <td><span class="badge badge-purple">Ongoing</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            The deterrent value alone is significant. People who know periodic reviews happen are less likely to test the gaps. An internal audit function that's visibly active — where findings are communicated and actions are followed up — changes behavior even when it's not actively auditing.
+          </p>
+        </section>
+
+        <!-- BEST PRACTICES -->
+        <section id="best-practices">
+          <h2>Making Internal Audit Actually Work</h2>
+          <p>
+            There are organizations with internal audit functions that produce reports every quarter and change almost nothing as a result. Here's what separates the useful kind from the paperwork kind.
+          </p>
+
+          <h3>Independence is non-negotiable</h3>
+          <p>
+            A manager auditing their own team's work isn't an independent review — it's a self-assessment. The person or function conducting the audit needs to be removed enough from the area being reviewed that they can find things honestly and report them without career risk. In larger organizations this means a separate reporting line to the audit committee or board. In small businesses it means the owner doing the review rather than the department head.
+          </p>
+
+          <h3>Findings need owners and deadlines</h3>
+          <p>
+            Every finding that comes out of an internal audit should have: a named person responsible for fixing it, a specific action, and a deadline. "Management agreed to review cash procedures" is not a finding closure. "Store manager will implement shift-by-shift till reconciliation by July 15, 2026" is.
+          </p>
+
+          <h3>Follow-up is where value is created or destroyed</h3>
+          <p>
+            The most important audit is the follow-up audit — the one that checks whether the last audit's findings were actually fixed. Without this, the entire audit process is just documentation. Organizations that consistently follow up on findings see shrinkage rates, error rates, and operational costs improve over time. Those that don't tend to find the same things in the same places audit after audit.
+          </p>
+
+          <h3>Use data before you walk in the door</h3>
+          <p>
+            Transaction data, exception reports, and trend analysis should shape every audit before the auditor sets foot on site. A location that's clean on data doesn't need the same scrutiny as one where returns are running 60% above average and cash is consistently short on specific shifts. Data-led auditing focuses limited time on the places it's most needed.
+          </p>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section id="conclusion">
+          <h2>The Bottom Line: Internal Audit Is About Knowing, Not Just Hoping</h2>
+          <p>
+            Every business has controls. Most businesses assume their controls are working. Internal audit is what tells you whether that assumption is correct — and what specifically needs fixing when it isn't.
+          </p>
+          <p>
+            For large organizations, that's a formal function with a team, a plan, and a reporting line. For smaller businesses, it's a structured habit — a few hours a quarter looking at things that don't normally get looked at, with the discipline to actually do something when you find a gap.
+          </p>
+          <p>
+            The businesses that do this consistently — even informally — tend to have lower shrinkage, fewer fraud incidents, better vendor pricing, and fewer surprises at year-end. Not because internal audit is magic, but because attention, applied regularly to the right places, prevents the small gaps from becoming expensive ones.
+          </p>
+
+          <div class="article-cta">
+            <h3>Ready to Go Deeper on Controls & Risk?</h3>
+            <p>Explore our guides on loss prevention, shrinkage calculation, cost control, and vendor fraud — all free, no sign-up needed.</p>
+            <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What is an internal audit?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                An internal audit is an independent, objective review of a business's processes, controls, and risk management conducted by people within the organization — or contractors serving in that role. It evaluates whether things are running as they should, identifies gaps and risks, and reports findings to management or the board so they can be addressed.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What is the difference between internal audit and external audit?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                External audit is done by an outside firm to verify that financial statements are accurate — primarily for shareholders and regulators. Internal audit is done by people inside the organization to evaluate whether processes, controls, and risk management are working — primarily for management and the board. They serve different purposes and answer different questions.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                Do small businesses need an internal audit function?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Small businesses rarely need a formal internal audit department, but they benefit enormously from the underlying practice — a structured, periodic review of cash handling, vendor controls, inventory, and policy compliance. An owner or senior manager doing this review two to four times a year achieves the same protective value without any dedicated team.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What are the main types of internal audit?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                The main types are: financial audit (accuracy of financial records), operational audit (efficiency and effectiveness of processes), compliance audit (adherence to laws and policies), IT audit (technology systems and data security), and fraud audit (targeted investigation of suspected fraudulent activity). Most businesses will use a mix of these over time rather than one type exclusively.
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- RELATED ARTICLES -->
+        <section id="related-articles">
+          <h2>Related Articles</h2>
+          <div class="related-grid">
+            <a class="related-card" href="/articles/how-to-calculate-retail-shrinkage-percentage.html">
+              <span class="rc-icon">📊</span>
+              <div>
+                <div class="rc-cat">Inventory Management</div>
+                <div class="rc-title">How to Calculate Retail Shrinkage Percentage (Step-by-Step With Examples)</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/what-is-cost-control.html">
+              <span class="rc-icon">📉</span>
+              <div>
+                <div class="rc-cat">Cost Control</div>
+                <div class="rc-title">What Is Cost Control? Definition, Examples & Strategies for Every Business</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/inventory-accuracy-vs-shrinkage.html">
+              <span class="rc-icon">📦</span>
+              <div>
+                <div class="rc-cat">Inventory Management</div>
+                <div class="rc-title">Inventory Accuracy vs Inventory Shrinkage: Understanding the Difference</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/what-is-loss-prevention.html">
+              <span class="rc-icon">🛡️</span>
+              <div>
+                <div class="rc-cat">Loss Prevention</div>
+                <div class="rc-title">What Is Loss Prevention? Complete Guide for Businesses</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/airport-chocolate-store-fraud-case-study.html">
+              <span class="rc-icon">🔴</span>
+              <div>
+                <div class="rc-cat">Real Case Study</div>
+                <div class="rc-title">The Airport Chocolate Store Fraud: How a Manager Turned Promotional Offers into a Personal Business</div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Article sidebar">
+
+      <div class="sidebar-card quickref">
+        <div class="qr-header"><span>🔍</span><h4>Quick Reference</h4></div>
+        <div class="qr-row">
+          <span class="qr-key">Definition</span>
+          <span class="qr-val purple">Independent internal review</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Conducted by</span>
+          <span class="qr-val">Internal staff or contractors</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Reports to</span>
+          <span class="qr-val">Management / board</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">vs External audit</span>
+          <span class="qr-val">Different purpose entirely</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Main types</span>
+          <span class="qr-val purple">Financial, Operational, Compliance, IT, Fraud</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Process steps</span>
+          <span class="qr-val">6 steps</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Small business version</span>
+          <span class="qr-val green">Quarterly structured review</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Most important step</span>
+          <span class="qr-val">Follow-up</span>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#definition">What Internal Audit Is</a></li>
+          <li><a href="#internal-vs-external">Internal vs External Audit</a></li>
+          <li><a href="#types">5 Types of Internal Audit</a></li>
+          <li><a href="#the-process">The 6-Step Process</a></li>
+          <li><a href="#real-examples">4 Real-World Examples</a></li>
+          <li><a href="#small-business">For Small Businesses</a></li>
+          <li><a href="#why-it-matters">Why It Matters</a></li>
+          <li><a href="#best-practices">Best Practices</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#related-articles">Related Articles</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      document.getElementById('read-progress').style.width =
+        ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+    });
+    function toggleFaq(btn) {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    }
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const a = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (a) a.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -75% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
