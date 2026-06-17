@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <title>How to Record Inventory Shrinkage in Accounting (Journal Entries, Examples & Best Practices) 2026</title>
+  <meta name="description" content="Exactly how to record inventory shrinkage in your accounting books — journal entries, adjusting entries, periodic vs perpetual methods, and real examples for retail, food service, and small business." />
+  <meta name="keywords" content="how to record inventory shrinkage in accounting, inventory shrinkage journal entry, recording shrinkage accounting, inventory shrinkage accounting entry, shrinkage accounting treatment, how to account for inventory shrinkage, inventory loss accounting entry, shrinkage adjusting entry, cost of goods sold shrinkage accounting, how to write off inventory shrinkage, inventory shrinkage bookkeeping, shrinkage debit credit entry, periodic inventory shrinkage entry, perpetual inventory shrinkage journal entry" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mithun GS" />
+  <link rel="canonical" href="https://www.preventloss.org/articles/how-to-record-inventory-shrinkage-accounting.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Record Inventory Shrinkage in Accounting (Journal Entries & Examples)" />
+  <meta property="og:description" content="Journal entries, worked examples, and the right accounting treatment for inventory shrinkage — for periodic and perpetual inventory systems." />
+  <meta property="og:url" content="https://www.preventloss.org/articles/how-to-record-inventory-shrinkage-accounting.html" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+  <meta property="article:published_time" content="2026-06-17T00:00:00Z" />
+  <meta property="article:modified_time" content="2026-06-17T00:00:00Z" />
+  <meta property="article:section" content="Inventory Management" />
+  <meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Record Inventory Shrinkage in Accounting" />
+  <meta name="twitter:description" content="Journal entries, examples, and accounting treatment for inventory shrinkage — periodic and perpetual methods covered." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Record Inventory Shrinkage in Accounting (Journal Entries, Examples & Best Practices)",
+    "description": "Exactly how to record inventory shrinkage in your books — journal entries, adjusting entries, and real examples for different inventory systems.",
+    "author": {
+      "@type": "Person",
+      "name": "Mithun GS",
+      "url": "https://www.linkedin.com/in/mithun-gs/"
+    },
+    "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+    "datePublished": "2026-06-17",
+    "dateModified": "2026-06-17",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/how-to-record-inventory-shrinkage-accounting.html" },
+    "keywords": "inventory shrinkage accounting, shrinkage journal entry, inventory loss accounting, record shrinkage bookkeeping"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the journal entry for inventory shrinkage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The standard journal entry for inventory shrinkage debits Cost of Goods Sold (or a Shrinkage Expense account) and credits Inventory. For example, if $2,000 of inventory is lost to shrinkage: Debit Cost of Goods Sold $2,000 / Credit Inventory $2,000. This reduces the inventory balance on the balance sheet and increases the cost recorded on the income statement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is inventory shrinkage debited or credited?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When recording inventory shrinkage, Inventory is credited (reduced) and Cost of Goods Sold or a Shrinkage Expense account is debited (increased). The debit records the loss as an expense; the credit removes the value from the inventory asset account."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does inventory shrinkage appear on financial statements?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inventory shrinkage reduces the Inventory balance on the balance sheet and increases Cost of Goods Sold (or appears as a separate Shrinkage Expense line) on the income statement, which reduces gross profit and net income. It does not appear as a separate line on the balance sheet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should inventory shrinkage be recorded?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under a periodic inventory system, shrinkage is typically recorded at count time — usually end of period. Under a perpetual inventory system, shrinkage should be recorded as soon as it's identified, whether during a cycle count or at year-end reconciliation. Best practice is to record it as close to when it occurred as possible."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+      --warn:        #f59e0b;
+      --danger:      #f87171;
+      --c-im:        #10b981;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono:    'Courier New', monospace;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: var(--font-body); font-size: 17px; line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo {
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
+      color: var(--heading); text-decoration: none; letter-spacing: -0.02em;
+    }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    #read-progress {
+      position: fixed; top: 56px; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--c-im), var(--accent-lt));
+      z-index: 99; transition: width 0.1s linear;
+    }
+
+    /* Layout */
+    .page-wrap {
+      max-width: 1140px; margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 300px; gap: 52px; align-items: start;
+    }
+    @media (max-width: 860px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* Header */
+    .article-header { padding: 52px 0 36px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--muted); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--border); }
+    .article-category {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #0d2018; border: 1px solid var(--c-im); color: var(--c-im);
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 18px;
+    }
+    h1 {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 3.8vw, 2.6rem);
+      font-weight: 700; color: var(--heading); line-height: 1.18; letter-spacing: -0.03em; margin-bottom: 18px;
+    }
+    .article-deck { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 22px; max-width: 680px; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.8rem; color: var(--muted); }
+
+    /* Stats */
+    .article-stats {
+      display: flex; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r-md); margin-bottom: 40px; overflow: hidden;
+    }
+    .stat-item { flex: 1; padding: 16px 18px; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-item .s-val {
+      font-family: var(--font-display); font-size: 1.35rem; font-weight: 700;
+      color: var(--heading); line-height: 1; margin-bottom: 4px;
+    }
+    .stat-item .s-val.green { color: var(--c-im); }
+    .stat-item .s-val.amber { color: var(--warn); }
+    .stat-item .s-lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; }
+    @media (max-width: 600px) {
+      .article-stats { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); }
+    }
+
+    /* Prose */
+    .article-body h2 {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 700;
+      color: var(--heading); letter-spacing: -0.02em;
+      margin: 48px 0 14px; padding-top: 48px; border-top: 1px solid var(--border);
+    }
+    .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--heading); margin: 28px 0 10px; }
+    .article-body p { margin-bottom: 18px; color: var(--text); }
+    .article-body a { color: var(--c-im); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body strong { color: var(--heading); font-weight: 600; }
+    .article-body em { font-style: italic; color: var(--muted); }
+
+    /* Callouts */
+    .callout { border-radius: var(--r-md); padding: 18px 22px; margin: 24px 0; border-left: 4px solid; }
+    .callout-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .callout p { margin-bottom: 6px; font-size: 0.94rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout-tip    { background: #0d1f16; border-color: var(--c-im); }
+    .callout-tip .callout-label { color: var(--c-im); }
+    .callout-info   { background: var(--accent-glow); border-color: var(--accent); }
+    .callout-info .callout-label { color: var(--accent-lt); }
+    .callout-warn   { background: #1c1500; border-color: var(--warn); }
+    .callout-warn .callout-label { color: var(--warn); }
+
+    /* Journal entry blocks */
+    .journal-block {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+      overflow: hidden; margin: 22px 0;
+    }
+    .jb-header {
+      padding: 12px 20px; border-bottom: 1px solid var(--border);
+      background: #0d2018; display: flex; align-items: center; gap: 10px;
+    }
+    .jb-title { font-size: 0.82rem; font-weight: 800; color: var(--c-im); }
+    .jb-sub { font-size: 0.72rem; color: var(--muted); margin-left: auto; }
+    .jb-body { padding: 0; }
+    .jb-row {
+      display: grid; grid-template-columns: 40px 1fr 110px 110px;
+      align-items: center; gap: 0; border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+    }
+    .jb-row:last-child { border-bottom: none; }
+    .jb-row.header { background: var(--surface-2); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .jb-cell { padding: 10px 14px; }
+    .jb-cell.num { text-align: center; color: var(--muted); font-size: 0.78rem; }
+    .jb-cell.account { }
+    .jb-cell.account.indent { padding-left: 32px; }
+    .jb-cell.debit { text-align: right; font-family: var(--font-mono); color: var(--c-im); font-weight: 700; }
+    .jb-cell.credit { text-align: right; font-family: var(--font-mono); color: var(--muted); }
+    .jb-cell.debit-head, .jb-cell.credit-head { text-align: right; }
+    .jb-row.total { background: #0d2018; font-weight: 700; }
+    .jb-row.total .jb-cell { color: var(--c-im); font-family: var(--font-mono); }
+    .jb-row.total .jb-cell.account { color: var(--muted); font-family: var(--font-body); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .jb-narration {
+      padding: 10px 20px 14px;
+      font-size: 0.82rem; color: var(--muted); font-style: italic;
+      border-top: 1px dashed var(--border); background: var(--bg);
+    }
+    .jb-narration strong { color: var(--text); font-style: normal; }
+
+    /* Example scenario cards */
+    .scenario-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+      overflow: hidden; margin: 22px 0;
+    }
+    .sc-header {
+      padding: 14px 22px; border-bottom: 1px solid var(--border);
+      background: var(--surface-2); display: flex; align-items: center; gap: 12px;
+    }
+    .sc-type { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.09em; color: var(--c-im); background: #0d2018; border: 1px solid var(--c-im); padding: 3px 10px; border-radius: 999px; }
+    .sc-name { font-weight: 700; color: var(--heading); font-size: 0.95rem; }
+    .sc-body { padding: 20px 22px; }
+    .sc-body p { font-size: 0.92rem; color: var(--text); margin-bottom: 14px; }
+    .sc-facts {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 10px; margin-bottom: 18px;
+    }
+    .sc-fact {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm);
+      padding: 10px 14px;
+    }
+    .sc-fact .sf-label { font-size: 0.66rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 4px; }
+    .sc-fact .sf-val { font-size: 0.95rem; font-weight: 700; color: var(--heading); font-family: var(--font-mono); }
+    .sc-fact .sf-val.green { color: var(--c-im); }
+    .sc-fact .sf-val.amber { color: var(--warn); }
+
+    /* T-accounts */
+    .t-accounts {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0 20px;
+    }
+    @media (max-width: 550px) { .t-accounts { grid-template-columns: 1fr; } }
+    .t-account {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm);
+      overflow: hidden;
+    }
+    .t-account .ta-name {
+      padding: 8px 14px; font-size: 0.78rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.07em; border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .t-account.debit-acc .ta-name { background: #0d2018; color: var(--c-im); }
+    .t-account.credit-acc .ta-name { background: #1c1500; color: var(--warn); }
+    .t-account .ta-row {
+      display: flex; justify-content: space-between; padding: 7px 14px;
+      font-size: 0.82rem; border-bottom: 1px solid var(--border);
+    }
+    .t-account .ta-row:last-child { border-bottom: none; }
+    .t-account .ta-row .tr-desc { color: var(--muted); }
+    .t-account .ta-row .tr-amt { font-family: var(--font-mono); font-weight: 700; }
+    .t-account.debit-acc .tr-amt  { color: var(--c-im); }
+    .t-account.credit-acc .tr-amt { color: var(--warn); }
+
+    /* Impact summary */
+    .impact-box {
+      background: #0d2018; border: 1px solid var(--c-im); border-radius: var(--r-sm);
+      padding: 14px 18px;
+    }
+    .impact-box .ib-label { font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-im); margin-bottom: 10px; }
+    .impact-row {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.85rem; padding: 5px 0; border-bottom: 1px dashed var(--border);
+    }
+    .impact-row:last-child { border-bottom: none; }
+    .impact-row .ir-account { color: var(--muted); }
+    .impact-row .ir-effect { font-family: var(--font-mono); font-weight: 700; color: var(--c-im); }
+    .impact-row .ir-effect.neg { color: var(--danger); }
+
+    /* Method comparison */
+    .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px 0; }
+    @media (max-width: 640px) { .method-grid { grid-template-columns: 1fr; } }
+    .method-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    .method-card .mc-hdr {
+      padding: 14px 18px; font-size: 0.82rem; font-weight: 800;
+      border-bottom: 1px solid var(--border);
+    }
+    .method-card.periodic .mc-hdr { background: var(--accent-glow); color: var(--accent-lt); border-bottom-color: var(--accent); }
+    .method-card.perpetual .mc-hdr { background: #0d2018; color: var(--c-im); border-bottom-color: var(--c-im); }
+    .method-card ul { list-style: none; }
+    .method-card ul li {
+      padding: 9px 18px; border-bottom: 1px solid var(--border);
+      font-size: 0.855rem; color: var(--muted); display: flex; gap: 8px;
+    }
+    .method-card ul li:last-child { border-bottom: none; }
+    .method-card.periodic ul li::before { content: '→'; color: var(--accent-lt); flex-shrink: 0; }
+    .method-card.perpetual ul li::before { content: '→'; color: var(--c-im); flex-shrink: 0; }
+    .method-card ul li strong { color: var(--text); }
+
+    /* Table */
+    .data-table-wrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--border); border-radius: var(--r-md); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    thead th {
+      background: var(--surface); color: var(--muted); font-size: 0.68rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 11px 14px; text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--surface); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.68rem; font-weight: 700; }
+    .badge-green { background: #0d2018; color: #34d399; }
+    .badge-amber { background: #1c1500; color: #fbbf24; }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 4px solid var(--c-im); padding: 16px 24px; margin: 30px 0;
+      background: #0d1f16; border-radius: 0 var(--r-md) var(--r-md) 0;
+    }
+    .pull-quote p {
+      font-family: var(--font-display); font-size: 1.08rem; color: var(--heading);
+      line-height: 1.55; font-style: italic; margin: 0;
+    }
+    .pull-quote cite {
+      display: block; font-size: 0.75rem; color: var(--muted); margin-top: 10px;
+      font-style: normal; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em;
+    }
+
+    /* FAQ */
+    .faq-list { margin: 14px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 10px; overflow: hidden; }
+    .faq-q {
+      width: 100%; background: var(--surface); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px; font-size: 0.95rem; font-weight: 600; color: var(--heading);
+      text-align: left; gap: 12px;
+    }
+    .faq-q:hover { background: var(--surface-2); }
+    .faq-q .arrow { flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 0.92rem; color: var(--muted); background: var(--surface); }
+    .faq-a.open { display: block; }
+
+    /* Related */
+    .related-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+    .related-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md);
+      padding: 16px 18px; text-decoration: none; display: flex; gap: 12px; align-items: flex-start;
+      transition: border-color 0.18s, background 0.15s;
+    }
+    .related-card:hover { border-color: var(--c-im); background: var(--surface-2); }
+    .related-card .rc-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .related-card .rc-cat { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--c-im); margin-bottom: 4px; }
+    .related-card .rc-title { font-size: 0.9rem; font-weight: 600; color: var(--heading); line-height: 1.35; }
+
+    /* CTA */
+    .article-cta {
+      background: linear-gradient(135deg, #0d2018 0%, #181c27 100%);
+      border: 1px solid var(--c-im); border-radius: var(--r-lg);
+      padding: 28px 32px; text-align: center; margin-top: 44px;
+    }
+    .article-cta h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); margin-bottom: 8px; }
+    .article-cta p  { color: var(--muted); font-size: 0.875rem; margin-bottom: 18px; }
+    .btn-primary {
+      display: inline-block; background: var(--c-im); color: #06281c;
+      font-weight: 700; font-size: 0.875rem; padding: 11px 26px; border-radius: var(--r-sm);
+      text-decoration: none; transition: opacity 0.18s;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+
+    /* Sidebar */
+    .sidebar { padding-top: 52px; }
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 18px; margin-bottom: 18px; }
+    .sidebar-card h4 { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--muted); margin-bottom: 12px; }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      font-size: 0.79rem; color: var(--muted); text-decoration: none;
+      display: block; padding: 4px 0 4px 12px; border-left: 2px solid transparent;
+      transition: all 0.15s; line-height: 1.35;
+    }
+    .toc-list a:hover, .toc-list a.active { color: var(--text); border-color: var(--c-im); }
+
+    .quickref { position: sticky; top: 72px; }
+    .qr-header { background: #0d2018; border-bottom: 1px solid var(--c-im); padding: 14px 18px; display: flex; align-items: center; gap: 8px; }
+    .qr-header h4 { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-im); }
+    .qr-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding: 11px 18px; border-bottom: 1px solid var(--border); font-size: 0.79rem; }
+    .qr-row:last-child { border-bottom: none; }
+    .qr-key { color: var(--muted); flex-shrink: 0; font-size: 0.75rem; }
+    .qr-val { color: var(--heading); font-weight: 600; text-align: right; font-size: 0.75rem; }
+    .qr-val.green { color: var(--c-im); }
+    .qr-val.amber { color: var(--warn); }
+
+    /* Footer */
+    .site-footer { border-top: 1px solid var(--border); margin-top: 80px; padding: 32px 24px; text-align: center; color: var(--muted); font-size: 0.82rem; }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <main id="main-content">
+
+      <header class="article-header">
+        <div class="breadcrumb">
+          <a href="/">Home</a><span>›</span>
+          <a href="/articles/">Articles</a><span>›</span>
+          <a href="/articles/?cat=inventory-management">Inventory Management</a>
+        </div>
+        <span class="article-category">📦 Inventory Management</span>
+        <h1>How to Record Inventory Shrinkage in Accounting</h1>
+        <p class="article-deck">
+          Finding shrinkage in a count is one thing. Knowing exactly how to record it in your books — with the right accounts, the right entries, and an understanding of what it does to your financial statements — is what turns a number into something you can actually manage.
+        </p>
+        <div class="article-meta">
+          <span>🗓 June 17, 2026</span>
+          <span>⏱ 9 min read</span>
+          <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--c-im); text-decoration:underline; text-underline-offset:3px;">Mithun GS</a></span>
+          <span>📂 Inventory Management</span>
+        </div>
+      </header>
+
+      <div class="article-stats">
+        <div class="stat-item">
+          <div class="s-val">2</div>
+          <div class="s-lbl">Inventory system methods covered</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val green">4</div>
+          <div class="s-lbl">Worked journal entry examples</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val amber">Both</div>
+          <div class="s-lbl">Periodic & perpetual methods</div>
+        </div>
+        <div class="stat-item">
+          <div class="s-val">3 accounts</div>
+          <div class="s-lbl">You'll use in most entries</div>
+        </div>
+      </div>
+
+      <article class="article-body" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="How to Record Inventory Shrinkage in Accounting" />
+        <meta itemprop="datePublished" content="2026-06-17" />
+
+        <!-- INTRO -->
+        <section id="introduction">
+          <h2 style="border-top:none; padding-top:0; margin-top:0;">Why Getting This Right Matters More Than Most People Think</h2>
+          <p>
+            Most businesses that track inventory shrinkage do the hard part — they count, they compare, they find a gap. Then they stop. The gap goes into a notes field somewhere, or gets absorbed into "cost of goods sold" without any proper journal entry, and six months later nobody's sure whether the shrinkage figure is real or whether it's hiding in a dozen places across the books.
+          </p>
+          <p>
+            Recording shrinkage correctly matters for two reasons that go beyond accounting accuracy. First, it affects what your financial statements actually show — your gross profit, your inventory balance on the balance sheet, your tax position. Get it wrong and your books are misleading, even if the underlying business is fine. Second, when shrinkage is recorded clearly and consistently, it becomes something management can actually see and respond to rather than something that quietly inflates COGS.
+          </p>
+          <p>
+            This guide walks through exactly how to record inventory shrinkage — the accounts involved, the journal entries for both periodic and perpetual systems, and four worked examples from different types of businesses. It assumes you're comfortable with basic double-entry bookkeeping but not that you're a CPA.
+          </p>
+
+          <div class="callout callout-info">
+            <div class="callout-label">📌 Note on professional advice</div>
+            <p>This guide explains the standard accounting treatment for inventory shrinkage. For specific tax treatment or jurisdiction-specific requirements, consult a qualified accountant. The journal entries shown here follow generally accepted principles but your chart of accounts and industry may have specific requirements.</p>
+          </div>
+        </section>
+
+        <!-- THE THREE ACCOUNTS -->
+        <section id="accounts-involved">
+          <h2>The Three Accounts You'll Use</h2>
+          <p>
+            Recording shrinkage touches three accounts, and understanding what each one represents makes the journal entries logical rather than something you memorize without understanding.
+          </p>
+
+          <div class="data-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Account</th>
+                  <th>Type</th>
+                  <th>Normal Balance</th>
+                  <th>What Happens During Shrinkage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Inventory</strong></td>
+                  <td>Asset (Balance Sheet)</td>
+                  <td>Debit</td>
+                  <td><strong>Credited</strong> (decreased) — the asset value is reduced to reflect actual stock</td>
+                </tr>
+                <tr>
+                  <td><strong>Cost of Goods Sold (COGS)</strong></td>
+                  <td>Expense (Income Statement)</td>
+                  <td>Debit</td>
+                  <td><strong>Debited</strong> (increased) — the shrinkage loss is recorded as a cost</td>
+                </tr>
+                <tr>
+                  <td><strong>Inventory Shrinkage Expense</strong></td>
+                  <td>Expense (Income Statement)</td>
+                  <td>Debit</td>
+                  <td><strong>Debited</strong> (increased) — <em>used instead of COGS when you want shrinkage visible as a separate line</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout callout-tip">
+            <div class="callout-label">💡 COGS vs Shrinkage Expense — which to use?</div>
+            <p>Most businesses roll shrinkage into Cost of Goods Sold. This is simpler and broadly acceptable. However, if you want shrinkage to appear as a separate, visible line on your P&L — so management can track it independently — you can create a dedicated <strong>Inventory Shrinkage Expense</strong> account. The impact on net income is identical; the difference is visibility on your income statement.</p>
+          </div>
+        </section>
+
+        <!-- PERPETUAL VS PERIODIC -->
+        <section id="inventory-systems">
+          <h2>Periodic vs Perpetual Inventory — Why It Changes the Entry</h2>
+          <p>
+            How you record shrinkage depends on which inventory tracking system your business uses. These aren't the same process, and confusing them is one of the most common bookkeeping errors around inventory.
+          </p>
+
+          <div class="method-grid">
+            <div class="method-card periodic">
+              <div class="mc-hdr">📋 Periodic Inventory System</div>
+              <ul>
+                <li><strong>What it is:</strong> Inventory is only updated at count time — usually monthly, quarterly, or annually</li>
+                <li><strong>Shrinkage detection:</strong> Found at each count when actual stock is less than expected</li>
+                <li><strong>When to record:</strong> At the end of each period when the count is done</li>
+                <li><strong>Journal entry:</strong> Adjusting entry at period end to bring book inventory in line with physical count</li>
+                <li><strong>Common for:</strong> Small retail stores, small restaurants, businesses with simple inventory</li>
+              </ul>
+            </div>
+            <div class="method-card perpetual">
+              <div class="mc-hdr">🔄 Perpetual Inventory System</div>
+              <ul>
+                <li><strong>What it is:</strong> Inventory is updated continuously — every sale, purchase, and return is recorded in real time</li>
+                <li><strong>Shrinkage detection:</strong> Found when a physical count differs from the running system balance</li>
+                <li><strong>When to record:</strong> As soon as a discrepancy is identified — cycle count or annual count</li>
+                <li><strong>Journal entry:</strong> Adjusting entry when the variance is confirmed, at any point in the period</li>
+                <li><strong>Common for:</strong> Mid-size to large retailers, any business using POS or inventory software</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- THE STANDARD ENTRY -->
+        <section id="standard-entry">
+          <h2>The Standard Journal Entry for Inventory Shrinkage</h2>
+          <p>
+            Whether you're on a periodic or perpetual system, the mechanics of the entry are the same. You're reducing inventory (a credit, since inventory is an asset with a debit normal balance) and recording an expense (a debit to COGS or Shrinkage Expense).
+          </p>
+
+          <div class="journal-block">
+            <div class="jb-header">
+              <span class="jb-title">Standard Shrinkage Entry</span>
+              <span class="jb-sub">Works for both periodic and perpetual systems</span>
+            </div>
+            <div class="jb-body">
+              <div class="jb-row header">
+                <div class="jb-cell num">#</div>
+                <div class="jb-cell account">Account</div>
+                <div class="jb-cell debit-head">Debit</div>
+                <div class="jb-cell credit-head">Credit</div>
+              </div>
+              <div class="jb-row">
+                <div class="jb-cell num">1</div>
+                <div class="jb-cell account">Cost of Goods Sold (or Inventory Shrinkage Expense)</div>
+                <div class="jb-cell debit">$X,XXX</div>
+                <div class="jb-cell credit">—</div>
+              </div>
+              <div class="jb-row">
+                <div class="jb-cell num"></div>
+                <div class="jb-cell account indent">Inventory</div>
+                <div class="jb-cell debit">—</div>
+                <div class="jb-cell credit">$X,XXX</div>
+              </div>
+              <div class="jb-row total">
+                <div class="jb-cell num"></div>
+                <div class="jb-cell account">Totals</div>
+                <div class="jb-cell debit">$X,XXX</div>
+                <div class="jb-cell credit">$X,XXX</div>
+              </div>
+            </div>
+            <div class="jb-narration">
+              <strong>Narration:</strong> To record inventory shrinkage identified during [period] physical count. Book inventory adjusted to reflect actual physical stock of $[amount].
+            </div>
+          </div>
+
+          <p>
+            That's it. Two lines. The complexity isn't in the entry itself — it's in making sure the dollar amount is right, the timing is correct, and you're consistent in which expense account you use so the figures are comparable across periods.
+          </p>
+        </section>
+
+        <!-- WORKED EXAMPLES -->
+        <section id="worked-examples">
+          <h2>Four Worked Examples</h2>
+
+          <!-- Example 1: Small retail, periodic -->
+          <div class="scenario-card" id="ex1">
+            <div class="sc-header">
+              <span class="sc-type">Example 1</span>
+              <span class="sc-name">Small Retail Store — Periodic System</span>
+            </div>
+            <div class="sc-body">
+              <p>A clothing boutique uses a periodic inventory system and does a full count at the end of each quarter. This quarter, the count reveals a $1,200 gap between book and physical inventory.</p>
+              <div class="sc-facts">
+                <div class="sc-fact">
+                  <div class="sf-label">Book Inventory</div>
+                  <div class="sf-val">$52,400</div>
+                </div>
+                <div class="sc-fact">
+                  <div class="sf-label">Physical Count</div>
+                  <div class="sf-val">$51,200</div>
+                </div>
+                <div class="sc-fact">
+                  <div class="sf-label">Shrinkage</div>
+                  <div class="sf-val amber">$1,200</div>
+                </div>
+              </div>
+
+              <div class="journal-block">
+                <div class="jb-header">
+                  <span class="jb-title">Journal Entry — Quarter End</span>
+                  <span class="jb-sub">Periodic system, COGS method</span>
+                </div>
+                <div class="jb-body">
+                  <div class="jb-row header">
+                    <div class="jb-cell num">#</div>
+                    <div class="jb-cell account">Account</div>
+                    <div class="jb-cell debit-head">Debit</div>
+                    <div class="jb-cell credit-head">Credit</div>
+                  </div>
+                  <div class="jb-row">
+                    <div class="jb-cell num">1</div>
+                    <div class="jb-cell account">Cost of Goods Sold</div>
+                    <div class="jb-cell debit">$1,200</div>
+                    <div class="jb-cell credit">—</div>
+                  </div>
+                  <div class="jb-row">
+                    <div class="jb-cell num"></div>
+                    <div class="jb-cell account indent">Merchandise Inventory</div>
+                    <div class="jb-cell debit">—</div>
+                    <div class="jb-cell credit">$1,200</div>
+                  </div>
+                  <div class="jb-row total">
+                    <div class="jb-cell num"></div>
+                    <div class="jb-cell account">Totals</div>
+                    <div class="jb-cell debit">$1,200</div>
+                    <div class="jb-cell credit">$1,200</div>
+                  </div>
+                </div>
+                <div class="jb-narration">To record inventory shrinkage identified in Q3 physical count. Book inventory reduced from $52,400 to $51,200.</div>
+              </div>
+
+              <div class="impact-box">
+                <div class="ib-label">📊 Financial Statement Impact</div>
+                <div class="impact-row"><span class="ir-account">Inventory (Balance Sheet)</span><span class="ir-effect neg">▼ $1,200</span></div>
+                <div class="impact-row"><span class="ir-account">COGS (Income Statement)</span><span class="ir-effect neg">▲ $1,200 (expense)</span></div>
+                <div class="impact-row"><span class="ir-account">Gross Profit</span><span class="ir-effect neg">▼ $1,200</span></div>
+                <div class="impact-row"><span class="ir-account">Net Income</span><span class="ir-effect neg">▼ $1,200</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Example 2: Restaurant perpetual -->
+          <div class="scenario-card" id="ex2">
+            <div class="sc-header">
+              <span class="sc-type">Example 2</span>
+              <span class="sc-name">Restaurant — Perpetual System, Separate Expense Account</span>
+            </div>
+            <div class="sc-body">
+              <p>A restaurant uses a perpetual inventory system and does weekly food cost reconciliations. A Friday cycle count finds $380 of food inventory missing — mostly high-value proteins. Management wants shrinkage tracked separately from regular COGS.</p>
+              <div class="sc-facts">
+                <div class="sc-fact">
+                  <div class="sf-label">System Balance</div>
+                  <div class="sf-val">$14,800</div>
+                </div>
+                <div class="sc-fact">
+                  <div class="sf-label">Physical Count</div>
+                  <div class="sf-val">$14,420</div>
+                </div>
+                <div class="sc-fact">
+                  <div class="sf-label">Variance</div>
+                  <div class="sf-val amber">$380</div>
+                </div>
+              </div>
+
+              <div class="journal-block">
+                <div class="jb-header">
+                  <span class="jb-title">Journal Entry — Recorded Immediately on Discovery</span>
+                  <span class="jb-sub">Perpetual system, separate shrinkage account</span>
+                </div>
+                <div class="jb-body">
+                  <div class="jb-row header">
+                    <div class="jb-cell num">#</div>
+                    <div class="jb-cell account">Account</div>
+                    <div class="jb-cell debit-head">Debit</div>
+                    <div class="jb-cell credit-head">Credit</div>
+                  </div>
+                  <div class="jb-row">
+                    <div class="jb-cell num">1</div>
+                    <div class="jb-cell account">Inventory Shrinkage Expense</div>
+                    <div class="jb-cell debit">$380</div>
+                    <div class="jb-cell credit">—</div>
+                  </div>
+                  <div class="jb-row">
+                    <div class="jb-cell num"></div>
+                    <div class="jb-cell account indent">Food Inventory</div>
+                    <div class="jb-cell debit">—</div>
+                    <div class="jb-cell credit">$380</div>
+                  </div>
+                  <div class="jb-row total">
+                    <div class="jb-cell num"></div>
+                    <div class="jb-cell account">Totals</div>
+                    <div class="jb-cell debit">$380</div>
+                    <div class="jb-cell credit">$380</div>
+                  </div>
+                </div>
+                <div class="jb-narration">To record food inventory shrinkage discovered in weekly protein cycle count, Friday June 19, 2026. Variance under investigation.</div>
+              </div>
+
+              <p style="font-size:0.9rem; color:var(--muted);">Using a dedicated <strong style="color:var(--text);">Inventory Shrinkage Expense</strong> account means the P&L shows COGS and shrinkage as separate lines. This makes it easy to see at a glance how much of the total "cost" is legitimate cost of sales versus unexplained loss.</p>
+            </div>
+          </div>
+
+          <!-- Example 3: Larger — split by cause -->
+          <div class="scenario-card" id="ex3">
+            <div class="sc-header">
+              <span class="sc-type">Example 3</span>
+              <span class="sc-name">Pharmacy — Shrinkage Split by Cause</span>
+            </div>
+            <div class="sc-body">
+              <p>A pharmacy completes its annual inventory count and finds $4,600 in total shrinkage. An investigation identifies two causes: $3,100 is unrecorded damage and expired stock, and $1,500 is genuinely unexplained. The owner wants these recorded separately because one has a different tax treatment.</p>
+              <div class="sc-facts">
+                <div class="sc-fact">
+                  <div class="sf-label">Total Shrinkage</div>
+                  <div class="sf-val amber">$4,600</div>
+                </div>
+                <div class="sc-fact">
+                  <div class="sf-label">Damaged/Expired</div>
+                  <div class="sf-val">$3,100</div>
+                </div>
+                <div class="sc-fact">
+                  <div class="sf-label">Unexplained</div>
+                  <div class="sf-val amber">$1,500</div>
+                </div>
+              </div>
+
+              <div class="journal-block">
+                <div class="jb-header">
+                  <span class="jb-title">Journal Entry — Split by Cause</span>
+                  <span class="jb-sub">Best practice when investigation identifies separate causes</span>
+                </div>
+                <div class="jb-body">
+                  <div class="jb-row header">
+                    <div class="jb-cell num">#</div>
+                    <div class="jb-cell account">Account</div>
+                    <div class="jb-cell debit-head">Debit</div>
+                    <div class="jb-cell credit-head">Credit</div>
+                  </div>
+                  <div class="jb-row">
+                    <div class="jb-cell num">1</div>
+                    <div class="jb-cell account">Inventory Write-Off — Damage & Expiry</div>
+                    <div class="jb-cell debit">$3,100</div>
+                    <div class="jb-cell credit">—</div>
+                  </div>
+                  <div class="jb-row">
+                    <div class="jb-cell num">2</div>
+                    <div class="jb-cell account">Inventory Shrinkage Expense</div>
+                    <div class="jb-cell debit">$1,500</div>
+                    <div class="jb-cell credit">—</div>
+                  </div>
+                  <div class="jb-row">
+                    <div class="jb-cell num"></div>
+                    <div class="jb-cell account indent">Pharmaceutical Inventory</div>
+                    <div class="jb-cell debit">—</div>
+                    <div class="jb-cell credit">$4,600</div>
+                  </div>
+                  <div class="jb-row total">
+                    <div class="jb-cell num"></div>
+                    <div class="jb-cell account">Totals</div>
+                    <div class="jb-cell debit">$4,600</div>
+                    <div class="jb-cell credit">$4,600</div>
+                  </div>
+                </div>
+                <div class="jb-narration">Annual physical count adjustment: $3,100 recorded as damage/expiry write-off, $1,500 recorded as unexplained shrinkage. Inventory balance adjusted accordingly.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Example 4: Reversal / insurance -->
+          <div class="scenario-card" id="ex4">
+            <div class="sc-header">
+              <span class="sc-type">Example 4</span>
+              <span class="sc-name">Retailer — Shrinkage Partially Recovered via Insurance</span>
+            </div>
+            <div class="sc-body">
+              <p>A home goods store suffers a break-in and $8,000 worth of inventory is stolen. They have insurance covering theft. The original entry records the loss, and a second entry records the insurance reimbursement when it's confirmed.</p>
+              <div class="sc-facts">
+                <div class="sc-fact">
+                  <div class="sf-label">Stolen Inventory (at cost)</div>
+                  <div class="sf-val amber">$8,000</div>
+                </div>
+                <div class="sc-fact">
+                  <div class="sf-label">Insurance Reimbursement</div>
+                  <div class="sf-val green">$6,500</div>
+                </div>
+                <div class="sc-fact">
+                  <div class="sf-label">Net Loss</div>
+                  <div class="sf-val amber">$1,500</div>
+                </div>
+              </div>
+
+              <h3 style="font-size:0.9rem; color:var(--muted); font-weight:700; margin:14px 0 8px; text-transform:uppercase; letter-spacing:0.07em;">Entry 1 — Record the Theft Loss</h3>
+              <div class="journal-block">
+                <div class="jb-header">
+                  <span class="jb-title">At Time of Discovery</span>
+                </div>
+                <div class="jb-body">
+                  <div class="jb-row header">
+                    <div class="jb-cell num">#</div>
+                    <div class="jb-cell account">Account</div>
+                    <div class="jb-cell debit-head">Debit</div>
+                    <div class="jb-cell credit-head">Credit</div>
+                  </div>
+                  <div class="jb-row">
+                    <div class="jb-cell num">1</div>
+                    <div class="jb-cell account">Loss from Theft (or Shrinkage Expense)</div>
+                    <div class="jb-cell debit">$8,000</div>
+                    <div class="jb-cell credit">—</div>
+                  </div>
+                  <div class="jb-row">
+                    <div class="jb-cell num"></div>
+                    <div class="jb-cell account indent">Merchandise Inventory</div>
+                    <div class="jb-cell debit">—</div>
+                    <div class="jb-cell credit">$8,000</div>
+                  </div>
+                  <div class="jb-row total">
+                    <div class="jb-cell num"></div>
+                    <div class="jb-cell account">Totals</div>
+                    <div class="jb-cell debit">$8,000</div>
+                    <div class="jb-cell credit">$8,000</div>
+                  </div>
+                </div>
+                <div class="jb-narration">To record merchandise stolen in break-in on June 17, 2026. Insurance claim filed, reimbursement pending.</div>
+              </div>
+
+              <h3 style="font-size:0.9rem; color:var(--muted); font-weight:700; margin:14px 0 8px; text-transform:uppercase; letter-spacing:0.07em;">Entry 2 — Record Insurance Reimbursement</h3>
+              <div class="journal-block">
+                <div class="jb-header">
+                  <span class="jb-title">When Insurance Payment is Confirmed</span>
+                </div>
+                <div class="jb-body">
+                  <div class="jb-row header">
+                    <div class="jb-cell num">#</div>
+                    <div class="jb-cell account">Account</div>
+                    <div class="jb-cell debit-head">Debit</div>
+                    <div class="jb-cell credit-head">Credit</div>
+                  </div>
+                  <div class="jb-row">
+                    <div class="jb-cell num">1</div>
+                    <div class="jb-cell account">Accounts Receivable — Insurance</div>
+                    <div class="jb-cell debit">$6,500</div>
+                    <div class="jb-cell credit">—</div>
+                  </div>
+                  <div class="jb-row">
+                    <div class="jb-cell num"></div>
+                    <div class="jb-cell account indent">Gain on Insurance Recovery</div>
+                    <div class="jb-cell debit">—</div>
+                    <div class="jb-cell credit">$6,500</div>
+                  </div>
+                  <div class="jb-row total">
+                    <div class="jb-cell num"></div>
+                    <div class="jb-cell account">Totals</div>
+                    <div class="jb-cell debit">$6,500</div>
+                    <div class="jb-cell credit">$6,500</div>
+                  </div>
+                </div>
+                <div class="jb-narration">To record insurance reimbursement of $6,500 for June 17 theft. Net uninsured loss remains $1,500.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WHERE IT APPEARS ON STATEMENTS -->
+        <section id="financial-statements">
+          <h2>Where Shrinkage Shows Up on Your Financial Statements</h2>
+          <p>
+            Once the journal entry is recorded, shrinkage affects two of your three core financial statements. Understanding exactly where it lands helps you read your own numbers more clearly.
+          </p>
+
+          <h3>Income Statement (P&L)</h3>
+          <p>
+            If you've recorded shrinkage into <strong>Cost of Goods Sold</strong>, the P&L shows a higher COGS figure — which reduces gross profit and ultimately net income. There's no separate "shrinkage" line visible in this approach unless someone specifically looks at the COGS sub-accounts.
+          </p>
+          <p>
+            If you've created a dedicated <strong>Inventory Shrinkage Expense</strong> account, it appears as a separate operating expense line below gross profit — or as a separate sub-line within COGS depending on how you've structured your chart of accounts. Either way, net income takes the same hit.
+          </p>
+
+          <h3>Balance Sheet</h3>
+          <p>
+            The Inventory account is reduced by the amount of the shrinkage credit entry. If inventory was $50,000 and you record $1,500 of shrinkage, the balance sheet now shows Inventory at $48,500. The asset value has decreased to reflect what's actually there.
+          </p>
+
+          <h3>Cash Flow Statement</h3>
+          <p>
+            Shrinkage recording doesn't directly affect cash flow — it's a non-cash adjustment. However, it does affect operating profit under the indirect method, so it flows through the reconciliation between net income and operating cash flows.
+          </p>
+
+          <div class="pull-quote">
+            <p>"The journal entry is simple. What matters is whether it's being done — and done consistently — so your inventory balance actually means something when someone reads the balance sheet."</p>
+            <cite>— PreventLoss.org</cite>
+          </div>
+        </section>
+
+        <!-- BEST PRACTICES -->
+        <section id="best-practices">
+          <h2>Best Practices When Recording Shrinkage</h2>
+          <p>
+            The technical entries are the easy part. These are the habits and decisions around the entries that separate businesses with useful accounting records from those with technically correct but operationally useless ones.
+          </p>
+
+          <h3>Record it when you find it — not at year end</h3>
+          <p>
+            A lot of businesses save all their shrinkage adjustments for the annual count. This means the financial statements throughout the year overstate inventory and understate costs. Under a perpetual system especially, shrinkage should be recorded as soon as it's identified — even if it's a small cycle count discrepancy. Accurate books in real time are more valuable than tidy ones at year end.
+          </p>
+
+          <h3>Document what you know about the cause</h3>
+          <p>
+            Your journal entry narration should include everything you know at the time: "Shrinkage identified in weekly protein count — investigation ongoing" or "Damage write-off, 12 units cosmetics — shelf collapse June 14." Good narrations make the records useful for investigation and for comparisons across periods. Vague narrations like "inventory adjustment" are almost useless six months later.
+          </p>
+
+          <h3>Use the same expense account consistently</h3>
+          <p>
+            If you roll shrinkage into COGS one quarter and use a separate Shrinkage Expense account the next, your trend data becomes meaningless. Pick one approach and stick to it. If you later decide to change, make the change at the start of a new financial year and note it clearly.
+          </p>
+
+          <h3>Separate known causes from unknown ones</h3>
+          <p>
+            When an investigation identifies the cause — damage, confirmed theft, expired stock — use a sub-account that reflects that. "Inventory Write-Off — Damage" and "Inventory Shrinkage — Unexplained" give you much more information in a report than two identically labeled entries. Unknown shrinkage that's tracked separately is also the right signal for management to investigate further.
+          </p>
+
+          <h3>Reconcile before you record — not after</h3>
+          <p>
+            Before recording a shrinkage entry, double-check that the gap isn't caused by an unprocessed receipt, a missing write-off, or a transfer that was never logged. Recording shrinkage for stock that's actually in the back room correctly labeled is an error that compounds when the correct stock is eventually found. <a href="/articles/inventory-accuracy-vs-shrinkage.html">Accuracy issues can look like shrinkage</a> — rule them out first.
+          </p>
+
+          <div class="callout callout-warn">
+            <div class="callout-label">⚠️ Common mistake</div>
+            <p>Recording shrinkage as a debit to <em>Inventory</em> and credit to <em>COGS</em> is backwards and wrong. Shrinkage reduces inventory (credit) and increases cost (debit). If you're unsure, think: does this entry reduce the asset on the balance sheet? The Inventory credit should do that.</p>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                What is the journal entry for inventory shrinkage?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                The standard entry is: Debit Cost of Goods Sold (or Inventory Shrinkage Expense) / Credit Inventory — for the dollar value of the shrinkage. This reduces the inventory balance on the balance sheet and records the loss as an expense on the income statement.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                Is inventory shrinkage debited or credited?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                Inventory is <strong>credited</strong> (reduced) when shrinkage is recorded — because inventory is an asset with a debit normal balance, a credit reduces it. The expense account (COGS or Shrinkage Expense) is <strong>debited</strong> — because expenses have a debit normal balance and the debit records the loss.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                Where does inventory shrinkage appear on financial statements?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                On the balance sheet, it reduces the Inventory asset balance. On the income statement, it increases Cost of Goods Sold (or appears as a separate Shrinkage Expense line) which reduces gross profit and net income. It does not appear as a standalone line on the balance sheet.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+                When should inventory shrinkage be recorded?
+                <span class="arrow">▾</span>
+              </button>
+              <div class="faq-a">
+                In a perpetual system, record it as soon as it's identified. In a periodic system, it's recorded at the end of each counting period when the physical count is compared to book inventory. Best practice is always to record as close to when the loss occurred as the information allows.
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- RELATED -->
+        <section id="related-articles">
+          <h2>Related Articles</h2>
+          <div class="related-grid">
+            <a class="related-card" href="/articles/how-to-calculate-retail-shrinkage-percentage.html">
+              <span class="rc-icon">📊</span>
+              <div>
+                <div class="rc-cat">Inventory Management</div>
+                <div class="rc-title">How to Calculate Retail Shrinkage Percentage (Step-by-Step With Examples)</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/what-is-cost-control.html">
+              <span class="rc-icon">📉</span>
+              <div>
+                <div class="rc-cat">Cost Control</div>
+                <div class="rc-title">What Is Cost Control? Definition, Examples & Strategies for Every Business</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/inventory-accuracy-vs-shrinkage.html">
+              <span class="rc-icon">📦</span>
+              <div>
+                <div class="rc-cat">Inventory Management</div>
+                <div class="rc-title">Inventory Accuracy vs Inventory Shrinkage: Understanding the Difference</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/what-is-loss-prevention.html">
+              <span class="rc-icon">🛡️</span>
+              <div>
+                <div class="rc-cat">Loss Prevention</div>
+                <div class="rc-title">What Is Loss Prevention? Complete Guide for Businesses</div>
+              </div>
+            </a>
+            <a class="related-card" href="/articles/airport-chocolate-store-fraud-case-study.html">
+              <span class="rc-icon">🔴</span>
+              <div>
+                <div class="rc-cat">Real Case Study</div>
+                <div class="rc-title">The Airport Chocolate Store Fraud: How a Manager Turned Promotional Offers into a Personal Business</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="article-cta">
+            <h3>Explore More Inventory & LP Guides</h3>
+            <p>Free practical guides on shrinkage, audits, loss prevention controls, and cost management — no sign-up needed.</p>
+            <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Article sidebar">
+
+      <div class="sidebar-card quickref">
+        <div class="qr-header"><span>📒</span><h4>Quick Reference</h4></div>
+        <div class="qr-row">
+          <span class="qr-key">Debit account</span>
+          <span class="qr-val green">COGS or Shrinkage Expense</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Credit account</span>
+          <span class="qr-val">Inventory</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Balance sheet effect</span>
+          <span class="qr-val amber">Inventory ▼</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Income statement effect</span>
+          <span class="qr-val amber">COGS ▲ / Profit ▼</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Periodic: when to record</span>
+          <span class="qr-val">At period end count</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Perpetual: when to record</span>
+          <span class="qr-val">When found</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Separate account?</span>
+          <span class="qr-val">Optional — better visibility</span>
+        </div>
+        <div class="qr-row">
+          <span class="qr-key">Cash flow effect</span>
+          <span class="qr-val">Non-cash adjustment</span>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#accounts-involved">The 3 Accounts Used</a></li>
+          <li><a href="#inventory-systems">Periodic vs Perpetual</a></li>
+          <li><a href="#standard-entry">The Standard Entry</a></li>
+          <li><a href="#worked-examples">4 Worked Examples</a></li>
+          <li><a href="#financial-statements">Financial Statement Impact</a></li>
+          <li><a href="#best-practices">Best Practices</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#related-articles">Related Articles</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      document.getElementById('read-progress').style.width =
+        ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+    });
+    function toggleFaq(btn) {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    }
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const a = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (a) a.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -75% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
