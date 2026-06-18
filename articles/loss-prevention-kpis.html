@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <title>Loss Prevention KPIs: The Metrics That Actually Tell You What's Happening (2026)</title>
+  <meta name="description" content="The loss prevention KPIs that matter most — shrink rate, cash variance, exception report metrics, and more. What each one measures, how to calculate it, and what a good result looks like for US retail and multi-industry operations." />
+  <meta name="keywords" content="loss prevention KPIs, loss prevention metrics, loss prevention key performance indicators, retail loss prevention KPIs, shrinkage KPI, loss prevention performance metrics, how to measure loss prevention, cash variance KPI, exception report metrics, LP KPI examples, loss prevention scorecard, loss prevention benchmarks USA, inventory shrinkage KPI, employee theft detection KPI, loss prevention program metrics" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mithun GS" />
+  <link rel="canonical" href="https://www.preventloss.org/articles/loss-prevention-kpis.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Loss Prevention KPIs: The Metrics That Actually Tell You What's Happening" />
+  <meta property="og:description" content="What to measure in loss prevention, how to calculate each metric, what benchmarks to use — and how to turn the numbers into action." />
+  <meta property="og:url" content="https://www.preventloss.org/articles/loss-prevention-kpis.html" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+  <meta property="article:published_time" content="2026-06-18T00:00:00Z" />
+  <meta property="article:modified_time" content="2026-06-18T00:00:00Z" />
+  <meta property="article:section" content="Loss Prevention" />
+  <meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Loss Prevention KPIs That Actually Tell You What's Happening" />
+  <meta name="twitter:description" content="Formulas, benchmarks, and real context for the LP metrics worth tracking — not a generic list, an actionable one." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Loss Prevention KPIs: The Metrics That Actually Tell You What's Happening",
+    "description": "What to measure in loss prevention, how to calculate each metric, benchmarks to use, and how to turn numbers into action.",
+    "author": {
+      "@type": "Person",
+      "name": "Mithun GS",
+      "url": "https://www.linkedin.com/in/mithun-gs/"
+    },
+    "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/loss-prevention-kpis.html" },
+    "keywords": "loss prevention KPIs, loss prevention metrics, shrinkage KPI, retail loss prevention benchmarks"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the most important loss prevention KPIs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most important loss prevention KPIs are shrinkage rate (as a percentage of sales or inventory), cash discrepancy rate, exception report frequency by employee (returns, voids, discounts), receiving accuracy rate, and LP audit score. Together these cover the main sources of retail loss and give an early signal when something is developing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good shrinkage rate KPI for US retail?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most US retailers, a shrinkage rate below 1% of net sales is considered well-controlled. The industry average sits between 1.5% and 2%. Anything above 2–3% typically signals a specific, addressable problem. High-risk categories like cosmetics, electronics accessories, and pharmacy items tend to run higher than general merchandise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should loss prevention KPIs be reviewed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The review frequency depends on the metric. Cash discrepancy rate and exception report data should be reviewed weekly or after each shift. Shrinkage rate is typically reviewed monthly (if you run cycle counts) or quarterly. LP audit scores are reviewed after each audit. The more frequently you review, the faster you catch developing issues."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can small businesses track loss prevention KPIs without special software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Most core LP KPIs can be tracked with a spreadsheet. Cash discrepancy is just a shift log. Exception reports come from most POS systems. Shrinkage rate requires a count and a calculation. A consistent manual process beats an inconsistent automated one — the key is reviewing the numbers regularly and acting on what they show."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+      --warn:        #f59e0b;
+      --danger:      #f87171;
+      --c-lp:        #3b82f6;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono:    'Courier New', monospace;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: var(--font-body); font-size: 17px; line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--heading); text-decoration: none; letter-spacing: -0.02em; }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    #read-progress {
+      position: fixed; top: 56px; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--c-lp), #a78bfa);
+      z-index: 99; transition: width 0.1s linear;
+    }
+
+    /* Layout */
+    .page-wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 300px; gap: 52px; align-items: start; }
+    @media (max-width: 860px) { .page-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+
+    /* Header */
+    .article-header { padding: 52px 0 36px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--muted); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--border); }
+    .article-category { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-glow); border: 1px solid var(--accent); color: var(--accent-lt); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 12px; border-radius: 999px; margin-bottom: 18px; }
+    h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 3.8vw, 2.65rem); font-weight: 700; color: var(--heading); line-height: 1.18; letter-spacing: -0.03em; margin-bottom: 18px; }
+    .article-deck { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 22px; max-width: 680px; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.8rem; color: var(--muted); }
+
+    /* Stats */
+    .article-stats { display: flex; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 40px; overflow: hidden; }
+    .stat-item { flex: 1; padding: 16px 18px; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-item .s-val { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--heading); line-height: 1; margin-bottom: 4px; }
+    .stat-item .s-val.blue  { color: var(--accent-lt); }
+    .stat-item .s-val.green { color: var(--success); }
+    .stat-item .s-val.amber { color: var(--warn); }
+    .stat-item .s-lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; }
+    @media (max-width: 600px) { .article-stats { flex-wrap: wrap; } .stat-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); } }
+
+    /* Prose */
+    .article-body h2 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--heading); letter-spacing: -0.02em; margin: 48px 0 14px; padding-top: 48px; border-top: 1px solid var(--border); }
+    .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--heading); margin: 28px 0 10px; }
+    .article-body p { margin-bottom: 18px; color: var(--text); }
+    .article-body a { color: var(--accent-lt); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body strong { color: var(--heading); font-weight: 600; }
+    .article-body em { font-style: italic; color: var(--muted); }
+
+    /* Callouts */
+    .callout { border-radius: var(--r-md); padding: 18px 22px; margin: 24px 0; border-left: 4px solid; }
+    .callout-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .callout p { margin-bottom: 6px; font-size: 0.94rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout-tip  { background: #0d1f16; border-color: var(--success); }
+    .callout-tip .callout-label { color: var(--success); }
+    .callout-info { background: var(--accent-glow); border-color: var(--accent); }
+    .callout-info .callout-label { color: var(--accent-lt); }
+    .callout-warn { background: #1c1500; border-color: var(--warn); }
+    .callout-warn .callout-label { color: var(--warn); }
+
+    /* ── KPI cards — the signature element ── */
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      margin: 24px 0;
+      transition: box-shadow 0.18s;
+    }
+    .kpi-card:hover { box-shadow: 0 4px 28px rgba(59,130,246,0.1); }
+    .kpi-header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 22px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface-2);
+    }
+    .kpi-num {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--accent-glow); border: 2px solid var(--accent-lt);
+      color: var(--accent-lt); font-family: var(--font-mono);
+      font-size: 0.78rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .kpi-title { font-family: var(--font-display); font-size: 1.08rem; font-weight: 700; color: var(--heading); line-height: 1.25; }
+    .kpi-priority {
+      font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+    }
+    .kpi-priority.critical { background: #1c0808; color: var(--danger); border: 1px solid var(--danger); }
+    .kpi-priority.high     { background: #1c1500; color: var(--warn); border: 1px solid var(--warn); }
+    .kpi-priority.medium   { background: #0d1f16; color: var(--success); border: 1px solid var(--success); }
+
+    .kpi-body { padding: 20px 22px; }
+    .kpi-body p { font-size: 0.92rem; color: var(--muted); margin-bottom: 16px; }
+    .kpi-body p strong { color: var(--text); }
+
+    .kpi-formula-block {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm);
+      padding: 12px 16px; margin-bottom: 14px;
+    }
+    .kpi-formula-block .kfb-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent-lt); margin-bottom: 6px; }
+    .kpi-formula-block code { font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-lt); display: block; line-height: 1.5; }
+
+    .kpi-metrics {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-bottom: 14px;
+    }
+    .kpi-metric {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 10px 14px;
+    }
+    .kpi-metric .km-label { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 4px; }
+    .kpi-metric .km-val { font-size: 0.95rem; font-weight: 700; font-family: var(--font-mono); }
+    .kpi-metric .km-val.green { color: var(--success); }
+    .kpi-metric .km-val.amber { color: var(--warn); }
+    .kpi-metric .km-val.red   { color: var(--danger); }
+
+    .kpi-signal {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm);
+      padding: 10px 16px; display: flex; gap: 8px; align-items: flex-start; font-size: 0.84rem;
+    }
+    .kpi-signal .ks-icon { font-size: 0.9rem; flex-shrink: 0; }
+    .kpi-signal p { margin: 0; color: var(--muted); line-height: 1.55; }
+    .kpi-signal p strong { color: var(--text); }
+
+    /* KPI category divider */
+    .kpi-divider {
+      display: flex; align-items: center; gap: 12px; margin: 44px 0 8px;
+    }
+    .kpi-divider .kd-line { flex: 1; height: 1px; background: var(--border); }
+    .kpi-divider .kd-label {
+      font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em;
+      padding: 4px 14px; border-radius: 999px; white-space: nowrap;
+    }
+    .kpi-divider.shrink .kd-label { color: var(--danger); background: #1c0808; border: 1px solid var(--danger); }
+    .kpi-divider.cash   .kd-label { color: var(--warn); background: #1c1500; border: 1px solid var(--warn); }
+    .kpi-divider.staff  .kd-label { color: var(--accent-lt); background: var(--accent-glow); border: 1px solid var(--accent); }
+    .kpi-divider.audit  .kd-label { color: var(--success); background: #0d1f16; border: 1px solid var(--success); }
+    .kpi-divider.vendor .kd-label { color: #a78bfa; background: #1e1340; border: 1px solid #a78bfa; }
+
+    /* Pull quote */
+    .pull-quote { border-left: 4px solid var(--c-lp); padding: 16px 24px; margin: 30px 0; background: var(--accent-glow); border-radius: 0 var(--r-md) var(--r-md) 0; }
+    .pull-quote p { font-family: var(--font-display); font-size: 1.08rem; color: var(--heading); line-height: 1.55; font-style: italic; margin: 0; }
+    .pull-quote cite { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 10px; font-style: normal; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; }
+
+    /* Summary table */
+    .data-table-wrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--border); border-radius: var(--r-md); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    thead th { background: var(--surface); color: var(--muted); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--surface); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.68rem; font-weight: 700; }
+    .badge-red    { background: #3b0c0c; color: var(--danger); }
+    .badge-amber  { background: #1c1500; color: #fbbf24; }
+    .badge-green  { background: #0d2018; color: #34d399; }
+    .badge-blue   { background: var(--accent-glow); color: var(--accent-lt); }
+
+    /* FAQ */
+    .faq-list { margin: 14px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 10px; overflow: hidden; }
+    .faq-q { width: 100%; background: var(--surface); border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; font-size: 0.95rem; font-weight: 600; color: var(--heading); text-align: left; gap: 12px; }
+    .faq-q:hover { background: var(--surface-2); }
+    .faq-q .arrow { flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 0.92rem; color: var(--muted); background: var(--surface); }
+    .faq-a.open { display: block; }
+
+    /* Related */
+    .related-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+    .related-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: 16px 18px; text-decoration: none; display: flex; gap: 12px; align-items: flex-start; transition: border-color 0.18s, background 0.15s; }
+    .related-card:hover { border-color: var(--accent-lt); background: var(--surface-2); }
+    .related-card .rc-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .related-card .rc-cat { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent-lt); margin-bottom: 4px; }
+    .related-card .rc-title { font-size: 0.9rem; font-weight: 600; color: var(--heading); line-height: 1.35; }
+
+    /* CTA */
+    .article-cta { background: linear-gradient(135deg, #0f2040 0%, #181c27 100%); border: 1px solid var(--accent); border-radius: var(--r-lg); padding: 28px 32px; text-align: center; margin-top: 44px; }
+    .article-cta h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); margin-bottom: 8px; }
+    .article-cta p  { color: var(--muted); font-size: 0.875rem; margin-bottom: 18px; }
+    .btn-primary { display: inline-block; background: var(--accent); color: #fff; font-weight: 700; font-size: 0.875rem; padding: 11px 26px; border-radius: var(--r-sm); text-decoration: none; transition: background 0.18s; }
+    .btn-primary:hover { background: var(--accent-lt); }
+
+    /* Sidebar */
+    .sidebar { padding-top: 52px; }
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 18px; margin-bottom: 18px; }
+    .sidebar-card h4 { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--muted); margin-bottom: 12px; }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a { font-size: 0.79rem; color: var(--muted); text-decoration: none; display: block; padding: 4px 0 4px 12px; border-left: 2px solid transparent; transition: all 0.15s; line-height: 1.35; }
+    .toc-list a:hover, .toc-list a.active { color: var(--text); border-color: var(--accent-lt); }
+
+    .quickref { position: sticky; top: 72px; }
+    .qr-header { background: var(--accent-glow); border-bottom: 1px solid var(--accent); padding: 14px 18px; display: flex; align-items: center; gap: 8px; }
+    .qr-header h4 { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-lt); }
+    .qr-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding: 11px 18px; border-bottom: 1px solid var(--border); font-size: 0.79rem; }
+    .qr-row:last-child { border-bottom: none; }
+    .qr-key { color: var(--muted); flex-shrink: 0; font-size: 0.75rem; }
+    .qr-val { color: var(--heading); font-weight: 600; text-align: right; font-size: 0.75rem; }
+    .qr-val.green { color: var(--success); }
+    .qr-val.amber { color: var(--warn); }
+    .qr-val.red   { color: var(--danger); }
+
+    /* Footer */
+    .site-footer { border-top: 1px solid var(--border); margin-top: 80px; padding: 32px 24px; text-align: center; color: var(--muted); font-size: 0.82rem; }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+    <main id="main-content">
+
+      <header class="article-header">
+        <div class="breadcrumb">
+          <a href="/">Home</a><span>›</span>
+          <a href="/articles/">Articles</a><span>›</span>
+          <a href="/articles/?cat=loss-prevention">Loss Prevention</a>
+        </div>
+        <span class="article-category">🛡️ Loss Prevention</span>
+        <h1>Loss Prevention KPIs: The Metrics That Actually Tell You What's Happening</h1>
+        <p class="article-deck">
+          Most businesses either track nothing, or track everything and look at none of it. Neither works. Here are the loss prevention KPIs that actually matter — what each one measures, how to calculate it, what a good number looks like, and what a bad one is telling you to investigate.
+        </p>
+        <div class="article-meta">
+          <span>🗓 June 18, 2026</span>
+          <span>⏱ 11 min read</span>
+          <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-lt); text-decoration:underline; text-underline-offset:3px;">Mithun GS</a></span>
+          <span>📂 Loss Prevention</span>
+        </div>
+      </header>
+
+      <div class="article-stats">
+        <div class="stat-item"><div class="s-val blue">12</div><div class="s-lbl">KPIs covered</div></div>
+        <div class="stat-item"><div class="s-val">5</div><div class="s-lbl">Categories</div></div>
+        <div class="stat-item"><div class="s-val green">Every</div><div class="s-lbl">KPI has formula + benchmark</div></div>
+        <div class="stat-item"><div class="s-val amber">Any size</div><div class="s-lbl">Business</div></div>
+      </div>
+
+      <article class="article-body" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="Loss Prevention KPIs: The Metrics That Actually Tell You What's Happening" />
+        <meta itemprop="datePublished" content="2026-06-18" />
+
+        <!-- INTRO -->
+        <section id="introduction">
+          <h2 style="border-top:none; padding-top:0; margin-top:0;">The Problem With Most LP Measurement</h2>
+          <p>
+            Loss prevention tends to attract one of two measurement problems. Either nobody's tracking anything — the business has a vague sense that "shrinkage is probably around 2%" based on a count someone did a year ago — or there's a dashboard full of metrics that generates a report every Monday that nobody reads.
+          </p>
+          <p>
+            Neither situation is actually measuring anything. The first has no data. The second has data with no attention. What makes a KPI useful isn't the number itself — it's whether someone is looking at it regularly, understanding what it means, and doing something different when it moves.
+          </p>
+          <p>
+            This guide covers twelve loss prevention KPIs across five categories. Each one has a formula, a benchmark, and — importantly — a note on what a bad number is actually signaling, because that's the part most metrics articles leave out. The signal matters more than the target.
+          </p>
+
+          <div class="callout callout-info">
+            <div class="callout-label">📌 How to use this</div>
+            <p>Don't try to track all twelve at once. Pick three or four that address your biggest current gap. Get those running consistently. Add more once the first ones are giving you clean, reliable data. A few KPIs reviewed weekly beat twelve KPIs reviewed never.</p>
+          </div>
+        </section>
+
+        <!-- CATEGORY 1: SHRINKAGE -->
+        <section id="shrinkage-kpis">
+          <h2>Category 1 — Shrinkage Metrics</h2>
+          <p>These are the headline metrics — the ones that give you the overall picture of how much stock or value is leaving your business unaccounted for.</p>
+
+          <div class="kpi-divider shrink">
+            <div class="kd-line"></div>
+            <div class="kd-label">🔴 Shrinkage</div>
+            <div class="kd-line"></div>
+          </div>
+
+          <!-- KPI 1 -->
+          <div class="kpi-card" id="kpi1">
+            <div class="kpi-header">
+              <div class="kpi-num">01</div>
+              <div class="kpi-title">Shrinkage Rate (% of Net Sales)</div>
+              <span class="kpi-priority critical">Critical</span>
+            </div>
+            <div class="kpi-body">
+              <p>This is your primary LP metric — the one everything else feeds into. It measures how much inventory value has gone missing relative to what you sold. It's the number most US industry benchmarks use, which makes it the most useful for external comparison.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Shrinkage % = (Dollar Value of Shrinkage ÷ Net Sales) × 100</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Excellent</div><div class="km-val green">Below 0.5%</div></div>
+                <div class="kpi-metric"><div class="km-label">Good</div><div class="km-val green">0.5% – 1%</div></div>
+                <div class="kpi-metric"><div class="km-label">US average</div><div class="km-val amber">1.5% – 2%</div></div>
+                <div class="kpi-metric"><div class="km-label">Action needed</div><div class="km-val red">Above 3%</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> A rising trend over three or more periods is more important than any single number. A rate that jumps suddenly in one period suggests a specific event — new staff, a process change, a timing error in a count. Gradual creep over many periods suggests something systemic.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI 2 -->
+          <div class="kpi-card" id="kpi2">
+            <div class="kpi-header">
+              <div class="kpi-num">02</div>
+              <div class="kpi-title">Shrinkage Rate (% of Book Inventory)</div>
+              <span class="kpi-priority high">High</span>
+            </div>
+            <div class="kpi-body">
+              <p>This version measures what percentage of your actual stock value has disappeared. It's particularly useful for understanding the scale of loss relative to what you hold — and for category-level analysis where you don't have a corresponding sales figure to divide by.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Shrinkage % = ((Book Inventory − Physical Count) ÷ Book Inventory) × 100</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Well controlled</div><div class="km-val green">Below 1%</div></div>
+                <div class="kpi-metric"><div class="km-label">Average</div><div class="km-val amber">1% – 3%</div></div>
+                <div class="kpi-metric"><div class="km-label">Investigate</div><div class="km-val red">Above 5%</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> Use this at category or SKU level to find where shrinkage concentrates. A store-level rate of 2% masking a 12% rate in one category is a much more specific and actionable problem than the blended number suggests.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI 3 -->
+          <div class="kpi-card" id="kpi3">
+            <div class="kpi-header">
+              <div class="kpi-num">03</div>
+              <div class="kpi-title">Shrinkage Trend (Period-over-Period Change)</div>
+              <span class="kpi-priority high">High</span>
+            </div>
+            <div class="kpi-body">
+              <p>A single shrinkage percentage tells you where you stand. The trend tells you which direction you're heading. This metric compares your current period's shrinkage rate against the same period last year or the prior period, giving you a directional signal that's more useful than any single reading.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Trend = ((Current Shrink % − Prior Shrink %) ÷ Prior Shrink %) × 100</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Target direction</div><div class="km-val green">Downward trend</div></div>
+                <div class="kpi-metric"><div class="km-label">Watch</div><div class="km-val amber">Flat for 3+ periods</div></div>
+                <div class="kpi-metric"><div class="km-label">Investigate</div><div class="km-val red">Rising trend</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> A business whose shrink rate stays flat at 2% is not making progress. A business that moves from 2.8% to 2.4% to 2.1% is. Track direction, not just the absolute number.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CATEGORY 2: CASH -->
+        <section id="cash-kpis">
+          <h2>Category 2 — Cash Handling Metrics</h2>
+          <p>Cash is the easiest thing to lose and the hardest to trace back to a cause. These metrics give you visibility over cash handling without requiring an investigation every time there's a discrepancy.</p>
+
+          <div class="kpi-divider cash">
+            <div class="kd-line"></div>
+            <div class="kd-label">🟡 Cash Handling</div>
+            <div class="kd-line"></div>
+          </div>
+
+          <!-- KPI 4 -->
+          <div class="kpi-card" id="kpi4">
+            <div class="kpi-header">
+              <div class="kpi-num">04</div>
+              <div class="kpi-title">Cash Discrepancy Rate</div>
+              <span class="kpi-priority critical">Critical</span>
+            </div>
+            <div class="kpi-body">
+              <p>This measures the frequency and size of gaps between the cash that should be in the till and what's actually there at reconciliation. It's one of the most sensitive indicators of cash handling problems — small, consistent discrepancies on specific shifts are often more telling than a single large gap.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Discrepancy Rate = (Total Cash Variance ÷ Total Cash Handled) × 100</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Well controlled</div><div class="km-val green">Below 0.1%</div></div>
+                <div class="kpi-metric"><div class="km-label">Monitor</div><div class="km-val amber">0.1% – 0.5%</div></div>
+                <div class="kpi-metric"><div class="km-label">Investigate</div><div class="km-val red">Above 0.5%</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> Pattern matters more than total amount. Small consistent shortfalls on the same shift, same day of the week, or same cashier are the signature of deliberate taking — not random error. Track this by cashier and by shift, not just as a store-wide total.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI 5 -->
+          <div class="kpi-card" id="kpi5">
+            <div class="kpi-header">
+              <div class="kpi-num">05</div>
+              <div class="kpi-title">Safe Compliance Rate</div>
+              <span class="kpi-priority high">High</span>
+            </div>
+            <div class="kpi-body">
+              <p>This tracks the percentage of cash handling events — drops, reconciliations, deposits — where the required dual-control or documentation procedure was followed correctly. A location can have zero cash discrepancies and still be one unsupervised till away from a problem.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Compliance Rate = (Correctly Completed Cash Events ÷ Total Cash Events) × 100</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Target</div><div class="km-val green">100%</div></div>
+                <div class="kpi-metric"><div class="km-label">Minimum acceptable</div><div class="km-val amber">95%</div></div>
+                <div class="kpi-metric"><div class="km-label">Investigate</div><div class="km-val red">Below 90%</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> Even one unchecked cash handling event is a gap. Low compliance rates on this metric often explain high cash discrepancy rates — the gap between them is where opportunity lives.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CATEGORY 3: STAFF -->
+        <section id="staff-kpis">
+          <h2>Category 3 — Employee Transaction Metrics</h2>
+          <p>Internal theft almost always leaves a pattern in transaction data before it's ever detected through other means. These metrics make that pattern visible.</p>
+
+          <div class="kpi-divider staff">
+            <div class="kd-line"></div>
+            <div class="kd-label">🔵 Employee Transactions</div>
+            <div class="kd-line"></div>
+          </div>
+
+          <!-- KPI 6 -->
+          <div class="kpi-card" id="kpi6">
+            <div class="kpi-header">
+              <div class="kpi-num">06</div>
+              <div class="kpi-title">Return / Refund Rate per Employee</div>
+              <span class="kpi-priority critical">Critical</span>
+            </div>
+            <div class="kpi-body">
+              <p>This measures how many refund transactions each employee processes compared to their peers. Returns are one of the most exploited transaction types in retail — phantom returns, inflated refund amounts, and returns-without-items are all common and all show up as outliers in this metric before they show up anywhere else.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Return Rate = (# Returns by Employee ÷ # Total Transactions by Employee) × 100</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Benchmark against</div><div class="km-val">Team average</div></div>
+                <div class="kpi-metric"><div class="km-label">Monitor if</div><div class="km-val amber">&gt; 2× team average</div></div>
+                <div class="kpi-metric"><div class="km-label">Investigate</div><div class="km-val red">&gt; 3× team average</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> A cashier processing three times the team's average refund volume isn't necessarily stealing — maybe they work a different shift type or serve more difficult customers. But it's a flag worth reviewing. Pull their refund records and spot-check against CCTV. Most of the time it's nothing. Occasionally it's everything.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI 7 -->
+          <div class="kpi-card" id="kpi7">
+            <div class="kpi-header">
+              <div class="kpi-num">07</div>
+              <div class="kpi-title">Void / No-Sale Rate per Employee</div>
+              <span class="kpi-priority critical">Critical</span>
+            </div>
+            <div class="kpi-body">
+              <p>Voids and no-sales are the other high-risk transaction types. A void after a customer has paid and left is a classic method for pocketing the cash without the system flagging a refund. High void rates concentrated on one employee or one time period — especially when correlated with cash discrepancies — are one of the clearest signals in retail LP.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Void Rate = (# Voids by Employee ÷ # Total Transactions by Employee) × 100</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Benchmark</div><div class="km-val">Store average</div></div>
+                <div class="kpi-metric"><div class="km-label">Flag at</div><div class="km-val amber">&gt; 2× store average</div></div>
+                <div class="kpi-metric"><div class="km-label">Correlate with</div><div class="km-val">Cash discrepancy data</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> A high void rate paired with a high cash discrepancy on the same shifts is as close to a confirmed signal as transaction data gets without CCTV review. This combination should always trigger a footage check on the specific shift days showing the pattern.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI 8 -->
+          <div class="kpi-card" id="kpi8">
+            <div class="kpi-header">
+              <div class="kpi-num">08</div>
+              <div class="kpi-title">Average Transaction Value by Cashier</div>
+              <span class="kpi-priority high">High</span>
+            </div>
+            <div class="kpi-body">
+              <p>Sweethearting — giving friends and family unauthorized discounts or free items — shows up as a lower-than-average transaction value for the employee involved, especially during specific time windows. This metric is best compared across employees who work similar shifts and serve similar customer types.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Avg Tx Value = Total Sales by Employee ÷ # Transactions by Employee</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Benchmark</div><div class="km-val">Peer group average</div></div>
+                <div class="kpi-metric"><div class="km-label">Flag at</div><div class="km-val amber">&gt; 15% below peers</div></div>
+                <div class="kpi-metric"><div class="km-label">Context needed</div><div class="km-val">Shift type, customer mix</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> Differences in transaction value across cashiers can have legitimate explanations — different product sections, different shift periods. Look for the pattern within a comparable group, or look at how one employee's average changes when specific customers visit.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CATEGORY 4: AUDIT -->
+        <section id="audit-kpis">
+          <h2>Category 4 — Audit & Compliance Metrics</h2>
+          <p>These metrics tell you how well your controls are being followed — not whether loss is happening, but whether the systems designed to prevent it are actually running.</p>
+
+          <div class="kpi-divider audit">
+            <div class="kd-line"></div>
+            <div class="kd-label">🟢 Audit & Compliance</div>
+            <div class="kd-line"></div>
+          </div>
+
+          <!-- KPI 9 -->
+          <div class="kpi-card" id="kpi9">
+            <div class="kpi-header">
+              <div class="kpi-num">09</div>
+              <div class="kpi-title">LP Audit Score</div>
+              <span class="kpi-priority high">High</span>
+            </div>
+            <div class="kpi-body">
+              <p>An LP audit score measures how well a location is complying with LP policies and procedures at the time of audit. It's a point-in-time snapshot, not a continuous measure — but tracked over multiple audits it becomes a trend that reveals whether a location is improving, plateauing, or drifting. Critical finding categories should be weighted separately from minor ones.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Audit Score = (Items Passed ÷ Total Items Audited) × 100</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Target</div><div class="km-val green">Above 90%</div></div>
+                <div class="kpi-metric"><div class="km-label">Monitor</div><div class="km-val amber">80% – 90%</div></div>
+                <div class="kpi-metric"><div class="km-label">Action plan</div><div class="km-val red">Below 80%</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> A 92% score with a critical finding (e.g., no dual cash control) is not a 92% score in practice — it's a location with a high-risk gap. Always look at what failed, not just the aggregate number. Trend is more useful than any single audit score.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI 10 -->
+          <div class="kpi-card" id="kpi10">
+            <div class="kpi-header">
+              <div class="kpi-num">10</div>
+              <div class="kpi-title">Audit Finding Close Rate</div>
+              <span class="kpi-priority high">High</span>
+            </div>
+            <div class="kpi-body">
+              <p>An LP audit that produces findings that are never acted on is a waste of time. This metric tracks what percentage of audit findings are resolved within the agreed timeframe. It's a measure of follow-through, not just of compliance — and it's one of the most important indicators of whether an LP program has any real teeth.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Close Rate = (Findings Resolved by Deadline ÷ Total Findings) × 100</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Target</div><div class="km-val green">95%+</div></div>
+                <div class="kpi-metric"><div class="km-label">Acceptable</div><div class="km-val amber">80% – 95%</div></div>
+                <div class="kpi-metric"><div class="km-label">LP program failing</div><div class="km-val red">Below 70%</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> A low close rate usually means one of two things: the deadlines are unrealistic, or there's no accountability for missing them. Either one undermines the entire audit process. This metric should be reviewed by senior management, not just the LP team.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CATEGORY 5: VENDOR -->
+        <section id="vendor-kpis">
+          <h2>Category 5 — Vendor & Receiving Metrics</h2>
+          <p>Supplier-side losses are consistently underestimated by most businesses because they're rarely tracked directly. These metrics shine a light on the delivery and procurement gaps that turn into shrinkage.</p>
+
+          <div class="kpi-divider vendor">
+            <div class="kd-line"></div>
+            <div class="kd-label">🟣 Vendor & Receiving</div>
+            <div class="kd-line"></div>
+          </div>
+
+          <!-- KPI 11 -->
+          <div class="kpi-card" id="kpi11">
+            <div class="kpi-header">
+              <div class="kpi-num">11</div>
+              <div class="kpi-title">Receiving Accuracy Rate</div>
+              <span class="kpi-priority critical">Critical</span>
+            </div>
+            <div class="kpi-body">
+              <p>This measures how often deliveries match the quantity and specification on the purchase order. Businesses that don't track this often mistake receiving discrepancies for shrinkage — spending time investigating theft that was actually a supplier short-delivery that nobody caught at the dock.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Receiving Accuracy = (Deliveries Matching PO ÷ Total Deliveries) × 100</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Target</div><div class="km-val green">98%+</div></div>
+                <div class="kpi-metric"><div class="km-label">Monitor</div><div class="km-val amber">94% – 98%</div></div>
+                <div class="kpi-metric"><div class="km-label">Vendor review needed</div><div class="km-val red">Below 94%</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> A low rate from one specific vendor is a supplier problem — challenge them and adjust future orders. A low rate across multiple vendors usually means your receiving process isn't checking properly. Track accuracy by vendor to separate the two causes.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI 12 -->
+          <div class="kpi-card" id="kpi12">
+            <div class="kpi-header">
+              <div class="kpi-num">12</div>
+              <div class="kpi-title">Vendor Invoice Discrepancy Rate</div>
+              <span class="kpi-priority high">High</span>
+            </div>
+            <div class="kpi-body">
+              <p>This tracks how often supplier invoices don't match the agreed purchase order price or quantity — catching overbilling and pricing drift before payment is released. Three-way matching (PO + delivery receipt + invoice) is the process; this KPI measures how well it's working.</p>
+              <div class="kpi-formula-block">
+                <div class="kfb-label">Formula</div>
+                <code>Discrepancy Rate = (Invoices with Discrepancies ÷ Total Invoices) × 100</code>
+              </div>
+              <div class="kpi-metrics">
+                <div class="kpi-metric"><div class="km-label">Target</div><div class="km-val green">Below 2%</div></div>
+                <div class="kpi-metric"><div class="km-label">Monitor</div><div class="km-val amber">2% – 5%</div></div>
+                <div class="kpi-metric"><div class="km-label">Systemic issue</div><div class="km-val red">Above 5%</div></div>
+              </div>
+              <div class="kpi-signal">
+                <span class="ks-icon">📊</span>
+                <p><strong>What the signal means:</strong> Discrepancies that always go in the vendor's favor — consistently above PO price, consistently above agreed quantity — aren't errors. They're a pattern worth challenging formally. A high overall rate across all vendors suggests your PO process or three-way matching isn't working.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SUMMARY TABLE -->
+        <section id="summary">
+          <h2>All 12 KPIs at a Glance</h2>
+          <div class="data-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>KPI</th>
+                  <th>Category</th>
+                  <th>Priority</th>
+                  <th>Review Frequency</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td><strong>Shrinkage Rate (% of Sales)</strong></td>
+                  <td>Shrinkage</td>
+                  <td><span class="badge badge-red">Critical</span></td>
+                  <td>Monthly / per count</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td><strong>Shrinkage Rate (% of Inventory)</strong></td>
+                  <td>Shrinkage</td>
+                  <td><span class="badge badge-amber">High</span></td>
+                  <td>Per count</td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td><strong>Shrinkage Trend</strong></td>
+                  <td>Shrinkage</td>
+                  <td><span class="badge badge-amber">High</span></td>
+                  <td>Quarterly</td>
+                </tr>
+                <tr>
+                  <td>04</td>
+                  <td><strong>Cash Discrepancy Rate</strong></td>
+                  <td>Cash</td>
+                  <td><span class="badge badge-red">Critical</span></td>
+                  <td>Daily / per shift</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td><strong>Safe Compliance Rate</strong></td>
+                  <td>Cash</td>
+                  <td><span class="badge badge-amber">High</span></td>
+                  <td>Weekly</td>
+                </tr>
+                <tr>
+                  <td>06</td>
+                  <td><strong>Return / Refund Rate per Employee</strong></td>
+                  <td>Staff</td>
+                  <td><span class="badge badge-red">Critical</span></td>
+                  <td>Monthly</td>
+                </tr>
+                <tr>
+                  <td>07</td>
+                  <td><strong>Void / No-Sale Rate per Employee</strong></td>
+                  <td>Staff</td>
+                  <td><span class="badge badge-red">Critical</span></td>
+                  <td>Monthly</td>
+                </tr>
+                <tr>
+                  <td>08</td>
+                  <td><strong>Avg Transaction Value by Cashier</strong></td>
+                  <td>Staff</td>
+                  <td><span class="badge badge-amber">High</span></td>
+                  <td>Monthly</td>
+                </tr>
+                <tr>
+                  <td>09</td>
+                  <td><strong>LP Audit Score</strong></td>
+                  <td>Audit</td>
+                  <td><span class="badge badge-amber">High</span></td>
+                  <td>Per audit</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td><strong>Audit Finding Close Rate</strong></td>
+                  <td>Audit</td>
+                  <td><span class="badge badge-amber">High</span></td>
+                  <td>Per audit cycle</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td><strong>Receiving Accuracy Rate</strong></td>
+                  <td>Vendor</td>
+                  <td><span class="badge badge-red">Critical</span></td>
+                  <td>Weekly</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td><strong>Vendor Invoice Discrepancy Rate</strong></td>
+                  <td>Vendor</td>
+                  <td><span class="badge badge-amber">High</span></td>
+                  <td>Monthly</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section id="conclusion">
+          <h2>Start With Three — Not Twelve</h2>
+          <p>
+            If you're starting from scratch, the most useful thing you can do is pick three KPIs from the Critical column, measure them consistently for 60 days, and build from there. Data that's a month old and actually being looked at is worth more than twelve metrics being ignored.
+          </p>
+          <p>
+            The three I'd suggest for most businesses starting out: <strong>Shrinkage Rate</strong> (gives you the headline number), <strong>Cash Discrepancy Rate</strong> (gives you daily visibility on your highest-risk asset), and <strong>Return Rate per Employee</strong> (gives you early warning on the most common form of internal theft). Those three together cover the majority of retail loss exposure.
+          </p>
+
+          <div class="pull-quote">
+            <p>"A KPI that's reviewed every week and acted on is worth twenty that sit in a report nobody opens."</p>
+            <cite>— PreventLoss.org</cite>
+          </div>
+
+          <div class="callout callout-tip">
+            <div class="callout-label">✅ The review habit that makes this work</div>
+            <p>Block 30 minutes every Monday morning for your three critical KPIs. That's it. Trend lines, outliers, anything that moved in the wrong direction. Ask why, and write down what you're going to do about it. Four weeks of that consistently beats a quarterly deep-dive that happens once and then gets forgotten.</p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Want to Dig Deeper Into Loss Prevention?</h3>
+            <p>Explore our full library of guides on audits, shrinkage, vendor controls, and cost management — all free, no sign-up needed.</p>
+            <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What are the most important loss prevention KPIs?<span class="arrow">▾</span></button>
+              <div class="faq-a">The most important are: shrinkage rate (as % of net sales), cash discrepancy rate, return/void rate per employee, receiving accuracy rate, and LP audit score. Together these cover the main sources of retail loss and flag problems early enough to act on them.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is a good shrinkage rate KPI for US retail?<span class="arrow">▾</span></button>
+              <div class="faq-a">Below 1% of net sales is considered well-controlled for most US retailers. The industry average runs 1.5–2%. Above 2–3% usually signals a specific, addressable problem. High-risk product categories — cosmetics, electronics accessories, pharmacy — typically run higher than general merchandise averages.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How often should loss prevention KPIs be reviewed?<span class="arrow">▾</span></button>
+              <div class="faq-a">Cash discrepancy and exception data should be reviewed daily or weekly. Shrinkage rate monthly or per count cycle. Audit scores after each audit. The key principle is that the faster you review, the faster you can catch and address something developing. Monthly reviews of daily data are too slow to be useful.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Can small businesses track LP KPIs without special software?<span class="arrow">▾</span></button>
+              <div class="faq-a">Yes. Cash discrepancy is a shift log. Exception reports come from most POS systems already. Shrinkage rate is a count and a formula. A consistent manual review beats an inconsistent automated one. The spreadsheet isn't the obstacle — the review habit is.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RELATED -->
+        <section id="related-articles">
+          <h2>Related Articles</h2>
+          <div class="related-grid">
+            <a class="related-card" href="/articles/how-to-calculate-retail-shrinkage-percentage.html">
+              <span class="rc-icon">📊</span>
+              <div><div class="rc-cat">Inventory Management</div><div class="rc-title">How to Calculate Retail Shrinkage Percentage (Step-by-Step With Examples)</div></div>
+            </a>
+            <a class="related-card" href="/articles/what-is-cost-control.html">
+              <span class="rc-icon">📉</span>
+              <div><div class="rc-cat">Cost Control</div><div class="rc-title">What Is Cost Control? Definition, Examples & Strategies for Every Business</div></div>
+            </a>
+            <a class="related-card" href="/articles/inventory-accuracy-vs-shrinkage.html">
+              <span class="rc-icon">📦</span>
+              <div><div class="rc-cat">Inventory Management</div><div class="rc-title">Inventory Accuracy vs Inventory Shrinkage: Understanding the Difference</div></div>
+            </a>
+            <a class="related-card" href="/articles/airport-chocolate-store-fraud-case-study.html">
+              <span class="rc-icon">🔴</span>
+              <div><div class="rc-cat">Real Case Study</div><div class="rc-title">The Airport Chocolate Store Fraud: How a Manager Turned Promotional Offers into a Personal Business</div></div>
+            </a>
+            <a class="related-card" href="/articles/what-is-internal-audit.html">
+              <span class="rc-icon">🔍</span>
+              <div><div class="rc-cat">Internal Audit</div><div class="rc-title">What Is Internal Audit? A Complete Beginner's Guide</div></div>
+            </a>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Article sidebar">
+
+      <div class="sidebar-card quickref">
+        <div class="qr-header"><span>📊</span><h4>Quick Reference</h4></div>
+        <div class="qr-row"><span class="qr-key">Total KPIs</span><span class="qr-val">12 across 5 categories</span></div>
+        <div class="qr-row"><span class="qr-key">Start with</span><span class="qr-val">KPIs 01, 04, 06</span></div>
+        <div class="qr-row"><span class="qr-key">Good shrink rate</span><span class="qr-val green">Below 1% of sales</span></div>
+        <div class="qr-row"><span class="qr-key">US average</span><span class="qr-val amber">1.5% – 2%</span></div>
+        <div class="qr-row"><span class="qr-key">Cash discrepancy target</span><span class="qr-val green">Below 0.1%</span></div>
+        <div class="qr-row"><span class="qr-key">Audit score target</span><span class="qr-val green">Above 90%</span></div>
+        <div class="qr-row"><span class="qr-key">Receiving accuracy target</span><span class="qr-val green">98%+</span></div>
+        <div class="qr-row"><span class="qr-key">Review frequency</span><span class="qr-val">Weekly (critical KPIs)</span></div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Jump to KPI</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#shrinkage-kpis">Shrinkage Metrics</a></li>
+          <li><a href="#kpi1">01 — Shrink % of Sales</a></li>
+          <li><a href="#kpi2">02 — Shrink % of Inventory</a></li>
+          <li><a href="#kpi3">03 — Shrinkage Trend</a></li>
+          <li><a href="#cash-kpis">Cash Handling</a></li>
+          <li><a href="#kpi4">04 — Cash Discrepancy</a></li>
+          <li><a href="#kpi5">05 — Safe Compliance</a></li>
+          <li><a href="#staff-kpis">Employee Transactions</a></li>
+          <li><a href="#kpi6">06 — Return Rate</a></li>
+          <li><a href="#kpi7">07 — Void Rate</a></li>
+          <li><a href="#kpi8">08 — Avg Transaction Value</a></li>
+          <li><a href="#audit-kpis">Audit & Compliance</a></li>
+          <li><a href="#kpi9">09 — Audit Score</a></li>
+          <li><a href="#kpi10">10 — Finding Close Rate</a></li>
+          <li><a href="#vendor-kpis">Vendor & Receiving</a></li>
+          <li><a href="#kpi11">11 — Receiving Accuracy</a></li>
+          <li><a href="#kpi12">12 — Invoice Discrepancy</a></li>
+          <li><a href="#summary">Summary Table</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      document.getElementById('read-progress').style.width =
+        ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+    });
+    function toggleFaq(btn) {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    }
+    const sections = document.querySelectorAll('section[id], .kpi-card[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const a = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (a) a.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -75% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
