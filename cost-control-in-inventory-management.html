@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<title>Cost Control in Inventory Management: Strategies, Formulas & Calculator (2026)</title>
+<meta name="description" content="Cost control in inventory management explained — carrying cost, holding cost, EOQ, dead stock cost, and stockout cost formulas with worked examples, practical strategies, and a free calculator to run your own numbers." />
+<meta name="keywords" content="cost control in inventory management, inventory cost control techniques, how to reduce inventory holding costs, inventory carrying cost formula, economic order quantity formula, dead stock cost calculation, inventory cost management strategies, reduce inventory costs small business, inventory cost control best practices USA, stockout cost formula, inventory management cost reduction, warehouse inventory cost control, EOQ calculator, inventory holding cost percentage" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Mithun GS" />
+<link rel="canonical" href="https://www.preventloss.org/articles/cost-control-in-inventory-management.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cost Control in Inventory Management: Strategies, Formulas & Calculator (2026)" />
+<meta property="og:description" content="Carrying cost, EOQ, dead stock, and stockout cost formulas with worked examples — plus a free calculator for your own inventory numbers." />
+<meta property="og:url" content="https://www.preventloss.org/articles/cost-control-in-inventory-management.html" />
+<meta property="og:site_name" content="PreventLoss.org" />
+<meta property="article:published_time" content="2026-06-20T00:00:00Z" />
+<meta property="article:modified_time" content="2026-06-20T00:00:00Z" />
+<meta property="article:section" content="Cost Control" />
+<meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cost Control in Inventory Management (2026)" />
+<meta name="twitter:description" content="Carrying cost, EOQ, dead stock cost — formulas, examples, and a free calculator for inventory cost control." />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cost Control in Inventory Management: Strategies, Formulas & Calculator",
+  "description": "Inventory cost control explained with formulas, worked examples, practical strategies, and an interactive calculator.",
+  "author": { "@type": "Person", "name": "Mithun GS", "url": "https://www.linkedin.com/in/mithun-gs/" },
+  "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+  "datePublished": "2026-06-20",
+  "dateModified": "2026-06-20",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/cost-control-in-inventory-management.html" },
+  "keywords": "inventory cost control, carrying cost, economic order quantity, dead stock, stockout cost"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is cost control in inventory management?", "acceptedAnswer": { "@type": "Answer", "text": "Cost control in inventory management is the ongoing practice of minimizing the total cost of holding, ordering, and managing stock while still meeting customer demand. It covers carrying costs (storage, insurance, financing), ordering costs, stockout costs, and the cost of dead or obsolete stock." } },
+    { "@type": "Question", "name": "What is Economic Order Quantity (EOQ)?", "acceptedAnswer": { "@type": "Answer", "text": "Economic Order Quantity (EOQ) is the order size that minimizes total inventory costs by balancing ordering costs against holding costs. The formula is EOQ = square root of (2 x Annual Demand x Order Cost / Holding Cost per Unit). Ordering too little increases ordering frequency and cost; ordering too much increases holding cost." } },
+    { "@type": "Question", "name": "What is a typical inventory carrying cost percentage?", "acceptedAnswer": { "@type": "Answer", "text": "Most businesses see inventory carrying costs between 20% and 30% of average inventory value annually, including storage, insurance, financing or opportunity cost, shrinkage, and obsolescence. Some industry estimates run as high as 25-35% when all components are fully accounted for." } },
+    { "@type": "Question", "name": "How do you reduce dead stock cost?", "acceptedAnswer": { "@type": "Answer", "text": "Reducing dead stock cost starts with identifying it through aging reports (inventory that hasn't sold in 90, 180, or 365 days), then taking action: discounting to clear, bundling with faster-moving items, returning to suppliers where possible, or writing it off if it has no remaining value. Preventing future dead stock requires better demand forecasting and tighter reorder controls." } }
+  ]
+}
+</script>
+<style>
+:root{--bg:#0f1117;--surface:#181c27;--surface-2:#1e2535;--border:#252a38;--accent:#2563eb;--accent-lt:#3b82f6;--accent-glow:#1d4ed840;--text:#e2e8f0;--muted:#94a3b8;--heading:#f8fafc;--success:#10b981;--warn:#f59e0b;--danger:#f87171;--c-cc:#f59e0b;--c-cc-bg:#1c1500;--c-im:#10b981;--c-im-bg:#0d2018;--font-display:'Georgia','Times New Roman',serif;--font-body:system-ui,-apple-system,'Segoe UI',sans-serif;--font-mono:'Courier New',monospace;--r-sm:6px;--r-md:12px;--r-lg:20px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased;}
+.site-nav{position:sticky;top:0;z-index:100;background:rgba(15,17,23,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.site-nav .logo{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--heading);text-decoration:none;letter-spacing:-0.02em;}
+.site-nav .logo span{color:var(--accent-lt);}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--text);}
+#read-progress{position:fixed;top:56px;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--c-cc),var(--c-im));z-index:99;transition:width 0.1s linear;}
+.page-wrap{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:52px;align-items:start;}
+@media (max-width:860px){.page-wrap{grid-template-columns:1fr;}.sidebar{display:none;}}
+.article-header{padding:52px 0 36px;border-bottom:1px solid var(--border);margin-bottom:36px;}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:var(--muted);margin-bottom:16px;}
+.breadcrumb a{color:var(--muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--text);}
+.breadcrumb span{color:var(--border);}
+.article-category{display:inline-flex;align-items:center;gap:6px;background:var(--c-cc-bg);border:1px solid var(--c-cc);color:var(--c-cc);font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;margin-bottom:18px;}
+h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.8vw,2.55rem);font-weight:700;color:var(--heading);line-height:1.18;letter-spacing:-0.03em;margin-bottom:18px;}
+.article-deck{font-size:1.05rem;color:var(--muted);line-height:1.65;margin-bottom:22px;max-width:680px;}
+.article-meta{display:flex;flex-wrap:wrap;gap:18px;font-size:0.8rem;color:var(--muted);}
+.article-stats{display:flex;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:40px;overflow:hidden;}
+.stat-item{flex:1;padding:16px 18px;border-right:1px solid var(--border);}
+.stat-item:last-child{border-right:none;}
+.stat-item .s-val{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--heading);line-height:1;margin-bottom:4px;}
+.stat-item .s-val.amber{color:var(--c-cc);}
+.stat-item .s-val.green{color:var(--success);}
+.stat-item .s-lbl{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:600;}
+@media (max-width:600px){.article-stats{flex-wrap:wrap;}.stat-item{flex:1 1 45%;border-bottom:1px solid var(--border);}}
+.article-body h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--heading);letter-spacing:-0.02em;margin:48px 0 14px;padding-top:48px;border-top:1px solid var(--border);}
+.article-body h2:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--heading);margin:26px 0 10px;}
+.article-body p{margin-bottom:18px;color:var(--text);}
+.article-body a{color:var(--c-cc);text-decoration:underline;text-underline-offset:3px;}
+.article-body strong{color:var(--heading);font-weight:600;}
+.article-body em{font-style:italic;color:var(--muted);}
+.callout{border-radius:var(--r-md);padding:18px 22px;margin:24px 0;border-left:4px solid;}
+.callout-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+.callout p{margin-bottom:6px;font-size:0.94rem;}
+.callout p:last-child{margin-bottom:0;}
+.callout-amber{background:var(--c-cc-bg);border-color:var(--c-cc);}
+.callout-amber .callout-label{color:var(--c-cc);}
+.callout-tip{background:#0d1f16;border-color:var(--success);}
+.callout-tip .callout-label{color:var(--success);}
+.callout-info{background:var(--accent-glow);border-color:var(--accent);}
+.callout-info .callout-label{color:var(--accent-lt);}
+.cost-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin:22px 0;}
+.cost-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:18px;border-top:3px solid var(--c-cc);}
+.cost-card .cc-icon{font-size:1.3rem;margin-bottom:8px;display:block;}
+.cost-card .cc-name{font-size:0.88rem;font-weight:700;color:var(--heading);margin-bottom:6px;}
+.cost-card .cc-pct{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--c-cc);margin-bottom:4px;}
+.cost-card .cc-desc{font-size:0.8rem;color:var(--muted);line-height:1.5;}
+.formula-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin:22px 0;}
+.formula-card .fc-header{padding:14px 22px;border-bottom:1px solid var(--border);background:var(--c-cc-bg);display:flex;align-items:center;gap:10px;}
+.fc-header h4{font-size:0.85rem;font-weight:800;color:var(--c-cc);}
+.fc-header .fc-badge{margin-left:auto;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:2px 8px;border-radius:999px;background:var(--c-cc-bg);color:var(--c-cc);border:1px solid var(--c-cc);}
+.fc-body{padding:20px 22px;}
+.fc-formula{font-family:var(--font-mono);font-size:0.93rem;padding:14px 18px;border-radius:var(--r-sm);border:1px solid var(--border);background:var(--bg);display:block;margin-bottom:14px;color:var(--c-cc);line-height:1.5;word-break:break-word;}
+.fc-desc{font-size:0.9rem;color:var(--muted);margin-bottom:14px;}
+.fc-example{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 18px;}
+.fc-example .fe-label{font-size:0.66rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-cc);margin-bottom:10px;}
+.fe-step{display:flex;gap:8px;align-items:baseline;font-family:var(--font-mono);font-size:0.84rem;color:var(--muted);margin-bottom:6px;line-height:1.5;flex-wrap:wrap;}
+.fe-step:last-child{margin-bottom:0;color:var(--c-cc);font-weight:700;}
+.fe-step .step-n{color:var(--border);font-size:0.72rem;flex-shrink:0;}
+.calc-widget{background:var(--surface);border:1px solid var(--c-cc);border-radius:var(--r-lg);padding:26px 28px;margin:28px 0;}
+.calc-widget h3{font-family:var(--font-display);font-size:1.15rem;color:var(--heading);margin-bottom:6px;}
+.calc-widget p.calc-sub{font-size:0.85rem;color:var(--muted);margin-bottom:20px;}
+.calc-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
+.calc-tab{background:var(--bg);border:1px solid var(--border);color:var(--muted);font-size:0.78rem;font-weight:700;padding:8px 16px;border-radius:999px;cursor:pointer;transition:all 0.15s;}
+.calc-tab.active{background:var(--c-cc);color:#1a0f00;border-color:var(--c-cc);}
+.calc-tab:hover:not(.active){border-color:var(--c-cc);color:var(--c-cc);}
+.calc-panel{display:none;}
+.calc-panel.active{display:block;}
+.calc-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+@media (max-width:500px){.calc-fields{grid-template-columns:1fr;}}
+.calc-field label{display:block;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin-bottom:6px;}
+.calc-field input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);color:var(--text);font-size:1rem;padding:10px 14px;outline:none;font-family:var(--font-mono);transition:border-color 0.2s;}
+.calc-field input:focus{border-color:var(--c-cc);}
+.calc-field input::placeholder{color:var(--border);}
+.calc-btn{width:100%;background:var(--c-cc);color:#1a0f00;border:none;font-size:0.9rem;font-weight:700;padding:12px;border-radius:var(--r-sm);cursor:pointer;transition:opacity 0.18s;margin-bottom:16px;}
+.calc-btn:hover{opacity:0.85;}
+.calc-result{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:16px 18px;display:none;}
+.calc-result.show{display:block;}
+.calc-result .cr-label{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;}
+.calc-result .cr-val{font-family:var(--font-display);font-size:2rem;font-weight:700;line-height:1;margin-bottom:8px;}
+.calc-result .cr-verdict{font-size:0.87rem;line-height:1.55;color:var(--muted);}
+.calc-result .cr-verdict strong{color:var(--text);}
+.strategy-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px 24px;margin:18px 0;border-top:3px solid var(--c-im);}
+.strategy-card .st-num{font-family:var(--font-mono);font-size:0.72rem;font-weight:800;color:var(--c-im);background:var(--c-im-bg);border:1px solid var(--c-im);border-radius:var(--r-sm);padding:3px 10px;display:inline-block;margin-bottom:10px;}
+.strategy-card .st-title{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--heading);margin-bottom:10px;}
+.strategy-card p{font-size:0.92rem;color:var(--muted);margin-bottom:12px;}
+.strategy-card .st-impact{display:flex;gap:16px;flex-wrap:wrap;padding-top:12px;border-top:1px solid var(--border);font-size:0.8rem;}
+.st-impact .si-item{display:flex;flex-direction:column;gap:2px;}
+.si-item .si-label{color:var(--muted);font-size:0.68rem;text-transform:uppercase;letter-spacing:0.07em;}
+.si-item .si-val{color:var(--heading);font-weight:700;}
+.si-val.green{color:var(--success);}
+.data-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--border);border-radius:var(--r-md);}
+table{width:100%;border-collapse:collapse;font-size:0.86rem;}
+thead th{background:var(--surface);color:var(--muted);font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:11px 14px;text-align:left;border-bottom:1px solid var(--border);}
+tbody td{padding:11px 14px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover td{background:var(--surface);}
+.badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:0.68rem;font-weight:700;}
+.badge-green{background:#0d2018;color:#34d399;}
+.badge-red{background:#3b0c0c;color:var(--danger);}
+.pull-quote{border-left:4px solid var(--c-cc);padding:16px 24px;margin:30px 0;background:var(--c-cc-bg);border-radius:0 var(--r-md) var(--r-md) 0;}
+.pull-quote p{font-family:var(--font-display);font-size:1.08rem;color:var(--heading);line-height:1.55;font-style:italic;margin:0;}
+.pull-quote cite{display:block;font-size:0.75rem;color:var(--muted);margin-top:10px;font-style:normal;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;}
+.faq-list{margin:14px 0;}
+.faq-item{border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:10px;overflow:hidden;}
+.faq-q{width:100%;background:var(--surface);border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;font-size:0.95rem;font-weight:600;color:var(--heading);text-align:left;gap:12px;}
+.faq-q:hover{background:var(--surface-2);}
+.faq-q .arrow{flex-shrink:0;font-size:1.1rem;color:var(--muted);transition:transform 0.2s;}
+.faq-q[aria-expanded="true"] .arrow{transform:rotate(180deg);}
+.faq-a{display:none;padding:0 20px 18px;font-size:0.92rem;color:var(--muted);background:var(--surface);}
+.faq-a.open{display:block;}
+.related-grid{display:flex;flex-direction:column;gap:12px;margin-top:10px;}
+.related-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:16px 18px;text-decoration:none;display:flex;gap:12px;align-items:flex-start;transition:border-color 0.18s,background 0.15s;}
+.related-card:hover{border-color:var(--c-cc);background:var(--surface-2);}
+.related-card .rc-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px;}
+.related-card .rc-cat{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--c-cc);margin-bottom:4px;}
+.related-card .rc-title{font-size:0.9rem;font-weight:600;color:var(--heading);line-height:1.35;}
+.article-cta{background:linear-gradient(135deg,var(--c-cc-bg) 0%,#181c27 100%);border:1px solid var(--c-cc);border-radius:var(--r-lg);padding:28px 32px;text-align:center;margin-top:44px;}
+.article-cta h3{font-family:var(--font-display);font-size:1.2rem;color:var(--heading);margin-bottom:8px;}
+.article-cta p{color:var(--muted);font-size:0.875rem;margin-bottom:18px;}
+.btn-primary{display:inline-block;background:var(--c-cc);color:#1a0f00;font-weight:700;font-size:0.875rem;padding:11px 26px;border-radius:var(--r-sm);text-decoration:none;transition:opacity 0.18s;}
+.btn-primary:hover{opacity:0.85;}
+.sidebar{padding-top:52px;}
+.sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;margin-bottom:18px;}
+.sidebar-card h4{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted);margin-bottom:12px;}
+.toc-list{list-style:none;}
+.toc-list li{margin-bottom:2px;}
+.toc-list a{font-size:0.79rem;color:var(--muted);text-decoration:none;display:block;padding:4px 0 4px 12px;border-left:2px solid transparent;transition:all 0.15s;line-height:1.35;}
+.toc-list a:hover,.toc-list a.active{color:var(--text);border-color:var(--c-cc);}
+.quickref{position:sticky;top:72px;}
+.qr-header{background:var(--c-cc-bg);border-bottom:1px solid var(--c-cc);padding:14px 18px;display:flex;align-items:center;gap:8px;}
+.qr-header h4{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-cc);}
+.qr-row{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:11px 18px;border-bottom:1px solid var(--border);font-size:0.79rem;}
+.qr-row:last-child{border-bottom:none;}
+.qr-key{color:var(--muted);flex-shrink:0;font-size:0.75rem;}
+.qr-val{color:var(--heading);font-weight:600;text-align:right;font-size:0.75rem;}
+.qr-val.amber{color:var(--c-cc);}
+.qr-val.green{color:var(--success);}
+.site-footer{border-top:1px solid var(--border);margin-top:80px;padding:32px 24px;text-align:center;color:var(--muted);font-size:0.82rem;}
+.site-footer a{color:var(--muted);text-decoration:none;}
+.site-footer a:hover{color:var(--text);}
+</style>
+</head>
+<body>
+<div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+<nav class="site-nav" aria-label="Site navigation">
+<a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+<ul class="nav-links">
+<li><a href="/articles/">Articles</a></li>
+<li><a href="/about.html">About</a></li>
+<li><a href="mailto:contact@preventloss.org">Contact</a></li>
+</ul>
+</nav>
+<div class="page-wrap">
+<main id="main-content">
+<header class="article-header">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/articles/">Articles</a><span>›</span><a href="/articles/?cat=cost-control">Cost Control</a></div>
+<span class="article-category">📉 Cost Control</span>
+<h1>Cost Control in Inventory Management: Strategies, Formulas & Calculator</h1>
+<p class="article-deck">Inventory is usually the largest asset on a business's balance sheet — and one of the most expensive to simply hold onto. This guide breaks down exactly what inventory costs beyond the purchase price, the formulas that measure each component, and the strategies that actually reduce them. Includes a free calculator at the bottom.</p>
+<div class="article-meta">
+<span>🗓 June 20, 2026</span>
+<span>⏱ 11 min read</span>
+<span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--c-cc); text-decoration:underline; text-underline-offset:3px;">Mithun GS</a></span>
+<span>📂 Cost Control</span>
+</div>
+</header>
+
+<div class="article-stats">
+<div class="stat-item"><div class="s-val amber">5</div><div class="s-lbl">Formulas with worked examples</div></div>
+<div class="stat-item"><div class="s-val green">1</div><div class="s-lbl">Free interactive calculator</div></div>
+<div class="stat-item"><div class="s-val">6</div><div class="s-lbl">Practical strategies</div></div>
+<div class="stat-item"><div class="s-val">20–30%</div><div class="s-lbl">Typical annual carrying cost</div></div>
+</div>
+
+<article class="article-body" itemscope itemtype="https://schema.org/Article">
+<meta itemprop="headline" content="Cost Control in Inventory Management: Strategies, Formulas & Calculator" />
+<meta itemprop="datePublished" content="2026-06-20" />
+
+<section id="introduction">
+<h2 style="border-top:none; padding-top:0; margin-top:0;">Inventory Isn't Just an Asset — It's an Ongoing Cost</h2>
+<p>Most businesses think about inventory cost as the price they paid for it. That's only the starting point. Every dollar of stock sitting on a shelf or in a warehouse is quietly costing money every single day it's there — storage space, insurance, financing or opportunity cost, the risk of it becoming damaged or obsolete, and the possibility it gets stolen before it ever sells. None of that shows up on the price tag.</p>
+<p>Cost control in inventory management is the discipline of understanding all of these hidden costs, measuring them properly, and making deliberate decisions to reduce them without compromising your ability to actually serve customers. Order too little and you pay more in ordering costs and risk stockouts. Order too much and you pay more in carrying cost and risk dead stock. The formulas in this guide help you find the right balance — with worked examples for each, and a calculator at the end so you can run your own numbers.</p>
+</section>
+
+<section id="cost-components">
+<h2>The Five Components of Inventory Cost</h2>
+<p>Total inventory cost isn't one number — it's the sum of five distinct categories, each with its own behavior and its own levers for control.</p>
+<div class="cost-grid">
+<div class="cost-card"><span class="cc-icon">🏬</span><div class="cc-name">Storage Cost</div><div class="cc-pct">~6–8%</div><div class="cc-desc">Rent, utilities, and space allocation for wherever inventory physically sits — warehouse, back room, or stockroom.</div></div>
+<div class="cost-card"><span class="cc-icon">🛡️</span><div class="cc-name">Insurance & Risk</div><div class="cc-pct">~2–3%</div><div class="cc-desc">Insuring inventory value against fire, theft, and damage. Scales with total inventory value held.</div></div>
+<div class="cost-card"><span class="cc-icon">💰</span><div class="cc-name">Financing / Opportunity Cost</div><div class="cc-pct">~6–10%</div><div class="cc-desc">The cost of capital tied up in stock — either actual interest paid or the return that money could have earned elsewhere.</div></div>
+<div class="cost-card"><span class="cc-icon">📉</span><div class="cc-name">Shrinkage</div><div class="cc-pct">~1.5–2%</div><div class="cc-desc">Theft, damage, and administrative loss that reduces inventory value without a corresponding sale.</div></div>
+<div class="cost-card"><span class="cc-icon">🗑️</span><div class="cc-name">Obsolescence / Dead Stock</div><div class="cc-pct">~3–5%</div><div class="cc-desc">Stock that becomes unsellable due to expiry, season change, or declining demand before it can be sold.</div></div>
+</div>
+<div class="callout callout-amber"><div class="callout-label">📌 Add them up</div><p>Sum these five components and most businesses land between 20% and 30% of average inventory value annually — meaning $100,000 of average inventory costs roughly $20,000–$30,000 a year just to hold, before it ever generates a sale. Most businesses have never calculated this number for themselves.</p></div>
+</section>
+
+<section id="formulas">
+<h2>The Core Inventory Cost Formulas</h2>
+
+<div class="formula-card">
+<div class="fc-header"><h4>1. Inventory Carrying Cost (Holding Cost)</h4><span class="fc-badge">Annual</span></div>
+<div class="fc-body">
+<code class="fc-formula">Carrying Cost % = (Total Carrying Costs ÷ Average Inventory Value) × 100</code>
+<p class="fc-desc">The combined cost of the five components above, expressed as a percentage of your average inventory value. This is the headline metric for understanding what it costs you to hold stock.</p>
+<div class="fc-example">
+<div class="fe-label">📊 Worked Example</div>
+<div class="fe-step"><span class="step-n">Given:</span> Storage $6,500 + Insurance $2,400 + Financing $8,800 + Shrinkage $1,900 + Obsolescence $3,600 = $23,200 total annual carrying costs</div>
+<div class="fe-step"><span class="step-n">Given:</span> Average Inventory Value = $98,000</div>
+<div class="fe-step"><span class="step-n">Step 1:</span> $23,200 ÷ $98,000 = 0.2367</div>
+<div class="fe-step"><span class="step-n">Result:</span> 0.2367 × 100 = <strong>23.7% carrying cost</strong></div>
+</div>
+</div>
+</div>
+
+<div class="formula-card">
+<div class="fc-header"><h4>2. Economic Order Quantity (EOQ)</h4><span class="fc-badge">Per SKU</span></div>
+<div class="fc-body">
+<code class="fc-formula">EOQ = √((2 × Annual Demand × Order Cost) ÷ Holding Cost per Unit)</code>
+<p class="fc-desc">EOQ is the order quantity that minimizes the combined cost of ordering too often (paying repeated order costs) and ordering too much (paying excess carrying cost). It's the classic balance point between two competing costs.</p>
+<div class="fc-example">
+<div class="fe-label">📊 Worked Example</div>
+<div class="fe-step"><span class="step-n">Given:</span> Annual Demand = 4,800 units | Order Cost = $45 per order | Holding Cost = $3.20 per unit/year</div>
+<div class="fe-step"><span class="step-n">Step 1:</span> 2 × 4,800 × $45 = $432,000</div>
+<div class="fe-step"><span class="step-n">Step 2:</span> $432,000 ÷ $3.20 = 135,000</div>
+<div class="fe-step"><span class="step-n">Result:</span> √135,000 ≈ <strong>367 units per order</strong></div>
+</div>
+</div>
+</div>
+
+<div class="formula-card">
+<div class="fc-header"><h4>3. Dead Stock Cost</h4><span class="fc-badge">Quarterly review</span></div>
+<div class="fc-body">
+<code class="fc-formula">Dead Stock Cost = (Units Unsold Beyond Threshold × Unit Cost) + Carrying Cost on That Stock</code>
+<p class="fc-desc">Dead stock — inventory that hasn't moved within a defined period, typically 90 to 365 days depending on category — represents capital that's not just idle but actively costing carrying expenses while generating zero return.</p>
+<div class="fc-example">
+<div class="fe-label">📊 Worked Example</div>
+<div class="fe-step"><span class="step-n">Given:</span> 340 units unsold for 180+ days | Unit Cost = $18 | Carrying cost rate = 24%</div>
+<div class="fe-step"><span class="step-n">Step 1:</span> 340 × $18 = $6,120 tied up in dead stock</div>
+<div class="fe-step"><span class="step-n">Step 2:</span> $6,120 × 0.24 = $1,469 annual carrying cost on that dead stock alone</div>
+<div class="fe-step"><span class="step-n">Result:</span> <strong>$6,120 capital tied up + $1,469/year ongoing cost</strong></div>
+</div>
+</div>
+</div>
+
+<div class="formula-card">
+<div class="fc-header"><h4>4. Stockout Cost</h4><span class="fc-badge">Per incident</span></div>
+<div class="fc-body">
+<code class="fc-formula">Stockout Cost = Lost Sales Units × Profit per Unit × Customer Loss Factor</code>
+<p class="fc-desc">The cost of NOT having enough stock — lost sales, and for repeat-purchase businesses, lost future customer loyalty when a stockout pushes a customer to a competitor. Often invisible because it never shows up as a recorded transaction.</p>
+<div class="fc-example">
+<div class="fe-label">📊 Worked Example</div>
+<div class="fe-step"><span class="step-n">Given:</span> Estimated 60 lost sales during a 2-week stockout | Profit per unit = $14 | Customer loss factor = 1.3 (accounts for some repeat-customer attrition)</div>
+<div class="fe-step"><span class="step-n">Step 1:</span> 60 × $14 = $840 direct lost profit</div>
+<div class="fe-step"><span class="step-n">Result:</span> $840 × 1.3 ≈ <strong>$1,092 total estimated stockout cost</strong></div>
+</div>
+</div>
+</div>
+
+<div class="formula-card">
+<div class="fc-header"><h4>5. Inventory Turnover Ratio</h4><span class="fc-badge">Quarterly</span></div>
+<div class="fc-body">
+<code class="fc-formula">Inventory Turnover = COGS ÷ Average Inventory Value</code>
+<p class="fc-desc">How many times your average inventory sells through in a given period. Directly connected to carrying cost — slower turnover means more average inventory sitting around accumulating holding costs for longer.</p>
+<div class="fc-example">
+<div class="fe-label">📊 Worked Example</div>
+<div class="fe-step"><span class="step-n">Given:</span> Annual COGS = $340,000 | Average Inventory = $98,000</div>
+<div class="fe-step"><span class="step-n">Step 1:</span> $340,000 ÷ $98,000 = <strong>3.47x annual turnover</strong></div>
+<div class="fe-step"><span class="step-n">Interpretation:</span> Inventory sells through roughly every 3.5 months</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="calculator">
+<h2>Free Inventory Cost Control Calculator</h2>
+<p>Enter your own figures below. Switch between tabs to calculate carrying cost, EOQ, or inventory turnover.</p>
+<div class="calc-widget">
+<h3>📊 Inventory Cost Calculator</h3>
+<p class="calc-sub">Results update instantly with context on whether your number is in a healthy range.</p>
+<div class="calc-tabs">
+<button class="calc-tab active" onclick="switchCalcTab('carry')">Carrying Cost</button>
+<button class="calc-tab" onclick="switchCalcTab('eoq')">EOQ</button>
+<button class="calc-tab" onclick="switchCalcTab('turn')">Turnover Ratio</button>
+</div>
+<div class="calc-panel active" id="panel-carry">
+<div class="calc-fields">
+<div class="calc-field"><label for="c-total">Total Carrying Costs ($/yr)</label><input type="number" id="c-total" placeholder="e.g. 23200" min="0" step="any" /></div>
+<div class="calc-field"><label for="c-avg">Average Inventory Value ($)</label><input type="number" id="c-avg" placeholder="e.g. 98000" min="0" step="any" /></div>
+</div>
+<button class="calc-btn" onclick="calcCarry()">Calculate Carrying Cost %</button>
+<div class="calc-result" id="result-carry"></div>
+</div>
+<div class="calc-panel" id="panel-eoq">
+<div class="calc-fields">
+<div class="calc-field"><label for="e-demand">Annual Demand (units)</label><input type="number" id="e-demand" placeholder="e.g. 4800" min="0" step="any" /></div>
+<div class="calc-field"><label for="e-order">Order Cost ($ per order)</label><input type="number" id="e-order" placeholder="e.g. 45" min="0" step="any" /></div>
+<div class="calc-field"><label for="e-hold">Holding Cost ($ per unit/yr)</label><input type="number" id="e-hold" placeholder="e.g. 3.20" min="0" step="any" /></div>
+</div>
+<button class="calc-btn" onclick="calcEOQ()">Calculate EOQ</button>
+<div class="calc-result" id="result-eoq"></div>
+</div>
+<div class="calc-panel" id="panel-turn">
+<div class="calc-fields">
+<div class="calc-field"><label for="t-cogs">Annual COGS ($)</label><input type="number" id="t-cogs" placeholder="e.g. 340000" min="0" step="any" /></div>
+<div class="calc-field"><label for="t-avg">Average Inventory Value ($)</label><input type="number" id="t-avg" placeholder="e.g. 98000" min="0" step="any" /></div>
+</div>
+<button class="calc-btn" onclick="calcTurnover()">Calculate Turnover Ratio</button>
+<div class="calc-result" id="result-turn"></div>
+</div>
+</div>
+</section>
+
+<section id="benchmarks">
+<h2>Inventory Cost Benchmarks</h2>
+<div class="data-table-wrap">
+<table>
+<thead><tr><th>Metric</th><th>Healthy Range</th><th>Needs Attention</th></tr></thead>
+<tbody>
+<tr><td><strong>Carrying Cost %</strong></td><td><span class="badge badge-green">Below 20%</span></td><td><span class="badge badge-red">Above 30%</span></td></tr>
+<tr><td><strong>Inventory Turnover</strong></td><td><span class="badge badge-green">4x+ annually (varies by category)</span></td><td><span class="badge badge-red">Below 2x annually</span></td></tr>
+<tr><td><strong>Dead Stock % of Inventory</strong></td><td><span class="badge badge-green">Below 5%</span></td><td><span class="badge badge-red">Above 15%</span></td></tr>
+<tr><td><strong>Stockout Frequency</strong></td><td><span class="badge badge-green">Below 2% of order lines</span></td><td><span class="badge badge-red">Above 8% of order lines</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:0.85rem;">Turnover benchmarks vary significantly by category — grocery and perishables turn much faster than furniture or jewelry. Compare against your own category, not a blended retail average.</p>
+</section>
+
+<section id="strategies">
+<h2>6 Strategies to Reduce Inventory Costs</h2>
+
+<div class="strategy-card">
+<span class="st-num">Strategy 01</span>
+<div class="st-title">Calculate EOQ for Your Top 20% of SKUs by Value</div>
+<p>You don't need to calculate EOQ for every single item — focus on the SKUs that represent the largest share of your inventory value. Getting order quantities right on these handful of items typically delivers most of the available savings, since they carry the most weight in your total carrying cost.</p>
+<div class="st-impact"><div class="si-item"><span class="si-label">Effort</span><span class="si-val">Medium</span></div><div class="si-item"><span class="si-label">Cost</span><span class="si-val green">Free</span></div><div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">5–10% carrying cost reduction</span></div></div>
+</div>
+
+<div class="strategy-card">
+<span class="st-num">Strategy 02</span>
+<div class="st-title">Run a Dead Stock Aging Report Every Quarter</div>
+<p>Most businesses discover dead stock by accident during a count, months after it's stopped moving. A quarterly aging report — flagging anything that hasn't sold in 90, 180, or 365 days — catches it early enough to act: discount, bundle, return to supplier, or write off before the carrying cost compounds further.</p>
+<div class="st-impact"><div class="si-item"><span class="si-label">Effort</span><span class="si-val">Low</span></div><div class="si-item"><span class="si-label">Cost</span><span class="si-val green">Free</span></div><div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">2–5% of inventory value recovered</span></div></div>
+</div>
+
+<div class="strategy-card">
+<span class="st-num">Strategy 03</span>
+<div class="st-title">Improve Demand Forecasting With Historical Sales Data</div>
+<p>A meaningful share of both dead stock and stockouts comes from ordering based on gut feel rather than actual sales history. Even a basic forecast — average of the same period last year, adjusted for current trend — reduces both over-ordering (dead stock) and under-ordering (stockouts) simultaneously.</p>
+<div class="st-impact"><div class="si-item"><span class="si-label">Effort</span><span class="si-val">Medium</span></div><div class="si-item"><span class="si-label">Cost</span><span class="si-val green">Free</span></div><div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">Reduces both dead stock & stockouts</span></div></div>
+</div>
+
+<div class="strategy-card">
+<span class="st-num">Strategy 04</span>
+<div class="st-title">Negotiate Smaller, More Frequent Deliveries on High-Value Items</div>
+<p>For your highest-value SKUs, smaller and more frequent deliveries reduce average inventory on hand — and therefore carrying cost — even if total annual order cost rises slightly. The trade-off usually favors lower carrying cost, especially on items where holding cost per unit is high relative to order cost.</p>
+<div class="st-impact"><div class="si-item"><span class="si-label">Effort</span><span class="si-val">Medium</span></div><div class="si-item"><span class="si-label">Cost</span><span class="si-val">Low</span></div><div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">3–8% carrying cost reduction</span></div></div>
+</div>
+
+<div class="strategy-card">
+<span class="st-num">Strategy 05</span>
+<div class="st-title">Reduce Shrinkage Through Receiving and Cycle Count Discipline</div>
+<p>Shrinkage is one of the five carrying cost components and one of the most directly controllable. Verified receiving against purchase orders and regular cycle counts on high-risk SKUs reduce the shrinkage component of your carrying cost without requiring any change to ordering behavior.</p>
+<div class="st-impact"><div class="si-item"><span class="si-label">Effort</span><span class="si-val">Low</span></div><div class="si-item"><span class="si-label">Cost</span><span class="si-val green">Free</span></div><div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">0.5–1.5% carrying cost reduction</span></div></div>
+</div>
+
+<div class="strategy-card">
+<span class="st-num">Strategy 06</span>
+<div class="st-title">Track Carrying Cost as a KPI, Not a Once-a-Year Calculation</div>
+<p>Most businesses calculate carrying cost once, if ever, and then forget about it. Treating it as a recurring metric — reviewed quarterly alongside turnover and dead stock — keeps it visible enough that decisions about ordering, storage, and clearance get made with the actual cost in mind rather than on instinct.</p>
+<div class="st-impact"><div class="si-item"><span class="si-label">Effort</span><span class="si-val">Low</span></div><div class="si-item"><span class="si-label">Cost</span><span class="si-val green">Free</span></div><div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">Sustains all other gains</span></div></div>
+</div>
+
+<div class="pull-quote"><p>"The cost of inventory doesn't end at the purchase price — it starts there. Every day a unit sits unsold, it's quietly accumulating cost that never shows up until someone actually calculates it."</p><cite>— Preventloss.org</cite></div>
+</section>
+
+<section id="conclusion">
+<h2>The Number Most Businesses Have Never Calculated</h2>
+<p>If you take one thing from this guide, make it this: calculate your carrying cost percentage at least once, using your actual numbers. Most business owners have a vague sense that holding inventory costs something, but very few have ever put a real number on it — and that number is almost always larger than expected once storage, insurance, financing, shrinkage, and obsolescence are all added together.</p>
+<p>From there, the EOQ, turnover, and dead stock formulas give you specific levers to pull. None of them require new systems or significant investment — they require running the numbers, comparing against the benchmarks, and treating inventory cost as a metric worth managing actively rather than an unavoidable cost of doing business.</p>
+<div class="callout callout-tip"><div class="callout-label">✅ Where to start today</div><p>Use the calculator above to find your carrying cost percentage with your real numbers. If it's above 25%, run a dead stock aging report next — that's usually where the fastest, easiest savings are sitting.</p></div>
+<div class="article-cta"><h3>Explore More Cost Control & Inventory Guides</h3><p>Free practical articles on shrinkage, vendor fraud, real case studies, and operations excellence — no sign-up needed.</p><a href="/articles/" class="btn-primary">Browse All Articles →</a></div>
+</section>
+
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-list">
+<div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is cost control in inventory management?<span class="arrow">▾</span></button><div class="faq-a">Cost control in inventory management is the ongoing practice of minimizing the total cost of holding, ordering, and managing stock while still meeting customer demand. It covers carrying costs (storage, insurance, financing), ordering costs, stockout costs, and the cost of dead or obsolete stock.</div></div>
+<div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is Economic Order Quantity (EOQ)?<span class="arrow">▾</span></button><div class="faq-a">EOQ is the order size that minimizes total inventory costs by balancing ordering costs against holding costs. The formula is EOQ = square root of (2 × Annual Demand × Order Cost ÷ Holding Cost per Unit). Ordering too little increases ordering frequency and cost; ordering too much increases holding cost.</div></div>
+<div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is a typical inventory carrying cost percentage?<span class="arrow">▾</span></button><div class="faq-a">Most businesses see inventory carrying costs between 20% and 30% of average inventory value annually, including storage, insurance, financing or opportunity cost, shrinkage, and obsolescence. Some industry estimates run as high as 25–35% when all components are fully accounted for.</div></div>
+<div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How do you reduce dead stock cost?<span class="arrow">▾</span></button><div class="faq-a">Start by identifying dead stock through aging reports — inventory that hasn't sold in 90, 180, or 365 days. Then take action: discount to clear, bundle with faster-moving items, return to suppliers where possible, or write it off if it has no remaining value. Preventing future dead stock requires better demand forecasting and tighter reorder controls.</div></div>
+</div>
+</section>
+
+<section id="related-articles">
+<h2>Related Articles</h2>
+<div class="related-grid">
+<a class="related-card" href="/articles/cost-control-in-retail.html"><span class="rc-icon">📉</span><div><div class="rc-cat">Cost Control</div><div class="rc-title">Cost Control in Retail: Strategies to Improve Profitability</div></div></a>
+<a class="related-card" href="/articles/what-is-cost-control.html"><span class="rc-icon">📊</span><div><div class="rc-cat">Cost Control</div><div class="rc-title">What Is Cost Control? Definition, Examples & Strategies for Every Business</div></div></a>
+<a class="related-card" href="/articles/vendor-fraud-prevention.html"><span class="rc-icon">🤝</span><div><div class="rc-cat">Procurement</div><div class="rc-title">Vendor Fraud Prevention: How to Protect Your Supply Chain</div></div></a>
+<a class="related-card" href="/articles/airport-chocolate-store-fraud-case-study.html"><span class="rc-icon">🔴</span><div><div class="rc-cat">Real Case Study</div><div class="rc-title">The Airport Chocolate Store Fraud: How a Manager Turned Promotional Offers into a Personal Business</div></div></a>
+</div>
+</section>
+
+</article>
+</main>
+
+<aside class="sidebar" aria-label="Article sidebar">
+<div class="sidebar-card quickref">
+<div class="qr-header"><span>📉</span><h4>Quick Reference</h4></div>
+<div class="qr-row"><span class="qr-key">Carrying cost formula</span><span class="qr-val">Costs ÷ Avg Inventory</span></div>
+<div class="qr-row"><span class="qr-key">EOQ formula</span><span class="qr-val">√(2×Demand×OrderCost÷HoldCost)</span></div>
+<div class="qr-row"><span class="qr-key">Turnover formula</span><span class="qr-val">COGS ÷ Avg Inventory</span></div>
+<div class="qr-row"><span class="qr-key">5 cost components</span><span class="qr-val">Storage, insurance, financing, shrinkage, obsolescence</span></div>
+<div class="qr-row"><span class="qr-key">Healthy carrying cost</span><span class="qr-val green">Below 20%</span></div>
+<div class="qr-row"><span class="qr-key">Avg carrying cost</span><span class="qr-val amber">20% – 30%</span></div>
+<div class="qr-row"><span class="qr-key">Healthy dead stock</span><span class="qr-val green">Below 5%</span></div>
+<div class="qr-row"><span class="qr-key">First action</span><span class="qr-val green">Calculate carrying cost %</span></div>
+</div>
+<div class="sidebar-card">
+<h4>In This Article</h4>
+<ul class="toc-list">
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#cost-components">5 Cost Components</a></li>
+<li><a href="#formulas">Core Formulas</a></li>
+<li><a href="#calculator">Free Calculator</a></li>
+<li><a href="#benchmarks">Benchmarks</a></li>
+<li><a href="#strategies">6 Strategies</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#related-articles">Related Articles</a></li>
+</ul>
+</div>
+</aside>
+</div>
+
+<footer class="site-footer">
+<p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+<p style="margin-top:8px;"><a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a></p>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const doc = document.documentElement;
+  document.getElementById('read-progress').style.width = ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+});
+
+function toggleFaq(btn) {
+  const isOpen = btn.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll('.faq-q').forEach(b => {
+    b.setAttribute('aria-expanded', 'false');
+    b.nextElementSibling.classList.remove('open');
+  });
+  if (!isOpen) {
+    btn.setAttribute('aria-expanded', 'true');
+    btn.nextElementSibling.classList.add('open');
+  }
+}
+
+function switchCalcTab(tab) {
+  document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+  document.querySelector(`.calc-tab[onclick="switchCalcTab('${tab}')"]`).classList.add('active');
+  document.getElementById('panel-' + tab).classList.add('active');
+}
+
+function calcCarry() {
+  const total = parseFloat(document.getElementById('c-total').value);
+  const avg   = parseFloat(document.getElementById('c-avg').value);
+  const r = document.getElementById('result-carry');
+  if (isNaN(total) || isNaN(avg) || avg <= 0) { alert('Enter valid Total Carrying Costs and Average Inventory Value.'); return; }
+  const pct = (total / avg) * 100;
+  let color = '#10b981', verdict = 'Below typical range — efficient inventory management.';
+  if (pct > 30) { color = '#f87171'; verdict = 'Above typical range — review slow-moving stock, storage, and financing costs.'; }
+  else if (pct >= 20) { color = '#f59e0b'; verdict = 'Within typical range (20–30%) — room for improvement.'; }
+  r.innerHTML = '<div class="cr-label">Inventory Carrying Cost</div><div class="cr-val" style="color:' + color + '">' + pct.toFixed(2) + '%</div><div class="cr-verdict"><strong style="color:' + color + '">' + verdict + '</strong><br>$' + total.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' annual carrying cost on $' + avg.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' average inventory.</div>';
+  r.classList.add('show');
+}
+
+function calcEOQ() {
+  const demand = parseFloat(document.getElementById('e-demand').value);
+  const order  = parseFloat(document.getElementById('e-order').value);
+  const hold   = parseFloat(document.getElementById('e-hold').value);
+  const r = document.getElementById('result-eoq');
+  if (isNaN(demand) || isNaN(order) || isNaN(hold) || demand <= 0 || order <= 0 || hold <= 0) {
+    alert('Enter valid Annual Demand, Order Cost, and Holding Cost values (all must be greater than zero).');
+    return;
+  }
+  const eoq = Math.sqrt((2 * demand * order) / hold);
+  const ordersPerYear = demand / eoq;
+  const daysBetween = 365 / ordersPerYear;
+  r.innerHTML = '<div class="cr-label">Economic Order Quantity</div><div class="cr-val" style="color:#10b981">' + Math.round(eoq) + ' units</div><div class="cr-verdict"><strong style="color:#10b981">Optimal order size to minimize total cost</strong><br>This results in approximately ' + ordersPerYear.toFixed(1) + ' orders per year, roughly every ' + Math.round(daysBetween) + ' days.</div>';
+  r.classList.add('show');
+}
+
+function calcTurnover() {
+  const cogs = parseFloat(document.getElementById('t-cogs').value);
+  const avg  = parseFloat(document.getElementById('t-avg').value);
+  const r = document.getElementById('result-turn');
+  if (isNaN(cogs) || isNaN(avg) || avg <= 0) { alert('Enter valid COGS and Average Inventory Value.'); return; }
+  const turns = cogs / avg;
+  const daysToSell = 365 / turns;
+  let color = '#10b981', verdict = 'Healthy turnover — inventory is moving efficiently.';
+  if (turns < 2) { color = '#f87171'; verdict = 'Low turnover — review slow-moving categories and carrying cost impact.'; }
+  else if (turns < 4) { color = '#f59e0b'; verdict = 'Moderate turnover — compare against your specific category benchmark.'; }
+  r.innerHTML = '<div class="cr-label">Inventory Turnover Ratio</div><div class="cr-val" style="color:' + color + '">' + turns.toFixed(2) + 'x / year</div><div class="cr-verdict"><strong style="color:' + color + '">' + verdict + '</strong><br>Inventory sells through roughly every ' + Math.round(daysToSell) + ' days on average.</div>';
+  r.classList.add('show');
+}
+
+const sections = document.querySelectorAll('section[id]');
+const tocLinks = document.querySelectorAll('.toc-list a');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const a = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+      if (a) a.classList.add('active');
+    }
+  });
+}, { rootMargin: '-15% 0px -75% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
