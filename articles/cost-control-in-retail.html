@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <title>Cost Control in Retail: Strategies to Improve Profitability (Formulas & Calculator) 2026</title>
+  <meta name="description" content="Practical cost control strategies for retail businesses — gross margin, inventory carrying cost, labor cost percentage, and shrinkage formulas with worked examples, plus a free interactive calculator to run your own numbers." />
+  <meta name="keywords" content="cost control in retail, retail cost control strategies, how to improve retail profitability, retail cost control formulas, gross margin formula retail, inventory carrying cost formula, labor cost percentage retail, retail profit margin calculator, cost control techniques retail business, reduce retail operating costs, retail cost management USA, retail profitability strategies, COGS formula retail, retail expense control" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mithun GS" />
+  <link rel="canonical" href="https://www.preventloss.org/articles/cost-control-in-retail.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cost Control in Retail: Strategies to Improve Profitability (2026)" />
+  <meta property="og:description" content="Real formulas, worked examples, and a free calculator — the cost control strategies that actually move retail profitability." />
+  <meta property="og:url" content="https://www.preventloss.org/articles/cost-control-in-retail.html" />
+  <meta property="og:site_name" content="PreventLoss.org" />
+  <meta property="article:published_time" content="2026-06-20T00:00:00Z" />
+  <meta property="article:modified_time" content="2026-06-20T00:00:00Z" />
+  <meta property="article:section" content="Cost Control" />
+  <meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cost Control in Retail: Strategies & Formulas (2026)" />
+  <meta name="twitter:description" content="Gross margin, carrying cost, labor %, shrinkage — formulas, examples, and a free calculator for retail profitability." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cost Control in Retail: Strategies to Improve Profitability",
+    "description": "Practical cost control strategies and formulas for retail businesses, with worked examples and an interactive calculator.",
+    "author": {
+      "@type": "Person",
+      "name": "Mithun GS",
+      "url": "https://www.linkedin.com/in/mithun-gs/"
+    },
+    "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+    "datePublished": "2026-06-20",
+    "dateModified": "2026-06-20",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/cost-control-in-retail.html" },
+    "keywords": "cost control retail, retail profitability, gross margin formula, inventory carrying cost, labor cost percentage"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is cost control in retail?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cost control in retail is the ongoing process of monitoring and managing the expenses that affect retail profitability — cost of goods sold, labor, shrinkage, occupancy, and operational waste — to keep them within budget and protect margin. It's a continuous discipline rather than a one-time cost-cutting exercise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good gross margin for a retail business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gross margin varies widely by retail category. Grocery typically runs 20-25%, general apparel 50-60%, jewelry and accessories can exceed 60%, and electronics often run lower at 15-25%. There's no single universal target — compare your margin against your specific category benchmark rather than a generic number."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you calculate inventory carrying cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inventory carrying cost is calculated as a percentage of average inventory value, typically including storage, insurance, financing, shrinkage, and obsolescence costs. Formula: Carrying Cost % = (Total Carrying Costs / Average Inventory Value) x 100. Most retailers see carrying costs between 20-30% of inventory value annually."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What percentage of revenue should labor cost be in retail?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Labor cost as a percentage of sales typically ranges from 10-20% in retail, depending on the business model. Self-service retail with minimal staffing can run as low as 8-10%, while specialty retail requiring more customer service often runs 15-20%. Track this weekly against your specific historical baseline rather than a generic industry number."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:          #0f1117;
+      --surface:     #181c27;
+      --surface-2:   #1e2535;
+      --border:      #252a38;
+      --accent:      #2563eb;
+      --accent-lt:   #3b82f6;
+      --accent-glow: #1d4ed840;
+      --text:        #e2e8f0;
+      --muted:       #94a3b8;
+      --heading:     #f8fafc;
+      --success:     #10b981;
+      --warn:        #f59e0b;
+      --danger:      #f87171;
+      --c-cc:        #f59e0b;
+      --c-cc-bg:     #1c1500;
+
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono:    'Courier New', monospace;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: var(--font-body); font-size: 17px; line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .site-nav .logo { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--heading); text-decoration: none; letter-spacing: -0.02em; }
+    .site-nav .logo span { color: var(--accent-lt); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    #read-progress {
+      position: fixed; top: 56px; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--c-cc), var(--warn));
+      z-index: 99; transition: width 0.1s linear;
+    }
+
+    .page-wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 300px; gap: 52px; align-items: start; }
+    @media (max-width: 860px) { .page-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+
+    .article-header { padding: 52px 0 36px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--muted); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--border); }
+    .article-category { display: inline-flex; align-items: center; gap: 6px; background: var(--c-cc-bg); border: 1px solid var(--c-cc); color: var(--c-cc); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 12px; border-radius: 999px; margin-bottom: 18px; }
+    h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 3.8vw, 2.6rem); font-weight: 700; color: var(--heading); line-height: 1.18; letter-spacing: -0.03em; margin-bottom: 18px; }
+    .article-deck { font-size: 1.05rem; color: var(--muted); line-height: 1.65; margin-bottom: 22px; max-width: 680px; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.8rem; color: var(--muted); }
+
+    .article-stats { display: flex; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 40px; overflow: hidden; }
+    .stat-item { flex: 1; padding: 16px 18px; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-item .s-val { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--heading); line-height: 1; margin-bottom: 4px; }
+    .stat-item .s-val.amber { color: var(--c-cc); }
+    .stat-item .s-val.green { color: var(--success); }
+    .stat-item .s-lbl { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; }
+    @media (max-width: 600px) { .article-stats { flex-wrap: wrap; } .stat-item { flex: 1 1 45%; border-bottom: 1px solid var(--border); } }
+
+    .article-body h2 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--heading); letter-spacing: -0.02em; margin: 48px 0 14px; padding-top: 48px; border-top: 1px solid var(--border); }
+    .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--heading); margin: 26px 0 10px; }
+    .article-body p { margin-bottom: 18px; color: var(--text); }
+    .article-body a { color: var(--c-cc); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body strong { color: var(--heading); font-weight: 600; }
+    .article-body em { font-style: italic; color: var(--muted); }
+
+    .callout { border-radius: var(--r-md); padding: 18px 22px; margin: 24px 0; border-left: 4px solid; }
+    .callout-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .callout p { margin-bottom: 6px; font-size: 0.94rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout-amber { background: var(--c-cc-bg); border-color: var(--c-cc); }
+    .callout-amber .callout-label { color: var(--c-cc); }
+    .callout-tip   { background: #0d1f16; border-color: var(--success); }
+    .callout-tip .callout-label { color: var(--success); }
+    .callout-info  { background: var(--accent-glow); border-color: var(--accent); }
+    .callout-info .callout-label { color: var(--accent-lt); }
+    .callout-warn  { background: #1c0808; border-color: var(--danger); }
+    .callout-warn .callout-label { color: var(--danger); }
+
+    .formula-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; margin: 22px 0; }
+    .formula-card .fc-header { padding: 14px 22px; border-bottom: 1px solid var(--border); background: var(--c-cc-bg); display: flex; align-items: center; gap: 10px; }
+    .fc-header h4 { font-size: 0.85rem; font-weight: 800; color: var(--c-cc); }
+    .fc-header .fc-badge { margin-left: auto; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 2px 8px; border-radius: 999px; background: var(--c-cc-bg); color: var(--c-cc); border: 1px solid var(--c-cc); }
+    .fc-body { padding: 20px 22px; }
+    .fc-formula { font-family: var(--font-mono); font-size: 0.96rem; padding: 14px 18px; border-radius: var(--r-sm); border: 1px solid var(--border); background: var(--bg); display: block; margin-bottom: 14px; color: var(--c-cc); line-height: 1.5; word-break: break-word; }
+    .fc-desc { font-size: 0.9rem; color: var(--muted); margin-bottom: 14px; }
+
+    .fc-example { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px 18px; }
+    .fc-example .fe-label { font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-cc); margin-bottom: 10px; }
+    .fe-step { display: flex; gap: 8px; align-items: baseline; font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; line-height: 1.5; }
+    .fe-step:last-child { margin-bottom: 0; color: var(--c-cc); font-weight: 700; }
+    .fe-step .step-n { color: var(--border); font-size: 0.72rem; flex-shrink: 0; }
+
+    .calc-widget {
+      background: var(--surface); border: 1px solid var(--c-cc);
+      border-radius: var(--r-lg); padding: 26px 28px; margin: 28px 0;
+    }
+    .calc-widget h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--heading); margin-bottom: 6px; }
+    .calc-widget p.calc-sub { font-size: 0.85rem; color: var(--muted); margin-bottom: 20px; }
+    .calc-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .calc-tab {
+      background: var(--bg); border: 1px solid var(--border); color: var(--muted);
+      font-size: 0.78rem; font-weight: 700; padding: 8px 16px; border-radius: 999px;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .calc-tab.active { background: var(--c-cc); color: #1a0f00; border-color: var(--c-cc); }
+    .calc-tab:hover:not(.active) { border-color: var(--c-cc); color: var(--c-cc); }
+
+    .calc-panel { display: none; }
+    .calc-panel.active { display: block; }
+    .calc-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+    @media (max-width: 500px) { .calc-fields { grid-template-columns: 1fr; } }
+    .calc-field label { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin-bottom: 6px; }
+    .calc-field input {
+      width: 100%; background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--r-sm); color: var(--text); font-size: 1rem;
+      padding: 10px 14px; outline: none; font-family: var(--font-mono);
+      transition: border-color 0.2s;
+    }
+    .calc-field input:focus { border-color: var(--c-cc); }
+    .calc-field input::placeholder { color: var(--border); }
+    .calc-btn {
+      width: 100%; background: var(--c-cc); color: #1a0f00;
+      border: none; font-size: 0.9rem; font-weight: 700;
+      padding: 12px; border-radius: var(--r-sm); cursor: pointer;
+      transition: opacity 0.18s; margin-bottom: 16px;
+    }
+    .calc-btn:hover { opacity: 0.85; }
+    .calc-result {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--r-sm); padding: 16px 18px; display: none;
+    }
+    .calc-result.show { display: block; }
+    .calc-result .cr-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+    .calc-result .cr-val { font-family: var(--font-display); font-size: 2rem; font-weight: 700; line-height: 1; margin-bottom: 8px; }
+    .calc-result .cr-verdict { font-size: 0.87rem; line-height: 1.55; color: var(--muted); }
+    .calc-result .cr-verdict strong { color: var(--text); }
+
+    .strategy-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 22px 24px; margin: 18px 0; border-top: 3px solid var(--c-cc); }
+    .strategy-card .st-num { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; color: var(--c-cc); background: var(--c-cc-bg); border: 1px solid var(--c-cc); border-radius: var(--r-sm); padding: 3px 10px; display: inline-block; margin-bottom: 10px; }
+    .strategy-card .st-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--heading); margin-bottom: 10px; }
+    .strategy-card p { font-size: 0.92rem; color: var(--muted); margin-bottom: 12px; }
+    .strategy-card .st-impact { display: flex; gap: 16px; flex-wrap: wrap; padding-top: 12px; border-top: 1px solid var(--border); font-size: 0.8rem; }
+    .st-impact .si-item { display: flex; flex-direction: column; gap: 2px; }
+    .si-item .si-label { color: var(--muted); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.07em; }
+    .si-item .si-val { color: var(--heading); font-weight: 700; }
+    .si-val.green { color: var(--success); }
+
+    .data-table-wrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--border); border-radius: var(--r-md); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    thead th { background: var(--surface); color: var(--muted); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--surface); }
+
+    .pull-quote { border-left: 4px solid var(--c-cc); padding: 16px 24px; margin: 30px 0; background: var(--c-cc-bg); border-radius: 0 var(--r-md) var(--r-md) 0; }
+    .pull-quote p { font-family: var(--font-display); font-size: 1.08rem; color: var(--heading); line-height: 1.55; font-style: italic; margin: 0; }
+    .pull-quote cite { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 10px; font-style: normal; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; }
+
+    .faq-list { margin: 14px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--r-md); margin-bottom: 10px; overflow: hidden; }
+    .faq-q { width: 100%; background: var(--surface); border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; font-size: 0.95rem; font-weight: 600; color: var(--heading); text-align: left; gap: 12px; }
+    .faq-q:hover { background: var(--surface-2); }
+    .faq-q .arrow { flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 0.92rem; color: var(--muted); background: var(--surface); }
+    .faq-a.open { display: block; }
+
+    .related-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+    .related-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: 16px 18px; text-decoration: none; display: flex; gap: 12px; align-items: flex-start; transition: border-color 0.18s, background 0.15s; }
+    .related-card:hover { border-color: var(--c-cc); background: var(--surface-2); }
+    .related-card .rc-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .related-card .rc-cat { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--c-cc); margin-bottom: 4px; }
+    .related-card .rc-title { font-size: 0.9rem; font-weight: 600; color: var(--heading); line-height: 1.35; }
+
+    .article-cta { background: linear-gradient(135deg, var(--c-cc-bg) 0%, #181c27 100%); border: 1px solid var(--c-cc); border-radius: var(--r-lg); padding: 28px 32px; text-align: center; margin-top: 44px; }
+    .article-cta h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--heading); margin-bottom: 8px; }
+    .article-cta p  { color: var(--muted); font-size: 0.875rem; margin-bottom: 18px; }
+    .btn-primary { display: inline-block; background: var(--c-cc); color: #1a0f00; font-weight: 700; font-size: 0.875rem; padding: 11px 26px; border-radius: var(--r-sm); text-decoration: none; transition: opacity 0.18s; }
+    .btn-primary:hover { opacity: 0.85; }
+
+    .sidebar { padding-top: 52px; }
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 18px; margin-bottom: 18px; }
+    .sidebar-card h4 { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--muted); margin-bottom: 12px; }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a { font-size: 0.79rem; color: var(--muted); text-decoration: none; display: block; padding: 4px 0 4px 12px; border-left: 2px solid transparent; transition: all 0.15s; line-height: 1.35; }
+    .toc-list a:hover, .toc-list a.active { color: var(--text); border-color: var(--c-cc); }
+    .quickref { position: sticky; top: 72px; }
+    .qr-header { background: var(--c-cc-bg); border-bottom: 1px solid var(--c-cc); padding: 14px 18px; display: flex; align-items: center; gap: 8px; }
+    .qr-header h4 { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-cc); }
+    .qr-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding: 11px 18px; border-bottom: 1px solid var(--border); font-size: 0.79rem; }
+    .qr-row:last-child { border-bottom: none; }
+    .qr-key { color: var(--muted); flex-shrink: 0; font-size: 0.75rem; }
+    .qr-val { color: var(--heading); font-weight: 600; text-align: right; font-size: 0.75rem; }
+    .qr-val.amber { color: var(--c-cc); }
+    .qr-val.green { color: var(--success); }
+
+    .site-footer { border-top: 1px solid var(--border); margin-top: 80px; padding: 32px 24px; text-align: center; color: var(--muted); font-size: 0.82rem; }
+    .site-footer a { color: var(--muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+    <ul class="nav-links">
+      <li><a href="/articles/">Articles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+    <main id="main-content">
+
+      <header class="article-header">
+        <div class="breadcrumb">
+          <a href="/">Home</a><span>›</span>
+          <a href="/articles/">Articles</a><span>›</span>
+          <a href="/articles/?cat=cost-control">Cost Control</a>
+        </div>
+        <span class="article-category">📉 Cost Control</span>
+        <h1>Cost Control in Retail: Strategies to Improve Profitability</h1>
+        <p class="article-deck">
+          Retail profitability usually doesn't collapse from one big mistake — it erodes slowly across five or six cost categories that nobody's watching closely enough. Here are the formulas that actually measure where your margin is leaking, worked examples for each one, and a free calculator so you can run your own numbers right now.
+        </p>
+        <div class="article-meta">
+          <span>🗓 June 20, 2026</span>
+          <span>⏱ 11 min read</span>
+          <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--c-cc); text-decoration:underline; text-underline-offset:3px;">Mithun GS</a></span>
+          <span>📂 Cost Control</span>
+        </div>
+      </header>
+
+      <div class="article-stats">
+        <div class="stat-item"><div class="s-val amber">6</div><div class="s-lbl">Formulas with worked examples</div></div>
+        <div class="stat-item"><div class="s-val green">1</div><div class="s-lbl">Free interactive calculator</div></div>
+        <div class="stat-item"><div class="s-val">7</div><div class="s-lbl">Practical strategies</div></div>
+        <div class="stat-item"><div class="s-val">Any size</div><div class="s-lbl">Store, chain, or category</div></div>
+      </div>
+
+      <article class="article-body" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="Cost Control in Retail: Strategies to Improve Profitability" />
+        <meta itemprop="datePublished" content="2026-06-20" />
+
+        <!-- INTRO -->
+        <section id="introduction">
+          <h2 style="border-top:none; padding-top:0; margin-top:0;">Where Retail Margin Actually Goes</h2>
+          <p>
+            Ask most retail owners why their margin isn't where they want it, and the answer is usually a guess — "prices are tight," "rent's gone up," "the market's tough right now." All of those can be true. But in my experience, most retail margin erosion isn't caused by the market. It's caused by five or six specific, measurable things that nobody's tracking closely enough to notice until the year-end numbers come in worse than expected.
+          </p>
+          <p>
+            The fix isn't a single big initiative. It's knowing the formulas, calculating them regularly, and treating each one as a number worth defending — the same way you'd defend your sales figures. This guide walks through six formulas that matter most in retail, with worked examples for each, seven practical strategies for improving them, and an interactive calculator at the bottom so you can plug in your own numbers right now.
+          </p>
+        </section>
+
+        <!-- FORMULAS -->
+        <section id="gross-margin">
+          <h2>The Core Formulas</h2>
+          <p>These six numbers, tracked consistently, cover the majority of where retail profitability is won or lost.</p>
+
+          <div class="formula-card">
+            <div class="fc-header">
+              <h4>1. Gross Margin %</h4>
+              <span class="fc-badge">Foundational</span>
+            </div>
+            <div class="fc-body">
+              <code class="fc-formula">Gross Margin % = ((Net Sales − COGS) ÷ Net Sales) × 100</code>
+              <p class="fc-desc">The single most important profitability number in retail. It tells you what percentage of every sales dollar is left after the direct cost of the goods you sold. Everything else — labor, rent, marketing — comes out of this remaining margin.</p>
+              <div class="fc-example">
+                <div class="fe-label">📊 Worked Example</div>
+                <div class="fe-step"><span class="step-n">Given:</span> Net Sales = $480,000 | COGS = $312,000</div>
+                <div class="fe-step"><span class="step-n">Step 1:</span> $480,000 − $312,000 = $168,000 gross profit</div>
+                <div class="fe-step"><span class="step-n">Step 2:</span> $168,000 ÷ $480,000 = 0.35</div>
+                <div class="fe-step"><span class="step-n">Result:</span> 0.35 × 100 = <strong>35% gross margin</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="formula-card">
+            <div class="fc-header">
+              <h4>2. Labor Cost Percentage</h4>
+              <span class="fc-badge">Weekly metric</span>
+            </div>
+            <div class="fc-body">
+              <code class="fc-formula">Labor Cost % = (Total Labor Cost ÷ Net Sales) × 100</code>
+              <p class="fc-desc">After cost of goods, labor is almost always the next biggest expense in retail. This number should be reviewed weekly — not monthly — because unplanned overtime and overstaffing compound fast if nobody's watching.</p>
+              <div class="fc-example">
+                <div class="fe-label">📊 Worked Example</div>
+                <div class="fe-step"><span class="step-n">Given:</span> Weekly Sales = $24,000 | Total Labor Cost = $3,840</div>
+                <div class="fe-step"><span class="step-n">Step 1:</span> $3,840 ÷ $24,000 = 0.16</div>
+                <div class="fe-step"><span class="step-n">Result:</span> 0.16 × 100 = <strong>16% labor cost</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="formula-card">
+            <div class="fc-header">
+              <h4>3. Shrinkage Rate</h4>
+              <span class="fc-badge">Per count</span>
+            </div>
+            <div class="fc-body">
+              <code class="fc-formula">Shrinkage % = ((Book Inventory − Physical Count) ÷ Book Inventory) × 100</code>
+              <p class="fc-desc">Inventory that's gone missing — to theft, damage, or error — comes directly out of your gross margin. A 2% shrinkage rate on a 35% margin business is a meaningfully larger hit to actual profit than the headline number suggests.</p>
+              <div class="fc-example">
+                <div class="fe-label">📊 Worked Example</div>
+                <div class="fe-step"><span class="step-n">Given:</span> Book Inventory = $95,000 | Physical Count = $92,150</div>
+                <div class="fe-step"><span class="step-n">Step 1:</span> $95,000 − $92,150 = $2,850</div>
+                <div class="fe-step"><span class="step-n">Step 2:</span> $2,850 ÷ $95,000 = 0.03</div>
+                <div class="fe-step"><span class="step-n">Result:</span> 0.03 × 100 = <strong>3.0% shrinkage</strong></div>
+              </div>
+              <p style="font-size:0.85rem; margin-top:12px; margin-bottom:0;">For a deeper breakdown, see our <a href="/articles/how-to-calculate-retail-shrinkage-percentage.html">complete guide to calculating shrinkage percentage</a>.</p>
+            </div>
+          </div>
+
+          <div class="formula-card">
+            <div class="fc-header">
+              <h4>4. Inventory Carrying Cost</h4>
+              <span class="fc-badge">Annual</span>
+            </div>
+            <div class="fc-body">
+              <code class="fc-formula">Carrying Cost % = (Total Carrying Costs ÷ Average Inventory Value) × 100</code>
+              <p class="fc-desc">This is the cost of simply holding inventory — storage, insurance, financing/opportunity cost, shrinkage, and obsolescence — expressed as a percentage of average inventory value. It's a number most retailers never calculate, and it's often higher than they'd assume.</p>
+              <div class="fc-example">
+                <div class="fe-label">📊 Worked Example</div>
+                <div class="fe-step"><span class="step-n">Given:</span> Storage $8,000 + Insurance $2,000 + Financing $9,000 + Shrinkage $4,500 + Obsolescence $3,500 = $27,000 total</div>
+                <div class="fe-step"><span class="step-n">Given:</span> Average Inventory Value = $110,000</div>
+                <div class="fe-step"><span class="step-n">Step 1:</span> $27,000 ÷ $110,000 = 0.2455</div>
+                <div class="fe-step"><span class="step-n">Result:</span> 0.2455 × 100 = <strong>24.5% carrying cost</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="formula-card">
+            <div class="fc-header">
+              <h4>5. Inventory Turnover Ratio</h4>
+              <span class="fc-badge">Quarterly</span>
+            </div>
+            <div class="fc-body">
+              <code class="fc-formula">Inventory Turnover = COGS ÷ Average Inventory Value</code>
+              <p class="fc-desc">How many times you sell through your average inventory in a given period. Low turnover means capital is tied up in slow-moving stock — which directly increases your carrying cost above. High turnover (within reason) generally signals healthier inventory management.</p>
+              <div class="fc-example">
+                <div class="fe-label">📊 Worked Example</div>
+                <div class="fe-step"><span class="step-n">Given:</span> Annual COGS = $312,000 | Average Inventory = $110,000</div>
+                <div class="fe-step"><span class="step-n">Step 1:</span> $312,000 ÷ $110,000 = <strong>2.84x annual turnover</strong></div>
+                <div class="fe-step"><span class="step-n">Interpretation:</span> Inventory sells through roughly every 4.2 months</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="formula-card">
+            <div class="fc-header">
+              <h4>6. Operating Expense Ratio</h4>
+              <span class="fc-badge">Monthly</span>
+            </div>
+            <div class="fc-body">
+              <code class="fc-formula">OpEx Ratio = (Total Operating Expenses ÷ Net Sales) × 100</code>
+              <p class="fc-desc">Everything that isn't COGS — rent, utilities, marketing, admin, insurance — as a percentage of sales. This is your overhead burden, and it determines how much of your gross margin actually survives to become net profit.</p>
+              <div class="fc-example">
+                <div class="fe-label">📊 Worked Example</div>
+                <div class="fe-step"><span class="step-n">Given:</span> Net Sales = $480,000 | OpEx (rent, utilities, marketing, admin) = $115,200</div>
+                <div class="fe-step"><span class="step-n">Step 1:</span> $115,200 ÷ $480,000 = 0.24</div>
+                <div class="fe-step"><span class="step-n">Result:</span> 0.24 × 100 = <strong>24% operating expense ratio</strong></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CALCULATOR -->
+        <section id="calculator">
+          <h2>Free Retail Cost Control Calculator</h2>
+          <p>Plug in your own numbers below. Switch between tabs to calculate gross margin, labor cost %, shrinkage rate, or carrying cost.</p>
+
+          <div class="calc-widget">
+            <h3>📊 Retail Profitability Calculator</h3>
+            <p class="calc-sub">Select a formula and enter your figures — results update instantly with context on whether your number is healthy.</p>
+
+            <div class="calc-tabs">
+              <button class="calc-tab active" onclick="switchCalcTab('margin')">Gross Margin</button>
+              <button class="calc-tab" onclick="switchCalcTab('labor')">Labor Cost %</button>
+              <button class="calc-tab" onclick="switchCalcTab('shrink')">Shrinkage Rate</button>
+              <button class="calc-tab" onclick="switchCalcTab('carry')">Carrying Cost</button>
+            </div>
+
+            <div class="calc-panel active" id="panel-margin">
+              <div class="calc-fields">
+                <div class="calc-field">
+                  <label for="m-sales">Net Sales ($)</label>
+                  <input type="number" id="m-sales" placeholder="e.g. 480000" min="0" step="any" />
+                </div>
+                <div class="calc-field">
+                  <label for="m-cogs">Cost of Goods Sold ($)</label>
+                  <input type="number" id="m-cogs" placeholder="e.g. 312000" min="0" step="any" />
+                </div>
+              </div>
+              <button class="calc-btn" onclick="calcMargin()">Calculate Gross Margin</button>
+              <div class="calc-result" id="result-margin"></div>
+            </div>
+
+            <div class="calc-panel" id="panel-labor">
+              <div class="calc-fields">
+                <div class="calc-field">
+                  <label for="l-sales">Sales for Period ($)</label>
+                  <input type="number" id="l-sales" placeholder="e.g. 24000" min="0" step="any" />
+                </div>
+                <div class="calc-field">
+                  <label for="l-labor">Total Labor Cost ($)</label>
+                  <input type="number" id="l-labor" placeholder="e.g. 3840" min="0" step="any" />
+                </div>
+              </div>
+              <button class="calc-btn" onclick="calcLabor()">Calculate Labor Cost %</button>
+              <div class="calc-result" id="result-labor"></div>
+            </div>
+
+            <div class="calc-panel" id="panel-shrink">
+              <div class="calc-fields">
+                <div class="calc-field">
+                  <label for="s-book">Book Inventory ($)</label>
+                  <input type="number" id="s-book" placeholder="e.g. 95000" min="0" step="any" />
+                </div>
+                <div class="calc-field">
+                  <label for="s-phys">Physical Count ($)</label>
+                  <input type="number" id="s-phys" placeholder="e.g. 92150" min="0" step="any" />
+                </div>
+              </div>
+              <button class="calc-btn" onclick="calcShrink()">Calculate Shrinkage Rate</button>
+              <div class="calc-result" id="result-shrink"></div>
+            </div>
+
+            <div class="calc-panel" id="panel-carry">
+              <div class="calc-fields">
+                <div class="calc-field">
+                  <label for="c-total">Total Carrying Costs ($/yr)</label>
+                  <input type="number" id="c-total" placeholder="e.g. 27000" min="0" step="any" />
+                </div>
+                <div class="calc-field">
+                  <label for="c-avg">Average Inventory Value ($)</label>
+                  <input type="number" id="c-avg" placeholder="e.g. 110000" min="0" step="any" />
+                </div>
+              </div>
+              <button class="calc-btn" onclick="calcCarry()">Calculate Carrying Cost %</button>
+              <div class="calc-result" id="result-carry"></div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- BENCHMARKS -->
+        <section id="benchmarks">
+          <h2>Retail Benchmarks by Category</h2>
+          <p>There's no single "good" number across all of retail — benchmarks vary enormously by category. Use this as a rough guide rather than a hard target.</p>
+
+          <div class="data-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Retail Category</th>
+                  <th>Typical Gross Margin</th>
+                  <th>Typical Labor Cost %</th>
+                  <th>Typical Shrinkage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Grocery</strong></td><td>20% – 25%</td><td>10% – 14%</td><td>1.0% – 1.5%</td></tr>
+                <tr><td><strong>General Apparel</strong></td><td>50% – 60%</td><td>14% – 18%</td><td>1.5% – 2.5%</td></tr>
+                <tr><td><strong>Electronics</strong></td><td>15% – 25%</td><td>10% – 15%</td><td>1.5% – 3%</td></tr>
+                <tr><td><strong>Jewelry & Accessories</strong></td><td>55% – 65%</td><td>15% – 20%</td><td>2% – 4%</td></tr>
+                <tr><td><strong>Pharmacy / Drug Store</strong></td><td>22% – 30%</td><td>12% – 16%</td><td>1.5% – 3%</td></tr>
+                <tr><td><strong>Home Goods / Furniture</strong></td><td>40% – 50%</td><td>10% – 14%</td><td>0.5% – 1.5%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- STRATEGIES -->
+        <section id="strategies">
+          <h2>7 Strategies to Improve Retail Profitability</h2>
+          <p>Formulas tell you where you stand. These strategies are what actually move the numbers in the right direction.</p>
+
+          <div class="strategy-card">
+            <span class="st-num">Strategy 01</span>
+            <div class="st-title">Review Gross Margin by Category, Not Just Store-Wide</div>
+            <p>A blended 35% gross margin can hide categories running at 50% and others bleeding at 15%. Break margin down by department or category monthly. The categories dragging your average down are usually fixable — through pricing, supplier renegotiation, or simply de-emphasizing low-margin lines.</p>
+            <div class="st-impact">
+              <div class="si-item"><span class="si-label">Effort</span><span class="si-val">Low</span></div>
+              <div class="si-item"><span class="si-label">Cost</span><span class="si-val green">Free</span></div>
+              <div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">1–3 margin points</span></div>
+            </div>
+          </div>
+
+          <div class="strategy-card">
+            <span class="st-num">Strategy 02</span>
+            <div class="st-title">Schedule Labor Against Actual Traffic Patterns, Not Habit</div>
+            <p>Most retail labor cost creep comes from scheduling that hasn't been updated to match current traffic patterns. Pull hourly sales data for the last 90 days and compare it against your current schedule. Misalignment here is one of the fastest wins available — it usually doesn't require cutting total hours, just moving them.</p>
+            <div class="st-impact">
+              <div class="si-item"><span class="si-label">Effort</span><span class="si-val">Medium</span></div>
+              <div class="si-item"><span class="si-label">Cost</span><span class="si-val green">Free</span></div>
+              <div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">1–2 labor points</span></div>
+            </div>
+          </div>
+
+          <div class="strategy-card">
+            <span class="st-num">Strategy 03</span>
+            <div class="st-title">Tighten Receiving to Separate Real Shrinkage from Vendor Shortfalls</div>
+            <p>A meaningful share of "shrinkage" in businesses without verified receiving is actually short deliveries from suppliers, misattributed as loss. Implementing PO verification at receiving — every delivery checked before sign-off — routinely uncovers that real shrinkage is lower than assumed once vendor shortfalls are separated out.</p>
+            <div class="st-impact">
+              <div class="si-item"><span class="si-label">Effort</span><span class="si-val">Low</span></div>
+              <div class="si-item"><span class="si-label">Cost</span><span class="si-val green">Free</span></div>
+              <div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">0.5–1.5 shrink points</span></div>
+            </div>
+          </div>
+
+          <div class="strategy-card">
+            <span class="st-num">Strategy 04</span>
+            <div class="st-title">Improve Inventory Turnover on Slow-Moving Categories</div>
+            <p>Slow-moving inventory increases carrying cost every month it sits unsold. Identify your bottom-quartile turnover SKUs and either discount them to clear, bundle them with faster-moving items, or stop reordering them. Capital freed from slow stock can fund faster-turning categories instead.</p>
+            <div class="st-impact">
+              <div class="si-item"><span class="si-label">Effort</span><span class="si-val">Medium</span></div>
+              <div class="si-item"><span class="si-label">Cost</span><span class="si-val">Low</span></div>
+              <div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">3–8 carrying cost points</span></div>
+            </div>
+          </div>
+
+          <div class="strategy-card">
+            <span class="st-num">Strategy 05</span>
+            <div class="st-title">Renegotiate or Re-Quote Supplier Pricing Annually</div>
+            <p>Vendor pricing drifts upward over long relationships more often than it drifts down. An annual review with at least one competitive quote for your largest suppliers keeps pricing honest and frequently surfaces savings that go straight to gross margin.</p>
+            <div class="st-impact">
+              <div class="si-item"><span class="si-label">Effort</span><span class="si-val">Medium</span></div>
+              <div class="si-item"><span class="si-label">Cost</span><span class="si-val green">Free</span></div>
+              <div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">1–4 margin points</span></div>
+            </div>
+          </div>
+
+          <div class="strategy-card">
+            <span class="st-num">Strategy 06</span>
+            <div class="st-title">Audit Recurring Operating Expenses Twice a Year</div>
+            <p>Subscriptions, service contracts, and recurring vendor charges tend to auto-renew without scrutiny. A biannual line-by-line review of operating expenses routinely finds unused services, outdated contracts, and pricing that's crept up without anyone noticing.</p>
+            <div class="st-impact">
+              <div class="si-item"><span class="si-label">Effort</span><span class="si-val">Low</span></div>
+              <div class="si-item"><span class="si-label">Cost</span><span class="si-val green">Free</span></div>
+              <div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">0.5–2 OpEx points</span></div>
+            </div>
+          </div>
+
+          <div class="strategy-card">
+            <span class="st-num">Strategy 07</span>
+            <div class="st-title">Track All Six Formulas Together, Not in Isolation</div>
+            <p>These numbers interact. Cutting labor too aggressively can hurt customer service and reduce sales, which worsens every other ratio. Improving inventory turnover too aggressively (excessive discounting) can crush gross margin. Review the full set together monthly — that's what reveals trade-offs before they become problems.</p>
+            <div class="st-impact">
+              <div class="si-item"><span class="si-label">Effort</span><span class="si-val">Low</span></div>
+              <div class="si-item"><span class="si-label">Cost</span><span class="si-val green">Free</span></div>
+              <div class="si-item"><span class="si-label">Typical impact</span><span class="si-val green">Prevents trade-off mistakes</span></div>
+            </div>
+          </div>
+
+          <div class="pull-quote">
+            <p>"None of these six numbers move in isolation. The businesses that actually improve profitability are the ones that look at all of them together, every month, and ask what's trading off against what."</p>
+            <cite>— Mithun GS</cite>
+          </div>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section id="conclusion">
+          <h2>Start With the Formula That Matters Most for Your Business</h2>
+          <p>
+            You don't need to overhaul everything this month. Pick the one or two formulas above that you've never actually calculated, run them properly using the calculator, and compare your number against the category benchmark. That single exercise — turning a vague feeling about costs into an actual number — is usually the first real step most retail businesses take toward genuine cost control.
+          </p>
+          <p>
+            From there, the rhythm matters more than any individual fix: calculate consistently, compare against your own trend (not just an external benchmark), and treat unexpected movement as a signal worth investigating rather than noise to ignore.
+          </p>
+
+          <div class="callout callout-tip">
+            <div class="callout-label">✅ Where to start today</div>
+            <p>Run your gross margin and labor cost % through the calculator above using last month's numbers. Those two formulas alone cover the majority of retail profitability — everything else is refinement once those are under control.</p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Explore More Cost Control & Loss Prevention Guides</h3>
+            <p>Free practical articles on shrinkage, operations excellence, internal controls, and real case studies — no sign-up needed.</p>
+            <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is cost control in retail?<span class="arrow">▾</span></button>
+              <div class="faq-a">Cost control in retail is the ongoing process of monitoring and managing the expenses that affect retail profitability — cost of goods sold, labor, shrinkage, occupancy, and operational waste — to keep them within budget and protect margin. It's a continuous discipline, not a one-time cost-cutting exercise.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is a good gross margin for a retail business?<span class="arrow">▾</span></button>
+              <div class="faq-a">Gross margin varies widely by retail category. Grocery typically runs 20–25%, general apparel 50–60%, jewelry and accessories can exceed 60%, and electronics often run lower at 15–25%. Compare your margin against your specific category benchmark rather than a generic universal number.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How do you calculate inventory carrying cost?<span class="arrow">▾</span></button>
+              <div class="faq-a">Inventory carrying cost is calculated as a percentage of average inventory value, typically including storage, insurance, financing, shrinkage, and obsolescence costs. Formula: Carrying Cost % = (Total Carrying Costs ÷ Average Inventory Value) × 100. Most retailers see carrying costs between 20–30% of inventory value annually.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What percentage of revenue should labor cost be in retail?<span class="arrow">▾</span></button>
+              <div class="faq-a">Labor cost as a percentage of sales typically ranges from 10–20% in retail, depending on the business model. Self-service retail with minimal staffing can run as low as 8–10%, while specialty retail requiring more customer service often runs 15–20%. Track this weekly against your own historical baseline rather than a generic industry number.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RELATED -->
+        <section id="related-articles">
+          <h2>Related Articles</h2>
+          <div class="related-grid">
+            <a class="related-card" href="/articles/how-to-calculate-retail-shrinkage-percentage.html">
+              <span class="rc-icon">📊</span>
+              <div><div class="rc-cat">Inventory Management</div><div class="rc-title">How to Calculate Retail Shrinkage Percentage (Step-by-Step With Examples)</div></div>
+            </a>
+            <a class="related-card" href="/articles/what-is-cost-control.html">
+              <span class="rc-icon">📉</span>
+              <div><div class="rc-cat">Cost Control</div><div class="rc-title">What Is Cost Control? Definition, Examples & Strategies for Every Business</div></div>
+            </a>
+            <a class="related-card" href="/articles/inventory-accuracy-vs-shrinkage.html">
+              <span class="rc-icon">📦</span>
+              <div><div class="rc-cat">Inventory Management</div><div class="rc-title">Inventory Accuracy vs Inventory Shrinkage: Understanding the Difference</div></div>
+            </a>
+            <a class="related-card" href="/articles/airport-chocolate-store-fraud-case-study.html">
+              <span class="rc-icon">🔴</span>
+              <div><div class="rc-cat">Real Case Study</div><div class="rc-title">The Airport Chocolate Store Fraud: How a Manager Turned Promotional Offers into a Personal Business</div></div>
+            </a>
+            <a class="related-card" href="/articles/operations-excellence.html">
+              <span class="rc-icon">⚙️</span>
+              <div><div class="rc-cat">Operations Excellence</div><div class="rc-title">What Is Operations Excellence? Definition, Examples & How to Build It</div></div>
+            </a>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Article sidebar">
+
+      <div class="sidebar-card quickref">
+        <div class="qr-header"><span>📉</span><h4>Quick Reference</h4></div>
+        <div class="qr-row"><span class="qr-key">Gross margin formula</span><span class="qr-val">(Sales − COGS) ÷ Sales</span></div>
+        <div class="qr-row"><span class="qr-key">Labor cost formula</span><span class="qr-val">Labor ÷ Sales</span></div>
+        <div class="qr-row"><span class="qr-key">Shrinkage formula</span><span class="qr-val">(Book − Physical) ÷ Book</span></div>
+        <div class="qr-row"><span class="qr-key">Carrying cost formula</span><span class="qr-val">Costs ÷ Avg Inventory</span></div>
+        <div class="qr-row"><span class="qr-key">Avg retail labor %</span><span class="qr-val amber">10% – 20%</span></div>
+        <div class="qr-row"><span class="qr-key">Avg shrink rate</span><span class="qr-val amber">1.5% – 2%</span></div>
+        <div class="qr-row"><span class="qr-key">Avg carrying cost</span><span class="qr-val amber">20% – 30%</span></div>
+        <div class="qr-row"><span class="qr-key">Best starting formula</span><span class="qr-val green">Gross margin + labor %</span></div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#gross-margin">6 Core Formulas</a></li>
+          <li><a href="#calculator">Free Calculator</a></li>
+          <li><a href="#benchmarks">Category Benchmarks</a></li>
+          <li><a href="#strategies">7 Strategies</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#related-articles">Related Articles</a></li>
+        </ul>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+    <p style="margin-top:8px;">
+      <a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      document.getElementById('read-progress').style.width =
+        ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+    });
+
+    function toggleFaq(btn) {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    }
+
+    function switchCalcTab(tab) {
+      document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector(`.calc-tab[onclick="switchCalcTab('${tab}')"]`).classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+    }
+
+    function calcMargin() {
+      const sales = parseFloat(document.getElementById('m-sales').value);
+      const cogs  = parseFloat(document.getElementById('m-cogs').value);
+      const r = document.getElementById('result-margin');
+      if (isNaN(sales) || isNaN(cogs) || sales <= 0) { alert('Enter valid Net Sales and COGS values.'); return; }
+      if (cogs > sales) { alert('COGS cannot be greater than Net Sales.'); return; }
+      const profit = sales - cogs;
+      const margin = (profit / sales) * 100;
+      let color = '#10b981', verdict = 'Healthy margin for most retail categories.';
+      if (margin < 20) { color = '#f87171'; verdict = 'Low margin — typical for grocery/commodity retail, tight for specialty retail.'; }
+      else if (margin < 35) { color = '#f59e0b'; verdict = 'Moderate margin — compare against your specific category benchmark.'; }
+      r.innerHTML = '<div class="cr-label">Gross Margin</div><div class="cr-val" style="color:' + color + '">' + margin.toFixed(2) + '%</div><div class="cr-verdict"><strong style="color:' + color + '">' + verdict + '</strong><br>Gross profit: $' + profit.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' on $' + sales.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' in sales.</div>';
+      r.classList.add('show');
+    }
+
+    function calcLabor() {
+      const sales = parseFloat(document.getElementById('l-sales').value);
+      const labor = parseFloat(document.getElementById('l-labor').value);
+      const r = document.getElementById('result-labor');
+      if (isNaN(sales) || isNaN(labor) || sales <= 0) { alert('Enter valid Sales and Labor Cost values.'); return; }
+      const pct = (labor / sales) * 100;
+      let color = '#10b981', verdict = 'Within typical retail range.';
+      if (pct > 20) { color = '#f87171'; verdict = 'Above typical range — review scheduling against traffic patterns.'; }
+      else if (pct > 16) { color = '#f59e0b'; verdict = 'On the higher end — worth monitoring weekly.'; }
+      else if (pct < 8) { color = '#f59e0b'; verdict = "Very low — confirm this isn't affecting customer service or coverage."; }
+      r.innerHTML = '<div class="cr-label">Labor Cost Percentage</div><div class="cr-val" style="color:' + color + '">' + pct.toFixed(2) + '%</div><div class="cr-verdict"><strong style="color:' + color + '">' + verdict + '</strong><br>$' + labor.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' labor on $' + sales.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' in sales.</div>';
+      r.classList.add('show');
+    }
+
+    function calcShrink() {
+      const book = parseFloat(document.getElementById('s-book').value);
+      const phys = parseFloat(document.getElementById('s-phys').value);
+      const r = document.getElementById('result-shrink');
+      if (isNaN(book) || isNaN(phys) || book <= 0) { alert('Enter valid Book Inventory and Physical Count values.'); return; }
+      if (phys > book) { alert('Physical Count cannot be greater than Book Inventory.'); return; }
+      const gap = book - phys;
+      const pct = (gap / book) * 100;
+      let color = '#10b981', verdict = 'Well-controlled shrinkage.';
+      if (pct > 3) { color = '#f87171'; verdict = 'Above safe range — investigate urgently.'; }
+      else if (pct > 2) { color = '#f59e0b'; verdict = 'Above average — worth investigating.'; }
+      else if (pct > 1) { color = '#f59e0b'; verdict = 'Average range for most retail.'; }
+      r.innerHTML = '<div class="cr-label">Shrinkage Rate</div><div class="cr-val" style="color:' + color + '">' + pct.toFixed(2) + '%</div><div class="cr-verdict"><strong style="color:' + color + '">' + verdict + '</strong><br>$' + gap.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' unaccounted for out of $' + book.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' book inventory.</div>';
+      r.classList.add('show');
+    }
+
+    function calcCarry() {
+      const total = parseFloat(document.getElementById('c-total').value);
+      const avg   = parseFloat(document.getElementById('c-avg').value);
+      const r = document.getElementById('result-carry');
+      if (isNaN(total) || isNaN(avg) || avg <= 0) { alert('Enter valid Total Carrying Costs and Average Inventory Value.'); return; }
+      const pct = (total / avg) * 100;
+      let color = '#10b981', verdict = 'Below typical range — efficient inventory management.';
+      if (pct > 30) { color = '#f87171'; verdict = 'Above typical range — review slow-moving stock and storage costs.'; }
+      else if (pct >= 20) { color = '#f59e0b'; verdict = 'Within typical retail range (20–30%).'; }
+      r.innerHTML = '<div class="cr-label">Inventory Carrying Cost</div><div class="cr-val" style="color:' + color + '">' + pct.toFixed(2) + '%</div><div class="cr-verdict"><strong style="color:' + color + '">' + verdict + '</strong><br>$' + total.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' annual carrying cost on $' + avg.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' average inventory.</div>';
+      r.classList.add('show');
+    }
+
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const a = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (a) a.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -75% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
