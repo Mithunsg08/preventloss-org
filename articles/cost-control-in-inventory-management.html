@@ -1,0 +1,1014 @@
+cat > /mnt/user-data/outputs/cost-control-inventory-management.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<title>Cost Control in Inventory Management: Strategies, KPIs & Best Practices (2026)</title>
+<meta name="description" content="Master cost control in inventory management with proven strategies, essential KPIs, EOQ calculator, ABC analysis, and actionable best practices for US businesses in 2026." />
+<meta name="keywords" content="cost control inventory management, inventory cost reduction, inventory KPIs 2026, ABC analysis inventory, EOQ formula, safety stock calculation, inventory turnover ratio, holding cost reduction, JIT inventory, lean inventory management, GMROI, inventory best practices USA" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Mithun GS" />
+<link rel="canonical" href="https://www.preventloss.org/articles/cost-control-in-inventory-management.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cost Control in Inventory Management: Strategies, KPIs & Best Practices (2026)" />
+<meta property="og:description" content="Proven strategies, essential KPIs, EOQ calculator, and 90-day roadmap to reduce inventory costs and protect margins." />
+<meta property="og:url" content="https://www.preventloss.org/articles/cost-control-in-inventory-management.html" />
+<meta property="og:site_name" content="PreventLoss.org" />
+<meta property="article:published_time" content="2026-06-23T00:00:00Z" />
+<meta property="article:modified_time" content="2026-06-23T00:00:00Z" />
+<meta property="article:section" content="Inventory Management" />
+<meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cost Control in Inventory Management 2026" />
+<meta name="twitter:description" content="Strategies, KPIs, EOQ calculator, and best practices to cut inventory costs and protect margins — for US businesses." />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cost Control in Inventory Management: Strategies, KPIs & Best Practices (2026)",
+  "description": "Master cost control in inventory management with proven strategies, essential KPIs, and actionable best practices for US businesses in 2026.",
+  "author": { "@type": "Person", "name": "Mithun GS", "url": "https://www.linkedin.com/in/mithun-gs/" },
+  "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/cost-control-in-inventory-management.html" },
+  "keywords": "cost control inventory management, ABC analysis, EOQ, safety stock, inventory turnover, GMROI, JIT, lean inventory"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the biggest cost in inventory management?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Holding (carrying) costs are typically the largest inventory cost component, running 20–30% of the item's value per year. This includes capital opportunity cost, warehousing, insurance, taxes, and obsolescence risk. Reducing average inventory levels through better demand forecasting and EOQ-based ordering is the fastest path to cutting this cost." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good inventory turnover ratio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For most US retail and distribution businesses, an inventory turnover ratio of 8–12 times per year is considered healthy. However, benchmarks vary significantly by industry — grocery may turn 25–30 times per year while heavy equipment dealers may turn 3–5 times. The key is benchmarking against your specific sector and tracking improvement over time." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is EOQ and how is it calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "EOQ (Economic Order Quantity) is the order quantity that minimizes total inventory costs by balancing ordering costs against holding costs. The formula is: EOQ = √(2DS/H), where D = annual demand in units, S = cost per order (ordering cost), and H = holding cost per unit per year. For example, if annual demand is 12,000 units, ordering cost is $500, and holding cost is $20/unit/year, EOQ = √(2 × 12,000 × 500 / 20) = 775 units." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ABC analysis reduce inventory costs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ABC analysis classifies inventory by value so management effort is concentrated where it generates the most return. A items (top 10–20% of SKUs, 70–80% of value) receive tight controls, frequent review, and dual sourcing. C items (50–70% of SKUs, only 5–10% of value) get simple reorder triggers and less oversight. This prevents over-managing low-value items while ensuring high-value stock never causes a stockout or excess." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is GMROI and what is a good benchmark?",
+      "acceptedAnswer": { "@type": "Answer", "text": "GMROI (Gross Margin Return on Inventory Investment) measures how much gross profit each dollar of inventory generates. Formula: GMROI = Gross Margin ÷ Average Inventory Cost. A GMROI above 2.0× is generally considered healthy, meaning you earn $2+ in gross margin for every $1 of inventory you carry. Best-in-class retailers often achieve 3.0×–5.0×." }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#0f1117;
+  --surface:#181c27;
+  --surface-2:#1e2535;
+  --border:#252a38;
+  --accent:#2563eb;
+  --accent-lt:#3b82f6;
+  --accent-glow:#1d4ed840;
+  --text:#e2e8f0;
+  --muted:#94a3b8;
+  --heading:#f8fafc;
+  --success:#10b981;
+  --warn:#f59e0b;
+  --danger:#f87171;
+  --c-pr:#f59e0b;
+  --c-pr-bg:#1c1500;
+  --font-display:'Georgia','Times New Roman',serif;
+  --font-body:system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'Courier New',monospace;
+  --r-sm:6px;
+  --r-md:12px;
+  --r-lg:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+.site-nav{position:sticky;top:0;z-index:100;background:rgba(15,17,23,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.site-nav .logo{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--heading);text-decoration:none;letter-spacing:-0.02em;}
+.site-nav .logo span{color:var(--accent-lt);}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--text);}
+
+/* PROGRESS BAR */
+#read-progress{position:fixed;top:56px;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--c-pr),var(--warn));z-index:99;transition:width 0.1s linear;}
+
+/* LAYOUT */
+.page-wrap{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:52px;align-items:start;}
+@media(max-width:860px){.page-wrap{grid-template-columns:1fr;}.sidebar{display:none;}}
+
+/* HEADER */
+.article-header{padding:52px 0 36px;border-bottom:1px solid var(--border);margin-bottom:36px;}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:var(--muted);margin-bottom:16px;}
+.breadcrumb a{color:var(--muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--text);}
+.breadcrumb span{color:var(--border);}
+.article-category{display:inline-flex;align-items:center;gap:6px;background:var(--c-pr-bg);border:1px solid var(--c-pr);color:var(--c-pr);font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;margin-bottom:18px;}
+h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.8vw,2.55rem);font-weight:700;color:var(--heading);line-height:1.18;letter-spacing:-0.03em;margin-bottom:18px;}
+.article-deck{font-size:1.05rem;color:var(--muted);line-height:1.65;margin-bottom:22px;max-width:680px;}
+.article-meta{display:flex;flex-wrap:wrap;gap:18px;font-size:0.8rem;color:var(--muted);}
+
+/* STAT STRIP */
+.article-stats{display:flex;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:40px;overflow:hidden;}
+.stat-item{flex:1;padding:16px 18px;border-right:1px solid var(--border);}
+.stat-item:last-child{border-right:none;}
+.stat-item .s-val{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--heading);line-height:1;margin-bottom:4px;}
+.stat-item .s-val.amber{color:var(--c-pr);}
+.stat-item .s-val.green{color:var(--success);}
+.stat-item .s-val.blue{color:var(--accent-lt);}
+.stat-item .s-lbl{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:600;}
+@media(max-width:600px){.article-stats{flex-wrap:wrap;}.stat-item{flex:1 1 45%;border-bottom:1px solid var(--border);}}
+
+/* ARTICLE BODY */
+.article-body h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--heading);letter-spacing:-0.02em;margin:48px 0 14px;padding-top:48px;border-top:1px solid var(--border);}
+.article-body h2:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+.article-body p{margin-bottom:18px;color:var(--text);}
+.article-body a{color:var(--c-pr);text-decoration:underline;text-underline-offset:3px;}
+.article-body strong{color:var(--heading);font-weight:600;}
+.article-body em{font-style:italic;color:var(--muted);}
+
+/* CALLOUTS */
+.callout{border-radius:var(--r-md);padding:18px 22px;margin:24px 0;border-left:4px solid;}
+.callout-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+.callout p{margin-bottom:6px;font-size:0.94rem;}
+.callout p:last-child{margin-bottom:0;}
+.callout-tip{background:#0d1f16;border-color:var(--success);}
+.callout-tip .callout-label{color:var(--success);}
+.callout-info{background:var(--accent-glow);border-color:var(--accent);}
+.callout-info .callout-label{color:var(--accent-lt);}
+.callout-amber{background:var(--c-pr-bg);border-color:var(--c-pr);}
+.callout-amber .callout-label{color:var(--c-pr);}
+.callout-danger{background:#1f0d0d;border-color:var(--danger);}
+.callout-danger .callout-label{color:var(--danger);}
+
+/* TIER DIVIDERS */
+.tier-divider{display:flex;align-items:center;gap:12px;margin:48px 0 8px;}
+.tier-divider .td-line{flex:1;height:1px;background:var(--border);}
+.tier-divider .td-label{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;padding:5px 16px;border-radius:999px;white-space:nowrap;}
+.tier-divider.costs .td-label{color:var(--danger);background:#1f0d0d;border:1px solid var(--danger);}
+.tier-divider.strategies .td-label{color:var(--c-pr);background:var(--c-pr-bg);border:1px solid var(--c-pr);}
+.tier-divider.kpis .td-label{color:var(--success);background:#0d1f16;border:1px solid var(--success);}
+.tier-divider.practices .td-label{color:var(--accent-lt);background:var(--accent-glow);border:1px solid var(--accent);}
+.tier-divider.tech .td-label{color:#a78bfa;background:#1e1340;border:1px solid #a78bfa;}
+.tier-divider.roadmap .td-label{color:#34d399;background:#0d2018;border:1px solid #34d399;}
+
+/* STRATEGY / CONCEPT CARDS */
+.sw-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin:20px 0;}
+.sw-header{padding:18px 22px;border-bottom:1px solid var(--border);background:var(--surface-2);display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.sw-rank{width:34px;height:34px;border-radius:50%;background:var(--c-pr-bg);border:2px solid var(--c-pr);color:var(--c-pr);font-family:var(--font-mono);font-weight:800;font-size:0.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sw-rank.green{background:#0d2018;border-color:var(--success);color:var(--success);}
+.sw-rank.blue{background:var(--accent-glow);border-color:var(--accent-lt);color:var(--accent-lt);}
+.sw-rank.purple{background:#1e1340;border-color:#a78bfa;color:#a78bfa;}
+.sw-name{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--heading);}
+.sw-tagline{font-size:0.78rem;color:var(--muted);margin-top:2px;}
+.sw-price{margin-left:auto;text-align:right;}
+.sw-price .sp-label{font-size:0.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;}
+.sw-price .sp-val{font-family:var(--font-mono);font-size:0.9rem;font-weight:700;color:var(--success);}
+.sw-body{padding:20px 22px;}
+.sw-body p{font-size:0.92rem;color:var(--muted);margin-bottom:14px;}
+.sw-body p strong{color:var(--text);}
+.sw-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+@media(max-width:520px){.sw-grid{grid-template-columns:1fr;}}
+.sw-col h4{font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.09em;margin-bottom:8px;}
+.sw-col.pros h4{color:var(--success);}
+.sw-col.cons h4{color:var(--danger);}
+.sw-col ul{list-style:none;}
+.sw-col ul li{font-size:0.84rem;color:var(--muted);padding:4px 0;display:flex;gap:6px;align-items:flex-start;line-height:1.5;}
+.sw-col.pros ul li::before{content:'✓';color:var(--success);flex-shrink:0;}
+.sw-col.cons ul li::before{content:'✗';color:var(--danger);flex-shrink:0;}
+.sw-bestfor{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 16px;font-size:0.86rem;}
+.sw-bestfor strong{color:var(--c-pr);}
+
+/* FORMULA BOX */
+.formula-box{background:var(--surface-2);border:1px solid var(--border);border-left:4px solid var(--accent-lt);border-radius:0 var(--r-md) var(--r-md) 0;padding:16px 22px;margin:18px 0;font-family:var(--font-mono);font-size:0.88rem;color:#93c5fd;line-height:1.9;}
+.formula-label{font-family:var(--font-body);font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:8px;}
+
+/* ABC GRID */
+.abc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:22px 0;}
+@media(max-width:500px){.abc-grid{grid-template-columns:1fr;}}
+.abc-card{border-radius:var(--r-md);padding:18px;text-align:center;border:1px solid;}
+.abc-card.a{background:#0d2018;border-color:var(--success);}
+.abc-card.b{background:var(--c-pr-bg);border-color:var(--c-pr);}
+.abc-card.c{background:var(--accent-glow);border-color:var(--accent);}
+.abc-letter{font-family:var(--font-display);font-size:38px;font-weight:800;line-height:1;margin-bottom:6px;}
+.abc-card.a .abc-letter{color:var(--success);}
+.abc-card.b .abc-letter{color:var(--c-pr);}
+.abc-card.c .abc-letter{color:var(--accent-lt);}
+.abc-pct{font-family:var(--font-mono);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px;}
+.abc-card.a .abc-pct{color:#34d399;}
+.abc-card.b .abc-pct{color:#fbbf24;}
+.abc-card.c .abc-pct{color:#93c5fd;}
+.abc-desc{font-size:0.78rem;color:var(--muted);line-height:1.5;}
+
+/* EOQ CALCULATOR */
+.calc-widget{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin:22px 0;}
+.calc-header{background:var(--accent-glow);border-bottom:1px solid var(--accent);padding:14px 20px;display:flex;align-items:center;gap:8px;}
+.calc-header h4{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-lt);}
+.calc-body{padding:20px 22px;}
+.calc-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:12px;flex-wrap:wrap;}
+.calc-label{font-size:0.85rem;color:var(--muted);flex:1 1 180px;}
+.calc-input{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:8px 12px;font-family:var(--font-mono);font-size:0.9rem;color:var(--heading);width:140px;outline:none;transition:border-color 0.2s;}
+.calc-input:focus{border-color:var(--accent-lt);}
+.calc-result{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 18px;margin-top:16px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;}
+.calc-result-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);}
+.calc-result-value{font-family:var(--font-display);font-size:1.4rem;font-weight:700;}
+.calc-result-value.green{color:var(--success);}
+.calc-result-value.blue{color:var(--accent-lt);}
+
+/* COST BARS */
+.cost-bar-section{margin:22px 0;}
+.cost-bar-item{margin-bottom:16px;}
+.cost-bar-label-row{display:flex;justify-content:space-between;margin-bottom:5px;font-size:0.82rem;}
+.cost-bar-name{color:var(--text);}
+.cost-bar-pct{font-family:var(--font-mono);font-weight:700;color:var(--heading);}
+.cost-bar-track{background:var(--surface-2);border-radius:4px;height:8px;overflow:hidden;}
+.cost-bar-fill{height:100%;border-radius:4px;}
+
+/* COMPARISON TABLE */
+.data-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--border);border-radius:var(--r-md);}
+table{width:100%;border-collapse:collapse;font-size:0.84rem;}
+thead th{background:var(--surface);color:var(--muted);font-size:0.66rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:11px 13px;text-align:left;border-bottom:1px solid var(--border);}
+tbody td{padding:11px 13px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover td{background:var(--surface);}
+.badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:0.66rem;font-weight:700;}
+.badge-green{background:#0d2018;color:#34d399;}
+.badge-amber{background:var(--c-pr-bg);color:#fbbf24;}
+.badge-blue{background:var(--accent-glow);color:#93c5fd;}
+.badge-purple{background:#1e1340;color:#c4b5fd;}
+.badge-red{background:#1f0d0d;color:#fca5a5;}
+
+/* STEPS */
+.steps-list{margin:18px 0;}
+.step-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border);align-items:flex-start;}
+.step-item:last-child{border-bottom:none;}
+.step-num{width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--c-pr-bg);border:2px solid var(--c-pr);color:var(--c-pr);font-family:var(--font-mono);font-weight:800;font-size:0.8rem;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.step-num.blue{background:var(--accent-glow);border-color:var(--accent-lt);color:var(--accent-lt);}
+.step-num.green{background:#0d2018;border-color:var(--success);color:var(--success);}
+.step-content{}
+.step-title{font-size:0.9rem;font-weight:600;color:var(--heading);margin-bottom:4px;}
+.step-text{font-size:0.84rem;color:var(--muted);line-height:1.6;}
+
+/* PULL QUOTE */
+.pull-quote{border-left:4px solid var(--c-pr);padding:16px 24px;margin:30px 0;background:var(--c-pr-bg);border-radius:0 var(--r-md) var(--r-md) 0;}
+.pull-quote p{font-family:var(--font-display);font-size:1.08rem;color:var(--heading);line-height:1.55;font-style:italic;margin:0;}
+.pull-quote cite{display:block;font-size:0.75rem;color:var(--muted);margin-top:10px;font-style:normal;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;}
+
+/* CHECKLIST */
+.check-list{list-style:none;margin:14px 0 22px;}
+.check-list li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--border);font-size:0.93rem;}
+.check-list li:last-child{border-bottom:none;}
+.check-list .ck{width:20px;height:20px;flex-shrink:0;background:var(--c-pr-bg);border:1px solid var(--c-pr);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--c-pr);margin-top:2px;}
+
+/* MINI STAT CARDS */
+.mini-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:22px 0;}
+.mini-stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px;}
+.mini-stat .ms-val{font-family:var(--font-display);font-size:1.4rem;font-weight:700;line-height:1;margin-bottom:4px;}
+.mini-stat .ms-lbl{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:600;}
+
+/* FAQ */
+.faq-list{margin:14px 0;}
+.faq-item{border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:10px;overflow:hidden;}
+.faq-q{width:100%;background:var(--surface);border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;font-size:0.95rem;font-weight:600;color:var(--heading);text-align:left;gap:12px;}
+.faq-q:hover{background:var(--surface-2);}
+.faq-q .arrow{flex-shrink:0;font-size:1.1rem;color:var(--muted);transition:transform 0.2s;}
+.faq-q[aria-expanded="true"] .arrow{transform:rotate(180deg);}
+.faq-a{display:none;padding:0 20px 18px;font-size:0.92rem;color:var(--muted);background:var(--surface);}
+.faq-a.open{display:block;}
+
+/* RELATED ARTICLES */
+.related-grid{display:flex;flex-direction:column;gap:12px;margin-top:10px;}
+.related-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:16px 18px;text-decoration:none;display:flex;gap:12px;align-items:flex-start;transition:border-color 0.18s,background 0.15s;}
+.related-card:hover{border-color:var(--c-pr);background:var(--surface-2);}
+.related-card .rc-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px;}
+.related-card .rc-cat{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--c-pr);margin-bottom:4px;}
+.related-card .rc-title{font-size:0.9rem;font-weight:600;color:var(--heading);line-height:1.35;}
+
+/* CTA */
+.article-cta{background:linear-gradient(135deg,var(--c-pr-bg) 0%,#181c27 100%);border:1px solid var(--c-pr);border-radius:var(--r-lg);padding:28px 32px;text-align:center;margin-top:44px;}
+.article-cta h3{font-family:var(--font-display);font-size:1.2rem;color:var(--heading);margin-bottom:8px;}
+.article-cta p{color:var(--muted);font-size:0.875rem;margin-bottom:18px;}
+.btn-primary{display:inline-block;background:var(--c-pr);color:#1a0f00;font-weight:700;font-size:0.875rem;padding:11px 26px;border-radius:var(--r-sm);text-decoration:none;transition:opacity 0.18s;}
+.btn-primary:hover{opacity:0.85;}
+
+/* DISCLOSURE */
+.disclosure{font-size:0.78rem;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 16px;margin:16px 0 0;}
+
+/* SIDEBAR */
+.sidebar{padding-top:52px;}
+.sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;margin-bottom:18px;}
+.sidebar-card h4{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted);margin-bottom:12px;}
+.toc-list{list-style:none;}
+.toc-list li{margin-bottom:2px;}
+.toc-list a{font-size:0.79rem;color:var(--muted);text-decoration:none;display:block;padding:4px 0 4px 12px;border-left:2px solid transparent;transition:all 0.15s;line-height:1.35;}
+.toc-list a:hover,.toc-list a.active{color:var(--text);border-color:var(--c-pr);}
+.quickref{position:sticky;top:72px;}
+.qr-header{background:var(--c-pr-bg);border-bottom:1px solid var(--c-pr);padding:14px 18px;display:flex;align-items:center;gap:8px;border-radius:var(--r-lg) var(--r-lg) 0 0;}
+.qr-header h4{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-pr);}
+.qr-row{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:10px 18px;border-bottom:1px solid var(--border);font-size:0.79rem;}
+.qr-row:last-child{border-bottom:none;border-radius:0 0 var(--r-lg) var(--r-lg);}
+.qr-key{color:var(--muted);flex-shrink:0;font-size:0.73rem;max-width:120px;}
+.qr-val{color:var(--heading);font-weight:600;text-align:right;font-size:0.73rem;}
+.qr-val.green{color:var(--success);}
+.qr-val.amber{color:var(--c-pr);}
+.qr-val.blue{color:var(--accent-lt);}
+
+/* FOOTER */
+.site-footer{border-top:1px solid var(--border);margin-top:80px;padding:32px 24px;text-align:center;color:var(--muted);font-size:0.82rem;}
+.site-footer a{color:var(--muted);text-decoration:none;}
+.site-footer a:hover{color:var(--text);}
+</style>
+</head>
+<body>
+<div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+  <ul class="nav-links">
+    <li><a href="/articles/">Articles</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+<main id="main-content">
+
+<header class="article-header">
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/articles/">Articles</a><span>›</span>
+    <a href="/articles/?cat=inventory">Inventory Management</a>
+  </div>
+  <span class="article-category">📦 Inventory Management</span>
+  <h1>Cost Control in Inventory Management: Strategies, KPIs &amp; Best Practices (2026)</h1>
+  <p class="article-deck">For most product businesses, inventory is the largest asset on the balance sheet — and one of the most expensive to maintain. This guide covers every lever available to reduce inventory costs: from ABC classification and EOQ ordering to safety stock optimization, KPI dashboards, and a 90-day implementation roadmap.</p>
+  <div class="article-meta">
+    <span>🗓 June 23, 2026</span>
+    <span>⏱ 22 min read</span>
+    <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--c-pr);text-decoration:underline;text-underline-offset:3px;">Mithun GS</a></span>
+    <span>📂 Inventory Management</span>
+  </div>
+</header>
+
+<div class="article-stats">
+  <div class="stat-item"><div class="s-val amber">25–35%</div><div class="s-lbl">Of revenue tied up in stock</div></div>
+  <div class="stat-item"><div class="s-val green">8–12×</div><div class="s-lbl">Ideal inventory turnover/year</div></div>
+  <div class="stat-item"><div class="s-val blue">$1.77T</div><div class="s-lbl">Global losses from overstocking</div></div>
+  <div class="stat-item"><div class="s-val">9</div><div class="s-lbl">KPIs every team must track</div></div>
+</div>
+
+<article class="article-body" itemscope itemtype="https://schema.org/Article">
+<meta itemprop="headline" content="Cost Control in Inventory Management: Strategies, KPIs & Best Practices (2026)" />
+<meta itemprop="datePublished" content="2026-06-23" />
+
+<!-- INTRO -->
+<section id="introduction">
+  <h2 style="border-top:none;padding-top:0;margin-top:0;">Why Inventory Costs Kill Margins Quietly</h2>
+  <p>Inventory is one of those business problems that goes wrong in slow motion. A purchase order placed a few weeks too early. A vendor that raises prices 3% every quarter with no one comparing against the original contract. A shipment received short and paid in full. A seasonal product that doesn't sell, sits for eight months, and gets marked down at 40% to clear the warehouse. None of these events trigger an alarm on the day they happen — they accumulate into a cost problem that shows up on the P&amp;L months later with no clear source.</p>
+  <p><strong>Poor inventory cost control is one of the top three reasons mid-market product businesses fail to scale profitably.</strong> The good news: inventory costs are highly controllable. Companies that actively manage them using structured frameworks consistently achieve 15–40% reductions in total inventory costs within 12–18 months — without cutting service levels.</p>
+  <p>This guide covers the complete picture: the anatomy of what you're actually paying for, the strategies that move the needle most, the nine KPIs every inventory function must track, current best practices, and a 90-day roadmap to get measurable results fast.</p>
+  <div class="disclosure">📌 <strong>Research note:</strong> Benchmarks and cost ranges reflect industry research and published studies from sources including Gartner, Deloitte, and the Institute for Supply Management, as of June 2026. Ranges vary by industry, business size, and geography — always validate against your specific sector.</div>
+</section>
+
+<!-- COST ANATOMY TIER -->
+<div class="tier-divider costs"><div class="td-line"></div><div class="td-label">🔴 Anatomy of Inventory Costs</div><div class="td-line"></div></div>
+
+<section id="cost-anatomy">
+  <h2>The Five Cost Buckets — and Where the Money Actually Goes</h2>
+  <p>Before you can control inventory costs, you must understand precisely what you're paying for. Most businesses measure total inventory value accurately but have no visibility into how that value is being eroded each month it sits on the shelf. Inventory costs fall into five distinct buckets, each requiring a different management response.</p>
+
+  <div class="cost-bar-section">
+    <div class="cost-bar-item">
+      <div class="cost-bar-label-row"><span class="cost-bar-name">Holding / Carrying Costs</span><span class="cost-bar-pct">20–35% of item value/yr</span></div>
+      <div class="cost-bar-track"><div class="cost-bar-fill" style="width:92%;background:var(--danger);"></div></div>
+    </div>
+    <div class="cost-bar-item">
+      <div class="cost-bar-label-row"><span class="cost-bar-name">Stockout / Shortage Costs</span><span class="cost-bar-pct">10–20% of missed sale value</span></div>
+      <div class="cost-bar-track"><div class="cost-bar-fill" style="width:58%;background:var(--c-pr);"></div></div>
+    </div>
+    <div class="cost-bar-item">
+      <div class="cost-bar-label-row"><span class="cost-bar-name">Ordering / Procurement Costs</span><span class="cost-bar-pct">10–15% of total inv. cost</span></div>
+      <div class="cost-bar-track"><div class="cost-bar-fill" style="width:40%;background:var(--accent-lt);"></div></div>
+    </div>
+    <div class="cost-bar-item">
+      <div class="cost-bar-label-row"><span class="cost-bar-name">Obsolescence &amp; Shrinkage</span><span class="cost-bar-pct">5–10% of total inv. cost</span></div>
+      <div class="cost-bar-track"><div class="cost-bar-fill" style="width:26%;background:#a78bfa;"></div></div>
+    </div>
+    <div class="cost-bar-item">
+      <div class="cost-bar-label-row"><span class="cost-bar-name">Administrative &amp; Quality Costs</span><span class="cost-bar-pct">3–8% of total inv. cost</span></div>
+      <div class="cost-bar-track"><div class="cost-bar-fill" style="width:18%;background:var(--muted);"></div></div>
+    </div>
+  </div>
+
+  <div class="sw-card">
+    <div class="sw-header">
+      <div class="sw-rank" style="background:#1f0d0d;border-color:var(--danger);color:var(--danger);">01</div>
+      <div><div class="sw-name">Holding / Carrying Costs</div><div class="sw-tagline">The largest and most controllable cost bucket</div></div>
+      <div class="sw-price"><div class="sp-label">Typical range</div><div class="sp-val" style="color:var(--danger);">20–35%/yr</div></div>
+    </div>
+    <div class="sw-body">
+      <p>Holding costs are the total cost of keeping inventory in storage — and they run 20–35% of the item's value per year for most businesses. This number surprises most business owners, because it's rarely tracked as a single line item. It includes:</p>
+      <div class="sw-grid">
+        <div class="sw-col pros"><h4>What's included</h4><ul>
+          <li>Capital cost — the opportunity cost of money tied up in stock</li>
+          <li>Warehousing — rent, utilities, racking, and equipment</li>
+          <li>Insurance and property taxes on stored goods</li>
+          <li>Deterioration, spoilage, and damage during storage</li>
+        </ul></div>
+        <div class="sw-col cons"><h4>Why it's dangerous</h4><ul>
+          <li>Accumulates invisibly — not reflected in daily operations</li>
+          <li>Compounds as slow-moving stock ages with no buyers</li>
+          <li>Often miscalculated by ignoring the capital opportunity cost</li>
+          <li>Creates write-off pressure when items pass expiry or trend</li>
+        </ul></div>
+      </div>
+      <div class="formula-box">
+        <div class="formula-label">Formula: Annual Holding Cost</div>
+        Holding Cost = (Average Inventory × Unit Cost) × Holding Cost Rate<br>
+        <span style="color:var(--muted);font-size:0.82rem;">Example: Avg inventory 1,000 units × $50/unit × 25% = $12,500/year</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sw-card">
+    <div class="sw-header">
+      <div class="sw-rank" style="background:var(--c-pr-bg);border-color:var(--c-pr);color:var(--c-pr);">02</div>
+      <div><div class="sw-name">Stockout / Shortage Costs</div><div class="sw-tagline">The invisible drain — costs far more than the face value of lost sales</div></div>
+    </div>
+    <div class="sw-body">
+      <p>Stockouts are deceptively expensive. Beyond the lost sale, they damage customer relationships, trigger emergency procurement at premium prices, require rush shipping, and can permanently shift customers to competitors. Research estimates the <strong>true cost of a stockout is 2–3× the face value of the missed sale</strong> when downstream effects are included.</p>
+      <div class="callout callout-danger"><div class="callout-label">⚠ The Real Cost of a Stockout</div><p>For a $100 sale that doesn't happen due to a stockout: $100 lost margin + $30–60 in emergency procurement premium + $15–25 in expedited shipping + estimated $50–100 in lost future customer lifetime value = <strong>$195–285 total cost per missed $100 sale.</strong></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGIES TIER -->
+<div class="tier-divider strategies"><div class="td-line"></div><div class="td-label">🟡 Core Cost-Control Strategies</div><div class="td-line"></div></div>
+
+<section id="strategies">
+  <h2>The Strategies That Actually Move the Needle</h2>
+  <p>The strategies below are sequenced by implementation priority. Start with classification and ordering optimization — these generate the fastest returns with the least technical investment. Technology-led approaches compound those gains but require a clean data foundation first.</p>
+
+  <!-- ABC ANALYSIS -->
+  <div class="sw-card">
+    <div class="sw-header">
+      <div class="sw-rank">S1</div>
+      <div><div class="sw-name">ABC Analysis</div><div class="sw-tagline">Apply the Pareto principle to your inventory — focus control where it matters</div></div>
+      <div class="sw-price"><div class="sp-label">Typical cost reduction</div><div class="sp-val">10–20%</div></div>
+    </div>
+    <div class="sw-body">
+      <p>ABC analysis classifies every SKU by annual consumption value so management attention is concentrated on the items that actually move the needle. Typically, <strong>the top 10–20% of SKUs (A items) account for 70–80% of total inventory value</strong> — they deserve tight controls, frequent review cycles, dual sourcing, and senior oversight. C items — often 50–70% of SKUs but only 5–10% of value — can be managed with simple automated reorder triggers and need minimal human attention.</p>
+      <div class="abc-grid">
+        <div class="abc-card a">
+          <div class="abc-letter">A</div>
+          <div class="abc-pct">10–20% of SKUs → 70–80% of value</div>
+          <div class="abc-desc">Weekly cycle count. Dual sourcing. Tight safety stocks. Perpetual tracking. Senior review.</div>
+        </div>
+        <div class="abc-card b">
+          <div class="abc-letter">B</div>
+          <div class="abc-pct">20–30% of SKUs → 15–25% of value</div>
+          <div class="abc-desc">Monthly review. Moderate safety stocks. Standard reorder points. Periodic physical count.</div>
+        </div>
+        <div class="abc-card c">
+          <div class="abc-letter">C</div>
+          <div class="abc-pct">50–70% of SKUs → 5–10% of value</div>
+          <div class="abc-desc">Quarterly review. Automated triggers. Bulk ordering. Minimal safety stock. Annual count.</div>
+        </div>
+      </div>
+      <div class="sw-bestfor"><strong>Implementation note:</strong> Reclassify ABC tiers quarterly — demand patterns shift, and an item that was a B six months ago may now belong in A or C. Static classification becomes inaccurate fast.</div>
+    </div>
+  </div>
+
+  <!-- EOQ -->
+  <div class="sw-card">
+    <div class="sw-header">
+      <div class="sw-rank">S2</div>
+      <div><div class="sw-name">Economic Order Quantity (EOQ)</div><div class="sw-tagline">The mathematically optimal order quantity — eliminates both overbuying and underbuying</div></div>
+      <div class="sw-price"><div class="sp-label">Typical cost reduction</div><div class="sp-val">8–15%</div></div>
+    </div>
+    <div class="sw-body">
+      <p>EOQ finds the order quantity at which total ordering and holding costs are minimized. Order too infrequently and holding costs balloon. Order too often and per-order administrative costs pile up. EOQ solves this trade-off mathematically. <strong>Use the calculator below to find your optimal order size.</strong></p>
+      <div class="formula-box">
+        <div class="formula-label">EOQ Formula</div>
+        EOQ = √(2DS / H)<br>
+        <span style="color:var(--muted);font-size:0.82rem;">D = Annual demand (units) · S = Cost per order · H = Holding cost per unit per year</span>
+      </div>
+      <div class="calc-widget">
+        <div class="calc-header"><h4>📐 EOQ Calculator — Find Your Optimal Order Quantity</h4></div>
+        <div class="calc-body">
+          <div class="calc-row">
+            <span class="calc-label">Annual Demand (units)</span>
+            <input class="calc-input" type="number" id="eoq-demand" value="12000" oninput="calcEOQ()">
+          </div>
+          <div class="calc-row">
+            <span class="calc-label">Cost per Order ($/order)</span>
+            <input class="calc-input" type="number" id="eoq-order" value="500" oninput="calcEOQ()">
+          </div>
+          <div class="calc-row">
+            <span class="calc-label">Holding Cost per Unit per Year ($)</span>
+            <input class="calc-input" type="number" id="eoq-hold" value="20" oninput="calcEOQ()">
+          </div>
+          <div class="calc-result">
+            <span class="calc-result-label">Optimal Order Quantity (EOQ)</span>
+            <span class="calc-result-value green" id="eoq-result">775 units</span>
+          </div>
+          <div class="calc-result" style="margin-top:8px;background:var(--accent-glow);border-color:var(--accent);">
+            <span class="calc-result-label" style="color:var(--muted);">Minimum Annual Total Cost</span>
+            <span class="calc-result-value blue" id="eoq-cost">$15,492</span>
+          </div>
+        </div>
+      </div>
+      <div class="sw-grid">
+        <div class="sw-col pros"><h4>When EOQ works best</h4><ul>
+          <li>Relatively stable, predictable demand patterns</li>
+          <li>Consistent supplier lead times</li>
+          <li>Clearly defined per-order fixed costs</li>
+          <li>Items not subject to quantity discount cliffs</li>
+        </ul></div>
+        <div class="sw-col cons"><h4>EOQ limitations</h4><ul>
+          <li>Assumes constant demand — less accurate for seasonal items</li>
+          <li>Doesn't account for bulk discount pricing thresholds</li>
+          <li>Requires accurate holding cost rate to be meaningful</li>
+          <li>Use EOQ-with-backorders variant if stockouts are allowed</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAFETY STOCK -->
+  <div class="sw-card">
+    <div class="sw-header">
+      <div class="sw-rank">S3</div>
+      <div><div class="sw-name">Safety Stock Optimization</div><div class="sw-tagline">The right buffer — calculated, not guessed</div></div>
+      <div class="sw-price"><div class="sp-label">Capital released</div><div class="sp-val">10–15%</div></div>
+    </div>
+    <div class="sw-body">
+      <p>Most businesses either carry too much safety stock (wasting capital) or too little (causing stockouts). The root cause is almost always the same: safety stock was set using a gut-feel rule like "keep 2 weeks of cover" — which ignores that demand and lead times vary independently. The statistically correct approach uses demand variability, lead time variability, and a service level factor.</p>
+      <div class="formula-box">
+        <div class="formula-label">Safety Stock Formula (Statistical Method)</div>
+        SS = Z × √(LT × σ²d + D² × σ²LT)<br><br>
+        Z = 1.28 (90% service level)<br>
+        Z = 1.65 (95% service level)<br>
+        Z = 2.05 (98% service level)<br>
+        <span style="color:var(--muted);font-size:0.82rem;">σd = std dev of daily demand · σLT = std dev of lead time · LT = avg lead time · D = avg daily demand</span>
+      </div>
+      <div class="callout callout-danger"><div class="callout-label">⚠ Common Costly Mistake</div><p>Using a flat "X weeks of cover" rule for all SKUs systematically <strong>overprotects slow movers</strong> (excess capital) and <strong>underprotects volatile fast movers</strong> (stockouts). The statistical method matches protection level to actual variability for each SKU — a significant improvement for almost no additional cost.</p></div>
+    </div>
+  </div>
+
+  <!-- JIT & LEAN -->
+  <div class="sw-card">
+    <div class="sw-header">
+      <div class="sw-rank">S4</div>
+      <div><div class="sw-name">JIT &amp; Lean Inventory</div><div class="sw-tagline">Any inventory beyond immediate need is waste — reduce it systematically</div></div>
+      <div class="sw-price"><div class="sp-label">Holding cost reduction</div><div class="sp-val">20–40%</div></div>
+    </div>
+    <div class="sw-body">
+      <p>Just-in-Time and Lean inventory principles — pioneered by Toyota and now applied across all industries — start from a simple premise: <strong>any inventory beyond immediate need is waste that carries cost without delivering value.</strong> The practical implementation involves eliminating the seven wastes and replacing push-based ordering (forecast-driven) with pull-based ordering (consumption-triggered).</p>
+      <div class="sw-grid">
+        <div class="sw-col pros"><h4>The 7 Lean Wastes in Inventory</h4><ul>
+          <li>Overproduction — ordering more than demand requires</li>
+          <li>Waiting — stock sitting idle between process steps</li>
+          <li>Transportation — unnecessary goods movement</li>
+          <li>Over-processing — rework or excess inspection</li>
+          <li>Excess inventory — anything beyond safety stock</li>
+          <li>Motion — inefficient warehouse layout increasing picks</li>
+          <li>Defects — damaged or obsolete goods requiring write-off</li>
+        </ul></div>
+        <div class="sw-col cons"><h4>JIT requirements &amp; risks</h4><ul>
+          <li>Demands highly reliable, consistent suppliers</li>
+          <li>Requires accurate demand forecasting as baseline</li>
+          <li>Vulnerable to supply chain disruptions and lead time spikes</li>
+          <li>Not suited to items with unpredictable demand volatility</li>
+        </ul></div>
+      </div>
+      <p><strong>Kanban replenishment</strong> is the simplest JIT implementation. A two-bin system replaces forecast-driven ordering entirely: when the first bin empties, it triggers a replenishment order while the second bin covers demand during lead time. No forecast required — consumption triggers supply.</p>
+    </div>
+  </div>
+
+  <!-- VMI -->
+  <div class="sw-card">
+    <div class="sw-header">
+      <div class="sw-rank">S5</div>
+      <div><div class="sw-name">Vendor-Managed Inventory (VMI)</div><div class="sw-tagline">Transfer replenishment responsibility to suppliers — reduce your overhead and stockout risk</div></div>
+    </div>
+    <div class="sw-body">
+      <p>In a VMI arrangement, the supplier monitors your inventory levels — via EDI, shared portal, or RFID data — and replenishes proactively, eliminating your ordering overhead entirely for covered items. <strong>VMI is most effective for high-volume, predictable C-category items</strong> where your value-add is selling and using the product, not managing its replenishment.</p>
+      <div class="sw-grid">
+        <div class="sw-col pros"><h4>VMI benefits</h4><ul>
+          <li>Eliminates purchase order processing cost for covered items</li>
+          <li>Shifts inventory risk to supplier for consignment VMI</li>
+          <li>Reduces stockouts as supplier has earlier demand signal</li>
+          <li>Frees procurement team to focus on strategic sourcing</li>
+        </ul></div>
+        <div class="sw-col cons"><h4>VMI drawbacks</h4><ul>
+          <li>Requires strong supplier trust and data-sharing infrastructure</li>
+          <li>Supplier may optimize their inventory, not yours</li>
+          <li>Creates supplier dependency for covered SKUs</li>
+          <li>Not suitable for strategic or single-source A items</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KPI TIER -->
+<div class="tier-divider kpis"><div class="td-line"></div><div class="td-label">🟢 Essential KPIs</div><div class="td-line"></div></div>
+
+<section id="kpis">
+  <h2>The 9 KPIs Every Inventory Team Must Track</h2>
+  <p>What gets measured gets managed. These are the KPIs that give finance and operations teams the visibility to identify cost leakages and track improvement over time. Report on all nine monthly — quarterly is not frequent enough to catch problems before they compound.</p>
+
+  <div class="mini-stats">
+    <div class="mini-stat"><div class="ms-val" style="color:var(--success);">8–12×</div><div class="ms-lbl">Target turnover ratio</div></div>
+    <div class="mini-stat"><div class="ms-val" style="color:var(--c-pr);">&lt;45 days</div><div class="ms-lbl">Target DIO (retail)</div></div>
+    <div class="mini-stat"><div class="ms-val" style="color:var(--accent-lt);">&gt;95%</div><div class="ms-lbl">Target fill rate</div></div>
+    <div class="mini-stat"><div class="ms-val" style="color:var(--danger);">&lt;2%</div><div class="ms-lbl">Target stockout rate</div></div>
+    <div class="mini-stat"><div class="ms-val" style="color:#a78bfa;">&gt;2.0×</div><div class="ms-lbl">Target GMROI</div></div>
+    <div class="mini-stat"><div class="ms-val" style="color:var(--success);">&gt;99%</div><div class="ms-lbl">Target accuracy</div></div>
+  </div>
+
+  <div class="data-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>KPI</th>
+          <th>Formula</th>
+          <th>Target / Benchmark</th>
+          <th>Why It Matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Inventory Turnover Ratio</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:0.8rem;">COGS ÷ Avg Inventory Value</span></td>
+          <td><span class="badge badge-green">8–12× per year</span></td>
+          <td>Core efficiency measure. Low turnover = capital trapped in slow-moving stock.</td>
+        </tr>
+        <tr>
+          <td><strong>Days Inventory Outstanding (DIO)</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:0.8rem;">(Avg Inv ÷ COGS) × 365</span></td>
+          <td><span class="badge badge-amber">&lt;45 days (retail)</span></td>
+          <td>How long stock sits before it sells. Directly impacts cash conversion cycle.</td>
+        </tr>
+        <tr>
+          <td><strong>Carrying Cost % of Value</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:0.8rem;">Holding Costs ÷ Avg Inv Value</span></td>
+          <td><span class="badge badge-amber">20–30%</span></td>
+          <td>Your true cost of warehousing money as physical product.</td>
+        </tr>
+        <tr>
+          <td><strong>Fill Rate</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:0.8rem;">(Orders complete ÷ Total) × 100</span></td>
+          <td><span class="badge badge-green">&gt;95%</span></td>
+          <td>Customer-facing completeness. Low fill rate signals inventory imbalance.</td>
+        </tr>
+        <tr>
+          <td><strong>Stockout Rate</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:0.8rem;">Lost Orders ÷ Total Orders × 100</span></td>
+          <td><span class="badge badge-red">&lt;2%</span></td>
+          <td>Service level failure rate. Understates true cost (2–3× face value).</td>
+        </tr>
+        <tr>
+          <td><strong>Obsolescence Rate</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:0.8rem;">Write-off ÷ Total Inv × 100</span></td>
+          <td><span class="badge badge-green">&lt;1% annually</span></td>
+          <td>Dead stock is pure cost. High rate signals poor demand forecasting.</td>
+        </tr>
+        <tr>
+          <td><strong>Inventory Accuracy</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:0.8rem;">(Accurate items ÷ Total) × 100</span></td>
+          <td><span class="badge badge-green">&gt;99%</span></td>
+          <td>Foundation of all other metrics. Inaccurate records corrupt every decision downstream.</td>
+        </tr>
+        <tr>
+          <td><strong>Perfect Order Rate</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:0.8rem;">On-time+complete+accurate ÷ Total</span></td>
+          <td><span class="badge badge-green">&gt;95%</span></td>
+          <td>Composite execution quality measure. Impacts repeat purchase rates directly.</td>
+        </tr>
+        <tr>
+          <td><strong>GMROI</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:0.8rem;">Gross Margin ÷ Avg Inv Cost</span></td>
+          <td><span class="badge badge-purple">&gt;2.0×</span></td>
+          <td>The ultimate efficiency ratio — gross profit generated per dollar of inventory held.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pull-quote"><p>"GMROI is the KPI that boards actually care about — it converts inventory efficiency directly into return-on-investment language that the CFO and CEO understand without needing a glossary."</p><cite>— Mithun GS</cite></div>
+</section>
+
+<!-- BEST PRACTICES TIER -->
+<div class="tier-divider practices"><div class="td-line"></div><div class="td-label">🔵 Best Practices</div><div class="td-line"></div></div>
+
+<section id="best-practices">
+  <h2>Best Practices for Sustained Cost Control</h2>
+  <p>Strategies and KPIs only generate returns when embedded in repeatable operating practices. The following practices represent the operational habits that differentiate consistently high-performing inventory functions from those that improve briefly and then regress.</p>
+
+  <ul class="check-list">
+    <li><div class="ck">✓</div><div><strong>Replace annual audits with cycle counting.</strong> Annual physical inventory counts are disruptive, expensive, and produce accuracy data once a year — by which time inaccuracies have compounded for months. Cycle counting divides inventory into segments and counts a portion continuously. A items weekly, B items monthly, C items quarterly. Perpetual accuracy without production shutdowns.</div></li>
+    <li><div class="ck">✓</div><div><strong>Implement Demand-Driven MRP (DDMRP).</strong> Traditional MRP forecasts in long horizons and generates large orders that create the bullwhip effect — small demand fluctuations amplify into massive upstream swings. DDMRP replaces forecast-driven push with strategically positioned buffers and pull-based replenishment, typically reducing inventory by 20–40% while improving service levels.</div></li>
+    <li><div class="ck">✓</div><div><strong>Rationalise your SKU portfolio aggressively.</strong> SKU proliferation is one of the most overlooked cost drivers. Each additional SKU adds procurement complexity, storage space, ordering overhead, and obsolescence risk. A structured SKU rationalisation process — identifying and eliminating underperforming SKUs by GMROI contribution — typically reduces carrying costs by 10–15% with zero service level impact.</div></li>
+    <li><div class="ck">✓</div><div><strong>Negotiate lead time reduction, not just price.</strong> Safety stock requirements are mathematically linked to lead time variability. A supplier who delivers in 5 ± 1 days requires dramatically less safety stock than one who delivers in 14 ± 7 days. The inventory cost savings from a two-week lead time reduction frequently exceed the price concessions you'd have achieved in a conventional negotiation.</div></li>
+    <li><div class="ck">✓</div><div><strong>Build cross-functional visibility.</strong> Inventory decisions made in silos are inefficient by definition. Procurement buys in bulk for discounts; sales promises lead times without checking stock; finance doesn't see the true carrying cost. Monthly S&amp;OP meetings, shared dashboards, and aligned KPI incentives are as important as any technical solution.</div></li>
+    <li><div class="ck">✓</div><div><strong>Align procurement team incentives to GMROI — not purchase price variance.</strong> A procurement team incentivized purely on cost savings will consistently overbuy to hit volume discounts. Rewarding GMROI and turnover ratio alongside purchase cost aligns purchasing behavior with total inventory efficiency.</div></li>
+    <li><div class="ck">✓</div><div><strong>Establish a slow-mover liquidation process before write-offs hit.</strong> Every inventory function needs a defined trigger point — 60 days, 90 days, or seasonal threshold — at which slow-moving items are moved to a liquidation track (discounting, returns to supplier, secondary channel sale). Converting aged stock to cash at 60 cents on the dollar beats writing it off at zero.</div></li>
+    <li><div class="ck">✓</div><div><strong>Implement barcode or RFID scanning at every movement point.</strong> Inventory accuracy above 99% is only sustainable with scanning at receipt, putaway, pick, and dispatch. Manual counts and paper processes consistently produce accuracy in the 65–85% range — which means every forecast, reorder point, and KPI built on that data is unreliable.</div></li>
+  </ul>
+</section>
+
+<!-- TECHNOLOGY TIER -->
+<div class="tier-divider tech"><div class="td-line"></div><div class="td-label">🟣 Technology Enablers</div><div class="td-line"></div></div>
+
+<section id="technology">
+  <h2>Technology That Accelerates Cost Control in 2026</h2>
+  <p>Technology doesn't replace good inventory management practice — it accelerates and scales it. The returns on technology investment are only realized when the underlying processes are sound and the data is clean. The following platforms and capabilities represent the current state of the art.</p>
+
+  <div class="callout callout-danger"><div class="callout-label">⚠ Technology Pitfall</div><p>Implementing ERP or WMS technology on top of broken inventory processes doesn't fix the processes — <strong>it automates the dysfunction at scale and at higher cost.</strong> Process discipline and data quality must precede technology investment for ROI to materialise. This is the most common reason inventory technology projects fail.</p></div>
+
+  <div class="sw-card">
+    <div class="sw-header">
+      <div class="sw-rank blue">T1</div>
+      <div><div class="sw-name">AI-Powered Demand Forecasting</div><div class="sw-tagline">30–50% improvement in forecast accuracy vs statistical methods alone</div></div>
+    </div>
+    <div class="sw-body">
+      <p>Machine learning demand forecasting models trained on POS data, macroeconomic signals, weather patterns, promotional calendars, and social trends consistently reduce forecast error by 30–50% compared to traditional statistical methods. Tighter forecasts enable tighter inventory — every percentage point of forecast improvement translates directly into reduced safety stock and holding cost.</p>
+      <div class="sw-grid">
+        <div class="sw-col pros"><h4>Best for</h4><ul>
+          <li>Businesses with 500+ SKUs and significant demand volatility</li>
+          <li>Seasonal categories where timing matters more than volume</li>
+          <li>Promotionally-driven categories where lift must be pre-positioned</li>
+        </ul></div>
+        <div class="sw-col cons"><h4>Requirements</h4><ul>
+          <li>Minimum 18–24 months of clean historical sales data</li>
+          <li>Data integration across POS, ERP, and external feeds</li>
+          <li>Ongoing model training and human override capability</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sw-card">
+    <div class="sw-header">
+      <div class="sw-rank blue">T2</div>
+      <div><div class="sw-name">RFID &amp; IoT Real-Time Tracking</div><div class="sw-tagline">99.9% inventory accuracy — eliminating the root cause of every downstream decision error</div></div>
+    </div>
+    <div class="sw-body">
+      <p>RFID systems achieve 99.9% inventory count accuracy versus the 65–95% typical of barcode or manual systems. When inventory accuracy is a given rather than an aspiration, every process built on that data — forecasting, reorder triggering, pick optimization, shrink detection — becomes dramatically more reliable. IoT sensors add live environmental monitoring (temperature, humidity) for perishable and temperature-sensitive inventory.</p>
+      <div class="sw-bestfor"><strong>ROI reality check:</strong> RFID capital costs have fallen significantly. For businesses with $5M+ in annual inventory value, RFID systems typically achieve payback in 18–24 months through accuracy improvements alone, before accounting for labor savings.</div>
+    </div>
+  </div>
+
+  <div class="sw-card">
+    <div class="sw-header">
+      <div class="sw-rank blue">T3</div>
+      <div><div class="sw-name">Autonomous Replenishment</div><div class="sw-tagline">AI-generated purchase orders within defined parameters — eliminating ordering latency and human error</div></div>
+    </div>
+    <div class="sw-body">
+      <p>Autonomous replenishment systems continuously monitor inventory positions against statistical safety stock models and automatically generate purchase orders when trigger points are reached — without human intervention for pre-approved suppliers, items, and quantity ranges. This eliminates the ordering latency that causes both stockouts (humans react slowly) and overstocks (humans order conservatively to avoid stockouts). Human review is reserved for exceptions: new suppliers, large deviation from norm, budget threshold breaches.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP TIER -->
+<div class="tier-divider roadmap"><div class="td-line"></div><div class="td-label">📅 90-Day Roadmap</div><div class="td-line"></div></div>
+
+<section id="roadmap">
+  <h2>90 Days to Measurable Results: Your Implementation Roadmap</h2>
+  <p>Inventory cost control improvements don't need to take years. A focused 90-day programme addressing the highest-impact levers first can deliver 10–20% cost reductions with minimal capital investment. The key is sequencing — getting the measurement and classification right before optimizing.</p>
+
+  <div class="steps-list">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <div class="step-title">Days 1–14: Baseline, Measure, and Classify</div>
+        <div class="step-text">Calculate current inventory turnover, DIO, carrying cost %, and GMROI. Run ABC classification across all SKUs using the past 12 months of COGS data. Identify the top 20 slow-movers (highest days-on-hand) and the top 20 stockout-prone SKUs (highest lost sales). These two lists define your first priorities.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <div class="step-title">Days 15–30: Fix Safety Stocks and Reorder Points</div>
+        <div class="step-text">Replace gut-feel safety stocks with statistically calculated buffers for all A and B items using the formula above. Recalculate reorder points based on actual lead time data and demand standard deviations. This single step typically releases 10–15% of trapped capital with no additional investment.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <div class="step-title">Days 31–60: Apply EOQ and Engage Suppliers</div>
+        <div class="step-text">Apply EOQ calculations to your top 20 spend categories. Approach key suppliers about lead time reduction — even a 3–5 day reduction in lead time variance can release significant safety stock capital. Begin VMI conversations with C-item suppliers. Launch cycle counting for all A items.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num green">4</div>
+      <div class="step-content">
+        <div class="step-title">Days 61–75: SKU Rationalisation and Slow-Mover Liquidation</div>
+        <div class="step-text">Identify the bottom quintile of SKUs by GMROI. Build the business case for consolidation or delisting of the weakest performers. Simultaneously, launch a targeted slow-mover liquidation campaign — any item with 90+ days on hand should be moving toward markdown, return, or secondary channel sale before it becomes a write-off.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num green">5</div>
+      <div class="step-content">
+        <div class="step-title">Days 76–90: Dashboard, S&amp;OP, and Ongoing Cadence</div>
+        <div class="step-text">Build and publish a live KPI dashboard covering all nine metrics above. Launch a monthly Sales &amp; Operations Planning meeting with procurement, sales, finance, and operations represented. Set 6-month and 12-month improvement targets. Measure the cost reduction achieved in the first 90 days — the first proof point matters for sustaining organizational commitment.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-amber"><div class="callout-label">💡 What to Expect</div><p>A well-executed 90-day programme addressing safety stocks, EOQ ordering, and ABC-based control typically delivers <strong>10–20% reduction in total carrying costs</strong> and frees up working capital equivalent to 5–12% of annual inventory value — without any capital technology investment. The compounding gains from supplier engagement and SKU rationalisation accrue over months 3–12.</p></div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section id="comparison">
+  <h2>Strategy Comparison: At a Glance</h2>
+  <div class="data-table-wrap">
+    <table>
+      <thead>
+        <tr><th>Strategy</th><th>Cost Reduction Potential</th><th>Implementation Time</th><th>Investment Required</th><th>Best For</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>ABC Analysis</strong></td><td><span class="badge badge-green">10–20%</span></td><td>1–2 weeks</td><td>Minimal</td><td>All businesses — start here</td></tr>
+        <tr><td><strong>EOQ Optimization</strong></td><td><span class="badge badge-green">8–15%</span></td><td>2–4 weeks</td><td>Minimal</td><td>Predictable-demand SKUs</td></tr>
+        <tr><td><strong>Safety Stock Recalculation</strong></td><td><span class="badge badge-green">10–15%</span></td><td>2–4 weeks</td><td>Minimal</td><td>All businesses with variable demand</td></tr>
+        <tr><td><strong>JIT / Lean</strong></td><td><span class="badge badge-amber">20–40%</span></td><td>3–12 months</td><td>Moderate</td><td>Reliable supplier base required</td></tr>
+        <tr><td><strong>SKU Rationalisation</strong></td><td><span class="badge badge-green">10–15%</span></td><td>1–3 months</td><td>Minimal</td><td>Businesses with 200+ SKUs</td></tr>
+        <tr><td><strong>VMI</strong></td><td><span class="badge badge-amber">15–25%</span></td><td>3–6 months</td><td>Low–moderate</td><td>C-item categories with trusted suppliers</td></tr>
+        <tr><td><strong>AI Demand Forecasting</strong></td><td><span class="badge badge-amber">20–35%</span></td><td>6–12 months</td><td>High</td><td>500+ SKUs, volatile demand, clean data</td></tr>
+        <tr><td><strong>RFID / IoT</strong></td><td><span class="badge badge-blue">Foundation</span></td><td>3–9 months</td><td>High</td><td>$5M+ inventory value businesses</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section id="conclusion">
+  <h2>The Real Cost of No Inventory Cost Control Programme</h2>
+  <p>Every business without a structured inventory cost control programme is hemorrhaging somewhere — whether it's capital trapped in slow-moving stock generating 25% holding costs per year, stockouts triggering 2–3× cost emergency purchases, or a SKU portfolio that grew by default rather than design and now costs more to manage than the bottom half contributes in margin.</p>
+  <p>These aren't hypothetical risks. They're the day-to-day reality for most businesses operating without structured inventory controls, and they accumulate into a significant cost line that rarely gets attributed to "lack of inventory discipline" — but absolutely should be.</p>
+  <div class="callout callout-tip"><div class="callout-label">✅ Where to Start Today</div><p>If you're currently managing inventory without ABC classification and statistically calculated safety stocks, start there this week. Pull 12 months of COGS data by SKU, rank by consumption value, draw the A/B/C lines, and recalculate safety stocks for your top 50 A items. That work — which takes a few days in a spreadsheet — is typically worth more than any software you could buy this quarter.</p></div>
+  <div class="article-cta"><h3>Explore More Inventory &amp; Loss Prevention Guides</h3><p>Free practical articles on procurement, vendor fraud, cost control, and operations — no sign-up needed.</p><a href="/articles/" class="btn-primary">Browse All Articles →</a></div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is the biggest cost in inventory management?<span class="arrow">▾</span></button>
+      <div class="faq-a">Holding (carrying) costs are typically the largest inventory cost component, running 20–35% of the item's value per year. This includes capital opportunity cost, warehousing, insurance, taxes, and obsolescence risk. Reducing average inventory levels through better demand forecasting and EOQ-based ordering is the fastest path to cutting this cost for most businesses.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is a good inventory turnover ratio?<span class="arrow">▾</span></button>
+      <div class="faq-a">For most US retail and distribution businesses, 8–12 times per year is considered healthy. However, benchmarks vary significantly by industry — grocery may turn 25–30 times per year while heavy equipment dealers turn 3–5 times. The key is benchmarking against your specific sector and tracking directional improvement over time, rather than chasing a generic number.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is EOQ and how is it calculated?<span class="arrow">▾</span></button>
+      <div class="faq-a">EOQ (Economic Order Quantity) is the order quantity that minimizes total inventory costs by balancing ordering costs against holding costs. Formula: EOQ = √(2DS/H), where D = annual demand (units), S = cost per order, and H = holding cost per unit per year. For example: annual demand 12,000 units, ordering cost $500, holding cost $20/unit/year → EOQ = √(2 × 12,000 × 500 ÷ 20) = 775 units. Use the calculator above to find yours instantly.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How does ABC analysis reduce inventory costs?<span class="arrow">▾</span></button>
+      <div class="faq-a">ABC analysis classifies inventory by value so management effort is concentrated where it generates the most return. A items (top 10–20% of SKUs, 70–80% of value) receive tight controls, frequent review, and dual sourcing. C items (50–70% of SKUs, only 5–10% of value) get simple automated triggers and minimal oversight. This prevents over-managing low-value items while ensuring high-value stock never causes a costly stockout or excess.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is GMROI and what is a good benchmark?<span class="arrow">▾</span></button>
+      <div class="faq-a">GMROI (Gross Margin Return on Inventory Investment) measures how much gross profit each dollar of inventory generates. Formula: Gross Margin ÷ Average Inventory Cost. A GMROI above 2.0× is generally considered healthy — meaning you earn $2+ in gross margin for every $1 of inventory carried. Best-in-class retailers often achieve 3.0–5.0×. It's the metric that most directly connects inventory management performance to business profitability in language the CFO understands.</div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED ARTICLES -->
+<section id="related-articles">
+  <h2>Related Articles</h2>
+  <div class="related-grid">
+    <a class="related-card" href="/articles/best-procurement-software.html"><span class="rc-icon">🤝</span><div><div class="rc-cat">Procurement</div><div class="rc-title">Best Procurement Software 2026: Free, Affordable &amp; Best Overall (USA)</div></div></a>
+    <a class="related-card" href="/articles/vendor-fraud-prevention.html"><span class="rc-icon">🔐</span><div><div class="rc-cat">Loss Prevention</div><div class="rc-title">Vendor Fraud Prevention: How to Protect Your Supply Chain</div></div></a>
+    <a class="related-card" href="/articles/best-inventory-management-software.html"><span class="rc-icon">📦</span><div><div class="rc-cat">Inventory Management</div><div class="rc-title">Best Inventory Management Software 2026: Free, Affordable &amp; Best Overall (USA)</div></div></a>
+    <a class="related-card" href="/articles/loss-prevention-audit.html"><span class="rc-icon">🔍</span><div><div class="rc-cat">Loss Prevention</div><div class="rc-title">Loss Prevention Audit: Checklist, Process, and Best Practices</div></div></a>
+    <a class="related-card" href="/articles/airport-chocolate-store-fraud-case-study.html"><span class="rc-icon">🔴</span><div><div class="rc-cat">Real Case Study</div><div class="rc-title">The Airport Chocolate Store Fraud: How a Manager Turned Promotions into a Personal Business</div></div></a>
+  </div>
+</section>
+
+</article>
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" aria-label="Article sidebar">
+  <div class="sidebar-card quickref" style="padding:0;overflow:hidden;">
+    <div class="qr-header"><span>📦</span><h4>Quick Reference — Key Benchmarks</h4></div>
+    <div class="qr-row"><span class="qr-key">Inventory turnover</span><span class="qr-val green">8–12× per year</span></div>
+    <div class="qr-row"><span class="qr-key">Days Inventory Outstanding</span><span class="qr-val amber">&lt;45 days</span></div>
+    <div class="qr-row"><span class="qr-key">Fill rate</span><span class="qr-val green">&gt;95%</span></div>
+    <div class="qr-row"><span class="qr-key">Stockout rate</span><span class="qr-val" style="color:var(--danger);">&lt;2%</span></div>
+    <div class="qr-row"><span class="qr-key">Carrying cost % of value</span><span class="qr-val amber">20–30%</span></div>
+    <div class="qr-row"><span class="qr-key">Inventory accuracy</span><span class="qr-val green">&gt;99%</span></div>
+    <div class="qr-row"><span class="qr-key">Perfect order rate</span><span class="qr-val green">&gt;95%</span></div>
+    <div class="qr-row"><span class="qr-key">Obsolescence rate</span><span class="qr-val green">&lt;1% annually</span></div>
+    <div class="qr-row"><span class="qr-key">GMROI target</span><span class="qr-val blue">&gt;2.0×</span></div>
+  </div>
+
+  <div class="sidebar-card" style="margin-top:18px;">
+    <h4>In This Article</h4>
+    <ul class="toc-list">
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#cost-anatomy">🔴 Anatomy of Inventory Costs</a></li>
+      <li><a href="#strategies">🟡 Core Strategies</a></li>
+      <li><a href="#kpis">🟢 Essential KPIs</a></li>
+      <li><a href="#best-practices">🔵 Best Practices</a></li>
+      <li><a href="#technology">🟣 Technology Enablers</a></li>
+      <li><a href="#roadmap">📅 90-Day Roadmap</a></li>
+      <li><a href="#comparison">Comparison Table</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#related-articles">Related Articles</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-card" style="margin-top:18px;font-family:var(--font-mono);font-size:0.78rem;color:#93c5fd;line-height:2;">
+    <h4 style="font-family:var(--font-body);margin-bottom:12px;">Key Formulas</h4>
+    EOQ = √(2DS/H)<br>
+    Turnover = COGS ÷ Avg Inv<br>
+    DIO = (Inv÷COGS)×365<br>
+    GMROI = GM ÷ Avg Inv Cost<br>
+    SS = Z×√(LT·σ²d+D²·σ²LT)<br>
+    Holding = AvgInv×Cost×Rate
+  </div>
+</aside>
+</div>
+
+<footer class="site-footer">
+  <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+  <p style="margin-top:8px;"><a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a></p>
+</footer>
+
+<script>
+// Read progress bar
+window.addEventListener('scroll', () => {
+  const doc = document.documentElement;
+  document.getElementById('read-progress').style.width =
+    ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+});
+
+// FAQ accordion
+function toggleFaq(btn) {
+  const isOpen = btn.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll('.faq-q').forEach(b => {
+    b.setAttribute('aria-expanded', 'false');
+    b.nextElementSibling.classList.remove('open');
+  });
+  if (!isOpen) {
+    btn.setAttribute('aria-expanded', 'true');
+    btn.nextElementSibling.classList.add('open');
+  }
+}
+
+// TOC active state
+const sections = document.querySelectorAll('section[id]');
+const tocLinks = document.querySelectorAll('.toc-list a');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const a = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+      if (a) a.classList.add('active');
+    }
+  });
+}, { rootMargin: '-15% 0px -75% 0px' });
+sections.forEach(s => observer.observe(s));
+
+// EOQ Calculator
+function calcEOQ() {
+  const D = parseFloat(document.getElementById('eoq-demand').value) || 0;
+  const S = parseFloat(document.getElementById('eoq-order').value) || 0;
+  const H = parseFloat(document.getElementById('eoq-hold').value) || 0;
+  if (D > 0 && S > 0 && H > 0) {
+    const eoq = Math.round(Math.sqrt((2 * D * S) / H));
+    const totalCost = Math.round(Math.sqrt(2 * D * S * H));
+    document.getElementById('eoq-result').textContent = eoq.toLocaleString() + ' units';
+    document.getElementById('eoq-cost').textContent = '$' + totalCost.toLocaleString();
+  }
+}
+calcEOQ();
+</script>
+</body>
+</html>
+HTMLEOF
+echo "Done"
