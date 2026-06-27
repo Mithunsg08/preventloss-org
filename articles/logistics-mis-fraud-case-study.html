@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<title>Logistics MIS Fraud Case Study: How a 1.35M Billing Error Was Caught and 1.3M Recovered</title>
+<meta name="description" content="A real case study: how a logistics team's unchecked MIS billing errors cost a company 1.35M — and how a focused investigation recovered 1.3M through a single negotiation. Lessons for every US business managing vendor payments." />
+<meta name="keywords" content="logistics fraud case study, MIS billing fraud, vendor overbilling case study, logistics vendor fraud, how to detect vendor overbilling, freight billing fraud detection, logistics payment fraud USA, how to recover overpayment from vendor, logistics team fraud, vehicle weight billing fraud, transporter overbilling, accounts payable fraud logistics, logistics loss prevention, how to audit logistics billing, freight cost control, logistics MIS discrepancy, vendor payment recovery, loss prevention case study real, logistics billing error recovery, how to catch vendor fraud" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Mithun GS" />
+<link rel="canonical" href="https://www.preventloss.org/articles/logistics-mis-fraud-case-study.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Logistics MIS Fraud Case Study: How a 1.35M Billing Error Was Caught and 1.3M Recovered" />
+<meta property="og:description" content="A real case: unchecked logistics billing ran 5,500/day in excess charges for over a year. Here's how it was caught, investigated, and 1.3M was recovered in a single negotiation." />
+<meta property="og:url" content="https://www.preventloss.org/articles/logistics-mis-fraud-case-study.html" />
+<meta property="og:site_name" content="PreventLoss.org" />
+<meta property="article:published_time" content="2026-06-27T00:00:00Z" />
+<meta property="article:modified_time" content="2026-06-27T00:00:00Z" />
+<meta property="article:section" content="Loss Prevention" />
+<meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Logistics MIS Fraud Case Study: 1.35M Lost, 1.3M Recovered" />
+<meta name="twitter:description" content="Unchecked MIS billing in logistics cost 1.35M over one year. A real case study of how it was caught, negotiated, and almost fully recovered." />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Logistics MIS Fraud Case Study: How a 1.35M Billing Error Was Caught and 1.3M Recovered",
+  "description": "A real case study of logistics vendor overbilling — 5,500/day in unchecked MIS discrepancies, 1.35M in losses over one year, and how a focused audit and negotiation recovered 1.3M.",
+  "author": { "@type": "Person", "name": "Mithun GS", "url": "https://www.linkedin.com/in/mithun-gs/" },
+  "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+  "datePublished": "2026-06-27",
+  "dateModified": "2026-06-27",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/logistics-mis-fraud-case-study.html" },
+  "keywords": "logistics fraud case study, MIS billing fraud, vendor overbilling, logistics loss prevention, freight billing fraud detection, vendor payment recovery"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is MIS billing fraud in logistics?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MIS (Management Information System) billing fraud in logistics occurs when the data used to calculate and approve vendor payments is inaccurate — either through error, negligence, or deliberate manipulation. In logistics, this commonly involves billing for a higher vehicle capacity than was actually deployed, applying incorrect rate cards, billing fixed-route vehicles as ad-hoc trip vehicles at higher rates, or continuing to use outdated rate structures after agreements have been renegotiated. Because logistics MIS data is often compiled internally and approved by the same team that manages the vendor relationship, discrepancies can go undetected for months or years." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you detect overbilling by a logistics vendor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The most effective way to detect logistics vendor overbilling is a three-way audit: compare (1) the signed vendor agreement rate card against (2) the MIS data used to generate invoices against (3) the actual operational records — vehicle registration certificates, trip logs, GPS data, and delivery manifests. Discrepancies between any two of these three sources indicate a billing problem. Key red flags include: rates in the MIS that don't match the agreement, vehicle capacity billed being higher than what was requested or assigned, fixed vehicles being billed at ad-hoc trip rates, and invoice totals that increase without a corresponding increase in operational volume." }
+    },
+    {
+      "@type": "Question",
+      "name": "How can a business recover overpayments from a logistics vendor?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Recovering overpayments from a logistics vendor requires three elements: documented proof of the correct agreement terms, evidence of what was actually delivered versus what was billed, and written communication trails that establish both parties' understanding. In negotiations, the strongest position is an itemized overpayment calculation supported by the vendor's own documents — their RC (registration certificate), their delivery records, and any email correspondence acknowledging the correct operational requirements. A credit note against future invoices is the most common recovery mechanism for ongoing vendor relationships, as it avoids legal action while still recovering the loss." }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is responsible when a logistics team approves incorrect billing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Responsibility is typically shared across multiple failure points. The person who compiled the MIS data is responsible for accuracy. The manager who approved payments without verifying the MIS is responsible for inadequate oversight. The organization is responsible for not having independent cross-verification between the operational team that manages the vendor and the finance team that processes payment. In most cases, logistics billing fraud or error is enabled by a single control gap: the team managing the vendor relationship is the same team compiling and approving the billing data, with no independent verification layer between them." }
+    },
+    {
+      "@type": "Question",
+      "name": "What controls prevent logistics billing fraud?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The most effective controls include: quarterly cross-verification of MIS data against the original vendor agreement by a party independent of the logistics team (finance, internal audit, or loss prevention); mandatory three-way matching of agreement rate → MIS billing → actual operational evidence before any payment is released; a process for updating MIS templates when agreements are renegotiated; and separation of the team that manages vendor operations from the team that approves vendor payments. Automated exception alerts triggered when per-unit billing rates exceed the agreement rate are also highly effective at catching discrepancies before they accumulate." }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#0f1117;
+  --surface:#181c27;
+  --surface-2:#1e2535;
+  --border:#252a38;
+  --accent:#2563eb;
+  --accent-lt:#3b82f6;
+  --accent-glow:#1d4ed840;
+  --text:#e2e8f0;
+  --muted:#94a3b8;
+  --heading:#f8fafc;
+  --success:#10b981;
+  --warn:#f59e0b;
+  --danger:#f87171;
+  --c-pr:#f59e0b;
+  --c-pr-bg:#1c1500;
+  --font-display:'Georgia','Times New Roman',serif;
+  --font-body:system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'Courier New',monospace;
+  --r-sm:6px;
+  --r-md:12px;
+  --r-lg:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased;}
+
+.site-nav{position:sticky;top:0;z-index:100;background:rgba(15,17,23,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.site-nav .logo{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--heading);text-decoration:none;letter-spacing:-0.02em;}
+.site-nav .logo span{color:var(--accent-lt);}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--text);}
+
+#read-progress{position:fixed;top:56px;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--danger),var(--c-pr));z-index:99;transition:width 0.1s linear;}
+
+.page-wrap{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:52px;align-items:start;}
+@media(max-width:860px){.page-wrap{grid-template-columns:1fr;}.sidebar{display:none;}}
+
+.article-header{padding:52px 0 36px;border-bottom:1px solid var(--border);margin-bottom:36px;}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:var(--muted);margin-bottom:16px;}
+.breadcrumb a{color:var(--muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--text);}
+.breadcrumb span{color:var(--border);}
+.dual-category{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.article-category{display:inline-flex;align-items:center;gap:6px;background:var(--c-pr-bg);border:1px solid var(--c-pr);color:var(--c-pr);font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;}
+.article-category.red{background:#1f0d0d;border-color:var(--danger);color:var(--danger);}
+h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.8vw,2.55rem);font-weight:700;color:var(--heading);line-height:1.18;letter-spacing:-0.03em;margin-bottom:18px;}
+.article-deck{font-size:1.05rem;color:var(--muted);line-height:1.65;margin-bottom:22px;max-width:680px;}
+.article-meta{display:flex;flex-wrap:wrap;gap:18px;font-size:0.8rem;color:var(--muted);}
+
+.article-stats{display:flex;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:40px;overflow:hidden;}
+.stat-item{flex:1;padding:16px 18px;border-right:1px solid var(--border);}
+.stat-item:last-child{border-right:none;}
+.stat-item .s-val{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--heading);line-height:1;margin-bottom:4px;}
+.stat-item .s-val.amber{color:var(--c-pr);}
+.stat-item .s-val.green{color:var(--success);}
+.stat-item .s-val.red{color:var(--danger);}
+.stat-item .s-val.blue{color:var(--accent-lt);}
+.stat-item .s-lbl{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:600;}
+@media(max-width:600px){.article-stats{flex-wrap:wrap;}.stat-item{flex:1 1 45%;border-bottom:1px solid var(--border);}}
+
+.article-body h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--heading);letter-spacing:-0.02em;margin:48px 0 14px;padding-top:48px;border-top:1px solid var(--border);}
+.article-body h2:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+.article-body p{margin-bottom:18px;color:var(--text);}
+.article-body a{color:var(--c-pr);text-decoration:underline;text-underline-offset:3px;}
+.article-body strong{color:var(--heading);font-weight:600;}
+.article-body em{font-style:italic;color:var(--muted);}
+
+.callout{border-radius:var(--r-md);padding:18px 22px;margin:24px 0;border-left:4px solid;}
+.callout-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+.callout p{margin-bottom:6px;font-size:0.94rem;}
+.callout p:last-child{margin-bottom:0;}
+.callout-tip{background:#0d1f16;border-color:var(--success);}
+.callout-tip .callout-label{color:var(--success);}
+.callout-info{background:var(--accent-glow);border-color:var(--accent);}
+.callout-info .callout-label{color:var(--accent-lt);}
+.callout-amber{background:var(--c-pr-bg);border-color:var(--c-pr);}
+.callout-amber .callout-label{color:var(--c-pr);}
+.callout-danger{background:#1f0d0d;border-color:var(--danger);}
+.callout-danger .callout-label{color:var(--danger);}
+
+/* TIER DIVIDERS */
+.tier-divider{display:flex;align-items:center;gap:12px;margin:48px 0 8px;}
+.tier-divider .td-line{flex:1;height:1px;background:var(--border);}
+.tier-divider .td-label{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;padding:5px 16px;border-radius:999px;white-space:nowrap;}
+.tier-divider.discovery .td-label{color:var(--c-pr);background:var(--c-pr-bg);border:1px solid var(--c-pr);}
+.tier-divider.investigation .td-label{color:var(--danger);background:#1f0d0d;border:1px solid var(--danger);}
+.tier-divider.negotiation .td-label{color:var(--accent-lt);background:var(--accent-glow);border:1px solid var(--accent);}
+.tier-divider.twist .td-label{color:#a78bfa;background:#1e1340;border:1px solid #a78bfa;}
+.tier-divider.lessons .td-label{color:var(--success);background:#0d1f16;border:1px solid var(--success);}
+.tier-divider.controls .td-label{color:#34d399;background:#0d2018;border:1px solid #34d399;}
+
+/* NARRATIVE SCENE CARDS */
+.scene-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin:20px 0;}
+.scene-header{padding:16px 22px;border-bottom:1px solid var(--border);background:var(--surface-2);display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.scene-num{width:34px;height:34px;border-radius:50%;font-family:var(--font-mono);font-weight:800;font-size:0.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.scene-num.amber{background:var(--c-pr-bg);border:2px solid var(--c-pr);color:var(--c-pr);}
+.scene-num.red{background:#1f0d0d;border:2px solid var(--danger);color:var(--danger);}
+.scene-num.blue{background:var(--accent-glow);border:2px solid var(--accent-lt);color:var(--accent-lt);}
+.scene-num.purple{background:#1e1340;border:2px solid #a78bfa;color:#a78bfa;}
+.scene-num.green{background:#0d2018;border:2px solid var(--success);color:var(--success);}
+.scene-title{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--heading);}
+.scene-subtitle{font-size:0.78rem;color:var(--muted);margin-top:2px;}
+.scene-badge{margin-left:auto;}
+.scene-body{padding:20px 22px;}
+.scene-body p{font-size:0.92rem;color:var(--muted);margin-bottom:14px;}
+.scene-body p strong{color:var(--text);}
+.scene-body p:last-child{margin-bottom:0;}
+
+/* TIMELINE */
+.timeline{margin:22px 0;position:relative;padding-left:28px;}
+.timeline::before{content:'';position:absolute;left:10px;top:8px;bottom:8px;width:2px;background:var(--border);}
+.tl-item{position:relative;margin-bottom:24px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-22px;top:5px;width:14px;height:14px;border-radius:50%;border:2px solid;background:var(--bg);}
+.tl-dot.amber{border-color:var(--c-pr);}
+.tl-dot.red{border-color:var(--danger);}
+.tl-dot.blue{border-color:var(--accent-lt);}
+.tl-dot.purple{border-color:#a78bfa;}
+.tl-dot.green{border-color:var(--success);}
+.tl-date{font-family:var(--font-mono);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px;}
+.tl-dot.amber + .tl-date{color:var(--c-pr);}
+.tl-dot.red + .tl-date{color:var(--danger);}
+.tl-dot.blue + .tl-date{color:var(--accent-lt);}
+.tl-dot.purple + .tl-date{color:#a78bfa);}
+.tl-dot.green + .tl-date{color:var(--success);}
+.tl-title{font-size:0.92rem;font-weight:600;color:var(--heading);margin-bottom:4px;}
+.tl-text{font-size:0.84rem;color:var(--muted);line-height:1.6;}
+
+/* MATH BOX */
+.math-box{background:var(--surface-2);border:1px solid var(--border);border-left:4px solid var(--c-pr);border-radius:0 var(--r-md) var(--r-md) 0;padding:18px 22px;margin:18px 0;font-family:var(--font-mono);font-size:0.88rem;line-height:2;}
+.math-label{font-family:var(--font-body);font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:10px;}
+.math-line{display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid var(--border);color:var(--text);}
+.math-line:last-child{border-bottom:none;color:var(--c-pr);font-weight:700;font-size:1rem;}
+.math-line.red{color:var(--danger);}
+.math-line.green{color:var(--success);}
+.math-key{color:var(--muted);font-size:0.8rem;}
+
+/* DIALOGUE BOX */
+.dialogue-box{border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;margin:22px 0;}
+.dialogue-header{background:var(--surface-2);padding:10px 18px;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--border);}
+.dialogue-exchange{padding:0;}
+.dialogue-line{display:flex;gap:12px;padding:12px 18px;border-bottom:1px solid var(--border);align-items:flex-start;}
+.dialogue-line:last-child{border-bottom:none;}
+.dialogue-speaker{font-family:var(--font-mono);font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;white-space:nowrap;min-width:80px;margin-top:2px;}
+.dialogue-speaker.us{color:var(--success);}
+.dialogue-speaker.them{color:var(--danger);}
+.dialogue-speaker.note{color:var(--accent-lt);}
+.dialogue-text{font-size:0.86rem;color:var(--muted);line-height:1.6;}
+.dialogue-text strong{color:var(--text);}
+
+/* COMPARISON TABLE */
+.data-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--border);border-radius:var(--r-md);}
+table{width:100%;border-collapse:collapse;font-size:0.84rem;}
+thead th{background:var(--surface);color:var(--muted);font-size:0.66rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:11px 13px;text-align:left;border-bottom:1px solid var(--border);}
+tbody td{padding:11px 13px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover td{background:var(--surface);}
+.badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:0.66rem;font-weight:700;}
+.badge-green{background:#0d2018;color:#34d399;}
+.badge-amber{background:var(--c-pr-bg);color:#fbbf24;}
+.badge-blue{background:var(--accent-glow);color:#93c5fd;}
+.badge-purple{background:#1e1340;color:#c4b5fd;}
+.badge-red{background:#1f0d0d;color:#fca5a5;}
+
+/* PULL QUOTE */
+.pull-quote{border-left:4px solid var(--c-pr);padding:16px 24px;margin:30px 0;background:var(--c-pr-bg);border-radius:0 var(--r-md) var(--r-md) 0;}
+.pull-quote p{font-family:var(--font-display);font-size:1.08rem;color:var(--heading);line-height:1.55;font-style:italic;margin:0;}
+.pull-quote cite{display:block;font-size:0.75rem;color:var(--muted);margin-top:10px;font-style:normal;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;}
+
+/* LESSON CARDS */
+.lesson-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0;}
+@media(max-width:580px){.lesson-grid{grid-template-columns:1fr;}}
+.lesson-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:18px;}
+.lesson-num{font-family:var(--font-mono);font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+.lesson-card:nth-child(1) .lesson-num{color:var(--danger);}
+.lesson-card:nth-child(2) .lesson-num{color:var(--c-pr);}
+.lesson-card:nth-child(3) .lesson-num{color:var(--accent-lt);}
+.lesson-card:nth-child(4) .lesson-num{color:#a78bfa;}
+.lesson-card:nth-child(5) .lesson-num{color:var(--success);}
+.lesson-card:nth-child(6) .lesson-num{color:#34d399;}
+.lesson-title{font-size:0.9rem;font-weight:700;color:var(--heading);margin-bottom:6px;line-height:1.35;}
+.lesson-text{font-size:0.82rem;color:var(--muted);line-height:1.6;}
+
+/* CHECK LIST */
+.check-list{list-style:none;margin:14px 0 22px;}
+.check-list li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--border);font-size:0.93rem;}
+.check-list li:last-child{border-bottom:none;}
+.check-list .ck{width:20px;height:20px;flex-shrink:0;background:var(--c-pr-bg);border:1px solid var(--c-pr);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--c-pr);margin-top:2px;}
+.check-list .ck.red{background:#1f0d0d;border-color:var(--danger);color:var(--danger);}
+.check-list .ck.green{background:#0d2018;border-color:var(--success);color:var(--success);}
+
+/* VERDICT BOX */
+.verdict-box{background:linear-gradient(135deg,#0d2018 0%,#181c27 100%);border:2px solid var(--success);border-radius:var(--r-lg);overflow:hidden;margin:24px 0;}
+.vb-header{padding:18px 24px;border-bottom:1px solid rgba(16,185,129,0.25);display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.vb-badge{font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;background:var(--success);color:#032015;padding:4px 14px;border-radius:999px;}
+.vb-title{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--heading);}
+.vb-body{padding:22px 24px;}
+.vb-body p{font-size:0.95rem;color:var(--text);margin-bottom:14px;}
+.vb-row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(16,185,129,0.15);font-size:0.88rem;}
+.vb-row:last-child{border-bottom:none;}
+.vb-key{color:var(--muted);}
+.vb-val{font-weight:700;font-family:var(--font-mono);}
+.vb-val.red{color:var(--danger);}
+.vb-val.green{color:var(--success);}
+.vb-val.amber{color:var(--c-pr);}
+
+/* MINI STATS */
+.mini-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:22px 0;}
+.mini-stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px;}
+.mini-stat .ms-val{font-family:var(--font-display);font-size:1.4rem;font-weight:700;line-height:1;margin-bottom:4px;}
+.mini-stat .ms-lbl{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:600;}
+
+/* FAQ */
+.faq-list{margin:14px 0;}
+.faq-item{border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:10px;overflow:hidden;}
+.faq-q{width:100%;background:var(--surface);border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;font-size:0.95rem;font-weight:600;color:var(--heading);text-align:left;gap:12px;}
+.faq-q:hover{background:var(--surface-2);}
+.faq-q .arrow{flex-shrink:0;font-size:1.1rem;color:var(--muted);transition:transform 0.2s;}
+.faq-q[aria-expanded="true"] .arrow{transform:rotate(180deg);}
+.faq-a{display:none;padding:0 20px 18px;font-size:0.92rem;color:var(--muted);background:var(--surface);}
+.faq-a.open{display:block;}
+
+/* RELATED */
+.related-grid{display:flex;flex-direction:column;gap:12px;margin-top:10px;}
+.related-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:16px 18px;text-decoration:none;display:flex;gap:12px;align-items:flex-start;transition:border-color 0.18s,background 0.15s;}
+.related-card:hover{border-color:var(--c-pr);background:var(--surface-2);}
+.related-card .rc-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px;}
+.related-card .rc-cat{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--c-pr);margin-bottom:4px;}
+.related-card .rc-title{font-size:0.9rem;font-weight:600;color:var(--heading);line-height:1.35;}
+
+.article-cta{background:linear-gradient(135deg,var(--c-pr-bg) 0%,#181c27 100%);border:1px solid var(--c-pr);border-radius:var(--r-lg);padding:28px 32px;text-align:center;margin-top:44px;}
+.article-cta h3{font-family:var(--font-display);font-size:1.2rem;color:var(--heading);margin-bottom:8px;}
+.article-cta p{color:var(--muted);font-size:0.875rem;margin-bottom:18px;}
+.btn-primary{display:inline-block;background:var(--c-pr);color:#1a0f00;font-weight:700;font-size:0.875rem;padding:11px 26px;border-radius:var(--r-sm);text-decoration:none;transition:opacity 0.18s;}
+.btn-primary:hover{opacity:0.85;}
+
+.disclosure{font-size:0.78rem;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 16px;margin:16px 0 0;}
+
+/* SIDEBAR */
+.sidebar{padding-top:52px;}
+.sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;margin-bottom:18px;}
+.sidebar-card h4{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted);margin-bottom:12px;}
+.toc-list{list-style:none;}
+.toc-list li{margin-bottom:2px;}
+.toc-list a{font-size:0.79rem;color:var(--muted);text-decoration:none;display:block;padding:4px 0 4px 12px;border-left:2px solid transparent;transition:all 0.15s;line-height:1.35;}
+.toc-list a:hover,.toc-list a.active{color:var(--text);border-color:var(--c-pr);}
+.quickref{position:sticky;top:72px;}
+.qr-header{background:var(--c-pr-bg);border-bottom:1px solid var(--c-pr);padding:14px 18px;display:flex;align-items:center;gap:8px;border-radius:var(--r-lg) var(--r-lg) 0 0;}
+.qr-header h4{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-pr);}
+.qr-row{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:10px 18px;border-bottom:1px solid var(--border);font-size:0.79rem;}
+.qr-row:last-child{border-bottom:none;}
+.qr-key{color:var(--muted);flex-shrink:0;font-size:0.73rem;max-width:130px;}
+.qr-val{color:var(--heading);font-weight:600;text-align:right;font-size:0.73rem;}
+.qr-val.green{color:var(--success);}
+.qr-val.red{color:var(--danger);}
+.qr-val.amber{color:var(--c-pr);}
+
+.site-footer{border-top:1px solid var(--border);margin-top:80px;padding:32px 24px;text-align:center;color:var(--muted);font-size:0.82rem;}
+.site-footer a{color:var(--muted);text-decoration:none;}
+.site-footer a:hover{color:var(--text);}
+</style>
+</head>
+<body>
+<div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+  <ul class="nav-links">
+    <li><a href="/articles/">Articles</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+<main id="main-content">
+
+<header class="article-header">
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/articles/">Articles</a><span>›</span>
+    <a href="/articles/?cat=loss-prevention">Loss Prevention</a>
+  </div>
+  <div class="dual-category">
+    <span class="article-category">🔐 Loss Prevention</span>
+    <span class="article-category red">🔴 Real Case Study</span>
+  </div>
+  <h1>The 1.35M Logistics Billing Leak: What Nobody Was Checking — and How We Got 1.3M Back</h1>
+  <p class="article-deck">A real case study of how unverified logistics MIS data, a single transporter, and an approval process no one was actually running let 5,500 per day flow out the door for over a year. Here's who failed, how the investigation unfolded, the negotiation that almost collapsed — and the email that changed everything.</p>
+  <div class="article-meta">
+    <span>🗓 June 27, 2026</span>
+    <span>⏱ 13 min read</span>
+    <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--c-pr);text-decoration:underline;text-underline-offset:3px;">Mithun GS</a></span>
+    <span>📂 Loss Prevention · Real Case Study</span>
+  </div>
+</header>
+
+<div class="article-stats">
+  <div class="stat-item"><div class="s-val red">1.35M</div><div class="s-lbl">Total losses over 12 months</div></div>
+  <div class="stat-item"><div class="s-val amber">5,500</div><div class="s-lbl">Excess charged per day</div></div>
+  <div class="stat-item"><div class="s-val green">1.3M</div><div class="s-lbl">Recovered via credit note</div></div>
+  <div class="stat-item"><div class="s-val blue">0</div><div class="s-lbl">Cross-checks in place before audit</div></div>
+</div>
+
+<article class="article-body" itemscope itemtype="https://schema.org/Article">
+<meta itemprop="headline" content="The 1.35M Logistics Billing Leak: What Nobody Was Checking — and How We Got 1.3M Back" />
+<meta itemprop="datePublished" content="2026-06-27" />
+
+<!-- INTRO -->
+<section id="introduction">
+  <h2 style="border-top:none;padding-top:0;margin-top:0;">How Does a Company Lose 1.35M Without Anyone Noticing?</h2>
+  <p>The answer, in this case, is devastatingly simple: <strong>because nobody was looking.</strong> Not the logistics team compiling the billing data. Not the logistics head approving the payments. Not the finance team processing the invoices. The transporter was billing correctly based on what the logistics team was telling them. The logistics team was billing based on what the previous MIS person had done. And the logistics head was approving payments based on trust, not verification.</p>
+  <p>This is a case study of what happens when three separate teams — logistics, finance, and operations — each assume someone else is verifying the numbers. The result was 5,500 in excess charges every single day, accumulating silently across twelve months, into a 1.35 million loss that nobody inside the company knew existed until a suspicious pattern caught someone's attention.</p>
+  <p>This is also a case study of recovery — of how a focused audit, a methodical negotiation, and one crucial email that took ten minutes to find became the lever that brought 1.3 million back.</p>
+  <div class="disclosure">📌 <strong>Editorial note:</strong> This case study is based on a real internal investigation. Certain identifiers have been omitted to protect commercial relationships. amounts, timelines, and key facts are accurate as documented during the investigation.</div>
+</section>
+
+<!-- TIMELINE OVERVIEW -->
+<div class="tier-divider discovery"><div class="td-line"></div><div class="td-label">🟡 How It Started</div><div class="td-line"></div></div>
+
+<section id="discovery">
+  <h2>The Suspicion That Started Everything</h2>
+  <p>It didn't begin with a tip or a whistleblower. It began with a pattern that didn't quite add up — logistics payments that were running higher than operations seemed to justify. Nothing dramatic. Just a nagging inconsistency between what the company was physically running and what it was paying for.</p>
+  <p>The first move was to go to finance — not logistics — and request three months of MIS data directly. That decision, to bypass the logistics team for the initial data pull, turned out to be critical. If the request had gone through logistics, the data might have been reviewed before being shared. Going to finance first meant we got the raw numbers without any prior knowledge of what was coming.</p>
+
+  <div class="scene-card">
+    <div class="scene-header">
+      <div class="scene-num amber">01</div>
+      <div>
+        <div class="scene-title">The First Anomaly: Something Doesn't Add Up</div>
+        <div class="scene-subtitle">The trigger that initiated the investigation</div>
+      </div>
+    </div>
+    <div class="scene-body">
+      <p>The three months of MIS data arrived from finance. We began the analysis looking for anything that stood out. What we found were <strong>exceptions — not one or two, but consistently, across multiple data points, involving one specific transporter.</strong></p>
+      <p>The company had a formal agreement with this logistics provider: fixed vehicles operating on a daily basis, at a defined rate. The MIS, however, told a different story. The vehicles listed as "fixed" were being classified and billed as ADOC (Ad-hoc / Trip) vehicles — a higher-rate category. And the per-day charge in the MIS didn't match the per-day rate in the agreement at all.</p>
+      <p>In three months, with just this one transporter, the excess charges came to <strong>300,000.</strong> We stopped. Looked at each other. Then requested twelve months of data.</p>
+    </div>
+  </div>
+
+  <div class="math-box">
+    <div class="math-label">📊 The Numbers That Made Us Stop</div>
+    <div class="math-line"><span class="math-key">Rate per agreement (per day)</span><span>Agreement rate</span></div>
+    <div class="math-line"><span class="math-key">Rate billed in MIS (per day)</span><span style="color:var(--danger);">Agreement rate + 5,500</span></div>
+    <div class="math-line"><span class="math-key">Excess per day (one transporter)</span><span style="color:var(--danger);">5,500</span></div>
+    <div class="math-line"><span class="math-key">Excess identified in 3-month sample</span><span style="color:var(--danger);">300,000</span></div>
+    <div class="math-line"><span class="math-key">Projected full-year excess (extrapolated)</span><span style="color:var(--danger);">~1.35M+</span></div>
+    <div class="math-line"><span class="math-key">Actual 12-month loss (confirmed)</span><span>1.35M</span></div>
+  </div>
+
+  <p>The twelve-month data confirmed the extrapolation. <strong>1.35 million</strong>. All from one transporter. All from a billing discrepancy that had been running unchallenged, month after month, through an approval process that wasn't functioning as an approval process at all.</p>
+
+  <div class="pull-quote">
+    <p>"1.35 million didn't vanish in one transaction. It left in 5,500 increments, every single day, for over a year — because no one was comparing what the agreement said to what the MIS said."</p>
+    <cite>— Mithun GS, PreventLoss.org</cite>
+  </div>
+</section>
+
+<!-- INVESTIGATION TIER -->
+<div class="tier-divider investigation"><div class="td-line"></div><div class="td-label">🔴 The Investigation</div><div class="td-line"></div></div>
+
+<section id="investigation">
+  <h2>What the Investigation Found: Three Separate Failures</h2>
+  <p>When we sat down with the logistics team to understand how this had happened, we uncovered not one failure but three — operating independently, each one amplifying the others. The combination created a near-perfect environment for unchecked overbilling to persist indefinitely.</p>
+
+  <div class="scene-card">
+    <div class="scene-header">
+      <div class="scene-num red">F1</div>
+      <div>
+        <div class="scene-title">Failure One — The MIS Was Built on a Ghost Template</div>
+        <div class="scene-subtitle">The billing data was copied from 2024 records, not from the current agreement</div>
+      </div>
+      <div class="scene-badge"><span class="badge badge-red">Process Failure</span></div>
+    </div>
+    <div class="scene-body">
+      <p>When we asked how the MIS was being compiled, the explanation was straightforward and damning: the current MIS person had inherited the template and the method from the previous person, who had left in 2024. <strong>Nobody had ever gone back to the vendor agreement to verify whether the inherited template was accurate.</strong> The template had been passed down like a document whose origin nobody questioned anymore — because it had always been done this way.</p>
+      <p>The previous person had apparently been billing at a different rate or under different conditions — possibly reflecting an older agreement that had since been renegotiated, possibly an error that had never been caught. Either way, <strong>the MIS was not built from the current agreement. It was built from the last person's MIS.</strong> And the discrepancy — 5,500 per day — had been silently compounding ever since.</p>
+      <div class="callout callout-danger">
+        <div class="callout-label">⚠ The Root Cause</div>
+        <p>This is among the most common and most dangerous process failures in any billing function: <strong>inherited templates treated as authoritative.</strong> When a new person takes over a billing or MIS process, they should be required to reconcile the template against the source agreement before running a single invoice cycle. In this case, that step never happened — and nobody required it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="scene-card">
+    <div class="scene-header">
+      <div class="scene-num red">F2</div>
+      <div>
+        <div class="scene-title">Failure Two — The Vehicle Capacity Was Wrong</div>
+        <div class="scene-subtitle">Billing for 12MT vehicles. Operating 8MT vehicles. Nobody checked.</div>
+      </div>
+      <div class="scene-badge"><span class="badge badge-red">Verification Failure</span></div>
+    </div>
+    <div class="scene-body">
+      <p>Beyond the rate discrepancy, there was a second, independent error embedded in the MIS: <strong>the vehicle utilization was being billed at 12 metric tons, but the actual vehicles being deployed were 8 metric ton capacity.</strong> This is not a small rounding difference — it's a 50% capacity premium being charged on every vehicle, every day.</p>
+      <p>The capacity listed in the MIS was not being verified against the vehicles actually operating. The transporter was providing vehicles. The MIS was recording a capacity. And at no point was anyone cross-checking the registered capacity of the vehicles against what the MIS was claiming.</p>
+
+      <div class="data-table-wrap">
+        <table>
+          <thead>
+            <tr><th>Data Point</th><th>What Agreement Said</th><th>What MIS Recorded</th><th>Gap</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Vehicle type</strong></td><td>Fixed daily vehicle</td><td><span style="color:var(--danger);">ADOC / Trip vehicle</span></td><td><span class="badge badge-red">Wrong category</span></td></tr>
+            <tr><td><strong>Vehicle capacity</strong></td><td>8 MT (actual need)</td><td><span style="color:var(--danger);">12 MT (billed)</span></td><td><span class="badge badge-red">+50% capacity</span></td></tr>
+            <tr><td><strong>Rate per day</strong></td><td>Agreement rate</td><td><span style="color:var(--danger);">Agreement rate + 5,500</span></td><td><span class="badge badge-red">5,500/day excess</span></td></tr>
+            <tr><td><strong>Cross-verification</strong></td><td>Required by process</td><td><span style="color:var(--danger);">Never performed</span></td><td><span class="badge badge-red">Zero checks</span></td></tr>
+            <tr><td><strong>MIS source</strong></td><td>Current agreement</td><td><span style="color:var(--danger);">2024 predecessor's template</span></td><td><span class="badge badge-red">Outdated baseline</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="scene-card">
+    <div class="scene-header">
+      <div class="scene-num red">F3</div>
+      <div>
+        <div class="scene-title">Failure Three — The Approval That Wasn't an Approval</div>
+        <div class="scene-subtitle">The logistics head was signing off on payments without reviewing the MIS</div>
+      </div>
+      <div class="scene-badge"><span class="badge badge-red">Oversight Failure</span></div>
+    </div>
+    <div class="scene-body">
+      <p>The most jarring moment of the investigation came when we asked the logistics head directly: <em>how were you approving these payments?</em></p>
+      <div class="dialogue-box">
+        <div class="dialogue-header">📋 Conversation with the Logistics Head</div>
+        <div class="dialogue-exchange">
+          <div class="dialogue-line">
+            <span class="dialogue-speaker us">Audit Team</span>
+            <span class="dialogue-text">Can you walk us through how you were approving the monthly logistics payments? What were you checking against?</span>
+          </div>
+          <div class="dialogue-line">
+            <span class="dialogue-speaker them">Logistics Head</span>
+            <span class="dialogue-text"><strong>"I was not checking the MIS. I was just doing the approval."</strong></span>
+          </div>
+          <div class="dialogue-line">
+            <span class="dialogue-speaker note">Context</span>
+            <span class="dialogue-text">He was approving invoices — some representing hundreds of thousands of dollars — without reviewing the underlying billing data. The MIS existed. The approval workflow existed. But the verification step between them did not.</span>
+          </div>
+        </div>
+      </div>
+      <p>This is the control gap that allowed Failures One and Two to persist without discovery. Even with an incorrect template and wrong vehicle capacities, a single approval-stage verification — comparing MIS totals against the rate card in the agreement — would have flagged the discrepancy on month one. <strong>The approval process was a signature, not a check.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO'S RESPONSIBLE -->
+<div class="tier-divider investigation"><div class="td-line"></div><div class="td-label">🔴 Who's Responsible?</div><div class="td-line"></div></div>
+
+<section id="responsibility">
+  <h2>Who Is Responsible — and How Responsibility Is Distributed</h2>
+  <p>In cases like this, the instinct is to find a single guilty party. The reality is almost always more distributed — and in this case, no fewer than four distinct responsibility layers contributed to the 1.35 million loss.</p>
+
+  <div class="lesson-grid">
+    <div class="lesson-card">
+      <div class="lesson-num">Responsible Party 01</div>
+      <div class="lesson-title">The MIS Compiler (Current)</div>
+      <div class="lesson-text">Inherited a billing template without ever verifying it against the active vendor agreement. Responsible for entering data accurately — not for inheriting a flawed template, but for not questioning it or reconciling it to source documentation.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-num">Responsible Party 02</div>
+      <div class="lesson-title">The Previous MIS Person (2024)</div>
+      <div class="lesson-text">Created or perpetuated the original incorrect template. Whether this was an honest error or intentional cannot be established retrospectively — but the template they left behind became the unverified baseline for every subsequent billing cycle.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-num">Responsible Party 03</div>
+      <div class="lesson-title">The Logistics Head</div>
+      <div class="lesson-text">Confirmed explicitly that payment approvals were being made without reviewing the MIS. His role was specifically to verify billing before authorizing payment. That verification never happened. This is the most significant single accountability failure in the chain.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-num">Responsible Party 04</div>
+      <div class="lesson-title">The Organization (Process Design)</div>
+      <div class="lesson-text">No independent cross-verification existed between the logistics team compiling the MIS and the finance team processing payment. The team managing the vendor relationship was also compiling and approving the billing data — with no external check. This is a structural control gap, not an individual failure.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-num">Responsible Party 05</div>
+      <div class="lesson-title">The Transporter</div>
+      <div class="lesson-text">A more complex question. The transporter provided 12MT vehicles and billed accordingly — initially appearing to have legitimate grounds. The full picture, as the negotiation revealed, is more nuanced. Their knowledge of the August 2024 email requesting 8MT vehicles shifts their moral (if not legal) position significantly.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-num">Contributing Factor</div>
+      <div class="lesson-title">No Onboarding Verification Requirement</div>
+      <div class="lesson-text">When the MIS role changed hands in 2024, there was no formal requirement to reconcile the inherited template against the source agreement. A single mandatory step — "verify your MIS against the current signed agreement before your first billing cycle" — would have caught this on day one of the new person's tenure.</div>
+    </div>
+  </div>
+
+  <div class="callout callout-amber">
+    <div class="callout-label">💡 The Core Structural Problem</div>
+    <p>In this case — as in most internal billing fraud and error cases — the fundamental vulnerability was that <strong>the same team managed the vendor relationship, compiled the billing data, and approved the payment.</strong> There was no independent verification layer anywhere in that chain. Finance processed what logistics approved. Logistics approved what the MIS showed. The MIS showed what the previous person had done. And nobody checked the agreement.</p>
+  </div>
+</section>
+
+<!-- NEGOTIATION TIER -->
+<div class="tier-divider negotiation"><div class="td-line"></div><div class="td-label">🔵 The Negotiation</div><div class="td-line"></div></div>
+
+<section id="negotiation">
+  <h2>The Negotiation: A Recovery That Almost Didn't Happen</h2>
+  <p>Armed with twelve months of data showing 1.35 million in excess charges, we initiated a meeting with the transporter. What followed was one of the most instructive negotiations in recent memory — not because it went smoothly, but because it almost collapsed twice before a single email turned it entirely around.</p>
+
+  <div class="scene-card">
+    <div class="scene-header">
+      <div class="scene-num blue">N1</div>
+      <div>
+        <div class="scene-title">Opening Position: The Transporter Denies Everything</div>
+        <div class="scene-subtitle">Round one — they push back hard, and their first argument is legitimate</div>
+      </div>
+    </div>
+    <div class="scene-body">
+      <p>The transporter's opening position was firm: <em>they were not receiving any excess payment.</em> From their perspective, this was true — they had provided vehicles, billed for those vehicles, and been paid the invoiced amount. The concept of "excess" assumed a benchmark they didn't agree with.</p>
+      <div class="dialogue-box">
+        <div class="dialogue-header">📋 First Meeting — Opening Exchange</div>
+        <div class="dialogue-exchange">
+          <div class="dialogue-line">
+            <span class="dialogue-speaker us">Our Team</span>
+            <span class="dialogue-text">You have been receiving excess payment for over a year. The MIS shows charges significantly above the agreement rate, and 12MT billing for vehicles the company requested at 8MT capacity.</span>
+          </div>
+          <div class="dialogue-line">
+            <span class="dialogue-speaker them">Transporter</span>
+            <span class="dialogue-text"><strong>"I am not getting any extra payment. There is no excess. I am doing business of 6–7 million per month with your company. You are a major client. Why would I risk that by overcharging?"</strong></span>
+          </div>
+          <div class="dialogue-line">
+            <span class="dialogue-speaker us">Our Team</span>
+            <span class="dialogue-text">We needed 8MT vehicles. But we were paying for 12MT. Can you explain the capacity discrepancy?</span>
+          </div>
+          <div class="dialogue-line">
+            <span class="dialogue-speaker them">Transporter</span>
+            <span class="dialogue-text"><strong>"I will show you the RC. Every vehicle I gave your company is registered as 12MT. I billed you for 12MT because you were given 12MT vehicles. Look — here are the registration certificates."</strong></span>
+          </div>
+          <div class="dialogue-line">
+            <span class="dialogue-speaker note">Internal Assessment</span>
+            <span class="dialogue-text">He was right. The RCs confirmed 12MT vehicles. We had billed 12MT because he had provided 12MT. We started to lose confidence in the recovery. We called a break.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE TWIST -->
+  <div class="tier-divider twist" style="margin-top:32px;"><div class="td-line"></div><div class="td-label">🟣 The Twist</div><div class="td-line"></div></div>
+
+  <div class="scene-card" style="border-color:#a78bfa;">
+    <div class="scene-header" style="background:#1e1340;">
+      <div class="scene-num purple">⚡</div>
+      <div>
+        <div class="scene-title">The Email That Changed Everything</div>
+        <div class="scene-subtitle">10 minutes of searching. One email. The entire negotiation shifted.</div>
+      </div>
+      <div class="scene-badge"><span class="badge badge-purple">The Turning Point</span></div>
+    </div>
+    <div class="scene-body">
+      <p>We took a break. Regrouped. Came back to the table. The transporter, perhaps sensing he had us on the back foot, handed us his phone and said: <em>"Look at the emails. In January 2024 your team requested 12MT vehicles from me. That's why I gave 12MT. That's what was requested."</em></p>
+      <p>He was right about the January 2024 email. Our logistics team had requested 12MT vehicles. The RC matched. The invoice matched the request. We were, again, losing ground. And then someone on our team said: <em>can we search through the other emails?</em></p>
+      <p>He agreed. With his phone in hand, we started searching. Ten minutes. Scrolling through months of correspondence. And then — there it was.</p>
+
+      <div class="dialogue-box" style="border-color:#a78bfa;">
+        <div class="dialogue-header" style="border-color:#a78bfa;color:#c4b5fd;">📧 The Email — August 2024</div>
+        <div class="dialogue-exchange">
+          <div class="dialogue-line">
+            <span class="dialogue-speaker" style="color:#a78bfa;">Email Found</span>
+            <span class="dialogue-text"><strong>From: Logistics Transport Team → To: Transporter</strong><br>August 2024<br><br>"We do not need the 12MT vehicle. Please provide us with the <strong>8MT vehicle</strong> going forward."</span>
+          </div>
+          <div class="dialogue-line">
+            <span class="dialogue-speaker note">What This Meant</span>
+            <span class="dialogue-text">The logistics team had formally communicated in writing — on the transporter's own phone, in his own inbox — that 8MT was the requirement. The transporter had received this instruction. He had continued to provide 12MT and bill accordingly.</span>
+          </div>
+        </div>
+      </div>
+
+      <p>We showed him the email. Read it out. Placed his phone on the table face-up. The transporter went completely silent.</p>
+      <p><strong>That silence was the moment the recovery became possible.</strong></p>
+    </div>
+  </div>
+
+  <div class="scene-card">
+    <div class="scene-header">
+      <div class="scene-num green">N2</div>
+      <div>
+        <div class="scene-title">The Final Negotiation: From 400K to 1.3M</div>
+        <div class="scene-subtitle">How the August 2024 email became the anchor for full recovery</div>
+      </div>
+    </div>
+    <div class="scene-body">
+      <p>With the August 2024 email on the table, the transporter's position had fundamentally changed. He could no longer credibly argue that he didn't know 8MT was the requirement. The email was in his inbox. His team had received it. And yet the 12MT billing had continued for months after that communication.</p>
+
+      <div class="dialogue-box">
+        <div class="dialogue-header">📋 Final Negotiation — After the Email</div>
+        <div class="dialogue-exchange">
+          <div class="dialogue-line">
+            <span class="dialogue-speaker us">Our Team</span>
+            <span class="dialogue-text">The email your team received in August 2024 clearly states 8MT. You were on notice. Every invoice after August 2024 for 12MT is excess billing on top of a written instruction to downgrade. We are calculating losses on a monthly basis. The total is 1.35 million. We need a credit note for that amount.</span>
+          </div>
+          <div class="dialogue-line">
+            <span class="dialogue-speaker them">Transporter</span>
+            <span class="dialogue-text"><strong>"I understand. But I cannot do the full amount. I have my own problems, my own costs. I can offer 400,000. That is my maximum."</strong></span>
+          </div>
+          <div class="dialogue-line">
+            <span class="dialogue-speaker us">Our Team</span>
+            <span class="dialogue-text">The email was sent in August 2024. We are only calculating from April 2025 onward. If you want to start the calculation from the email date, the full period is longer and the total climbs to approximately 2 million. We can go back to the August 2024 date if you prefer — but the number gets larger, not smaller.</span>
+          </div>
+          <div class="dialogue-line">
+            <span class="dialogue-speaker them">Transporter</span>
+            <span class="dialogue-text"><em>Long pause.</em> <strong>"Fine. I will give the credit note for 1.3 million."</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <p>The reversal from 400,000 to 1.3 million happened in a single exchange. The logic was precise: our calculation was actually conservative — we had started from April 2025, not from the August 2024 email that proved his awareness of the 8MT requirement. Pointing out that going back further only increased his liability — from 1.35M toward 2M — made the 1.3M credit note feel like a reasonable resolution from his perspective. <strong>He took it immediately.</strong></p>
+    </div>
+  </div>
+
+  <!-- FINAL NUMBERS -->
+  <div class="verdict-box">
+    <div class="vb-header">
+      <span class="vb-badge">✅ Final Outcome</span>
+      <span class="vb-title">1.3M Credit Note — Secured</span>
+    </div>
+    <div class="vb-body">
+      <p>From a 300,000 anomaly spotted in a three-month data sample, to a twelve-month confirmed loss of 1.35 million, to a negotiated recovery of 1.3 million via credit note — against a transporter doing 6–7 million per month in business with the company. The relationship was preserved. The money came back. And a control system that had never existed now had to be built from scratch.</p>
+      <div class="vb-row"><span class="vb-key">Total confirmed losses (12 months)</span><span class="vb-val red">1,350,000</span></div>
+      <div class="vb-row"><span class="vb-key">Transporter's opening offer</span><span class="vb-val amber">400,000</span></div>
+      <div class="vb-row"><span class="vb-key">Potential liability if Aug 2024 start date applied</span><span class="vb-val red">~2,000,000</span></div>
+      <div class="vb-row"><span class="vb-key">Final credit note agreed</span><span class="vb-val green">1,300,000</span></div>
+      <div class="vb-row"><span class="vb-key">Recovery rate</span><span class="vb-val green">96.3% of confirmed losses</span></div>
+      <div class="vb-row"><span class="vb-key">Recovery mechanism</span><span class="vb-val green">Credit note (future invoices)</span></div>
+      <div class="vb-row"><span class="vb-key">Vendor relationship status</span><span class="vb-val green">Preserved — ongoing</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LESSONS TIER -->
+<div class="tier-divider lessons"><div class="td-line"></div><div class="td-label">🟢 What We Can Learn</div><div class="td-line"></div></div>
+
+<section id="lessons">
+  <h2>What Every Business Can Learn From This Case</h2>
+  <p>This case is not unusual. The specific details — logistics vehicles, MIS templates, 8MT vs 12MT — are particular to this industry. But the pattern of failures is absolutely universal: inherited process treated as authoritative, approval without verification, and no independent check between the team managing the vendor and the team processing the payment. Some version of this plays out in procurement, payroll, accounts payable, and operations functions across industries every day.</p>
+
+  <div class="lesson-grid">
+    <div class="lesson-card">
+      <div class="lesson-num">Lesson 01 — Process</div>
+      <div class="lesson-title">Inherited Templates Are Not Ground Truth</div>
+      <div class="lesson-text">Every time a billing or MIS role changes hands, the incoming person must reconcile the template to the source agreement before the first billing cycle. "That's how the last person did it" is not a verification method. It is how errors compound across years without detection.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-num">Lesson 02 — Oversight</div>
+      <div class="lesson-title">An Approval Without Verification Is Just a Signature</div>
+      <div class="lesson-text">The logistics head's explicit confirmation — "I was not checking the MIS, just doing the approval" — is a description of a rubber stamp, not an approval process. Every financial approval should require a defined, documented verification step. What specifically is being checked? Against what? By whom?</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-num">Lesson 03 — Structure</div>
+      <div class="lesson-title">The Vendor Relationship Team Cannot Also Approve Billing</div>
+      <div class="lesson-text">The same team that manages the transporter relationship compiled and approved the billing data for that transporter. No independent eye touched either the MIS or the approval. Separation between operational teams and payment approval is the most critical structural control in vendor payment processes.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-num">Lesson 04 — Documentation</div>
+      <div class="lesson-title">Every Operational Change Must Be a Formal Record</div>
+      <div class="lesson-text">The August 2024 email requesting 8MT vehicles saved the recovery. If that communication had been a phone call or a verbal instruction during a site visit, there would have been no proof, no leverage, and likely no recovery beyond what the transporter chose to offer voluntarily. Operational changes must be documented in writing — always.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-num">Lesson 05 — Audit</div>
+      <div class="lesson-title">Quarterly Cross-Audits Catch What Daily Operations Miss</div>
+      <div class="lesson-text">This discrepancy ran for over a year undetected. A quarterly independent cross-check — comparing MIS billing to the signed agreement — would have caught it within 90 days, limiting losses to approximately 100K rather than 1.35M. Quarterly audits of high-value vendor billing are a non-negotiable practice in any logistics function.</div>
+    </div>
+    <div class="lesson-card">
+      <div class="lesson-num">Lesson 06 — Negotiation</div>
+      <div class="lesson-title">The Paper Trail Is Your Most Powerful Recovery Tool</div>
+      <div class="lesson-text">The negotiation only succeeded because of a document — an email found on the transporter's own phone. Without it, the recovery would likely have stalled at 400K. Evidence doesn't just help in legal disputes. It shifts the entire dynamic of a commercial negotiation. Preserve every operational instruction in writing.</div>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    <p>"The email was sent in August. We started calculating from April. When we pointed out that going back to August made the number larger — not smaller — he agreed to 1.3 million in ten seconds. The documentation didn't just support our case. It ended the argument."</p>
+    <cite>— Mithun GS, PreventLoss.org</cite>
+  </div>
+</section>
+
+<!-- CONTROLS TIER -->
+<div class="tier-divider controls"><div class="td-line"></div><div class="td-label">📋 Prevention Controls</div><div class="td-line"></div></div>
+
+<section id="controls">
+  <h2>Controls That Would Have Prevented This — and Should Now Be Standard</h2>
+  <p>Based on the three failure points identified in this case, the following controls should be standard practice in any logistics or vendor payment function. These are not theoretical — they are the specific gaps that allowed 1.35 million to leave unnoticed.</p>
+
+  <ul class="check-list">
+    <li><div class="ck red">!</div><div><strong>MIS-to-Agreement Reconciliation on Role Handover:</strong> Any time the MIS or billing role changes hands, a mandatory reconciliation of the current template against the active signed agreement is required before the first billing cycle. The outgoing person and incoming person both sign off on the reconciliation document.</div></li>
+    <li><div class="ck red">!</div><div><strong>Quarterly Independent MIS Audit:</strong> Finance or Internal Audit — not the logistics team — conducts a quarterly cross-check of MIS billing data against the signed vendor agreement, focusing on: rate per unit, vehicle category classification, and capacity billed vs. operational records.</div></li>
+    <li><div class="ck red">!</div><div><strong>Three-Way Match Before Payment Release:</strong> All logistics invoices above a defined threshold must be matched against three independent sources before payment: (1) signed agreement rate card, (2) MIS billing data, (3) operational evidence — trip logs, GPS records, or vehicle RC for capacity verification.</div></li>
+    <li><div class="ck">✓</div><div><strong>Defined Approval Checklist:</strong> The payment approval step requires a documented checklist, not just a signature. The approver confirms: rate matches agreement ✓ / vehicle category correct ✓ / capacity verified ✓. No checklist, no approval.</div></li>
+    <li><div class="ck">✓</div><div><strong>Separation of Vendor Management and Payment Approval:</strong> The team managing the day-to-day vendor relationship does not approve the vendor's invoices. Payment approval for major logistics vendors must involve a separate function — finance, internal audit, or loss prevention.</div></li>
+    <li><div class="ck green">✓</div><div><strong>Mandatory Written Communication for All Operational Changes:</strong> Any change to vehicle specifications, routes, capacity requirements, or rate structures must be confirmed in writing by both parties before implementation. Verbal or phone-based instructions are followed up with an email confirmation within 24 hours.</div></li>
+    <li><div class="ck green">✓</div><div><strong>Automated Rate Exception Alert:</strong> Any MIS entry where the per-unit rate exceeds the agreement rate by more than a defined tolerance (e.g., 2%) triggers an automatic alert to finance for review before the invoice is approved for payment.</div></li>
+    <li><div class="ck green">✓</div><div><strong>Annual Agreement-to-MIS Full Audit:</strong> Once per year, an independent party conducts a full comparison of all active vendor agreements against the MIS templates being used to generate invoices, with findings reported directly to senior management.</div></li>
+  </ul>
+
+  <div class="callout callout-tip">
+    <div class="callout-label">✅ The Cost of These Controls vs. the Cost of Not Having Them</div>
+    <p>Every control listed above costs time — a few hours per quarter for most of them. The total annual cost of implementing all eight controls across a mid-size logistics function is likely 15,000–30,000 in labor hours. The cost of not having them, as this case demonstrates, was <strong>1.35 million in twelve months</strong> — from a single transporter. The math is not complicated.</p>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section id="conclusion">
+  <h2>The Bigger Picture: What This Case Tells Us About Vendor Payment Risk</h2>
+  <p>This was not a case of elaborate fraud. No one hacked a system. No fictitious vendors were created. No invoices were forged. The transporter billed for what was provided. The logistics team approved what the MIS showed. The MIS showed what the previous person had done. And the previous person had done it wrong, or had done it under an older agreement, or had made an error that nobody had ever been required to verify.</p>
+  <p>The 1.35 million loss was the product of compounding negligence — not malice — across multiple roles and processes. And that makes it more common, not less dangerous. Malicious fraud requires intent and planning. Process failure requires only a gap in oversight and enough time for the gap to accumulate into a loss that finally gets noticed.</p>
+  <p><strong>The recovery of 1.3 million — 96.3% of confirmed losses — happened because of three things:</strong> a focused data analysis that didn't accept the logistics team's framing, a negotiation that refused to accept the transporter's opening position, and ten minutes spent searching through emails for documentation that turned the entire conversation around. None of those things required exceptional skill. They required persistence, preparation, and the discipline to follow the paper trail.</p>
+
+  <div class="callout callout-tip">
+    <div class="callout-label">✅ What to Do This Week</div>
+    <p>If your organization manages significant logistics or vendor payments: pull three months of billing data for your highest-spend vendors and compare it directly to the signed agreement rate cards. Check that the unit rates match. Check that the categories are correct. If you cannot do that comparison in under an hour because the MIS and the agreement are not comparable, that gap is itself a finding worth escalating immediately.</p>
+  </div>
+
+  <div class="article-cta">
+    <h3>Explore More Loss Prevention &amp; Case Study Guides</h3>
+    <p>Real cases, proven controls, and practical frameworks for US businesses — no sign-up required.</p>
+    <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is MIS billing fraud in logistics?<span class="arrow">▾</span></button>
+      <div class="faq-a">MIS (Management Information System) billing fraud in logistics occurs when the data used to calculate and approve vendor payments is inaccurate — either through error, negligence, or deliberate manipulation. In logistics, this commonly involves billing for higher vehicle capacity than deployed, applying incorrect rate cards, billing fixed-route vehicles as ad-hoc trip vehicles at higher rates, or continuing to use outdated rate structures. Because logistics MIS data is often compiled internally and approved by the same team managing the vendor relationship, discrepancies can go undetected for months or years.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How do you detect overbilling by a logistics vendor?<span class="arrow">▾</span></button>
+      <div class="faq-a">The most effective method is a three-way audit: compare (1) the signed vendor agreement rate card against (2) the MIS data used to generate invoices against (3) actual operational records — vehicle registration certificates, trip logs, GPS data, and delivery manifests. Key red flags include: rates in the MIS that don't match the agreement, vehicle capacity billed being higher than what was requested or assigned, fixed vehicles billed at ad-hoc trip rates, and invoice totals increasing without a corresponding increase in operational volume.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How can a business recover overpayments from a logistics vendor?<span class="arrow">▾</span></button>
+      <div class="faq-a">Recovering overpayments requires three elements: documented proof of the correct agreement terms, evidence of what was actually delivered versus what was billed, and written communication trails establishing both parties' understanding of requirements. In negotiations, the strongest position is an itemized overpayment calculation supported by the vendor's own documents — their RC (registration certificate), delivery records, and any email correspondence acknowledging operational requirements. A credit note against future invoices is the most common recovery mechanism for ongoing vendor relationships, avoiding legal action while recovering the loss.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Who is responsible when a logistics team approves incorrect billing?<span class="arrow">▾</span></button>
+      <div class="faq-a">Responsibility is typically shared across multiple failure points. The MIS compiler is responsible for billing data accuracy. The manager who approved payments without verifying the MIS is responsible for inadequate oversight. The organization is responsible for not having independent cross-verification between the operational team managing the vendor and the finance team processing payment. In most cases, logistics billing error is enabled by a single structural gap: the team managing the vendor relationship also compiles and approves the billing data, with no independent verification layer between them and the payment function.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What controls prevent logistics billing fraud?<span class="arrow">▾</span></button>
+      <div class="faq-a">The most effective controls include: quarterly cross-verification of MIS data against the original vendor agreement by a party independent of the logistics team; mandatory three-way matching of agreement rate → MIS billing → actual operational evidence before any payment is released; a formal process for updating MIS templates when agreements change; separation of vendor management from payment approval; and automated exception alerts when per-unit billing rates exceed the agreement rate. Requiring written confirmation of all operational changes — vehicle specs, capacity, routes — is also essential for establishing accountability in any subsequent dispute or recovery.</div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section id="related-articles">
+  <h2>Related Articles</h2>
+  <div class="related-grid">
+    <a class="related-card" href="https://preventloss.org/articles/what-is-loss-prevention.html"><span class="rc-icon">🔐</span><div><div class="rc-cat">Loss Prevention</div><div class="rc-title">What Is Loss Prevention? Definition, Scope &amp; Why It Matters</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/loss-prevention-strategies.html"><span class="rc-icon">🛡️</span><div><div class="rc-cat">Loss Prevention</div><div class="rc-title">Loss Prevention Strategies: A Complete Guide for US Businesses</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/vendor-fraud-prevention.html"><span class="rc-icon">🤝</span><div><div class="rc-cat">Procurement</div><div class="rc-title">Vendor Fraud Prevention: How to Protect Your Supply Chain</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/airport-chocolate-store-fraud-case-study.html"><span class="rc-icon">🔴</span><div><div class="rc-cat">Real Case Study</div><div class="rc-title">The Airport Chocolate Store Fraud: How a Manager Turned Promotions into a Personal Business</div></div></a>
+  </div>
+</section>
+
+</article>
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" aria-label="Article sidebar">
+  <div class="sidebar-card quickref" style="padding:0;overflow:hidden;">
+    <div class="qr-header"><span>🔍</span><h4>Case Study — At a Glance</h4></div>
+    <div class="qr-row"><span class="qr-key">Total losses (12 months)</span><span class="qr-val red">1,350,000</span></div>
+    <div class="qr-row"><span class="qr-key">Excess charged per day</span><span class="qr-val red">5,500</span></div>
+    <div class="qr-row"><span class="qr-key">3-month sample anomaly</span><span class="qr-val amber">300,000</span></div>
+    <div class="qr-row"><span class="qr-key">Vehicle billed vs. needed</span><span class="qr-val amber">12MT vs 8MT</span></div>
+    <div class="qr-row"><span class="qr-key">Cross-checks in place</span><span class="qr-val red">Zero</span></div>
+    <div class="qr-row"><span class="qr-key">Transporter's opening offer</span><span class="qr-val amber">400,000</span></div>
+    <div class="qr-row"><span class="qr-key">Recovery agreed</span><span class="qr-val green">1,300,000</span></div>
+    <div class="qr-row"><span class="qr-key">Recovery rate</span><span class="qr-val green">96.3%</span></div>
+    <div class="qr-row"><span class="qr-key">Key evidence</span><span class="qr-val green">Aug 2024 email</span></div>
+  </div>
+
+  <div class="sidebar-card" style="margin-top:18px;">
+    <h4>In This Article</h4>
+    <ul class="toc-list">
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#discovery">🟡 How It Started</a></li>
+      <li><a href="#investigation">🔴 The Investigation</a></li>
+      <li><a href="#responsibility">🔴 Who's Responsible?</a></li>
+      <li><a href="#negotiation">🔵 The Negotiation</a></li>
+      <li><a href="#lessons">🟢 What We Learned</a></li>
+      <li><a href="#controls">📋 Prevention Controls</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#related-articles">Related Articles</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-card" style="margin-top:18px;background:linear-gradient(135deg,#1f0d0d 0%,var(--surface) 100%);border-color:var(--danger);">
+    <h4 style="color:var(--danger);">The 3 Failures</h4>
+    <div style="font-size:0.81rem;line-height:1.9;color:var(--muted);">
+      <div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);"><span style="color:var(--danger);font-weight:700;white-space:nowrap;">F1</span><span>Inherited MIS — never verified vs. agreement</span></div>
+      <div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);"><span style="color:var(--danger);font-weight:700;white-space:nowrap;">F2</span><span>12MT billed, 8MT deployed — capacity unchecked</span></div>
+      <div style="display:flex;gap:8px;padding:6px 0;"><span style="color:var(--danger);font-weight:700;white-space:nowrap;">F3</span><span>Approval without reviewing the MIS</span></div>
+    </div>
+  </div>
+
+  <div class="sidebar-card" style="margin-top:18px;background:linear-gradient(135deg,#0d2018 0%,var(--surface) 100%);border-color:var(--success);">
+    <h4 style="color:var(--success);">What Saved the Recovery</h4>
+    <div style="font-size:0.81rem;line-height:1.9;color:var(--muted);">
+      <div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);"><span style="color:var(--success);">→</span><span>3-month MIS sample pulled from Finance, not Logistics</span></div>
+      <div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);"><span style="color:var(--success);">→</span><span>Didn't accept transporter's RC argument — kept searching</span></div>
+      <div style="display:flex;gap:8px;padding:6px 0;"><span style="color:var(--success);">→</span><span>Aug 2024 email found — 10 min search, 900K swing</span></div>
+    </div>
+  </div>
+</aside>
+</div>
+
+<footer class="site-footer">
+  <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+  <p style="margin-top:8px;"><a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a></p>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const doc = document.documentElement;
+  document.getElementById('read-progress').style.width =
+    ((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100) + '%';
+});
+function toggleFaq(btn) {
+  const isOpen = btn.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll('.faq-q').forEach(b => {
+    b.setAttribute('aria-expanded', 'false');
+    b.nextElementSibling.classList.remove('open');
+  });
+  if (!isOpen) {
+    btn.setAttribute('aria-expanded', 'true');
+    btn.nextElementSibling.classList.add('open');
+  }
+}
+const sections = document.querySelectorAll('section[id]');
+const tocLinks = document.querySelectorAll('.toc-list a');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const a = document.querySelector(`.toc-list a[href="#{entry.target.id}"]`);
+      if (a) a.classList.add('active');
+    }
+  });
+}, { rootMargin: '-15% 0px -75% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
