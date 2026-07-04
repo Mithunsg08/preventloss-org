@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+<!-- GOOGLE Analytics GOES HERE -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-45J6FRBJN0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-45J6FRBJN0');
+</script>
+
+<title>Cycle Counting vs Physical Inventory Count: Which Wins? (+ Transition Plan)</title>
+<meta name="description" content="Still shutting down operations for a once-a-year count? There's a better way. See how cycle counting beats wall-to-wall physical inventory on accuracy, cost, and disruption — plus a ready-to-use 12-week transition schedule to get there without missing a single shipment." />
+<meta name="keywords" content="cycle counting vs physical inventory count, cycle counting inventory management, how to implement cycle counting, wall to wall inventory count vs cycle count, physical inventory count disruption, cycle count schedule template, how to transition from annual inventory count to cycle counting, cycle counting benefits, inventory cycle count best practices, ABC cycle counting, cycle count frequency by category, perpetual inventory vs physical count, inventory accuracy cycle counting, cycle count program implementation, reduce inventory count disruption" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Mithun GS" />
+<link rel="canonical" href="https://www.preventloss.org/articles/cycle-counting-vs-physical-inventory-count.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cycle Counting vs Physical Inventory Count: Which Wins? (+ Transition Plan)" />
+<meta property="og:description" content="Still shutting down for a once-a-year count? See how cycle counting wins on accuracy, cost, and disruption — plus a 12-week transition plan." />
+<meta property="og:url" content="https://www.preventloss.org/articles/cycle-counting-vs-physical-inventory-count.html" />
+<meta property="og:site_name" content="PreventLoss.org" />
+<meta property="article:published_time" content="2026-07-04T00:00:00Z" />
+<meta property="article:modified_time" content="2026-07-04T00:00:00Z" />
+<meta property="article:section" content="Inventory Management" />
+<meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cycle Counting vs Physical Inventory Count: Which Wins?" />
+<meta name="twitter:description" content="Cycle counting vs wall-to-wall physical counts — the honest comparison, plus a 12-week transition plan that doesn't disrupt fulfillment." />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cycle Counting vs Physical Inventory Count: Which Inventory Audit System Wins?",
+  "description": "A complete comparison of cycle counting and wall-to-wall physical inventory counts — accuracy, cost, disruption, and a step-by-step 12-week transition plan to move from annual shutdown counts to a rolling daily cycle count program.",
+  "author": { "@type": "Person", "name": "Mithun GS", "url": "https://www.linkedin.com/in/mithun-gs/" },
+  "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+  "datePublished": "2026-07-04",
+  "dateModified": "2026-07-04",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/cycle-counting-vs-physical-inventory-count.html" },
+  "keywords": "cycle counting, physical inventory count, wall to wall count, inventory accuracy, cycle count schedule, ABC cycle counting"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between cycle counting and physical inventory counting?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A physical inventory count (also called a wall-to-wall count or full count) is a complete, one-time count of all inventory across all locations, typically conducted once per year and often requiring operations to stop. A cycle count is a rolling program where a small portion of inventory is counted every day or week, so that the entire inventory is covered over a defined period without ever stopping operations. Cycle counting provides continuous accuracy data; physical counts provide a single snapshot that's accurate on count day and degrades until the next count." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should cycle counts be done?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Frequency depends on item classification. In an ABC-based cycle counting program: A items (high value, 70–80% of inventory value) should be counted monthly or more frequently — some businesses count them weekly. B items should be counted quarterly. C items should be counted twice a year or annually. The total count workload is distributed across working days so that no single count session takes more than 30–60 minutes of a team's time." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does cycle counting replace the annual physical inventory count?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For most businesses, yes — once a cycle counting program achieves and sustains inventory accuracy above 98–99%, the annual wall-to-wall count becomes unnecessary. However, some businesses with external audit requirements (public companies, government contractors) may still need an annual full count for financial reporting purposes. In those cases, cycle counting makes the annual count faster and more accurate because the system records are already highly accurate going into it." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good inventory accuracy rate for cycle counting?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A target of 98–99% inventory record accuracy is the standard for a well-functioning cycle count program. Below 95% accuracy is considered a significant problem — at that level, system records can't be trusted for replenishment decisions, and stockouts and excess stock accumulate from bad data rather than bad demand. The key metric is not just overall accuracy but accuracy by location and SKU tier — an A item with 95% accuracy in a high-velocity picking location is a bigger operational problem than a C item at the same level." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to transition from annual counts to cycle counting?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A structured transition from annual physical inventory to a functioning cycle count program takes 10–14 weeks for most businesses. The process starts with an ABC classification of your inventory, followed by one clean baseline count of your highest-value items, then a progressive roll-out of the daily count schedule. The 12-week plan in this guide walks through each step so that daily operations are never disrupted during the transition." }
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#0f1117;--surface:#181c27;--surface-2:#1e2535;--border:#252a38;
+  --accent:#2563eb;--accent-lt:#3b82f6;--accent-glow:#1d4ed840;
+  --text:#e2e8f0;--muted:#94a3b8;--heading:#f8fafc;
+  --success:#10b981;--warn:#f59e0b;--danger:#f87171;
+  --c-pr:#f59e0b;--c-pr-bg:#1c1500;
+  --font-display:'Georgia','Times New Roman',serif;
+  --font-body:system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'Courier New',monospace;
+  --r-sm:6px;--r-md:12px;--r-lg:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased;}
+
+.site-nav{position:sticky;top:0;z-index:100;background:rgba(15,17,23,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.site-nav .logo{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--heading);text-decoration:none;letter-spacing:-0.02em;}
+.site-nav .logo span{color:var(--accent-lt);}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--text);}
+
+#read-progress{position:fixed;top:56px;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--success),var(--accent-lt));z-index:99;transition:width 0.1s linear;}
+
+.page-wrap{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:52px;align-items:start;}
+@media(max-width:860px){.page-wrap{grid-template-columns:1fr;}.sidebar{display:none;}}
+
+.article-header{padding:52px 0 36px;border-bottom:1px solid var(--border);margin-bottom:36px;}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:var(--muted);margin-bottom:16px;}
+.breadcrumb a{color:var(--muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--text);}
+.breadcrumb span{color:var(--border);}
+.dual-category{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.article-category{display:inline-flex;align-items:center;gap:6px;background:var(--c-pr-bg);border:1px solid var(--c-pr);color:var(--c-pr);font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;}
+.article-category.green{background:#0d1f16;border-color:var(--success);color:var(--success);}
+h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.8vw,2.55rem);font-weight:700;color:var(--heading);line-height:1.18;letter-spacing:-0.03em;margin-bottom:18px;}
+.article-deck{font-size:1.05rem;color:var(--muted);line-height:1.65;margin-bottom:22px;max-width:680px;}
+.article-meta{display:flex;flex-wrap:wrap;gap:18px;font-size:0.8rem;color:var(--muted);}
+
+.article-stats{display:flex;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:40px;overflow:hidden;}
+.stat-item{flex:1;padding:16px 18px;border-right:1px solid var(--border);}
+.stat-item:last-child{border-right:none;}
+.s-val{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--heading);line-height:1;margin-bottom:4px;}
+.s-val.amber{color:var(--c-pr);}
+.s-val.green{color:var(--success);}
+.s-val.blue{color:var(--accent-lt);}
+.s-val.red{color:var(--danger);}
+.s-lbl{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:600;}
+@media(max-width:600px){.article-stats{flex-wrap:wrap;}.stat-item{flex:1 1 45%;border-bottom:1px solid var(--border);}}
+
+.article-body h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--heading);letter-spacing:-0.02em;margin:48px 0 14px;padding-top:48px;border-top:1px solid var(--border);}
+.article-body h2:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+.article-body p{margin-bottom:18px;color:var(--text);}
+.article-body a{color:var(--c-pr);text-decoration:underline;text-underline-offset:3px;}
+.article-body strong{color:var(--heading);font-weight:600;}
+.article-body em{font-style:italic;color:var(--muted);}
+
+.callout{border-radius:var(--r-md);padding:18px 22px;margin:24px 0;border-left:4px solid;}
+.callout-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+.callout p{margin-bottom:6px;font-size:0.94rem;}
+.callout p:last-child{margin-bottom:0;}
+.callout-tip{background:#0d1f16;border-color:var(--success);}
+.callout-tip .callout-label{color:var(--success);}
+.callout-info{background:var(--accent-glow);border-color:var(--accent);}
+.callout-info .callout-label{color:var(--accent-lt);}
+.callout-amber{background:var(--c-pr-bg);border-color:var(--c-pr);}
+.callout-amber .callout-label{color:var(--c-pr);}
+.callout-danger{background:#1f0d0d;border-color:var(--danger);}
+.callout-danger .callout-label{color:var(--danger);}
+
+.tier-divider{display:flex;align-items:center;gap:12px;margin:48px 0 8px;}
+.tier-divider .td-line{flex:1;height:1px;background:var(--border);}
+.tier-divider .td-label{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;padding:5px 16px;border-radius:999px;white-space:nowrap;}
+.tier-divider.problem  .td-label{color:var(--danger);background:#1f0d0d;border:1px solid var(--danger);}
+.tier-divider.compare  .td-label{color:var(--accent-lt);background:var(--accent-glow);border:1px solid var(--accent);}
+.tier-divider.when     .td-label{color:var(--c-pr);background:var(--c-pr-bg);border:1px solid var(--c-pr);}
+.tier-divider.abc      .td-label{color:var(--success);background:#0d1f16;border:1px solid var(--success);}
+.tier-divider.schedule .td-label{color:#a78bfa;background:#1e1340;border:1px solid #a78bfa;}
+.tier-divider.transition .td-label{color:#34d399;background:#0d2018;border:1px solid #34d399;}
+.tier-divider.mistakes .td-label{color:var(--danger);background:#1f0d0d;border:1px solid var(--danger);}
+
+/* HEAD-TO-HEAD COMPARISON CARDS */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0;}
+@media(max-width:600px){.vs-grid{grid-template-columns:1fr;}}
+.vs-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;}
+.vs-card.winner{border-color:var(--success);}
+.vs-header{padding:16px 20px;border-bottom:1px solid var(--border);background:var(--surface-2);}
+.vs-label{font-size:0.65rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;}
+.vs-card.cycle .vs-label{color:var(--success);}
+.vs-card.wall .vs-label{color:var(--danger);}
+.vs-title{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--heading);}
+.vs-body{padding:16px 20px;}
+.vs-row{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border);font-size:0.83rem;gap:10px;}
+.vs-row:last-child{border-bottom:none;}
+.vs-key{color:var(--muted);flex-shrink:0;max-width:110px;}
+.vs-val{font-weight:600;text-align:right;}
+.vs-card.cycle .vs-val{color:var(--success);}
+.vs-card.wall .vs-val{color:var(--danger);}
+
+/* SCORING TABLE */
+.score-table-wrap{margin:22px 0;border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;}
+.score-table{width:100%;border-collapse:collapse;font-size:0.84rem;}
+.score-table thead th{background:var(--surface-2);color:var(--muted);font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:11px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.score-table tbody td{padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.score-table tbody tr:last-child td{border-bottom:none;}
+.score-table tbody tr:hover td{background:var(--surface);}
+.score-category{font-weight:600;color:var(--heading);}
+.score-cycle{color:var(--success);font-weight:700;font-family:var(--font-mono);}
+.score-wall{color:var(--danger);font-weight:700;font-family:var(--font-mono);}
+.score-note{font-size:0.78rem;color:var(--muted);}
+
+/* ABC FREQUENCY TABLE */
+.abc-freq{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:22px 0;}
+@media(max-width:540px){.abc-freq{grid-template-columns:1fr;}}
+.abc-freq-card{border-radius:var(--r-md);padding:18px;border:1px solid;}
+.abc-freq-card.a{background:#0d2018;border-color:var(--success);}
+.abc-freq-card.b{background:var(--c-pr-bg);border-color:var(--c-pr);}
+.abc-freq-card.c{background:var(--accent-glow);border-color:var(--accent);}
+.afc-letter{font-family:var(--font-display);font-size:36px;font-weight:800;line-height:1;margin-bottom:4px;}
+.abc-freq-card.a .afc-letter{color:var(--success);}
+.abc-freq-card.b .afc-letter{color:var(--c-pr);}
+.abc-freq-card.c .afc-letter{color:var(--accent-lt);}
+.afc-freq{font-family:var(--font-mono);font-size:0.8rem;font-weight:700;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em;}
+.abc-freq-card.a .afc-freq{color:#34d399;}
+.abc-freq-card.b .afc-freq{color:#fbbf24;}
+.abc-freq-card.c .afc-freq{color:#93c5fd;}
+.afc-items{font-size:0.78rem;color:var(--muted);margin-bottom:8px;}
+.afc-controls{font-size:0.76rem;color:var(--muted);line-height:1.6;}
+.afc-controls ul{list-style:none;}
+.afc-controls ul li{padding:2px 0;display:flex;gap:6px;}
+.afc-controls ul li::before{content:'→';flex-shrink:0;}
+.abc-freq-card.a .afc-controls ul li::before{color:var(--success);}
+.abc-freq-card.b .afc-controls ul li::before{color:var(--c-pr);}
+.abc-freq-card.c .afc-controls ul li::before{color:var(--accent-lt);}
+
+/* 12-WEEK SCHEDULE */
+.schedule-wrap{margin:22px 0;}
+.schedule-phase{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:14px;}
+.sp-header{padding:14px 20px;border-bottom:1px solid var(--border);background:var(--surface-2);display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.sp-weeks{font-family:var(--font-mono);font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;}
+.sp-title{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--heading);}
+.sp-sub{font-size:0.76rem;color:var(--muted);}
+.sp-body{padding:16px 20px;}
+.sp-body p{font-size:0.88rem;color:var(--muted);margin-bottom:10px;}
+.sp-body p:last-child{margin-bottom:0;}
+.sp-body p strong{color:var(--text);}
+.sp-week-rows{display:flex;flex-direction:column;gap:6px;margin-top:10px;}
+.sp-week-row{display:flex;gap:14px;align-items:flex-start;font-size:0.82rem;}
+.sp-week-label{font-family:var(--font-mono);font-size:0.7rem;font-weight:700;color:var(--muted);white-space:nowrap;min-width:56px;padding-top:2px;}
+.sp-week-content{color:var(--muted);line-height:1.55;}
+.sp-week-content strong{color:var(--text);}
+
+/* SAMPLE DAILY SCHEDULE TABLE */
+.daily-schedule{margin:22px 0;border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;}
+.ds-header{background:linear-gradient(135deg,#1e1340 0%,#181c27 100%);padding:14px 20px;border-bottom:1px solid #a78bfa;}
+.ds-header h4{font-size:0.76rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:#c4b5fd;}
+.ds-table{width:100%;border-collapse:collapse;font-size:0.83rem;}
+.ds-table th{background:var(--surface-2);color:var(--muted);font-size:0.63rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.ds-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle;}
+.ds-table tr:last-child td{border-bottom:none;}
+.ds-table tr:hover td{background:var(--surface);}
+.day-label{font-weight:700;white-space:nowrap;}
+.day-mon{color:var(--success);}
+.day-tue{color:var(--c-pr);}
+.day-wed{color:var(--accent-lt);}
+.day-thu{color:#a78bfa;}
+.day-fri{color:#34d399;}
+.count-qty{font-family:var(--font-mono);font-size:0.8rem;color:var(--heading);font-weight:600;}
+.time-est{font-size:0.78rem;color:var(--muted);}
+
+/* TRANSITION TIMELINE */
+.timeline{margin:22px 0;position:relative;padding-left:28px;}
+.timeline::before{content:'';position:absolute;left:10px;top:8px;bottom:8px;width:2px;background:var(--border);}
+.tl-item{position:relative;margin-bottom:22px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-22px;top:6px;width:14px;height:14px;border-radius:50%;border:2px solid;background:var(--bg);}
+.tl-dot.amber{border-color:var(--c-pr);}
+.tl-dot.blue{border-color:var(--accent-lt);}
+.tl-dot.green{border-color:var(--success);}
+.tl-dot.purple{border-color:#a78bfa;}
+.tl-dot.teal{border-color:#34d399;}
+.tl-date{font-family:var(--font-mono);font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:3px;}
+.tl-dot.amber ~ .tl-date{color:var(--c-pr);}
+.tl-dot.blue ~ .tl-date{color:var(--accent-lt);}
+.tl-dot.green ~ .tl-date{color:var(--success);}
+.tl-dot.purple ~ .tl-date{color:#a78bfa;}
+.tl-dot.teal ~ .tl-date{color:#34d399;}
+.tl-title{font-size:0.9rem;font-weight:600;color:var(--heading);margin-bottom:4px;}
+.tl-text{font-size:0.83rem;color:var(--muted);line-height:1.6;}
+
+/* MISTAKE CARDS */
+.mistake-card{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--danger);border-radius:0 var(--r-md) var(--r-md) 0;padding:18px 22px;margin:14px 0;}
+.mistake-title{font-size:0.9rem;font-weight:700;color:var(--heading);margin-bottom:5px;}
+.mistake-text{font-size:0.84rem;color:var(--muted);line-height:1.6;margin-bottom:6px;}
+.mistake-fix{font-size:0.82rem;color:var(--success);display:flex;gap:6px;align-items:flex-start;}
+.mistake-fix::before{content:'✓ Fix:';font-weight:700;flex-shrink:0;}
+
+/* BADGE */
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:0.68rem;font-weight:700;}
+.badge-green{background:#0d2018;color:#34d399;}
+.badge-amber{background:var(--c-pr-bg);color:#fbbf24;}
+.badge-blue{background:var(--accent-glow);color:#93c5fd;}
+.badge-red{background:#1f0d0d;color:#fca5a5;}
+.badge-purple{background:#1e1340;color:#c4b5fd;}
+
+/* PULL QUOTE */
+.pull-quote{border-left:4px solid var(--c-pr);padding:16px 24px;margin:30px 0;background:var(--c-pr-bg);border-radius:0 var(--r-md) var(--r-md) 0;}
+.pull-quote p{font-family:var(--font-display);font-size:1.08rem;color:var(--heading);line-height:1.55;font-style:italic;margin:0;}
+.pull-quote cite{display:block;font-size:0.75rem;color:var(--muted);margin-top:10px;font-style:normal;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;}
+
+/* CHECK LIST */
+.check-list{list-style:none;margin:14px 0 22px;}
+.check-list li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--border);font-size:0.93rem;}
+.check-list li:last-child{border-bottom:none;}
+.ck{width:20px;height:20px;flex-shrink:0;background:var(--c-pr-bg);border:1px solid var(--c-pr);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--c-pr);margin-top:2px;}
+.ck.green{background:#0d2018;border-color:var(--success);color:var(--success);}
+
+/* FAQ */
+.faq-list{margin:14px 0;}
+.faq-item{border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:10px;overflow:hidden;}
+.faq-q{width:100%;background:var(--surface);border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;font-size:0.95rem;font-weight:600;color:var(--heading);text-align:left;gap:12px;}
+.faq-q:hover{background:var(--surface-2);}
+.faq-q .arrow{flex-shrink:0;font-size:1.1rem;color:var(--muted);transition:transform 0.2s;}
+.faq-q[aria-expanded="true"] .arrow{transform:rotate(180deg);}
+.faq-a{display:none;padding:0 20px 18px;font-size:0.92rem;color:var(--muted);background:var(--surface);}
+.faq-a.open{display:block;}
+
+/* RELATED */
+.related-grid{display:flex;flex-direction:column;gap:12px;margin-top:10px;}
+.related-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:16px 18px;text-decoration:none;display:flex;gap:12px;align-items:flex-start;transition:border-color 0.18s,background 0.15s;}
+.related-card:hover{border-color:var(--c-pr);background:var(--surface-2);}
+.related-card .rc-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px;}
+.related-card .rc-cat{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--c-pr);margin-bottom:4px;}
+.related-card .rc-title{font-size:0.9rem;font-weight:600;color:var(--heading);line-height:1.35;}
+
+.article-cta{background:linear-gradient(135deg,var(--c-pr-bg) 0%,#181c27 100%);border:1px solid var(--c-pr);border-radius:var(--r-lg);padding:28px 32px;text-align:center;margin-top:44px;}
+.article-cta h3{font-family:var(--font-display);font-size:1.2rem;color:var(--heading);margin-bottom:8px;}
+.article-cta p{color:var(--muted);font-size:0.875rem;margin-bottom:18px;}
+.btn-primary{display:inline-block;background:var(--c-pr);color:#1a0f00;font-weight:700;font-size:0.875rem;padding:11px 26px;border-radius:var(--r-sm);text-decoration:none;transition:opacity 0.18s;}
+.btn-primary:hover{opacity:0.85;}
+
+.disclosure{font-size:0.78rem;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 16px;margin:16px 0 0;}
+
+/* SIDEBAR */
+.sidebar{padding-top:52px;}
+.sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;margin-bottom:18px;}
+.sidebar-card h4{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted);margin-bottom:12px;}
+.toc-list{list-style:none;}
+.toc-list li{margin-bottom:2px;}
+.toc-list a{font-size:0.79rem;color:var(--muted);text-decoration:none;display:block;padding:4px 0 4px 12px;border-left:2px solid transparent;transition:all 0.15s;line-height:1.35;}
+.toc-list a:hover,.toc-list a.active{color:var(--text);border-color:var(--c-pr);}
+.quickref{position:sticky;top:72px;}
+.qr-header{background:var(--c-pr-bg);border-bottom:1px solid var(--c-pr);padding:14px 18px;display:flex;align-items:center;gap:8px;border-radius:var(--r-lg) var(--r-lg) 0 0;}
+.qr-header h4{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-pr);}
+.qr-row{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:10px 18px;border-bottom:1px solid var(--border);font-size:0.79rem;}
+.qr-row:last-child{border-bottom:none;}
+.qr-key{color:var(--muted);flex-shrink:0;font-size:0.73rem;max-width:120px;}
+.qr-val{color:var(--heading);font-weight:600;text-align:right;font-size:0.73rem;}
+.qr-val.green{color:var(--success);}
+.qr-val.red{color:var(--danger);}
+.qr-val.amber{color:var(--c-pr);}
+
+.site-footer{border-top:1px solid var(--border);margin-top:80px;padding:32px 24px;text-align:center;color:var(--muted);font-size:0.82rem;}
+.site-footer a{color:var(--muted);text-decoration:none;}
+.site-footer a:hover{color:var(--text);}
+</style>
+</head>
+<body>
+<div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+  <ul class="nav-links">
+    <li><a href="/articles/">Articles</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+<main id="main-content">
+
+<header class="article-header">
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/articles/">Articles</a><span>›</span>
+    <a href="/articles/?cat=inventory">Inventory Management</a>
+  </div>
+  <div class="dual-category">
+    <span class="article-category">📦 Inventory Management</span>
+    <span class="article-category green">📅 With Transition Plan</span>
+  </div>
+  <h1>Cycle Counting vs. Wall-to-Wall Physical Counts: Which Inventory Audit System Actually Wins?</h1>
+  <p class="article-deck">The annual shutdown count is a business ritual that almost everyone hates and almost no one questions. Operations stop. Staff get pulled off their real jobs. The count takes two days. The results are accurate for exactly one afternoon. There is a better system — and this guide shows you how to transition to it without disrupting a single shipment.</p>
+  <div class="article-meta">
+    <span>🗓 July 4, 2026</span>
+    <span>⏱ 17 min read</span>
+    <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--c-pr);text-decoration:underline;text-underline-offset:3px;">Mithun GS</a></span>
+    <span>📂 Inventory Management</span>
+  </div>
+</header>
+
+<div class="article-stats">
+  <div class="stat-item"><div class="s-val red">65–85%</div><div class="s-lbl">Typical physical count accuracy within 3 months</div></div>
+  <div class="stat-item"><div class="s-val green">99%+</div><div class="s-lbl">Target accuracy with cycle counting</div></div>
+  <div class="stat-item"><div class="s-val amber">12 weeks</div><div class="s-lbl">To fully transition — without disrupting ops</div></div>
+  <div class="stat-item"><div class="s-val blue">30–60 min</div><div class="s-lbl">Daily count time in a mature cycle count program</div></div>
+</div>
+
+<article class="article-body" itemscope itemtype="https://schema.org/Article">
+<meta itemprop="headline" content="Cycle Counting vs Wall-to-Wall Physical Inventory Count: Which Wins?" />
+<meta itemprop="datePublished" content="2026-07-04" />
+
+<!-- INTRO -->
+<section id="introduction">
+  <h2 style="border-top:none;padding-top:0;margin-top:0;">The Annual Count That Costs More Than It Reveals</h2>
+  <p>Picture the scene: it's the last Sunday of the fiscal year. The warehouse is closed to inbound and outbound freight. Eight staff members have been pulled from their regular duties and armed with clipboards or handheld scanners. The count starts at 7am and, despite everyone's best efforts, finishes at 6pm. Results are entered into the system. Adjustments are made. A shrinkage figure emerges. Leadership looks at it, winces, and the business gets back to normal the next morning.</p>
+  <p>And then the slow decay begins. By week two, the receiving team has processed 40 new purchase orders. Returns have come back from three customers. Two shelving bays were reorganized. The system records drift away from physical reality — gradually at first, then faster as activity accelerates. By month three, the inventory accuracy that was so precisely established on count day has degraded to somewhere between 65% and 85%. By month eight, counting on your system's inventory figures for meaningful purchasing or fulfillment decisions is an act of optimism rather than analysis.</p>
+  <p><strong>This is the fundamental problem with the wall-to-wall physical count:</strong> it delivers a single moment of accuracy, once a year, at enormous cost in disruption and labor — and then that accuracy evaporates at a rate the business never sees coming, because nobody is measuring it between counts.</p>
+  <p>Cycle counting solves this. Not by eliminating the count effort, but by distributing it so evenly across the working year that counting becomes routine, accuracy stays perpetually high, and nobody ever needs to shut down operations to establish where the stock actually is.</p>
+  <div class="disclosure">📌 The transition plan and schedule in this guide are designed for general warehousing, distribution, and retail operations. Adjust count quantities and frequencies based on your specific SKU count, daily volume, and team size. Businesses with external audit requirements should consult their auditor before eliminating their annual physical count.</div>
+</section>
+
+<!-- THE PROBLEM WITH ANNUAL COUNTS -->
+<div class="tier-divider problem"><div class="td-line"></div><div class="td-label">🔴 The Problem with Annual Counts</div><div class="td-line"></div></div>
+
+<section id="annual-count-problems">
+  <h2>Why the Annual Shutdown Count Fails — Even When It Goes Well</h2>
+  <p>The issue isn't that annual counts are poorly executed. Most businesses run them as well as the format allows. The issue is that the format itself has structural limitations that no amount of preparation can overcome.</p>
+
+  <div class="callout callout-danger">
+    <div class="callout-label">⚠ The Accuracy Decay Problem</div>
+    <p>A wall-to-wall count is accurate on the day it is completed. From that point, every receiving error, every mis-pick, every unrecorded return, every miscounted item in a rush shipment nudges your system records away from physical reality. After 90 days of normal operations at a mid-size warehouse or retail operation, inventory accuracy has typically dropped to 80–90%. After six months, 70–80% is common. The count revealed the truth — and then reality immediately started eroding it again.</p>
+  </div>
+
+  <p>Beyond the accuracy decay problem, annual counts carry four additional costs that rarely appear in the "cost of the count" calculation:</p>
+
+  <p><strong>1. Direct labor cost during the count.</strong> Pulling 8–15 people off productive work for one or two days is not free. If an operation has 12 warehouse staff at an average fully loaded cost of $28/hour and the count takes 16 hours including setup and reconciliation, that's $5,376 in direct labor — before factoring in overtime, manager time, and any external temp labor brought in to cover absent staff.</p>
+
+  <p><strong>2. Lost revenue from operational shutdown.</strong> Orders not shipped during count time translate directly to delayed customer satisfaction or missed same-day/next-day commitments. The cost depends on your daily order volume and customer expectations, but for many e-commerce and distribution operations it is measured in thousands of dollars per shutdown day.</p>
+
+  <p><strong>3. Decisions made on bad data between counts.</strong> Every purchase order, safety stock calculation, stockout investigation, and space planning decision made in months 4–12 after the count is made on data that is progressively less accurate. The cost of these misinformed decisions — excess stock purchased for SKUs that were actually well-stocked, genuine shortages missed because the system said stock was there — is rarely attributed back to "we had bad inventory data," but it should be.</p>
+
+  <p><strong>4. The count itself is error-prone.</strong> A 14-hour count, conducted by tired staff, in a large facility, under time pressure, does not achieve 100% count accuracy. Research and practitioner experience consistently show that even well-run annual physical counts contain counting errors of 1–3% — which means the "clean" starting point is already imperfect before decay begins.</p>
+
+  <div class="pull-quote">
+    <p>"The annual count feels like control because it's visible, scheduled, and disruptive enough to seem serious. But visibility isn't accuracy. You're counting everything precisely — and then watching the precision evaporate quietly for the next eleven months."</p>
+    <cite>— Mithun GS, PreventLoss.org</cite>
+  </div>
+</section>
+
+<!-- HEAD-TO-HEAD COMPARISON -->
+<div class="tier-divider compare"><div class="td-line"></div><div class="td-label">🔵 Head-to-Head Comparison</div><div class="td-line"></div></div>
+
+<section id="comparison">
+  <h2>Cycle Counting vs Physical Count: The Honest Head-to-Head</h2>
+  <p>Both methods count inventory. Everything else about them is different — the frequency, the disruption, the ongoing accuracy, the cost structure, and what you actually do with the results. Here's the side-by-side.</p>
+
+  <div class="vs-grid">
+    <div class="vs-card cycle winner">
+      <div class="vs-header">
+        <div class="vs-label">✅ Cycle Counting</div>
+        <div class="vs-title">Rolling Daily Counts</div>
+      </div>
+      <div class="vs-body">
+        <div class="vs-row"><span class="vs-key">Frequency</span><span class="vs-val">Daily / ongoing</span></div>
+        <div class="vs-row"><span class="vs-key">Disruption</span><span class="vs-val">None — ops continue</span></div>
+        <div class="vs-row"><span class="vs-key">Accuracy sustained</span><span class="vs-val">98–99%+ perpetually</span></div>
+        <div class="vs-row"><span class="vs-key">Labor model</span><span class="vs-val">30–60 min/day distributed</span></div>
+        <div class="vs-row"><span class="vs-key">Error detection speed</span><span class="vs-val">Days to weeks</span></div>
+        <div class="vs-row"><span class="vs-key">Root cause diagnosis</span><span class="vs-val">Pinpoint by location</span></div>
+        <div class="vs-row"><span class="vs-key">Training required</span><span class="vs-val">Moderate — ongoing</span></div>
+        <div class="vs-row"><span class="vs-key">Annual audit need</span><span class="vs-val">Often eliminated</span></div>
+      </div>
+    </div>
+    <div class="vs-card wall">
+      <div class="vs-header">
+        <div class="vs-label">⚠ Wall-to-Wall Count</div>
+        <div class="vs-title">Annual Full Shutdown</div>
+      </div>
+      <div class="vs-body">
+        <div class="vs-row"><span class="vs-key">Frequency</span><span class="vs-val">Once a year (typically)</span></div>
+        <div class="vs-row"><span class="vs-key">Disruption</span><span class="vs-val">Full operational halt</span></div>
+        <div class="vs-row"><span class="vs-key">Accuracy sustained</span><span class="vs-val">Degrades within weeks</span></div>
+        <div class="vs-row"><span class="vs-key">Labor model</span><span class="vs-val">All hands, 1–2 days</span></div>
+        <div class="vs-row"><span class="vs-key">Error detection speed</span><span class="vs-val">Up to 12 months</span></div>
+        <div class="vs-row"><span class="vs-key">Root cause diagnosis</span><span class="vs-val">Net variance only</span></div>
+        <div class="vs-row"><span class="vs-key">Training required</span><span class="vs-val">Annual briefing</span></div>
+        <div class="vs-row"><span class="vs-key">Annual audit need</span><span class="vs-val">Is the audit</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="border-top:none;padding-top:0;margin-top:28px;font-size:1.1rem;">Scoring It Across 8 Dimensions</h2>
+
+  <div class="score-table-wrap">
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Cycle Counting</th>
+          <th>Physical Count</th>
+          <th>Winner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="score-category">Inventory Accuracy</td>
+          <td class="score-cycle">Sustained 98–99%+</td>
+          <td class="score-wall">Peaks on day one; decays</td>
+          <td><span class="badge badge-green">Cycle</span></td>
+        </tr>
+        <tr>
+          <td class="score-category">Operational Disruption</td>
+          <td class="score-cycle">Zero — runs during normal hours</td>
+          <td class="score-wall">Full shutdown 1–2 days</td>
+          <td><span class="badge badge-green">Cycle</span></td>
+        </tr>
+        <tr>
+          <td class="score-category">Total Annual Labor Cost</td>
+          <td class="score-cycle">Lower — distributed daily</td>
+          <td class="score-wall">Higher — concentrated burst</td>
+          <td><span class="badge badge-green">Cycle</span></td>
+        </tr>
+        <tr>
+          <td class="score-category">Error Detection Speed</td>
+          <td class="score-cycle">Days to weeks</td>
+          <td class="score-wall">Up to 12 months</td>
+          <td><span class="badge badge-green">Cycle</span></td>
+        </tr>
+        <tr>
+          <td class="score-category">Root Cause Isolation</td>
+          <td class="score-cycle">By location, SKU, team</td>
+          <td class="score-wall">Net variance only</td>
+          <td><span class="badge badge-green">Cycle</span></td>
+        </tr>
+        <tr>
+          <td class="score-category">Setup & Implementation</td>
+          <td class="score-cycle">Requires initial effort</td>
+          <td class="score-wall">Familiar — team knows it</td>
+          <td><span class="badge badge-amber">Physical</span></td>
+        </tr>
+        <tr>
+          <td class="score-category">External Audit Compliance</td>
+          <td class="score-cycle">Depends on auditor / requirements</td>
+          <td class="score-wall">Universally accepted</td>
+          <td><span class="badge badge-amber">Physical</span></td>
+        </tr>
+        <tr>
+          <td class="score-category">Shrinkage Identification</td>
+          <td class="score-cycle">Faster — continuous detection</td>
+          <td class="score-wall">Once per year, net only</td>
+          <td><span class="badge badge-green">Cycle</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Cycle counting wins on six of eight dimensions. The two areas where annual physical counts retain an edge — implementation familiarity and external audit compliance — are both manageable: the first through structured transition (covered in this guide), and the second by confirming your auditor's requirements before eliminating the annual count entirely.</p>
+</section>
+
+<!-- WHEN TO USE WHICH -->
+<div class="tier-divider when"><div class="td-line"></div><div class="td-label">🟡 When to Use Each</div><div class="td-line"></div></div>
+
+<section id="when-to-use">
+  <h2>When a Full Physical Count Still Makes Sense</h2>
+  <p>Cycle counting wins the comparison decisively — but that doesn't mean the annual physical count is never the right tool. There are specific situations where a full wall-to-wall count is either required or genuinely the most practical option.</p>
+
+  <div class="callout callout-amber">
+    <div class="callout-label">📋 Keep a Full Physical Count If...</div>
+    <p><strong>External audit requirements mandate it.</strong> Public companies, government contractors, and businesses with certain lender covenants may be required to conduct a formal physical inventory count as part of their financial audit. Check with your auditor before transitioning — in many cases, a mature cycle count program with documented accuracy above 98% satisfies the requirement, but confirm first.</p>
+  </div>
+  <div class="callout callout-info">
+    <div class="callout-label">📋 A Full Count Makes Practical Sense If...</div>
+    <p><strong>Your current inventory records are severely inaccurate.</strong> A cycle counting program built on a corrupt baseline produces corrupt results. If your inventory accuracy is currently below 80%, start with a clean full count to establish a reliable baseline — then build your cycle count program from that foundation.</p>
+  </div>
+  <div class="callout callout-info">
+    <div class="callout-label">📋 Combine Both Methods If...</div>
+    <p><strong>You operate a very small operation.</strong> A business with 50 SKUs and one stockroom doesn't need a sophisticated cycle count program — a monthly full count takes 30 minutes and covers everything. Cycle counting's advantages scale with SKU count and inventory complexity. Below a certain threshold, simplicity wins.</p>
+  </div>
+</section>
+
+<!-- ABC CYCLE COUNT FRAMEWORK -->
+<div class="tier-divider abc"><div class="td-line"></div><div class="td-label">🟢 ABC-Based Count Frequencies</div><div class="td-line"></div></div>
+
+<section id="abc-framework">
+  <h2>How ABC Classification Drives Your Cycle Count Frequency</h2>
+  <p>The single most important design decision in a cycle counting program is not what to count — it's <strong>how often to count what.</strong> Counting your highest-value A items weekly and your C items quarterly is not arbitrary. It directly reflects where the cost of an error is highest, where shrinkage is most expensive, and where count effort delivers the most return.</p>
+
+  <div class="abc-freq">
+    <div class="abc-freq-card a">
+      <div class="afc-letter">A</div>
+      <div class="afc-freq">Monthly or Weekly</div>
+      <div class="afc-items">10–20% of SKUs · 70–80% of value</div>
+      <div class="afc-controls">
+        <ul>
+          <li>Count every location monthly minimum</li>
+          <li>High-velocity A items: count weekly</li>
+          <li>Discrepancies investigated same day</li>
+          <li>Root cause documented every time</li>
+          <li>Two-person verification on all A counts</li>
+        </ul>
+      </div>
+    </div>
+    <div class="abc-freq-card b">
+      <div class="afc-letter">B</div>
+      <div class="afc-freq">Quarterly</div>
+      <div class="afc-items">20–30% of SKUs · 15–25% of value</div>
+      <div class="afc-controls">
+        <ul>
+          <li>Count each B item once per quarter</li>
+          <li>Discrepancies investigated within 48hrs</li>
+          <li>Single counter acceptable</li>
+          <li>Variance threshold: flag &gt;2% or &gt;$200</li>
+          <li>Promote to A if variance patterns emerge</li>
+        </ul>
+      </div>
+    </div>
+    <div class="abc-freq-card c">
+      <div class="afc-letter">C</div>
+      <div class="afc-freq">Twice Per Year</div>
+      <div class="afc-items">50–70% of SKUs · 5–10% of value</div>
+      <div class="afc-controls">
+        <ul>
+          <li>Two counts per year (H1 and H2)</li>
+          <li>Batch by location to minimize travel</li>
+          <li>Variance threshold: flag &gt;5% or &gt;$100</li>
+          <li>Good candidates for automated reorder triggers</li>
+          <li>Annual review for obsolescence</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="border-top:none;padding-top:0;margin-top:28px;font-size:1.15rem;">How to Distribute Count Workload Across the Working Week</h2>
+  <p>The practical fear most operations managers have about cycle counting is that it adds unmanageable daily work. In practice, a well-structured program distributes count effort so evenly that it becomes a 30–45 minute daily routine — not a project. Here's a sample weekly count schedule for a mid-size warehouse with 800 active SKUs (160 A items, 240 B items, 400 C items).</p>
+
+  <div class="daily-schedule">
+    <div class="ds-header"><h4>📋 Sample Weekly Cycle Count Schedule — 800-SKU Warehouse</h4></div>
+    <table class="ds-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Focus Category</th>
+          <th>Count Target</th>
+          <th>Location Zone</th>
+          <th>Est. Time</th>
+          <th>Counter</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="day-label day-mon">Monday</span></td>
+          <td><span class="badge badge-green">A Items</span></td>
+          <td class="count-qty">8 SKUs</td>
+          <td>Zones A1–A4 (high-velocity)</td>
+          <td class="time-est">35–45 min</td>
+          <td>Lead + verify</td>
+        </tr>
+        <tr>
+          <td><span class="day-label day-tue">Tuesday</span></td>
+          <td><span class="badge badge-green">A Items</span></td>
+          <td class="count-qty">8 SKUs</td>
+          <td>Zones A5–A8</td>
+          <td class="time-est">35–45 min</td>
+          <td>Lead + verify</td>
+        </tr>
+        <tr>
+          <td><span class="day-label day-wed">Wednesday</span></td>
+          <td><span class="badge badge-amber">B Items</span></td>
+          <td class="count-qty">10 SKUs</td>
+          <td>Zones B1–B5 (rotating)</td>
+          <td class="time-est">30–40 min</td>
+          <td>Single counter</td>
+        </tr>
+        <tr>
+          <td><span class="day-label day-thu">Thursday</span></td>
+          <td><span class="badge badge-green">A Items</span> + <span class="badge badge-blue">C Items</span></td>
+          <td class="count-qty">6A + 12C SKUs</td>
+          <td>Zones A9–A12 + C-row batch</td>
+          <td class="time-est">40–55 min</td>
+          <td>Two counters split</td>
+        </tr>
+        <tr>
+          <td><span class="day-label day-fri">Friday</span></td>
+          <td>Variance Resolution + Next Week Prep</td>
+          <td class="count-qty">Recount flagged SKUs</td>
+          <td>Exception locations</td>
+          <td class="time-est">20–30 min</td>
+          <td>Supervisor</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-tip">
+    <div class="callout-label">✅ Weekly Rhythm at Scale</div>
+    <p>This schedule counts 32 A items and 10 B items and 12 C items each week. Over a 4-week month, that covers all 160 A items twice, 40 B items (all B items over the quarter), and 48 C items. The entire program requires approximately 35–50 minutes of counting per day — less than most morning briefings. <strong>This is not a project bolted on top of operations. It is a 40-minute daily routine that replaces a two-day annual shutdown.</strong></p>
+  </div>
+</section>
+
+<!-- 12-WEEK TRANSITION PLAN -->
+<div class="tier-divider transition"><div class="td-line"></div><div class="td-label">🟢 12-Week Transition Plan</div><div class="td-line"></div></div>
+
+<section id="transition-plan">
+  <h2>The 12-Week Transition: From Annual Shutdown to Daily Cycle Count</h2>
+  <p>The biggest implementation risk is starting the cycle count program on top of inaccurate system records. If your beginning inventory data is wrong, your cycle counts will keep flagging variances that can't be resolved — which kills team confidence and creates the impression that "cycle counting doesn't work." The transition plan below addresses this by establishing a clean, validated baseline before the rolling program begins.</p>
+
+  <div class="schedule-wrap">
+    <div class="schedule-phase">
+      <div class="sp-header">
+        <span class="sp-weeks" style="background:rgba(245,158,11,0.15);border:1px solid var(--c-pr);color:var(--c-pr);">Weeks 1–2</span>
+        <div>
+          <div class="sp-title">Foundation: Classify and Understand Your Inventory</div>
+          <div class="sp-sub">No counting yet — data work first</div>
+        </div>
+      </div>
+      <div class="sp-body">
+        <p><strong>Pull 12 months of sales and cost data and run an ABC classification.</strong> Every active SKU gets classified as A, B, or C based on annual consumption value. This classification drives every count frequency decision going forward. If you've already done ABC analysis, verify it's current — any classification older than 6 months should be refreshed.</p>
+        <p>Simultaneously, review your current location structure. Each SKU should have a defined primary location (and overflow locations clearly linked in the system). Unlocated or multi-located items with no system record are the most common source of persistent variance in new cycle count programs.</p>
+        <div class="sp-week-rows">
+          <div class="sp-week-row"><span class="sp-week-label">Week 1</span><div class="sp-week-content">Export 12-month COGS data by SKU. Calculate Annual Consumption Value. Sort and classify into A, B, C tiers. Define count frequency for each tier.</div></div>
+          <div class="sp-week-row"><span class="sp-week-label">Week 2</span><div class="sp-week-content">Audit location master in your WMS/inventory system. Ensure every A item has a confirmed primary bin location. Flag any SKUs with no assigned location or ambiguous multi-location records.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="schedule-phase">
+      <div class="sp-header">
+        <span class="sp-weeks" style="background:rgba(59,130,246,0.12);border:1px solid var(--accent-lt);color:var(--accent-lt);">Weeks 3–5</span>
+        <div>
+          <div class="sp-title">Baseline: Count and Validate All A Items</div>
+          <div class="sp-sub">Establish a clean, trusted starting point for your highest-value stock</div>
+        </div>
+      </div>
+      <div class="sp-body">
+        <p><strong>Count every A item — and only A items — over these three weeks.</strong> This is the closest thing to a mini wall-to-wall count, but targeted at the 10–20% of SKUs that represent 70–80% of your value. It typically takes 2–3 hours per day for 15 days to count and recount all A items.</p>
+        <p>For each A item where the count doesn't match the system record: investigate before adjusting. Don't simply correct the number — find out why it was wrong. Was it a receiving error? A mis-pick? A location mix-up? A returns processing gap? The root cause matters, because the same cause will create the same variance again unless the process is fixed.</p>
+        <div class="sp-week-rows">
+          <div class="sp-week-row"><span class="sp-week-label">Week 3</span><div class="sp-week-content"><strong>Count A items in Zones 1–3.</strong> Two-person counts only. Record every count on a standardized form (SKU, location, system qty, physical qty, counter name, date). Flag all variances immediately.</div></div>
+          <div class="sp-week-row"><span class="sp-week-label">Week 4</span><div class="sp-week-content"><strong>Count A items in Zones 4–6.</strong> Investigate and resolve all variances from Week 3 before adjusting system records. Document root cause for every discrepancy over $100 in value.</div></div>
+          <div class="sp-week-row"><span class="sp-week-label">Week 5</span><div class="sp-week-content"><strong>Finish remaining A items. Recount any A items with unresolved variances from Weeks 3–4.</strong> By end of Week 5, all A items should have a verified, adjusted, confirmed system record. Calculate your starting A-item accuracy rate as a baseline benchmark.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="schedule-phase">
+      <div class="sp-header">
+        <span class="sp-weeks" style="background:rgba(16,185,129,0.1);border:1px solid var(--success);color:var(--success);">Weeks 6–8</span>
+        <div>
+          <div class="sp-title">Launch: Start the Daily Cycle Count Routine for A Items</div>
+          <div class="sp-sub">Establish the daily habit while extending the baseline to B items</div>
+        </div>
+      </div>
+      <div class="sp-body">
+        <p><strong>Begin the daily A-item cycle count schedule from Week 6.</strong> Use the weekly schedule framework above as a starting template — 8 A items per day, Monday through Thursday, Friday for variance resolution and next-week preparation. This is when the routine gets embedded: count, record, compare to system, flag variance, investigate, resolve.</p>
+        <p>Simultaneously, begin the B-item baseline count — working through your B-item locations at a pace of 15–20 B items per day, separate from the A-item count, as a background process during lower-activity hours.</p>
+        <div class="sp-week-rows">
+          <div class="sp-week-row"><span class="sp-week-label">Week 6</span><div class="sp-week-content"><strong>Day 1 of live cycle counting for A items.</strong> Conduct the first real cycle count under the daily schedule. Brief counting staff on the process, the forms, and the escalation path for variances. Expect higher-than-normal variance investigation time in this first week.</div></div>
+          <div class="sp-week-row"><span class="sp-week-label">Week 7</span><div class="sp-week-content">A-item cycle count continues daily. Begin B-item baseline counting in parallel (15–20 B items per day). Supervisor reviews all A-item variance investigations from previous week and confirms root causes are being addressed.</div></div>
+          <div class="sp-week-row"><span class="sp-week-label">Week 8</span><div class="sp-week-content">A-item daily count is now routine. Measure first-week accuracy rate for A items and compare to baseline. Any location with recurring variance gets a process review. Continue B-item baseline.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="schedule-phase">
+      <div class="sp-header">
+        <span class="sp-weeks" style="background:rgba(167,139,250,0.12);border:1px solid #a78bfa;color:#a78bfa;">Weeks 9–10</span>
+        <div>
+          <div class="sp-title">Expand: Add B Items to the Rolling Schedule</div>
+          <div class="sp-sub">The full ABC cycle count system comes online</div>
+        </div>
+      </div>
+      <div class="sp-body">
+        <p><strong>By Week 9, all B items should have a validated baseline.</strong> Add B items to the weekly count schedule — 10 B items per Wednesday and a batch of B or C items on Thursday alongside the A-item count. The daily count time will temporarily increase to 45–60 minutes while the team adjusts to the fuller schedule.</p>
+        <div class="sp-week-rows">
+          <div class="sp-week-row"><span class="sp-week-label">Week 9</span><div class="sp-week-content">B-item baseline finalized. Add B items to Wednesday count slot. Confirm total daily count time — if it consistently exceeds 60 minutes, redistribute across more days rather than increasing session length.</div></div>
+          <div class="sp-week-row"><span class="sp-week-label">Week 10</span><div class="sp-week-content">Full A + B daily schedule running. Begin scheduling C-item counts in dedicated Thursday afternoon batch sessions. C items should cover one full H1 count pass over the next 6 weeks.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="schedule-phase">
+      <div class="sp-header">
+        <span class="sp-weeks" style="background:rgba(52,211,153,0.1);border:1px solid #34d399;color:#34d399;">Weeks 11–12</span>
+        <div>
+          <div class="sp-title">Optimize: Measure, Report, and Replace the Annual Count</div>
+          <div class="sp-sub">The program is live — now make it permanent</div>
+        </div>
+      </div>
+      <div class="sp-body">
+        <p><strong>The cycle count program is now fully operational.</strong> All three tiers are being counted on their defined schedules. Week 11 and 12 focus on performance measurement, process refinement, and the organizational decisions that make the program permanent.</p>
+        <div class="sp-week-rows">
+          <div class="sp-week-row"><span class="sp-week-label">Week 11</span><div class="sp-week-content">Produce the first full cycle count accuracy report: overall accuracy rate, accuracy by tier (A/B/C), accuracy by location zone, top 10 most-variated SKUs, root cause summary. Present to management.</div></div>
+          <div class="sp-week-row"><span class="sp-week-label">Week 12</span><div class="sp-week-content">Formally communicate that the annual wall-to-wall count is suspended (pending auditor sign-off if required). Publish the cycle count calendar for the next quarter. Set accuracy improvement targets: 98% within 3 months, 99% within 6 months.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-tip">
+    <div class="callout-label">✅ Protecting Fulfillment During the Transition</div>
+    <p>The most common concern during transition is that the increased count activity will slow down picking and fulfillment. The protection is simple: <strong>never count a location that has an open pick task in the next 4 hours.</strong> Build this as a system rule if your WMS supports it, or as a manual check — the count scheduler reviews open pick waves before finalizing each day's count locations. Counting a bin that's about to be picked creates a variance that isn't real; avoiding it keeps the count data clean and the fulfillment team unimpeded.</p>
+  </div>
+</section>
+
+<!-- MISTAKES TIER -->
+<div class="tier-divider mistakes"><div class="td-line"></div><div class="td-label">🔴 Common Mistakes</div><div class="td-line"></div></div>
+
+<section id="mistakes">
+  <h2>6 Cycle Count Mistakes That Kill Programs Before They Mature</h2>
+
+  <div class="mistake-card">
+    <div class="mistake-title">⚠ Mistake 1: Starting With Bad System Data</div>
+    <div class="mistake-text">Launching a cycle count program without establishing a clean baseline first means every count session produces variances that can't be traced to real problems. Staff lose confidence that the process is working, and the program quietly dies within two months.</div>
+    <div class="mistake-fix">Complete a targeted baseline count of all A items before the live program starts. Don't begin rolling counts until your A-item accuracy is confirmed and any location structure problems are resolved.</div>
+  </div>
+
+  <div class="mistake-card">
+    <div class="mistake-title">⚠ Mistake 2: Adjusting Without Investigating</div>
+    <div class="mistake-text">The fastest way to destroy a cycle count program is to train staff that the correct response to a variance is to correct the system number. This fixes the symptom and buries the cause. The same process error will create the same variance next week, and the week after, indefinitely.</div>
+    <div class="mistake-fix">Every variance above a defined threshold (recommend: $100 for B items, any variance for A items) requires a documented root cause before the system is adjusted. "Unknown" is never an acceptable root cause — it means the investigation was incomplete.</div>
+  </div>
+
+  <div class="mistake-card">
+    <div class="mistake-title">⚠ Mistake 3: Counting the Same High-Traffic Locations Repeatedly</div>
+    <div class="mistake-text">It's tempting to build a count schedule around the most convenient or most familiar locations. A program that counts bins A1–A20 every week and never gets to the rest of the warehouse provides a very accurate picture of a very small slice of inventory.</div>
+    <div class="mistake-fix">Use a rotating location schedule that ensures every bin, shelf, and overflow location is counted within its assigned cycle — not just the easy-access ones. Map your complete location structure and build the count schedule against it systematically.</div>
+  </div>
+
+  <div class="mistake-card">
+    <div class="mistake-title">⚠ Mistake 4: Letting Counters Know What the System Says Before Counting</div>
+    <div class="mistake-text">If the counter can see the system quantity before they count, they will (consciously or not) anchor to that number. Counts conducted with the system quantity visible consistently show lower variance rates — but not because accuracy is higher. It's because counters stop at the system number rather than counting independently.</div>
+    <div class="mistake-fix">Always blind count first: the counter records the physical quantity before any system data is visible. Compare to system only after the physical count is complete and locked. This is non-negotiable for count integrity.</div>
+  </div>
+
+  <div class="mistake-card">
+    <div class="mistake-title">⚠ Mistake 5: No Accountability for Count Quality</div>
+    <div class="mistake-text">If count accuracy is never reported, no one is accountable for it. Programs that track variance rates and root causes for the first month and then stop tracking produce steadily degrading accuracy because there's no feedback signal telling the team that something is going wrong.</div>
+    <div class="mistake-fix">Publish a weekly accuracy report showing overall rate, accuracy by tier, and the top variance locations. Make it visible to the team — not as a blame mechanism, but as a shared performance metric everyone is working to improve.</div>
+  </div>
+
+  <div class="mistake-card">
+    <div class="mistake-title">⚠ Mistake 6: Not Adjusting Frequencies When Patterns Emerge</div>
+    <div class="mistake-text">A C item that consistently shows variance should be reclassified to B or even A tier for counting frequency purposes — regardless of its ABC value classification. Conversely, a stable A item that's never had a variance in 6 months may be appropriate for a relaxed count frequency.</div>
+    <div class="mistake-fix">Review count frequencies quarterly alongside the accuracy report. Let the actual variance data, not just the ABC classification, drive count frequency adjustments. Classification informs the starting point — experience refines it.</div>
+  </div>
+</section>
+
+<!-- KPIs TO TRACK -->
+<section id="kpis">
+  <h2>How to Measure Whether Your Cycle Count Program Is Working</h2>
+  <p>A cycle count program without performance metrics is just counting. These are the four numbers that tell you whether the program is achieving its purpose:</p>
+
+  <div class="callout callout-info">
+    <div class="callout-label">📊 Inventory Record Accuracy (IRA)</div>
+    <p><strong>Formula:</strong> (SKUs counted with no variance ÷ Total SKUs counted) × 100<br>
+    <strong>Target:</strong> 98%+ for A items within 3 months; 99%+ across all tiers within 6 months.<br>
+    This is the headline metric. Track it weekly by tier — A accuracy, B accuracy, C accuracy — not just in aggregate.</p>
+  </div>
+
+  <div class="callout callout-info">
+    <div class="callout-label">📊 Variance Rate by Location</div>
+    <p><strong>Formula:</strong> (Locations with variance ÷ Locations counted) × 100<br>
+    Locations with persistent variance are either process problems (mis-picks, receiving errors, returns not processed) or structural problems (overflow stock not recorded, shared bins with ambiguous SKU assignment). Track by zone and address the highest-variance locations specifically.</p>
+  </div>
+
+  <div class="callout callout-info">
+    <div class="callout-label">📊 Root Cause Distribution</div>
+    <p>Track what percentage of variances fall into each root cause category: receiving error, picking error, returns processing, system entry error, damage/shrinkage, transfer error, other. The distribution tells you which processes need fixing. If 60% of variances are receiving errors, that's a receiving process problem — not an inventory problem.</p>
+  </div>
+
+  <div class="callout callout-info">
+    <div class="callout-label">📊 Count Coverage Rate</div>
+    <p><strong>Formula:</strong> (SKUs counted this period ÷ SKUs scheduled for this period) × 100<br>
+    A program where scheduled counts are routinely skipped or deferred will not sustain accuracy. If coverage rate consistently falls below 90%, the schedule is too ambitious for current team capacity — reduce count quantities per day rather than letting the program slip.</p>
+  </div>
+
+  <p>For the broader inventory accuracy KPI context — how these metrics connect to shrinkage rate, fill rate, and overall inventory performance — see our <a href="https://preventloss.org/articles/loss-prevention-kpis.html">Loss Prevention KPIs guide</a> and the <a href="https://preventloss.org/articles/inventory-accuracy-vs-shrinkage.html">Inventory Accuracy vs Shrinkage comparison</a>.</p>
+</section>
+
+<!-- CONCLUSION -->
+<section id="conclusion">
+  <h2>The Bottom Line: Stop Counting Everything Once and Start Counting the Right Things Always</h2>
+  <p>The annual wall-to-wall count is not a bad idea poorly executed. It is a fundamentally limited tool applied to a problem that requires continuous measurement, not annual snapshots. No amount of preparation, scanning technology, or additional count staff can fix the core limitation: you learn where your stock is on one day a year, and then you stop learning until next year.</p>
+  <p>Cycle counting doesn't require more total effort — it requires different effort, distributed differently. The daily count takes less cumulative labor than the annual count over a 12-month period, delivers infinitely better accuracy data, catches shrinkage and process errors within days rather than a year, and never forces you to choose between counting inventory and shipping orders.</p>
+  <p>The 12-week plan above is designed to get you from wherever you are to a fully operational program without disrupting a single fulfillment day. Start with the ABC classification this week. The rest follows a step at a time.</p>
+
+  <ul class="check-list">
+    <li><div class="ck green">✓</div><div>Run or update your ABC classification before designing the count schedule</div></li>
+    <li><div class="ck green">✓</div><div>Establish a clean baseline for all A items before starting the live rolling program</div></li>
+    <li><div class="ck green">✓</div><div>Always blind count — physical quantity recorded before system quantity is visible</div></li>
+    <li><div class="ck green">✓</div><div>Never adjust a variance without a documented root cause</div></li>
+    <li><div class="ck green">✓</div><div>Schedule counts to avoid active pick locations — protect fulfillment first</div></li>
+    <li><div class="ck green">✓</div><div>Publish a weekly IRA report and share it with the team</div></li>
+    <li><div class="ck green">✓</div><div>Review and adjust count frequencies quarterly based on actual variance data</div></li>
+    <li><div class="ck green">✓</div><div>Confirm auditor requirements before formally eliminating the annual full count</div></li>
+  </ul>
+
+  <div class="article-cta">
+    <h3>Explore More Inventory Management Guides</h3>
+    <p>Free, practical frameworks for US businesses — ABC analysis, shrinkage control, inventory KPIs, and more. No sign-up needed.</p>
+    <a href="/articles/" class="btn-primary">Browse All Articles →</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is the difference between cycle counting and physical inventory counting?<span class="arrow">▾</span></button>
+      <div class="faq-a">A physical inventory count (wall-to-wall) is a complete, one-time count of all inventory, typically conducted once per year and often requiring operations to stop. A cycle count is a rolling program where a small portion of inventory is counted every day or week, so the entire inventory is covered over a defined period without stopping operations. Cycle counting provides continuous accuracy data; physical counts provide a single snapshot that degrades until the next count.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How often should cycle counts be done?<span class="arrow">▾</span></button>
+      <div class="faq-a">Frequency depends on ABC classification. A items (high value, 70–80% of inventory value): monthly minimum, weekly for high-velocity items. B items: quarterly. C items: twice per year. The total count workload is distributed across working days so no single session takes more than 30–60 minutes. This is the core advantage of cycle counting — the effort is spread so evenly it becomes a daily routine rather than a disruptive event.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Does cycle counting replace the annual physical inventory count?<span class="arrow">▾</span></button>
+      <div class="faq-a">For most businesses, yes — once a cycle count program sustains accuracy above 98–99%, the annual wall-to-wall count becomes unnecessary. However, businesses with external audit requirements (public companies, government contractors) may still need an annual full count for financial reporting. In those cases, cycle counting makes the annual count faster and more accurate because system records are already highly accurate going in.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is a good inventory accuracy rate for cycle counting?<span class="arrow">▾</span></button>
+      <div class="faq-a">98–99%+ inventory record accuracy is the standard for a well-functioning cycle count program. Below 95% is considered a significant problem — system records can't be trusted for replenishment or fulfillment decisions at that level. A mature program targeting A items should reach 98%+ within 3 months of launch; full portfolio accuracy above 99% is a realistic 6-month target with consistent execution.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How long does it take to transition from annual counts to cycle counting?<span class="arrow">▾</span></button>
+      <div class="faq-a">A structured transition takes 10–14 weeks for most businesses. The process starts with ABC classification, followed by a clean baseline count of high-value items, then a progressive roll-out of the daily count schedule. The 12-week plan in this guide walks through each step so daily operations are never disrupted during the transition.</div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED ARTICLES -->
+<section id="related-articles">
+  <h2>Related Articles</h2>
+  <div class="related-grid">
+    <a class="related-card" href="https://preventloss.org/articles/inventory-shrinkage-explained.html"><span class="rc-icon">📦</span><div><div class="rc-cat">Inventory Management</div><div class="rc-title">Inventory Shrinkage Explained: Causes, Calculation &amp; How to Reduce It</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/inventory-audit-checklist.html"><span class="rc-icon">✅</span><div><div class="rc-cat">Inventory Management</div><div class="rc-title">Inventory Audit Checklist: Complete Guide for Before, During &amp; After the Count</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/inventory-accuracy-vs-shrinkage.html"><span class="rc-icon">🎯</span><div><div class="rc-cat">Inventory Management</div><div class="rc-title">Inventory Accuracy vs Inventory Shrinkage: Understanding the Difference</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/abc-inventory-analysis.html"><span class="rc-icon">📐</span><div><div class="rc-cat">Inventory Management</div><div class="rc-title">ABC Inventory Analysis: Complete Guide with Real Examples &amp; Live Calculator</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/causes-of-inventory-shrinkage.html"><span class="rc-icon">🔍</span><div><div class="rc-cat">Inventory Management</div><div class="rc-title">Top 10 Causes of Inventory Shrinkage — and How to Prevent Each One</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/loss-prevention-kpis.html"><span class="rc-icon">📊</span><div><div class="rc-cat">Loss Prevention</div><div class="rc-title">Loss Prevention KPIs: The Metrics That Actually Tell You What's Happening</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/inventory-turnover-ratio.html"><span class="rc-icon">🔢</span><div><div class="rc-cat">Inventory Management</div><div class="rc-title">Inventory Turnover Ratio: Formula, Free Calculator &amp; Industry Benchmarks</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/cost-control-in-inventory-management.html"><span class="rc-icon">📉</span><div><div class="rc-cat">Inventory Management</div><div class="rc-title">Cost Control in Inventory Management: Strategies, KPIs &amp; Best Practices</div></div></a>
+  </div>
+</section>
+
+</article>
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" aria-label="Article sidebar">
+  <div class="sidebar-card quickref" style="padding:0;overflow:hidden;">
+    <div class="qr-header"><span>📦</span><h4>Quick Reference</h4></div>
+    <div class="qr-row"><span class="qr-key">A items — count frequency</span><span class="qr-val green">Monthly / Weekly</span></div>
+    <div class="qr-row"><span class="qr-key">B items — count frequency</span><span class="qr-val amber">Quarterly</span></div>
+    <div class="qr-row"><span class="qr-key">C items — count frequency</span><span class="qr-val">Twice per year</span></div>
+    <div class="qr-row"><span class="qr-key">Target IRA accuracy</span><span class="qr-val green">98–99%+</span></div>
+    <div class="qr-row"><span class="qr-key">Problem accuracy level</span><span class="qr-val red">Below 95%</span></div>
+    <div class="qr-row"><span class="qr-key">Daily count time (mature)</span><span class="qr-val">30–60 min</span></div>
+    <div class="qr-row"><span class="qr-key">Transition timeline</span><span class="qr-val amber">10–14 weeks</span></div>
+    <div class="qr-row"><span class="qr-key">Physical count accuracy decay</span><span class="qr-val red">65–85% by month 3</span></div>
+    <div class="qr-row"><span class="qr-key">Count method</span><span class="qr-val green">Always blind first</span></div>
+  </div>
+
+  <div class="sidebar-card" style="margin-top:18px;">
+    <h4>In This Article</h4>
+    <ul class="toc-list">
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#annual-count-problems">🔴 Why Annual Counts Fail</a></li>
+      <li><a href="#comparison">🔵 Head-to-Head Comparison</a></li>
+      <li><a href="#when-to-use">🟡 When to Use Each</a></li>
+      <li><a href="#abc-framework">🟢 ABC Count Frequencies</a></li>
+      <li><a href="#transition-plan">🟢 12-Week Transition Plan</a></li>
+      <li><a href="#mistakes">🔴 6 Common Mistakes</a></li>
+      <li><a href="#kpis">KPIs to Track</a></li>
+      <li><a href="#conclusion">Conclusion + Checklist</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#related-articles">Related Articles</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-card" style="margin-top:18px;background:linear-gradient(135deg,#0d2018 0%,var(--surface) 100%);border-color:var(--success);">
+    <h4 style="color:var(--success);">The 12-Week Plan</h4>
+    <div style="font-size:0.8rem;line-height:2;color:var(--muted);">
+      <div style="display:flex;gap:8px;padding:4px 0;border-bottom:1px solid var(--border);"><span style="color:var(--c-pr);font-weight:700;white-space:nowrap;">Wk 1–2</span><span>ABC classify + location audit</span></div>
+      <div style="display:flex;gap:8px;padding:4px 0;border-bottom:1px solid var(--border);"><span style="color:var(--accent-lt);font-weight:700;white-space:nowrap;">Wk 3–5</span><span>A-item baseline count</span></div>
+      <div style="display:flex;gap:8px;padding:4px 0;border-bottom:1px solid var(--border);"><span style="color:var(--success);font-weight:700;white-space:nowrap;">Wk 6–8</span><span>Launch daily A-item cycle count</span></div>
+      <div style="display:flex;gap:8px;padding:4px 0;border-bottom:1px solid var(--border);"><span style="color:#a78bfa;font-weight:700;white-space:nowrap;">Wk 9–10</span><span>Add B items to schedule</span></div>
+      <div style="display:flex;gap:8px;padding:4px 0;"><span style="color:#34d399;font-weight:700;white-space:nowrap;">Wk 11–12</span><span>Measure, report, go permanent</span></div>
+    </div>
+  </div>
+</aside>
+</div>
+
+<footer class="site-footer">
+  <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+  <p style="margin-top:8px;"><a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a></p>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const d = document.documentElement;
+  document.getElementById('read-progress').style.width =
+    ((d.scrollTop / (d.scrollHeight - d.clientHeight)) * 100) + '%';
+});
+
+function toggleFaq(btn) {
+  const open = btn.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll('.faq-q').forEach(b => {
+    b.setAttribute('aria-expanded','false');
+    b.nextElementSibling.classList.remove('open');
+  });
+  if (!open) { btn.setAttribute('aria-expanded','true'); btn.nextElementSibling.classList.add('open'); }
+}
+
+document.querySelectorAll('section[id]').forEach(s => {
+  new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        document.querySelectorAll('.toc-list a').forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin:'-15% 0px -75% 0px' }).observe(s);
+});
+</script>
+</body>
+</html>
