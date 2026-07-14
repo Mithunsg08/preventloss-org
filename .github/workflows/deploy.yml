@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages with IndexNow
 on:
   push:
     branches:
-      - main # Change this to "master" if your default branch is master
+      - main 
 
 permissions:
   contents: read
@@ -18,13 +18,13 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps: deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # This creates your secret text file dynamically at the root before deploying
+      # 1. This creates your secret text file dynamically at the root
       - name: Inject IndexNow Key File
         run: |
           echo "${{ secrets.INDEXNOW_KEY }}" > ${{ secrets.INDEXNOW_KEY }}.txt
@@ -35,8 +35,15 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # Uploads your HTML root folder + the newly created key file
+          path: '.' 
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # 2. AUTOMATIC INDEXING TRIGER (Runs right after successful deployment)
+      - name: Automatically Submit to IndexNow
+        uses: bojieyang/indexnow-action@v3
+        with:
+          sitemap-location: 'https://preventloss.org/sitemap.xml' # Change to your actual domain
+          key: ${{ secrets.INDEXNOW_KEY }}
