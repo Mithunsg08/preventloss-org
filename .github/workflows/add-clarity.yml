@@ -10,10 +10,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Fix Spaced Encoding and Inject Clarity Script
+      - name: Repair Broken Spaced HTML and Inject Clarity
         run: |
           python3 -c '
-          import os
+          import os, re
 
           CLARITY_SCRIPT = """<script type="text/javascript">
               (function(c,l,a,r,i,t,y){
@@ -30,25 +30,30 @@ jobs:
                   if file.endswith(".html"):
                       filepath = os.path.join(root, file)
                       
-                      # Read raw bytes to safely remove UTF-16 null characters (\x00)
-                      with open(filepath, "rb") as f:
-                          raw = f.read()
+                      with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
+                          text = f.read()
 
-                      # Strip null bytes caused by UTF-16 conversion
-                      raw = raw.replace(b"\x00", b"")
+                      # Check if file has the spaced character glitch (e.g., "< ! D O C T Y P E")
+                      if "< ! D O C T Y P E" in text or "< h t m l" in text or "< h e a d" in text:
+                          # Collapse single spaces between individual characters back to normal text
+                          text = re.sub(r"(?<=\S) (?=\S)", "", text)
+                          # Restore intentional tag spacing like "<!DOCTYPEhtml>" -> "<!DOCTYPE html>"
+                          text = text.replace("<!DOCTYPEhtml>", "<!DOCTYPE html>")
+                          text = text.replace("<htmllang=", "<html lang=")
+                          text = text.replace("><", ">\n<")
 
-                      # Decode as clean UTF-8
-                      text = raw.decode("utf-8", errors="ignore")
+                      # Strip leftover null bytes if present
+                      text = text.replace("\x00", "")
 
-                      # Inject Clarity script if missing
+                      # Inject Clarity script if not present
                       if "clarity.ms/tag/" not in text and "</head>" in text:
                           text = text.replace("</head>", f"{CLARITY_SCRIPT}\n</head>")
 
-                      # Write back as clean, plain UTF-8
+                      # Save back as strict UTF-8
                       with open(filepath, "w", encoding="utf-8") as f:
                           f.write(text)
 
-                      print(f"Cleaned & Updated: {filepath}")
+                      print(f"Repaired: {filepath}")
           '
 
       - name: Commit and Push changes
@@ -56,5 +61,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Fix spaced text encoding error and add Clarity" || echo "No changes to commit"
+          git commit -m "Aggressively repair spaced text encoding and add Clarity" || echo "No changes to commit"
           git push
