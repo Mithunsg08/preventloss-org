@@ -10,7 +10,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Fix Encoding and Update HTML files with Clarity Script
+      - name: Fix Spaced Encoding and Inject Clarity Script
         run: |
           python3 -c '
           import os
@@ -23,41 +23,32 @@ jobs:
               })(window, document, "clarity", "script", "xlrtp9eqdq");
           </script>"""
 
-          updated_count = 0
           for root, dirs, files in os.walk("."):
               if "/." in root:
                   continue
               for file in files:
                   if file.endswith(".html"):
                       filepath = os.path.join(root, file)
+                      
+                      # Read raw bytes to safely remove UTF-16 null characters (\x00)
+                      with open(filepath, "rb") as f:
+                          raw = f.read()
 
-                      # Detect and read file safely handling UTF-16 / UTF-8
-                      try:
-                          with open(filepath, "r", encoding="utf-8-sig") as f:
-                              content = f.read()
-                      except UnicodeDecodeError:
-                          try:
-                              with open(filepath, "r", encoding="utf-16") as f:
-                                  content = f.read()
-                          except UnicodeDecodeError:
-                              continue
+                      # Strip null bytes caused by UTF-16 conversion
+                      raw = raw.replace(b"\x00", b"")
 
-                      # Clean up any leftover NULL spaces from UTF-16 corruption
-                      if "\x00" in content:
-                          content = content.replace("\x00", "")
+                      # Decode as clean UTF-8
+                      text = raw.decode("utf-8", errors="ignore")
 
-                      # Inject Clarity script if not already present
-                      if "clarity.ms/tag/" not in content and "</head>" in content:
-                          content = content.replace("</head>", f"{CLARITY_SCRIPT}\n</head>")
+                      # Inject Clarity script if missing
+                      if "clarity.ms/tag/" not in text and "</head>" in text:
+                          text = text.replace("</head>", f"{CLARITY_SCRIPT}\n</head>")
 
-                      # Save back as pure clean UTF-8
+                      # Write back as clean, plain UTF-8
                       with open(filepath, "w", encoding="utf-8") as f:
-                          f.write(content)
-                          
-                      print(f"Repaired and Updated: {filepath}")
-                      updated_count += 1
+                          f.write(text)
 
-          print(f"Total files processed: {updated_count}")
+                      print(f"Cleaned & Updated: {filepath}")
           '
 
       - name: Commit and Push changes
@@ -65,5 +56,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Fix UTF-16 encoding and inject Clarity script" || echo "No changes to commit"
+          git commit -m "Fix spaced text encoding error and add Clarity" || echo "No changes to commit"
           git push
