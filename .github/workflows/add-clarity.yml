@@ -1,26 +1,34 @@
-name: Restore Original HTML Files
+name: Add Clarity Cleanly
 
 on:
   workflow_dispatch:
 
 jobs:
-  revert-files:
+  add-clarity:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Fetch all history to find the original commit
 
-      - name: Reset HTML files to clean commit
+      - name: Inject Clarity Tag
         run: |
-          # Revert all HTML files to commit 'bc65c94' (before encoding break)
-          git checkout bc65c94 -- "*.html" "articles/*.html"
-          
-      - name: Commit and Push clean files
+          # Prepare the script block
+          SCRIPT='<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "xlrtp9eqdq");</script>'
+
+          # Safely append before </head> in all html files without altering encodings
+          find . -type f -name "*.html" -not -path '*/.*' -exec sh -c '
+            for file; do
+              if ! grep -q "clarity.ms/tag/" "$file"; then
+                sed -i "s|</head>|'"$SCRIPT"'\n</head>|g" "$file"
+                echo "Updated $file"
+              fi
+            done
+          ' sh {} +
+
+      - name: Commit Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Restore all HTML files to clean UTF-8 state" || echo "No changes"
+          git commit -m "Safely inject Clarity tracking script" || echo "No changes"
           git push
