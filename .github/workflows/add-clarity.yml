@@ -1,65 +1,26 @@
-name: Inject Clarity Script into HTML Files
+name: Restore Original HTML Files
 
 on:
   workflow_dispatch:
 
 jobs:
-  inject-clarity:
+  revert-files:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history to find the original commit
 
-      - name: Repair Broken Spaced HTML and Inject Clarity
+      - name: Reset HTML files to clean commit
         run: |
-          python3 -c '
-          import os, re
-
-          CLARITY_SCRIPT = """<script type="text/javascript">
-              (function(c,l,a,r,i,t,y){
-                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "xlrtp9eqdq");
-          </script>"""
-
-          for root, dirs, files in os.walk("."):
-              if "/." in root:
-                  continue
-              for file in files:
-                  if file.endswith(".html"):
-                      filepath = os.path.join(root, file)
-                      
-                      with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
-                          text = f.read()
-
-                      # Check if file has the spaced character glitch (e.g., "< ! D O C T Y P E")
-                      if "< ! D O C T Y P E" in text or "< h t m l" in text or "< h e a d" in text:
-                          # Collapse single spaces between individual characters back to normal text
-                          text = re.sub(r"(?<=\S) (?=\S)", "", text)
-                          # Restore intentional tag spacing like "<!DOCTYPEhtml>" -> "<!DOCTYPE html>"
-                          text = text.replace("<!DOCTYPEhtml>", "<!DOCTYPE html>")
-                          text = text.replace("<htmllang=", "<html lang=")
-                          text = text.replace("><", ">\n<")
-
-                      # Strip leftover null bytes if present
-                      text = text.replace("\x00", "")
-
-                      # Inject Clarity script if not present
-                      if "clarity.ms/tag/" not in text and "</head>" in text:
-                          text = text.replace("</head>", f"{CLARITY_SCRIPT}\n</head>")
-
-                      # Save back as strict UTF-8
-                      with open(filepath, "w", encoding="utf-8") as f:
-                          f.write(text)
-
-                      print(f"Repaired: {filepath}")
-          '
-
-      - name: Commit and Push changes
+          # Revert all HTML files to commit 'bc65c94' (before encoding break)
+          git checkout bc65c94 -- "*.html" "articles/*.html"
+          
+      - name: Commit and Push clean files
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Aggressively repair spaced text encoding and add Clarity" || echo "No changes to commit"
+          git commit -m "Restore all HTML files to clean UTF-8 state" || echo "No changes"
           git push
