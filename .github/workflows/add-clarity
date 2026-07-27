@@ -1,0 +1,47 @@
+name: Inject Clarity Script into HTML Files
+
+on:
+  workflow_dispatch: # Allows manual trigger from Actions tab
+
+jobs:
+  inject-clarity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Update HTML files with Clarity Script
+        run: |
+          python3 -c '
+          import os
+
+          CLARITY_SCRIPT = """"""
+
+          updated_count = 0
+          for root, dirs, files in os.walk("."):
+              # Skip hidden folders like .git or .github
+              if "/." in root:
+                  continue
+              for file in files:
+                  if file.endswith(".html"):
+                      filepath = os.path.join(root, file)
+                      with open(filepath, "r", encoding="utf-8") as f:
+                          content = f.read()
+
+                      if "clarity.ms/tag/" not in content and "" in content:
+                          new_content = content.replace("", f"{CLARITY_SCRIPT}\n")
+                          with open(filepath, "w", encoding="utf-8") as f:
+                              f.write(new_content)
+                          print(f"Updated: {filepath}")
+                          updated_count += 1
+
+          print(f"Total files updated: {updated_count}")
+          '
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Automated: Add Clarity analytics script to all HTML files" || echo "No changes to commit"
+          git push
