@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Inject CSS Styles for Banner
+  const isArticlePage = window.location.pathname.includes("/articles/");
+
+  // 1. Inject CSS Styles
   const style = document.createElement("style");
   style.textContent = `
     .sidebar { position: relative; height: 100%; }
@@ -29,24 +31,26 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   document.head.appendChild(style);
 
-  // 2. Inject Desktop Sidebar Banner (If element exists)
-  const sidebar = document.querySelector(".sidebar");
-  if (sidebar) {
-    sidebar.innerHTML = `
-      <div class="ad-banner-card">
-        <span class="ad-badge">⚡ Free LP Analysis Tool</span>
-        <h3 class="ad-title">Free Loss Prevention Analysis Tool</h3>
-        <p class="ad-desc">Analyze your procurement costs, margin leakage, and inventory risks instantly. Works 100% locally on your browser — <strong>no cloud uploads</strong>.</p>
-        <div class="ad-privacy-tag">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <span>Client-Side Only • Secure</span>
+  // 2. Inject Desktop Sidebar Banner ONLY if on an article page
+  if (isArticlePage) {
+    const sidebar = document.querySelector(".sidebar");
+    if (sidebar) {
+      sidebar.innerHTML = `
+        <div class="ad-banner-card">
+          <span class="ad-badge">⚡ Free LP Analysis Tool</span>
+          <h3 class="ad-title">Free Loss Prevention Analysis Tool</h3>
+          <p class="ad-desc">Analyze your procurement costs, margin leakage, and inventory risks instantly. Works 100% locally on your browser — <strong>no cloud uploads</strong>.</p>
+          <div class="ad-privacy-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Client-Side Only • Secure</span>
+          </div>
+          <a href="https://opsreveal.preventloss.org/" target="_blank" rel="noopener" class="ad-cta-btn">Analyze Now →</a>
         </div>
-        <a href="https://opsreveal.preventloss.org/" target="_blank" rel="noopener" class="ad-cta-btn">Analyze Now →</a>
-      </div>
-    `;
+      `;
+    }
   }
 
-  // 3. Inject Mobile Popup & Bottom Sticky Bar
+  // 3. Inject Modal Popup & Bottom Banner Markup
   const mobileMarkup = `
     <div class="mobile-ad-overlay" id="mobileAdOverlay">
       <div class="mobile-ad-modal">
@@ -67,10 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   document.body.insertAdjacentHTML("beforeend", mobileMarkup);
 
-  // 4. Handle Mobile Logic
+  // 4. Trigger Popup Logic
   let adClosed = false;
   setTimeout(() => {
-    if (window.innerWidth <= 860 && !adClosed) {
+    // Show popup on mobile for articles, OR on ALL screen sizes for non-article pages
+    if ((window.innerWidth <= 860 || !isArticlePage) && !adClosed) {
       document.getElementById("mobileAdOverlay")?.classList.add("active");
     }
   }, 10000);
@@ -78,7 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("closeAdBtn")?.addEventListener("click", () => {
     adClosed = true;
     document.getElementById("mobileAdOverlay")?.classList.remove("active");
-    document.getElementById("mobileBottomBanner")?.classList.add("show");
+    if (window.innerWidth <= 860) {
+      document.getElementById("mobileBottomBanner")?.classList.add("show");
+    }
   });
 
   window.addEventListener("scroll", () => {
