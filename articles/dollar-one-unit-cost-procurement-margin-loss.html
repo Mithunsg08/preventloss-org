@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-45J6FRBJN0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-45J6FRBJN0');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<title>The $1 Unit Cost Trap: How Micro Purchase Price Variances Destroy Profit Margins (2026)</title>
+<meta name="description" content="Discover how an unexamined $1 per unit procurement variance multiplies across volume to destroy gross margins, inflate carrying costs, and generate silent inventory losses." />
+<meta name="keywords" content="unit cost variance, purchase price variance, procurement loss prevention, margin erosion, gross profit margin calculation, inventory carrying cost, supply chain loss prevention 2026" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Mithun GS" />
+<link rel="canonical" href="https://www.preventloss.org/articles/dollar-one-unit-cost-procurement-margin-loss.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The $1 Unit Cost Trap: How Micro Variances Destroy Profit Margins" />
+<meta property="og:description" content="A single $1 unit cost variance sounds negligible — until it destroys 15–30% of your net margin. Here is the math behind procurement cost inflation and loss prevention." />
+<meta property="og:url" content="https://www.preventloss.org/articles/dollar-one-unit-cost-procurement-margin-loss.html" />
+<meta property="og:site_name" content="PreventLoss.org" />
+<meta property="article:published_time" content="2026-08-13T00:00:00Z" />
+<meta property="article:modified_time" content="2026-08-13T00:00:00Z" />
+<meta property="article:section" content="Procurement & Loss Prevention" />
+
+<!-- Structured Data (Article) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The $1 Unit Cost Trap: How Micro Purchase Price Variances Destroy Profit Margins (2026)",
+  "description": "How a $1 unit price increase in procurement compounding across inventory volume creates margin erosion, higher carrying costs, and hidden financial losses.",
+  "author": { "@type": "Person", "name": "Mithun GS", "url": "https://www.linkedin.com/in/mithun-gs/" },
+  "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+  "datePublished": "2026-08-13",
+  "dateModified": "2026-08-13",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/dollar-one-unit-cost-procurement-margin-loss.html" }
+}
+</script>
+
+<!-- Structured Data (FAQ) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does a $1 unit cost increase affect gross margin?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A $1 unit cost increase directly reduces dollar profit by $1 per unit sold. Because gross margin percentage is calculated as (Selling Price - COGS) / Selling Price, raising procurement cost by $1 compresses gross margin percentages exponentially, particularly on lower-priced SKUs." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Purchase Price Variance (PPV) in loss prevention?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Purchase Price Variance measures the difference between expected standard cost and actual invoice cost paid to suppliers. Unmonitored PPV represents a major source of procurement financial loss." }
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#0f1117;
+  --surface:#181c27;
+  --surface-2:#1e2535;
+  --border:#252a38;
+  --accent:#2563eb;
+  --accent-lt:#3b82f6;
+  --accent-glow:#1d4ed840;
+  --text:#e2e8f0;
+  --muted:#94a3b8;
+  --heading:#f8fafc;
+  --success:#10b981;
+  --warn:#f59e0b;
+  --danger:#f87171;
+  --c-pr:#f59e0b;
+  --c-pr-bg:#1c1500;
+  --font-display:'Georgia','Times New Roman',serif;
+  --font-body:system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'Courier New',monospace;
+  --r-sm:6px;--r-md:12px;--r-lg:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+.site-nav{position:sticky;top:0;z-index:100;background:rgba(15,17,23,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.site-nav .logo{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--heading);text-decoration:none;}
+.site-nav .logo span{color:var(--accent-lt);}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;}
+
+#read-progress{position:fixed;top:56px;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--accent-lt),var(--danger));z-index:99;transition:width 0.1s linear;}
+
+/* LAYOUT */
+.page-wrap{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:52px;align-items:start;}
+@media(max-width:860px){.page-wrap{grid-template-columns:1fr;}.sidebar{display:none;}}
+
+/* HEADER */
+.article-header{padding:52px 0 36px;border-bottom:1px solid var(--border);margin-bottom:36px;}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:var(--muted);margin-bottom:16px;}
+.breadcrumb a{color:var(--muted);text-decoration:none;}
+.dual-category{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.article-category{display:inline-flex;align-items:center;gap:6px;background:#2a0f0f;border:1px solid var(--danger);color:var(--danger);font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;}
+.article-category.blue{background:var(--accent-glow);border-color:var(--accent-lt);color:var(--accent-lt);}
+h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.8vw,2.55rem);font-weight:700;color:var(--heading);line-height:1.18;margin-bottom:18px;}
+.article-deck{font-size:1.05rem;color:var(--muted);line-height:1.65;margin-bottom:22px;max-width:680px;}
+.article-meta{display:flex;flex-wrap:wrap;gap:18px;font-size:0.8rem;color:var(--muted);}
+
+/* STATS */
+.article-stats{display:flex;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:40px;overflow:hidden;}
+.stat-item{flex:1;padding:16px 18px;border-right:1px solid var(--border);}
+.stat-item:last-child{border-right:none;}
+.stat-item .s-val{font-family:var(--font-display);font-size:1.3rem;font-weight:700;line-height:1;margin-bottom:4px;}
+.stat-item .s-val.red{color:var(--danger);}
+.stat-item .s-val.amber{color:var(--c-pr);}
+.stat-item .s-lbl{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:600;}
+
+/* BODY */
+.article-body h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--heading);margin:48px 0 14px;padding-top:48px;border-top:1px solid var(--border);}
+.article-body h2:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+.article-body p{margin-bottom:18px;color:var(--text);}
+.article-body strong{color:var(--heading);font-weight:600;}
+
+/* CALLOUTS */
+.callout{border-radius:var(--r-md);padding:18px 22px;margin:24px 0;border-left:4px solid;}
+.callout-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+.callout-danger{background:#1f0d0d;border-color:var(--danger);}
+.callout-danger .callout-label{color:var(--danger);}
+.callout-amber{background:var(--c-pr-bg);border-color:var(--c-pr);}
+.callout-amber .callout-label{color:var(--c-pr);}
+
+/* TABLE */
+.data-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--border);border-radius:var(--r-md);}
+table{width:100%;border-collapse:collapse;font-size:0.84rem;}
+thead th{background:var(--surface);color:var(--muted);font-size:0.66rem;font-weight:700;text-transform:uppercase;padding:11px 13px;text-align:left;border-bottom:1px solid var(--border);}
+tbody td{padding:11px 13px;border-bottom:1px solid var(--border);color:var(--text);}
+
+/* SIDEBAR & AD BANNER STYLES */
+.sidebar{padding-top:52px;}
+.sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;margin-bottom:18px;}
+
+/* FREEZING AD BANNER (SIDEBAR DESKTOP) */
+.ad-banner-card{
+  position:sticky;
+  top:72px;
+  background:linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+  border:2px solid #6366f1;
+  box-shadow:0 10px 25px -5px rgba(99, 102, 241, 0.3);
+  border-radius:var(--r-lg);
+  padding:22px;
+  text-align:center;
+  z-index:80;
+  transition:all 0.3s ease;
+}
+.ad-badge{display:inline-block;background:#312e81;color:#a5b4fc;font-size:0.65rem;font-weight:800;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:12px;border:1px solid #4338ca;}
+.ad-title{font-size:1.1rem;font-weight:800;color:#fff;line-height:1.3;margin-bottom:10px;}
+.ad-desc{font-size:0.82rem;color:#c7d2fe;line-height:1.5;margin-bottom:16px;}
+.ad-privacy-tag{display:flex;align-items:center;justify-content:center;gap:6px;font-size:0.73rem;color:#34d399;margin-bottom:18px;background:rgba(16,185,129,0.1);padding:6px 10px;border-radius:var(--r-sm);border:1px solid rgba(16,185,129,0.2);}
+.ad-cta-btn{display:block;width:100%;background:#4f46e5;color:#ffffff;font-weight:800;font-size:0.88rem;padding:12px 16px;border-radius:var(--r-md);text-decoration:none;text-transform:uppercase;letter-spacing:0.05em;box-shadow:0 4px 14px rgba(79, 70, 229, 0.4);transition:transform 0.2s, background 0.2s;}
+.ad-cta-btn:hover{background:#4338ca;transform:translateY(-2px);}
+
+/* MOBILE & TABLET STICKY/POPUP BANNER */
+.mobile-ad-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(15,17,23,0.85);
+  backdrop-filter:blur(8px);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.mobile-ad-overlay.active{display:flex;}
+.mobile-ad-modal{
+  background:linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+  border:2px solid #818cf8;
+  border-radius:var(--r-lg);
+  padding:24px;
+  max-width:420px;
+  width:100%;
+  position:relative;
+  box-shadow:0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  text-align:center;
+}
+.close-ad-btn{
+  position:absolute;
+  top:12px;
+  right:14px;
+  background:none;
+  border:none;
+  color:#94a3b8;
+  font-size:1.5rem;
+  cursor:pointer;
+  line-height:1;
+}
+
+/* MOBILE BOTTOM FROZEN BAR (AFTER POPUP CLOSED OR SCROLLED) */
+.mobile-bottom-banner{
+  display:none;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#1e1b4b;
+  border-top:2px solid #6366f1;
+  padding:12px 16px;
+  z-index:999;
+  box-shadow:0 -5px 20px rgba(0,0,0,0.5);
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+@media(max-width:860px){
+  .mobile-bottom-banner.show{display:flex;}
+}
+.m-ad-text{font-size:0.78rem;color:#e0e7ff;line-height:1.3;}
+.m-ad-text strong{color:#fff;display:block;}
+.m-ad-btn{background:#4f46e5;color:#fff;font-size:0.75rem;font-weight:700;padding:8px 14px;border-radius:var(--r-sm);text-decoration:none;white-space:nowrap;}
+
+.site-footer{border-top:1px solid var(--border);margin-top:80px;padding:32px 24px;text-align:center;color:var(--muted);font-size:0.82rem;}
+.site-footer a{color:var(--muted);text-decoration:none;}
+</style>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xlrtp9eqdq");
+</script>
+</head>
+<body>
+<div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+  <ul class="nav-links">
+    <li><a href="/articles/">Articles</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="mailto:contact@preventloss.org">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+<main id="main-content">
+
+<header class="article-header">
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/articles/">Articles</a><span>›</span>
+    <a href="/articles/?cat=procurement">Loss Prevention</a>
+  </div>
+  <div class="dual-category">
+    <span class="article-category">🚨 Financial Loss Prevention</span>
+    <span class="article-category blue">📊 Margin Analytics</span>
+  </div>
+  <h1>The $1 Unit Cost Trap: How Micro Purchase Price Variances Destroy Profit Margins</h1>
+  <p class="article-deck">A single dollar increase in purchase cost seems insignificant on an invoice. But multiplied across volume and compounding carrying costs, an unexamined $1 variance erodes bottom-line profits exponentially. Here is the operational math behind procurement loss prevention.</p>
+  <div class="article-meta">
+    <span>🗓 August 13, 2026</span>
+    <span>⏱ 11 min read</span>
+    <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--c-pr);text-decoration:underline;">Mithun GS</a></span>
+  </div>
+</header>
+
+<div class="article-stats">
+  <div class="stat-item"><div class="s-val red">+$1.00</div><div class="s-lbl">Unit Cost Variance</div></div>
+  <div class="stat-item"><div class="s-val amber">-16.6%</div><div class="s-lbl">Net Margin Erosion (Base Case)</div></div>
+  <div class="stat-item"><div class="s-val red">+25%</div><div class="s-lbl">Inflated Inventory Carrying Loss</div></div>
+</div>
+
+<article class="article-body">
+
+<section id="introduction">
+  <h2>The Illusion of the Negligible $1 Variance</h2>
+  <p>In mid-to-large-scale supply chain operations, purchasing agents and inventory managers routinely accept minor cost fluctuations. A component pricing increase from $10.00 to $11.00 per unit is often dismissed as standard inflation or supplier cost adjustment.</p>
+  <p>This is a catastrophic assumption in loss prevention. Unlike sales price increases, which are capped by market elasticity, <strong>untracked procurement cost increases hit profit margins directly with 100% force</strong>. Furthermore, that extra dollar gets locked into inventory carrying costs, insurance, taxes, and shrinkage calculations, silently amplifying operational losses.</p>
+</section>
+
+<section id="margin-math">
+  <h2>The Compounding Impact on Profit Margins</h2>
+  <p>To understand how a $1 per product unit price increase penalizes profit margins, consider a product with fixed wholesale pricing and static retail market expectations:</p>
+
+  <div class="data-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Baseline Scenario</th>
+          <th>+$1.00 Unit Cost Variance</th>
+          <th>Operational Difference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Retail Selling Price</strong></td>
+          <td>$25.00</td>
+          <td>$25.00</td>
+          <td>$0.00</td>
+        </tr>
+        <tr>
+          <td><strong>Unit Procurement Cost (COGS)</strong></td>
+          <td>$15.00</td>
+          <td>$16.00</td>
+          <td style="color:var(--danger); font-weight:bold;">+$1.00 (+6.6%)</td>
+        </tr>
+        <tr>
+          <td><strong>Gross Dollar Margin</strong></td>
+          <td>$10.00</td>
+          <td>$9.00</td>
+          <td style="color:var(--danger); font-weight:bold;">-$1.00 (-10.0%)</td>
+        </tr>
+        <tr>
+          <td><strong>Gross Profit Margin %</strong></td>
+          <td>40.0%</td>
+          <td>36.0%</td>
+          <td style="color:var(--danger); font-weight:bold;">-4.0% Absolute Reduction</td>
+        </tr>
+        <tr>
+          <td><strong>Annual Volume (Units)</strong></td>
+          <td>100,000</td>
+          <td>100,000</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Direct Bottom-Line Loss</strong></td>
+          <td>$1,000,000 Profit</td>
+          <td>$900,000 Profit</td>
+          <td style="color:var(--danger); font-weight:bold;">-$100,000 Direct Loss</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-danger">
+    <div class="callout-label">🚨 The Net Margin Multiplier</div>
+    <p>If your business operates on a net margin of 6%, losing $100,000 in bottom-line profit due to a $1 procurement cost leak requires <strong>$1,666,666 in additional sales revenue</strong> just to regain original profitability!</p>
+  </div>
+</section>
+
+<section id="carrying-cost-losses">
+  <h2>Secondary Impact: Inflated Carrying Costs & Shrinkage Loss</h2>
+  <p>The financial damage of an unmonitored $1 unit increase does not stop at invoice payment. The standard annual holding cost of inventory ranges between 20% and 30% of average inventory value (encompassing capital interest, warehouse space, handling, and insurance).</p>
+
+  <div class="callout callout-amber">
+    <div class="callout-label">📉 The Inventory Holding Calculation</div>
+    <p>Holding 20,000 units in safety stock at an inflated +$1 cost ties up an additional <strong>$20,000 in working capital</strong>. At a 25% carrying cost rate, this adds an invisible <strong>$5,000 annual holding loss</strong> directly to overhead expenses.</p>
+  </div>
+
+  <p>When physical shrinkage (theft, damage, admin errors) occurs, each lost unit is written off at the higher purchase price ($16 vs $15), turning physical inventory leaks into larger dollar losses on balance sheets.</p>
+</section>
+
+<section id="prevention-action">
+  <h2>Loss Prevention Strategies for Purchase Price Variance (PPV)</h2>
+  <p>Preventing procurement cost leakage requires moving from reactive accounting to active loss control:</p>
+  <ul style="margin-left: 20px; color: var(--text);">
+    <li style="margin-bottom: 10px;"><strong>Automate Invoice Matching:</strong> Require 3-way automated matching (PO, Receiving Slip, Supplier Invoice) with hard blocks on cost variances over $0.05.</li>
+    <li style="margin-bottom: 10px;"><strong>Track Purchase Price Variance (PPV) Daily:</strong> Treat unapproved price increases as financial operational losses rather than procurement expenses.</li>
+    <li style="margin-bottom: 10px;"><strong>Conduct Local Audits:</strong> Periodically run client-side data analysis across SKUs to pinpoint silent price creep before it compounds across quarterly purchase orders.</li>
+  </ul>
+</section>
+
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <p><strong>Q: Why is unit cost variance considered a loss prevention concern rather than just a purchasing issue?</strong><br>
+  A: Because unauthorized or unmonitored unit price variance leads to profit leakage, inventory write-off expansion, and vendor billing fraud. Unchecked micro-variances account for millions in lost margins annually across retail and distribution sectors.</p>
+</section>
+
+</article>
+</main>
+
+<!-- DESKTOP SIDEBAR WITH FREEZING AD BANNER -->
+<aside class="sidebar" aria-label="Article sidebar">
+  
+  <!-- FREEZING AD BANNER -->
+  <div class="ad-banner-card">
+    <span class="ad-badge">⚡ Free LP Analysis Tool</span>
+    <h3 class="ad-title">Free Loss Prevention Analysis Tool</h3>
+    <p class="ad-desc">Analyze your procurement costs, margin leakage, and inventory risks instantly. Works 100% locally on your browser — <strong>no cloud uploads, zero risk to confidential reports</strong>.</p>
+    <div class="ad-privacy-tag">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Client-Side Only • Secure</span>
+    </div>
+    <a href="https://opsreveal.preventloss.org/" target="_blank" rel="noopener" class="ad-cta-btn">
+      Analyze Now →
+    </a>
+  </div>
+
+</aside>
+</div>
+
+<!-- MOBILE / TABLET 10-SEC POPUP MODAL -->
+<div class="mobile-ad-overlay" id="mobileAdOverlay">
+  <div class="mobile-ad-modal">
+    <button class="close-ad-btn" onclick="closeMobileAd()">&times;</button>
+    <span class="ad-badge">⚡ Instant Audit Tool</span>
+    <h3 class="ad-title" style="margin-top:8px;">Free Loss Prevention Analysis Tool</h3>
+    <p class="ad-desc">Runs entirely in your web browser. Analyze confidential procurement files safely without uploading data to external clouds.</p>
+    <div class="ad-privacy-tag">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>100% Local & Confidential</span>
+    </div>
+    <a href="https://opsreveal.preventloss.org/" target="_blank" rel="noopener" class="ad-cta-btn" onclick="closeMobileAd()">
+      Launch Analysis Tool
+    </a>
+  </div>
+</div>
+
+<!-- MOBILE FIXED BOTTOM FROZEN BAR -->
+<div class="mobile-bottom-banner" id="mobileBottomBanner">
+  <div class="m-ad-text">
+    <strong>Free Loss Prevention Tool</strong>
+    <span>100% Local Browser-Based • Zero Cloud Storage</span>
+  </div>
+  <a href="https://opsreveal.preventloss.org/" target="_blank" rel="noopener" class="m-ad-btn">Try Tool</a>
+</div>
+
+<footer class="site-footer">
+  <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+</footer>
+
+<script>
+/* Reading progress bar */
+window.addEventListener('scroll', () => {
+  const d = document.documentElement;
+  document.getElementById('read-progress').style.width =
+    ((d.scrollTop / (d.scrollHeight - d.clientHeight)) * 100) + '%';
+});
+
+/* Mobile/Tablet Ad Logic: Popup after 10s, then freezes at bottom */
+let adClosed = false;
+
+setTimeout(() => {
+  if (window.innerWidth <= 860 && !adClosed) {
+    document.getElementById('mobileAdOverlay').classList.add('active');
+  }
+}, 10000); // 10 Second Popup Trigger
+
+function closeMobileAd() {
+  adClosed = true;
+  document.getElementById('mobileAdOverlay').classList.remove('active');
+  // Freeze banner at the bottom after modal is closed
+  document.getElementById('mobileBottomBanner').classList.add('show');
+}
+
+// Show sticky bottom banner on scroll for mobile if popup wasn't triggered
+window.addEventListener('scroll', () => {
+  if (window.innerWidth <= 860 && window.scrollY > 300) {
+    document.getElementById('mobileBottomBanner').classList.add('show');
+  }
+});
+</script>
+</body>
+</html>
