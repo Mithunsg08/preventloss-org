@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if ((!isArticlePage || isMobile) && !adClosed) {
       document.getElementById("mobileAdOverlay")?.classList.add("active");
     }
-  }, 10000);
+  }, 3000);
 
   const closePopup = () => {
     adClosed = true;
