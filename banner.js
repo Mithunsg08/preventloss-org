@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Check if current page path is an article page
   const isArticlePage = window.location.pathname.includes("/articles/");
 
   // 1. Inject Dynamic CSS
@@ -7,7 +6,54 @@ document.addEventListener("DOMContentLoaded", () => {
   style.textContent = `
     .sidebar { position: relative; height: 100%; }
     
-    /* Desktop Sticky Sidebar Banner (Articles Only) */
+    /* Brand Header Styling (No Image - Pure HTML/CSS) */
+    .ops-brand-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .ops-logo-icon {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    }
+    .ops-logo-icon::after {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 3.5px solid #0f172a;
+      border-radius: 50%;
+    }
+    .ops-brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .ops-title-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .ops-sub-text {
+      font-size: 0.62rem;
+      font-weight: 700;
+      color: #94a3b8;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    /* Card Layout */
     .ad-banner-card {
       position: -webkit-sticky;
       position: sticky;
@@ -17,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(99, 102, 241, 0.2);
       border-radius: 20px;
       padding: 24px 20px;
-      text-align: center;
+      text-align: left;
       z-index: 80;
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
@@ -25,10 +71,25 @@ document.addEventListener("DOMContentLoaded", () => {
       border-color: rgba(99, 102, 241, 0.7);
       box-shadow: 0 16px 36px -5px rgba(0, 0, 0, 0.6), 0 0 22px rgba(99, 102, 241, 0.35);
     }
-    .ad-badge { display: inline-block; background: #312e81; color: #a5b4fc; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; border: 1px solid #4338ca; }
-    .ad-title { font-size: 1.1rem; font-weight: 800; color: #fff; line-height: 1.3; margin-bottom: 10px; }
-    .ad-desc { font-size: 0.82rem; color: #c7d2fe; line-height: 1.5; margin-bottom: 16px; }
-    .ad-privacy-tag { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 0.73rem; color: #34d399; margin-bottom: 18px; background: rgba(16,185,129,0.1); padding: 6px 10px; border-radius: 6px; border: 1px solid rgba(16,185,129,0.2); }
+
+    /* Badges & Text Elements */
+    .ad-badge { 
+      display: inline-block; 
+      background: #312e81; 
+      color: #a5b4fc; 
+      font-size: 0.65rem; 
+      font-weight: 800; 
+      text-transform: uppercase; 
+      padding: 5px 12px; 
+      border-radius: 999px; 
+      margin-bottom: 14px; 
+      border: 1px solid #4338ca; 
+      letter-spacing: 0.05em;
+    }
+    .ad-title { font-size: 1.15rem; font-weight: 800; color: #fff; line-height: 1.35; margin-bottom: 10px; }
+    .ad-desc { font-size: 0.85rem; color: #c7d2fe; line-height: 1.55; margin-bottom: 18px; }
+    
+    /* CTA Button & Micro-copy */
     .ad-cta-btn {
       display: inline-flex;
       align-items: center;
@@ -38,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       color: #ffffff;
       font-weight: 700;
       font-size: 0.88rem;
-      padding: 12px 16px;
+      padding: 13px 16px;
       border-radius: 12px;
       text-decoration: none;
       text-transform: uppercase;
@@ -49,6 +110,17 @@ document.addEventListener("DOMContentLoaded", () => {
     .ad-cta-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+    }
+    .ad-micro-copy {
+      font-size: 0.74rem;
+      color: #34d399;
+      margin-top: 12px;
+      text-align: center;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
 
     /* Modal Popup Overlay */
@@ -73,13 +145,13 @@ document.addEventListener("DOMContentLoaded", () => {
       max-width: 420px;
       width: 100%;
       position: relative;
-      text-align: center;
+      text-align: left;
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
     }
     .close-ad-btn {
       position: absolute;
-      top: 12px;
-      right: 14px;
+      top: 14px;
+      right: 16px;
       background: none;
       border: none;
       color: #94a3b8;
@@ -95,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(15, 23, 42, 0.92);
+      background: rgba(15, 23, 42, 0.94);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-top: 1px solid rgba(99, 102, 241, 0.4);
@@ -113,20 +185,29 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   document.head.appendChild(style);
 
+  // HTML structure for Brand Header
+  const brandHeaderHTML = `
+    <div class="ops-brand-header">
+      <div class="ops-logo-icon"></div>
+      <div class="ops-brand-text">
+        <span class="ops-title-text">OpsReveal</span>
+        <span class="ops-sub-text">BY PREVENTLOSS.ORG</span>
+      </div>
+    </div>
+  `;
+
   // 2. Inject Sidebar Banner (Only on Article pages)
   if (isArticlePage) {
     const sidebar = document.querySelector(".sidebar");
     if (sidebar) {
       sidebar.innerHTML = `
         <div class="ad-banner-card">
-          <span class="ad-badge">⚡ Free LP Analysis Tool</span>
-          <h3 class="ad-title">Free Loss Prevention Analysis Tool</h3>
-          <p class="ad-desc">Analyze your procurement costs, margin leakage, and inventory risks instantly. Works 100% locally on your browser — <strong>no cloud uploads</strong>.</p>
-          <div class="ad-privacy-tag">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Client-Side Only • Secure</span>
-          </div>
-          <a href="https://opsreveal.preventloss.org/" target="_blank" rel="noopener" class="ad-cta-btn">Analyze Now →</a>
+          ${brandHeaderHTML}
+          <span class="ad-badge">⚡ INSTANT BROWSER AUDIT</span>
+          <h3 class="ad-title">Stop Margin Leakage & Protect Your Profit</h3>
+          <p class="ad-desc">Analyze procurement costs and inventory risks instantly on your browser. Zero cloud uploads required.</p>
+          <a href="https://opsreveal.preventloss.org/" target="_blank" rel="noopener" class="ad-cta-btn">Run Free Audit →</a>
+          <div class="ad-micro-copy">🔒 100% Client-Side & Secure</div>
         </div>
       `;
     }
@@ -137,32 +218,27 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="mobile-ad-overlay" id="mobileAdOverlay">
       <div class="mobile-ad-modal">
         <button class="close-ad-btn" id="closeAdBtn">&times;</button>
-        <span class="ad-badge">⚡ Instant Audit Tool</span>
-        <h3 class="ad-title" style="margin-top:8px;">Free Loss Prevention Analysis Tool</h3>
-        <p class="ad-desc">Runs entirely in your web browser. Analyze confidential procurement files safely without uploading data to external clouds.</p>
-        <div class="ad-privacy-tag">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <span>100% Local & Confidential</span>
-        </div>
-        <a href="https://opsreveal.preventloss.org/" target="_blank" rel="noopener" class="ad-cta-btn" id="modalCtaBtn">Launch Analysis Tool</a>
+        ${brandHeaderHTML}
+        <span class="ad-badge">⚡ INSTANT BROWSER AUDIT</span>
+        <h3 class="ad-title">Stop Margin Leakage & Protect Your Profit</h3>
+        <p class="ad-desc">Analyze procurement costs and inventory risks instantly on your browser. Zero cloud uploads required.</p>
+        <a href="https://opsreveal.preventloss.org/" target="_blank" rel="noopener" class="ad-cta-btn" id="modalCtaBtn">Run Free Audit →</a>
+        <div class="ad-micro-copy">🔒 100% Client-Side & Secure</div>
       </div>
     </div>
     <div class="mobile-bottom-banner" id="mobileBottomBanner">
       <div style="font-size:0.78rem;color:#e0e7ff;line-height:1.3;">
-        <strong style="color:#fff;display:block;">Free Loss Prevention Tool</strong>
+        <strong style="color:#fff;display:block;">OpsReveal Audit Tool</strong>
         <span>100% Local Browser-Based</span>
       </div>
-      <a href="https://opsreveal.preventloss.org/" target="_blank" rel="noopener" style="background:#4f46e5;color:#fff;font-size:0.75rem;font-weight:700;padding:8px 14px;border-radius:6px;text-decoration:none;">Try Tool</a>
+      <a href="https://opsreveal.preventloss.org/" target="_blank" rel="noopener" style="background:#4f46e5;color:#fff;font-size:0.75rem;font-weight:700;padding:8px 14px;border-radius:6px;text-decoration:none;">Run Audit</a>
     </div>
   `;
   document.body.insertAdjacentHTML("beforeend", popupMarkup);
 
-  // 4. Popup & Banner Display Logic
+  // 4. Trigger Display Logic
   let adClosed = false;
 
-  // Trigger popup after 10 seconds:
-  // - On non-article pages: Displays on ALL screen sizes (Desktop + Mobile)
-  // - On article pages: Displays on Mobile only
   setTimeout(() => {
     const isMobile = window.innerWidth <= 860;
     if ((!isArticlePage || isMobile) && !adClosed) {
@@ -170,7 +246,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 10000);
 
-  // Close Popup
   const closePopup = () => {
     adClosed = true;
     document.getElementById("mobileAdOverlay")?.classList.remove("active");
@@ -182,7 +257,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("closeAdBtn")?.addEventListener("click", closePopup);
   document.getElementById("modalCtaBtn")?.addEventListener("click", closePopup);
 
-  // Trigger bottom banner on scroll for mobile
   window.addEventListener("scroll", () => {
     if (window.innerWidth <= 860 && window.scrollY > 300) {
       document.getElementById("mobileBottomBanner")?.classList.add("show");
