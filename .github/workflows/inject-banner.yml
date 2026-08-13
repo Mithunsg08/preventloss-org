@@ -1,4 +1,4 @@
-name: Inject Banner Script into Article HTML Files
+name: Inject Banner Script into All HTML Files
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run script to inject banner into article pages only
+      - name: Run script to inject banner into all HTML pages
         run: |
           python -c '
           import os
@@ -29,24 +29,22 @@ jobs:
               if "/." in root:
                   continue
               
-              # ONLY process files inside the "articles" directory or subdirectories
-              if "articles" in root.split(os.sep):
-                  for file in files:
-                      if file.endswith(".html"):
-                          filepath = os.path.join(root, file)
-                          with open(filepath, "r", encoding="utf-8") as f:
-                              content = f.read()
+              for file in files:
+                  if file.endswith(".html"):
+                      filepath = os.path.join(root, file)
+                      with open(filepath, "r", encoding="utf-8") as f:
+                          content = f.read()
 
-                          # Inject script tag before </body> if not already present
-                          if "banner.js" not in content and "</body>" in content:
-                              new_content = content.replace("</body>", f"  {script_tag}\n</body>")
-                              with open(filepath, "w", encoding="utf-8") as f:
-                                  f.write(new_content)
-                              print(f"Injected banner into: {filepath}")
+                      # Inject script tag before </body> if not already present
+                      if "banner.js" not in content and "</body>" in content:
+                          new_content = content.replace("</body>", f"  {script_tag}\n</body>")
+                          with open(filepath, "w", encoding="utf-8") as f:
+                              f.write(new_content)
+                          print(f"Injected banner into: {filepath}")
           '
 
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "auto: Inject banner.js into articles HTML files"
+          commit_message: "auto: Inject banner.js into all HTML files"
           branch: ${{ github.ref_name }}
