@@ -165,10 +165,9 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      gap: 0;
+      gap: 10px;
       flex-wrap: wrap;
       padding: 12px 0;
-      gap: 10px;
     }
 
     /* Search input */
@@ -310,7 +309,7 @@
     .article-card[data-cat="internal-audit"]:hover        { border-color: var(--c-ia); }
     .article-card[data-cat="cost-control"]:hover          { border-color: var(--c-cc); }
     .article-card[data-cat="operations-excellence"]:hover { border-color: var(--c-oe); }
-    .article-card[data-cat="Real-case-study"]::hover      { background: var(--c-cs); }
+    .article-card[data-cat="Real-case-study"]:hover       { border-color: var(--c-cs); }
 
     /* Card category badge */
     .card-cat {
@@ -327,7 +326,7 @@
     .article-card[data-cat="internal-audit"]        .card-cat { color: var(--c-ia); }
     .article-card[data-cat="cost-control"]          .card-cat { color: var(--c-cc); }
     .article-card[data-cat="operations-excellence"] .card-cat { color: var(--c-oe); }
-    .article-card[data-cat="Real-case-study"] .card-cat { color: var(--c-cs); }
+    .article-card[data-cat="Real-case-study"]        .card-cat { color: var(--c-cs); }
 
     .article-card[data-cat="loss-prevention"]       .dot { background: var(--c-lp); }
     .article-card[data-cat="inventory-management"]  .dot { background: var(--c-im); }
@@ -379,15 +378,14 @@
       display: flex; align-items: center; gap: 4px;
     }
 
-    /* Featured card (spans 2 columns) */
+    /* Featured card alignment fixing */
     .article-card.featured {
-      grid-column: span 2;
       flex-direction: row;
       align-items: flex-start;
-      gap: 28px;
+      gap: 20px;
     }
     .article-card.featured .card-body { flex: 1; display: flex; flex-direction: column; gap: 12px; }
-    .article-card.featured .card-title { font-size: 1.3rem; }
+    .article-card.featured .card-title { font-size: 1.2rem; }
     .article-card.featured .card-excerpt { -webkit-line-clamp: 4; }
     .article-card.featured .featured-badge {
       display: inline-flex; align-items: center; gap: 6px;
@@ -400,15 +398,15 @@
       width: fit-content;
     }
     .featured-icon {
-      width: 80px; height: 80px; flex-shrink: 0;
+      width: 64px; height: 64px; flex-shrink: 0;
       background: var(--accent-glow);
       border: 1px solid var(--accent);
       border-radius: var(--r-md);
       display: flex; align-items: center; justify-content: center;
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
     @media (max-width: 720px) {
-      .article-card.featured { grid-column: span 1; flex-direction: column; }
+      .article-card.featured { flex-direction: column; }
       .featured-icon { display: none; }
     }
 
@@ -422,19 +420,6 @@
     .empty-state .empty-icon { font-size: 2.5rem; margin-bottom: 16px; }
     .empty-state h3 { color: var(--text); font-size: 1.1rem; margin-bottom: 8px; }
     .empty-state p { font-size: 0.9rem; }
-
-    /* ─── Section dividers between categories ──── */
-    .section-label {
-      grid-column: 1 / -1;
-      display: flex; align-items: center; gap: 12px;
-      margin-top: 8px;
-    }
-    .section-label-text {
-      font-size: 0.72rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.1em;
-      color: var(--muted); white-space: nowrap;
-    }
-    .section-label-line { flex: 1; height: 1px; background: var(--border); }
 
     /* ─── Footer ────────────────────────────────── */
     .site-footer {
@@ -539,7 +524,7 @@
 
       <!-- Result count -->
       <div class="result-count" id="result-count" aria-live="polite">
-        <strong id="count-num">07</strong> articles
+        <strong id="count-num">00</strong> articles
       </div>
 
     </div>
@@ -550,10 +535,30 @@
     <div class="articles-grid" id="articles-grid" role="list">
 
       <!-- ══════════════════════════════════════════
-           LOSS PREVENTION
+           FEATURED ARTICLES
       ══════════════════════════════════════════ -->
 
-      <!-- FEATURED -->
+      <a class="article-card featured"
+         href="/articles/introducing-opsreveal-audit-tool.html"
+         data-cat="internal-audit"
+         data-title="Introducing OpsReveal: The Free Operations Audit & Risk Analysis Tool"
+         role="listitem">
+        <div class="featured-icon" aria-hidden="true">🛠️</div>
+        <div class="card-body">
+          <div class="featured-badge">⭐ Featured Tool</div>
+          <div class="card-cat"><span class="dot"></span>Internal Audit</div>
+          <div class="card-title">Introducing OpsReveal: The Free Operations Audit & Risk Analysis Tool</div>
+          <div class="card-excerpt">Discover OpsReveal, a free, practical audit tool built to reveal hidden operational leakage, procurement fraud, and inventory shrink in real time. Learn how to streamline your audit workflows and protect bottom-line margins.</div>
+          <div class="card-meta">
+            <div class="card-meta-left">
+              <span class="card-meta-item">🗓 Sep 2026</span>
+              <span class="card-meta-item">⏱ 5 min read</span>
+            </div>
+            <span class="card-read-more">Read article →</span>
+          </div>
+        </div>
+      </a>
+
       <a class="article-card featured"
          href="/articles/what-is-loss-prevention.html"
          data-cat="loss-prevention"
@@ -575,6 +580,10 @@
         </div>
       </a>
 
+      <!-- ══════════════════════════════════════════
+           STANDARD ARTICLES
+      ══════════════════════════════════════════ -->
+
       <a class="article-card"
          href="/articles/preventing-scrap-and-waste-theft.html"
          data-cat="loss-prevention"
@@ -582,11 +591,11 @@
          role="listitem">
         <div class="card-cat"><span class="dot"></span>Loss Prevention</div>
         <div class="card-title">Scrap & Waste Theft in Manufacturing: Stopping Raw Material Diversion</div>
-        <div class="card-excerpt"High-value metals, raw polymers, and slightly damaged inventory are regularly written off as "scrap" only to be smuggled out and resold. Learn how to audit manufacturing write-offs, secure disposal yards, and protect yield margins.</div>
+        <div class="card-excerpt">High-value metals, raw polymers, and slightly damaged inventory are regularly written off as "scrap" only to be smuggled out and resold. Learn how to audit manufacturing write-offs, secure disposal yards, and protect yield margins.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Aug 2026</span>
-            <span class="card-meta-item">⏱ 13 min read</span>`
+            <span class="card-meta-item">🗓 Aug 2026</span>
+            <span class="card-meta-item">⏱ 13 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -602,8 +611,8 @@
         <div class="card-excerpt">Open-ended work orders, unverified emergency calls, and rogue internal requisitions bleed maintenance budgets dry. Discover the exact mechanics of field service fraud and implement modern controls to eliminate overbilling.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Aug 2026</span>
-            <span class="card-meta-item">⏱ 13 min read</span>`
+            <span class="card-meta-item">🗓 Aug 2026</span>
+            <span class="card-meta-item">⏱ 13 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -619,8 +628,8 @@
         <div class="card-excerpt">Unchecked accounts payable processes quietly drain corporate capital through duplicate billing, price creep, and non-delivery scams. Learn how to architect a foolproof three-way matching workflow across POs, receiving logs, and vendor invoices.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Aug 2026</span>
-            <span class="card-meta-item">⏱ 14 min read</span>`
+            <span class="card-meta-item">🗓 Aug 2026</span>
+            <span class="card-meta-item">⏱ 14 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -636,8 +645,8 @@
         <div class="card-excerpt">Broken connections between procurement software and field execution silently bleed 5% to 10% of annual revenue. Discover how rogue technicians, padded contractor hours, and broken matching workflows steal your margin—and learn the exact 5-step control framework to eliminate it.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Aug 2026</span>
-            <span class="card-meta-item">⏱ 14 min read</span>`
+            <span class="card-meta-item">🗓 Aug 2026</span>
+            <span class="card-meta-item">⏱ 14 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -653,8 +662,8 @@
         <div class="card-excerpt">A single dollar increase in purchase cost seems insignificant on an invoice. But multiplied across volume and compounding carrying costs, an unexamined $1 variance erodes bottom-line profits exponentially. Here is the operational math behind procurement loss prevention.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Aug 2026</span>
-            <span class="card-meta-item">⏱ 11 min read</span>`
+            <span class="card-meta-item">🗓 Aug 2026</span>
+            <span class="card-meta-item">⏱ 11 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -670,16 +679,14 @@
         <div class="card-excerpt">The sales floor gets the cameras, the EAS gates, and the attentive staff. The receiving dock and backroom often get none of that — which is exactly why a meaningful share of retail shrink never actually makes it to the shelf at all. This guide covers the 6 most common ways product disappears before or just after delivery, a live exposure calculator, and the receiving SOPs that close the gap at the back door.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jul 2026</span>
-            <span class="card-meta-item">⏱ 13 min read</span>`
+            <span class="card-meta-item">🗓 Jul 2026</span>
+            <span class="card-meta-item">⏱ 13 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
       </a>
 
-      
-
-       <a class="article-card"
+      <a class="article-card"
          href="/articles/retail-cash-handling-procedures.html"
          data-cat="loss-prevention"
          data-title="Retail Cash Handling Procedures: A Step-by-Step Guide to Stopping Register Shortages"
@@ -689,14 +696,14 @@
         <div class="card-excerpt">A register that's short $8 tonight and $6 last Tuesday looks like nothing on its own. Tracked across a month, across every shift that same cashier works, it's a pattern — and patterns are exactly what a proper cash handling protocol is built to surface. This guide walks store managers through the daily register balance procedure, the till audit checklist, and the over/short tracking system that turns invisible skimming into an obvious number on a report.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jul 2026</span>
-            <span class="card-meta-item">⏱ 13 min read</span>`
+            <span class="card-meta-item">🗓 Jul 2026</span>
+            <span class="card-meta-item">⏱ 13 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
       </a>
 
-       <a class="article-card"
+      <a class="article-card"
          href="/articles/retail-return-fraud-prevention.html"
          data-cat="loss-prevention"
          data-title="Retail Return Fraud: 6 Common Scams and How to Stop Them"
@@ -706,8 +713,8 @@
         <div class="card-excerpt">Every return policy is a trust exercise — and the more generous it is, the more it gets tested. From forged receipts to "buy, wear, return" wardrobing, return fraud lets customers and thieves turn a customer-service feature into a direct drain on margin. This guide covers the 6 most common return and receipt scams, a live exposure calculator, and the policy controls that keep returns honest without punishing legitimate customers.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jul 2026</span>
-            <span class="card-meta-item">⏱ 13 min read</span>`
+            <span class="card-meta-item">🗓 Jul 2026</span>
+            <span class="card-meta-item">⏱ 13 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -723,8 +730,8 @@
         <div class="card-excerpt">Fitting rooms are one of the few retail spaces where the law itself keeps your cameras out — and that makes them the single biggest blind zone in most apparel stores. This guide covers the 5 most common fitting room theft tactics, a live attendant staffing calculator, and the count-in/count-out policies that close the gap without a single camera.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jul 2026</span>
-            <span class="card-meta-item">⏱ 12 min read</span>`
+            <span class="card-meta-item">🗓 Jul 2026</span>
+            <span class="card-meta-item">⏱ 12 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -740,8 +747,8 @@
         <div class="card-excerpt">Self-checkout lanes have become the #1 source of retail shrinkage, and the reason isn't a mystery — removing the trained cashier removes the one thing that used to catch mismatches in real time. This guide covers the 5 most common self-checkout theft tactics, how each one actually works, a live cost calculator, and the loss prevention technology closing the gap.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jul 2026</span>
-            <span class="card-meta-item">⏱ 13 min read</span>`
+            <span class="card-meta-item">🗓 Jul 2026</span>
+            <span class="card-meta-item">⏱ 13 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -757,8 +764,8 @@
         <div class="card-excerpt">Deodorant behind plexiglass. Laundry detergent under lock and key. Baby formula requiring a store associate and a key fob just to reach the shelf. America's retail theft crisis has driven stores to a desperate solution — and the data is now clear that the cure may be as damaging as the disease. This is the full story of the locking trend, what it actually costs in lost sales, and what the technology alternatives look like that retailers are finally starting to adopt.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jul 2026</span>
-            <span class="card-meta-item">⏱ 18 min read</span>`
+            <span class="card-meta-item">🗓 Jul 2026</span>
+            <span class="card-meta-item">⏱ 18 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -774,14 +781,14 @@
         <div class="card-excerpt">Most retail theft isn't luck — it's opportunism. Shoplifters don't target stores at random; they select locations where the layout itself provides cover: a tall fixture in the back corner, a dead-end aisle far from the checkout, a fitting room corridor that no one can see into. This guide shows you how to audit your store's design, close every structural blind spot, and use layout as your first and most powerful anti-theft tool.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jul 2026</span>
-            <span class="card-meta-item">⏱ 16 min read</span>`
+            <span class="card-meta-item">🗓 Jul 2026</span>
+            <span class="card-meta-item">⏱ 16 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
       </a>
 
-       <a class="article-card"
+      <a class="article-card"
          href="/articles/cycle-counting-vs-physical-inventory-count.html"
          data-cat="inventory-management"
          data-title="Cycle Counting vs Physical Inventory Count: Which Wins? (+ Transition Plan)"
@@ -791,8 +798,8 @@
         <div class="card-excerpt">The annual shutdown count is a business ritual that almost everyone hates and almost no one questions. Operations stop. Staff get pulled off their real jobs. The count takes two days. The results are accurate for exactly one afternoon. There is a better system — and this guide shows you how to transition to it without disrupting a single shipment.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jul 2026</span>
-            <span class="card-meta-item">⏱ 17 min read</span>`
+            <span class="card-meta-item">🗓 Jul 2026</span>
+            <span class="card-meta-item">⏱ 17 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -808,8 +815,8 @@
         <div class="card-excerpt">One number tells you whether your inventory is working hard for your business — or sitting in a warehouse costing you money every single day. This guide explains the inventory turnover ratio formula clearly, gives you a free interactive calculator, real worked examples across three industries, the exact benchmarks by sector, and the proven fixes when your number is too low.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jul 2026</span>
-            <span class="card-meta-item">⏱ 15 min read</span>`
+            <span class="card-meta-item">🗓 Jul 2026</span>
+            <span class="card-meta-item">⏱ 15 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -825,8 +832,8 @@
         <div class="card-excerpt">Most businesses treat every SKU like it's equally important — and that's exactly why they tie up capital in dead stock while running out of the items that actually drive revenue. ABC analysis fixes that in a single afternoon. This guide covers what it is, how to do it step by step, a real worked example with a live calculator, the ABC-XYZ extension, and the seven mistakes that make most ABC implementations useless within six months.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jul 2026</span>
-            <span class="card-meta-item">⏱ 16 min read</span>`
+            <span class="card-meta-item">🗓 Jul 2026</span>
+            <span class="card-meta-item">⏱ 16 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -842,8 +849,8 @@
         <div class="card-excerpt">A weak loss prevention policy is worse than no policy at all — it creates a false sense of control while shrinkage, internal theft, and vendor fraud keep draining your margins. This guide gives you the exact 9-section framework used by US retail, logistics, and distribution businesses, plus a free, fully editable Word template you can download and customize in under 20 minutes — no email required.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 14 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 14 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -859,13 +866,12 @@
         <div class="card-excerpt">A real case study of how unverified logistics MIS data, a single transporter, and an approval process no one was actually running let 5,500 per day flow out the door for over a year. Here's who failed, how the investigation unfolded, the negotiation that almost collapsed — and the email that changed everything.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item">June 2026</span>
+            <span class="card-meta-item">🗓 June 2026</span>
             <span class="card-meta-item">⏱ 13 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
       </a>
-
 
       <a class="article-card"
          href="/articles/employee-theft-prevention.html"
@@ -877,8 +883,8 @@
         <div class="card-excerpt">Employee theft costs US businesses an estimated $50 billion every year — and the average case goes undetected for 14 months. This guide covers how to recognize the warning signs early, understand why employees steal, and implement a layered prevention system that works before a single dollar walks out the door.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 18 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 18 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -894,13 +900,12 @@
         <div class="card-excerpt">For most product businesses, inventory is the largest asset on the balance sheet — and one of the most expensive to maintain. This guide covers every lever available to reduce inventory costs: from ABC classification and EOQ ordering to safety stock optimization, KPI dashboards, and a 90-day implementation roadmap.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 22 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 22 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
       </a>
-
 
       <a class="article-card"
          href="/articles/best-procurement-software.html"
@@ -912,13 +917,12 @@
         <div class="card-excerpt">Most procurement software comparisons are either too generic or too enterprise-focused to be useful for a real business making a real decision. This one is organized by budget tier: the two best free tools, the two most affordable paid options, the two best platforms overall, and one single recommendation if you want a direct answer.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
+            <span class="card-meta-item">🗓 Jun 2026</span>
             <span class="card-meta-item">⏱ 9 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
       </a>
-
 
       <a class="article-card"
          href="/articles/best-inventory-management-software.html"
@@ -930,8 +934,8 @@
         <div class="card-excerpt">Most "best software" lists try to cover every use case at once and end up being useful for none of them. This one is organized differently: two genuinely good free tools, two affordable paid options that won't strain a small budget, two platforms that are simply the best overall regardless of price, and one single recommendation if you only want to read one paragraph.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 9 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 9 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -947,14 +951,14 @@
         <div class="card-excerpt">Most businesses look at their P&L once a month and call that "tracking costs." That's a financial statement, not a control system. Here are the cost control KPIs that actually catch problems while they're still small — what each one measures, how to calculate it, and what a bad number is really telling you.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 10 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 10 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
       </a>
 
-       <a class="article-card"
+      <a class="article-card"
          href="/articles/cost-control-in-retail.html"
          data-cat="cost-control"
          data-title="Cost Control in Retail: Strategies to Improve Profitability"
@@ -964,8 +968,8 @@
         <div class="card-excerpt">Retail profitability usually doesn't collapse from one big mistake — it erodes slowly across five or six cost categories that nobody's watching closely enough. Here are the formulas that actually measure where your margin is leaking, worked examples for each one, and a free calculator so you can run your own numbers right now.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 11 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 11 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -981,14 +985,14 @@
         <div class="card-excerpt">Most inaccurate inventory counts aren't caused by careless counting — they're caused by skipping the steps before and after the count itself. This is the full checklist: what to do before count day, what to do during it, and what to do once the numbers come in. Use it as-is or adapt it to your operation.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 10 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 10 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
       </a>
 
-       <a class="article-card"
+      <a class="article-card"
          href="/articles/loss-prevention-kpis.html"
          data-cat="loss-prevention"
          data-title="Loss Prevention KPIs: The Metrics That Actually Tell You What's Happening"
@@ -998,8 +1002,8 @@
         <div class="card-excerpt">Most businesses either track nothing, or track everything and look at none of it. Neither works. Here are the loss prevention KPIs that actually matter — what each one measures, how to calculate it, what a good number looks like, and what a bad one is telling you to investigate.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 11 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 11 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -1015,8 +1019,8 @@
         <div class="card-excerpt">Operations excellence is one of those phrases that gets used constantly and explained poorly. It's not about perfection, and it's not just about efficiency. At its core it's about building an operation that runs reliably, wastes little, gets better over time, and doesn't depend on specific individuals to hold it together. Here's what that actually looks like.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 10 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 10 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -1025,15 +1029,15 @@
       <a class="article-card"
          href="/articles/what-is-internal-audit.html"
          data-cat="internal-audit"
-         data-title="How to Record Inventory Shrinkage in Accounting"
+         data-title="What Is Internal Audit? A Complete Beginner's Guide"
          role="listitem">
         <div class="card-cat"><span class="dot"></span>Internal Audit</div>
         <div class="card-title">What Is Internal Audit? A Complete Beginner's Guide</div>
         <div class="card-excerpt">Internal audit is one of those terms that sounds more intimidating than it is. Strip away the jargon and it's actually a pretty logical thing: someone inside the organization takes an independent look at how things are running and tells management what they find. Here's what that actually means in practice, why it matters, and what it looks like in businesses of different sizes.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 10 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 10 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -1049,8 +1053,8 @@
         <div class="card-excerpt">Finding shrinkage in a count is one thing. Knowing exactly how to record it in your books — with the right accounts, the right entries, and an understanding of what it does to your financial statements — is what turns a number into something you can actually manage.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 9 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 9 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -1059,15 +1063,15 @@
       <a class="article-card"
          href="/articles/what-is-cost-control.html"
          data-cat="cost-control"
-         data-title="How to Calculate Retail Shrinkage Percentage (Step-by-Step With Examples)"
+         data-title="What Is Cost Control? Definition, Examples & Strategies for Every Business"
          role="listitem">
         <div class="card-cat"><span class="dot"></span>Cost Control</div>
-        <div class="card-title">What Is Cost Control? Definition, Examples & Strategies for Every Business.</div>
+        <div class="card-title">What Is Cost Control? Definition, Examples & Strategies for Every Business</div>
         <div class="card-excerpt">Most businesses know their costs are too high. Fewer have a system for actually managing them. Cost control isn't about cutting things — it's about making sure the money going out is doing what you think it's doing, and catching it when it isn't.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 10 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 10 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
@@ -1083,14 +1087,14 @@
         <div class="card-excerpt">A lot of store owners know they have shrinkage. Far fewer have actually sat down and calculated the percentage — properly. Here's exactly how to do it, with two formulas, four real-world worked examples across different store types, and a quick calculator you can use for your own numbers.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
-            <span class="card-meta-item">⏱ 8 min read</span>`
+            <span class="card-meta-item">🗓 Jun 2026</span>
+            <span class="card-meta-item">⏱ 8 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
       </a>
 
-       <a class="article-card"
+      <a class="article-card"
          href="/articles/loss-prevention-audit.html"
          data-cat="loss-prevention"
          data-title="Loss Prevention Audit: Checklist, Process, and Best Practices"
@@ -1100,7 +1104,7 @@
         <div class="card-excerpt">Most audits don't find much — not because nothing's wrong, but because they're not structured to look in the right places. This guide walks through how to run an LP audit that actually tells you something, with a full checklist, a step-by-step process, and the habits that separate a useful audit from a box-ticking exercise.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
+            <span class="card-meta-item">🗓 Jun 2026</span>
             <span class="card-meta-item">⏱ 11 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
@@ -1117,7 +1121,7 @@
         <div class="card-excerpt">These two terms get used almost interchangeably in a lot of inventory conversations — and that's exactly where the confusion starts. They're related, but they measure different things, they point to different causes, and they need different fixes. Getting them mixed up is how businesses end up solving the wrong problem.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
+            <span class="card-meta-item">🗓 Jun 2026</span>
             <span class="card-meta-item">⏱ 8 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
@@ -1134,7 +1138,7 @@
         <div class="card-excerpt">Every time your stock count comes up short, one of ten things caused it. Some of them are obvious. Some are hiding in places most businesses never look. Here's the full breakdown — with real examples and actual fixes, not just generic advice.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
+            <span class="card-meta-item">🗓 Jun 2026</span>
             <span class="card-meta-item">⏱ 10 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
@@ -1151,7 +1155,7 @@
         <div class="card-excerpt">Not every strategy on a "loss prevention" list is worth your time. Some work consistently. Some sound good in theory and fall apart when you try to apply them to a real store or operation. This list is the ones that actually work — with real examples and honest notes on where each one fits best.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item">June 2026</span>
+            <span class="card-meta-item">🗓 June 2026</span>
             <span class="card-meta-item">⏱ 11 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
@@ -1168,7 +1172,7 @@
         <div class="card-excerpt">If you've noticed some companies call the role "Loss Prevention" and others call it "Asset Protection" and wondered if that's just a fancier name for the same job — you're not wrong, but you're not entirely right either. Here's what's actually going on.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item">June 2026</span>
+            <span class="card-meta-item">🗓 June 2026</span>
             <span class="card-meta-item">⏱ 7 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
@@ -1185,7 +1189,7 @@
         <div class="card-excerpt">When people hear "loss prevention," a lot of them picture a guy in a polo shirt watching a bank of CCTV monitors, waiting to chase someone out the door. That's part of it, sure. But honestly? That's the smallest part of the job, and if that's all your store is doing, you're probably missing most of where the money actually goes.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item">June 2026</span>
+            <span class="card-meta-item">🗓 June 2026</span>
             <span class="card-meta-item">⏱ 9 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
@@ -1202,7 +1206,7 @@
         <div class="card-excerpt">Step-by-step framework for designing and launching a loss prevention program — whether you're a solo operator or a multi-site business with no formal LP function yet.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item">June 2026</span>
+            <span class="card-meta-item">🗓 June 2026</span>
             <span class="card-meta-item">⏱ 10 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
@@ -1216,17 +1220,16 @@
          role="listitem">
         <div class="card-cat"><span class="dot"></span>Inventory Management</div>
         <div class="card-title">Inventory Shrinkage Explained: Causes, Calculation & How to Reduce It</div>
-        <div class="card-excerpt">inventory shrinkage, what is inventory shrinkage, shrinkage rate formula, how to calculate shrinkage, inventory shrinkage causes, reduce inventory shrinkage, retail shrinkage, stock loss, shrink percentage, inventory shrinkage examples, shrinkage management, stock variance.</div>
+        <div class="card-excerpt">Learn the core definition of inventory shrinkage, the standard calculation formulas, top causes across various industries, and proven operational strategies to reduce stock variances effectively.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
+            <span class="card-meta-item">🗓 Jun 2026</span>
             <span class="card-meta-item">⏱ 9 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
       </a>
 
-      
       <a class="article-card"
          href="/articles/vendor-fraud-prevention.html"
          data-cat="procurement"
@@ -1237,14 +1240,12 @@
         <div class="card-excerpt">Vendor fraud quietly drains more money than most businesses realize. Here's how overbilling, short shipments, and kickback schemes actually happen — and the practical controls that catch them. Written by a working loss prevention manager.</div>
         <div class="card-meta">
           <div class="card-meta-left">
-            <span class="card-meta-item"> Jun 2026</span>
+            <span class="card-meta-item">🗓 Jun 2026</span>
             <span class="card-meta-item">⏱ 8 min read</span>
           </div>
           <span class="card-read-more">Read article →</span>
         </div>
       </a>
-
-      
 
       <!-- Empty state (hidden by default) -->
       <div class="empty-state" id="empty-state" style="display:none;" aria-live="polite">
@@ -1260,7 +1261,7 @@
   <footer class="site-footer">
     <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
     <p style="margin-top:8px;">
-      <a href="/privacy.html">Privacy</a> · <a href="/about.html/">About</a> · <a href="terms.html">Terms</a>· <a href="mailto:contact@preventloss.org">Contact</a>
+      <a href="/privacy.html">Privacy</a> · <a href="/about.html">About</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a>
     </p>
   </footer>
 
@@ -1296,8 +1297,8 @@
         if (show) visible++;
       });
 
-      // Update count
-      countNum.textContent = visible;
+      // Update count (formatted with leading zero if needed)
+      countNum.textContent = visible < 10 ? `0${visible}` : visible;
 
       // Toggle empty state
       emptyState.style.display = visible === 0 ? 'grid' : 'none';
