@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+  <!-- GOOGLE Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-45J6FRBJN0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-45J6FRBJN0');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<title>Introducing OpsReveal: Zero-Data-Retention Audit Engine for Operational Leakage (2026)</title>
+<meta name="description" content="Detect retail operational leakages in seconds with OpsReveal. Run client-side GRN audits, margin erosion checks, write-off cross-audits, and stock ageing reviews with complete data privacy—no raw data ever leaves your browser." />
+<meta name="keywords" content="OpsReveal, operational leakage audit, GRN audit tool, inventory margin erosion, retail stock ageing audit, local browser data audit, zero data retention audit, inventory loss prevention software, preventloss tools, 115% ROI Guarantee" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Mithun GS" />
+<link rel="canonical" href="https://www.preventloss.org/articles/introducing-opsreveal-audit-tool.html" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Introducing OpsReveal: Zero-Data-Retention Audit Engine for Operational Leakage" />
+<meta property="og:description" content="Discover how OpsReveal scans your GRNs, Sales Margins, Write-Offs, and Stock Ageing directly in your browser without exposing sensitive enterprise data." />
+<meta property="og:url" content="https://www.preventloss.org/articles/introducing-opsreveal-audit-tool.html" />
+<meta property="og:site_name" content="PreventLoss.org" />
+<meta property="article:published_time" content="2026-09-02T00:00:00Z" />
+<meta property="article:modified_time" content="2026-09-02T00:00:00Z" />
+<meta property="article:section" content="Loss Prevention Tools" />
+<meta property="article:author" content="https://www.linkedin.com/in/mithun-gs/" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="OpsReveal: Client-Side Audit Tool for Operational Leakage" />
+<meta name="twitter:description" content="Run instant audits on GRNs, inventory ageing, and margin leakages using client-side processing. Zero raw data uploaded to servers." />
+
+<!-- Rich SEO Structured Data: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Introducing OpsReveal: Zero-Data-Retention Audit Engine for Operational Leakage",
+  "description": "A comprehensive deep dive into OpsReveal—the client-side audit engine built by PreventLoss.org to catch GRN mismatches, margin erosion, write-off discrepancies, and inventory ageing without uploading raw ERP records.",
+  "author": { "@type": "Person", "name": "Mithun GS", "url": "https://www.linkedin.com/in/mithun-gs/" },
+  "publisher": { "@type": "Organization", "name": "PreventLoss.org", "url": "https://www.preventloss.org" },
+  "datePublished": "2026-09-02",
+  "dateModified": "2026-09-02",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.preventloss.org/articles/introducing-opsreveal-audit-tool.html" },
+  "keywords": "OpsReveal, operational leakage, GRN audit, inventory loss prevention, client-side data audit, 115% ROI Guarantee"
+}
+</script>
+
+<!-- Rich SEO Structured Data: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "OpsReveal",
+  "operatingSystem": "Web-Based",
+  "applicationCategory": "BusinessApplication",
+  "url": "https://opsreveal.preventloss.org",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "0.00",
+    "highPrice": "99.00",
+    "offerCount": "3"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "PreventLoss.org"
+  }
+}
+</script>
+
+<!-- Rich SEO Structured Data: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is my proprietary enterprise inventory data uploaded to any server when using OpsReveal?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. OpsReveal processes all uploaded raw data files entirely inside your device's web browser using client-side JavaScript. Raw transactional files are never sent across the internet. Only high-level summary metrics (e.g., overall leakage total and audit timestamps) are optionally synced to secure Cloudflare EU edge infrastructure." }
+    },
+    {
+      "@type": "Question",
+      "name": "What audit modules are available in OpsReveal?",
+      "acceptedAnswer": { "@type": "Answer", "text": "OpsReveal supports 5 specialized audit engines: Goods Receiving Note (GRN) / Receiving Audit, Sales Margin Audit, Write-Off & Shrink Audit, Stock Ageing Audit, and GRN vs. Write-Off Cross-Audit." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the 115% ROI Guarantee work for the Professional Plan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We guarantee the Professional Plan pays for itself—and then some. If OpsReveal Professional does not uncover financial leakage exceeding 115% of your subscription cost, your next month of service is 100% free." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize thresholds like Target Margin % or Shelf Life requirements?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. OpsReveal allows configurable parameters such as Minimum Target Shelf Life % (default 60%), Target Margin % (default 20%), and custom ageing day cutoffs to tailor exception flags specifically to your operational rules." }
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#0f1117;
+  --surface:#181c27;
+  --surface-2:#1e2535;
+  --border:#252a38;
+  --accent:#2563eb;
+  --accent-lt:#3b82f6;
+  --accent-glow:#1d4ed840;
+  --text:#e2e8f0;
+  --muted:#94a3b8;
+  --heading:#f8fafc;
+  --success:#10b981;
+  --warn:#f59e0b;
+  --danger:#f87171;
+  --c-pr:#f59e0b;
+  --c-pr-bg:#1c1500;
+  --font-display:'Georgia','Times New Roman',serif;
+  --font-body:system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'Courier New',monospace;
+  --r-sm:6px;--r-md:12px;--r-lg:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+.site-nav{position:sticky;top:0;z-index:100;background:rgba(15,17,23,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.site-nav .logo{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--heading);text-decoration:none;letter-spacing:-0.02em;}
+.site-nav .logo span{color:var(--accent-lt);}
+.nav-links{display:flex;gap:24px;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--text);}
+
+#read-progress{position:fixed;top:56px;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--accent-lt),var(--success));z-index:99;transition:width 0.1s linear;}
+
+/* LAYOUT */
+.page-wrap{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:52px;align-items:start;}
+@media(max-width:860px){.page-wrap{grid-template-columns:1fr;}.sidebar{display:none;}}
+
+/* HEADER */
+.article-header{padding:52px 0 36px;border-bottom:1px solid var(--border);margin-bottom:36px;}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:var(--muted);margin-bottom:16px;}
+.breadcrumb a{color:var(--muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--text);}
+.breadcrumb span{color:var(--border);}
+.dual-category{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.article-category{display:inline-flex;align-items:center;gap:6px;background:var(--c-pr-bg);border:1px solid var(--c-pr);color:var(--c-pr);font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:999px;}
+.article-category.blue{background:var(--accent-glow);border-color:var(--accent-lt);color:var(--accent-lt);}
+h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.8vw,2.55rem);font-weight:700;color:var(--heading);line-height:1.18;letter-spacing:-0.03em;margin-bottom:18px;}
+.article-deck{font-size:1.05rem;color:var(--muted);line-height:1.65;margin-bottom:22px;max-width:680px;}
+.article-meta{display:flex;flex-wrap:wrap;gap:18px;font-size:0.8rem;color:var(--muted);}
+
+/* STATS */
+.article-stats{display:flex;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:40px;overflow:hidden;}
+.stat-item{flex:1;padding:16px 18px;border-right:1px solid var(--border);}
+.stat-item:last-child{border-right:none;}
+.stat-item .s-val{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--heading);line-height:1;margin-bottom:4px;}
+.stat-item .s-val.amber{color:var(--c-pr);}
+.stat-item .s-val.green{color:var(--success);}
+.stat-item .s-val.blue{color:var(--accent-lt);}
+.stat-item .s-val.red{color:var(--danger);}
+.stat-item .s-lbl{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;font-weight:600;}
+@media(max-width:600px){.article-stats{flex-wrap:wrap;}.stat-item{flex:1 1 45%;border-bottom:1px solid var(--border);}}
+
+/* BODY */
+.article-body h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--heading);letter-spacing:-0.02em;margin:48px 0 14px;padding-top:48px;border-top:1px solid var(--border);}
+.article-body h2:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+.article-body p{margin-bottom:18px;color:var(--text);}
+.article-body a{color:var(--c-pr);text-decoration:underline;text-underline-offset:3px;}
+.article-body strong{color:var(--heading);font-weight:600;}
+.article-body em{font-style:italic;color:var(--muted);}
+
+/* CALLOUTS */
+.callout{border-radius:var(--r-md);padding:18px 22px;margin:24px 0;border-left:4px solid;}
+.callout-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+.callout p{margin-bottom:6px;font-size:0.94rem;}
+.callout p:last-child{margin-bottom:0;}
+.callout-tip{background:#0d1f16;border-color:var(--success);}
+.callout-tip .callout-label{color:var(--success);}
+.callout-info{background:var(--accent-glow);border-color:var(--accent);}
+.callout-info .callout-label{color:var(--accent-lt);}
+.callout-amber{background:var(--c-pr-bg);border-color:var(--c-pr);}
+.callout-amber .callout-label{color:var(--c-pr);}
+.callout-danger{background:#1f0d0d;border-color:var(--danger);}
+.callout-danger .callout-label{color:var(--danger);}
+
+/* TIER DIVIDERS */
+.tier-divider{display:flex;align-items:center;gap:12px;margin:48px 0 8px;}
+.tier-divider .td-line{flex:1;height:1px;background:var(--border);}
+.tier-divider .td-label{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;padding:5px 16px;border-radius:999px;white-space:nowrap;}
+.tier-divider.what .td-label{color:var(--accent-lt);background:var(--accent-glow);border:1px solid var(--accent);}
+.tier-divider.how .td-label{color:var(--c-pr);background:var(--c-pr-bg);border:1px solid var(--c-pr);}
+.tier-divider.pricing .td-label{color:var(--success);background:#0d1f16;border:1px solid var(--success);}
+
+/* CARDS GRID */
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0;}
+@media(max-width:600px){.feature-grid{grid-template-columns:1fr;}}
+.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:20px;}
+.feature-card h4{font-family:var(--font-display);color:var(--heading);font-size:1.1rem;margin-bottom:8px;}
+.feature-card p{font-size:0.88rem;color:var(--muted);margin-bottom:0;}
+
+/* STEP CARDS */
+.step-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin:18px 0;}
+.step-card-header{padding:16px 22px;border-bottom:1px solid var(--border);background:var(--surface-2);display:flex;align-items:center;gap:14px;}
+.step-badge{width:38px;height:38px;border-radius:50%;background:var(--c-pr-bg);border:2px solid var(--c-pr);color:var(--c-pr);font-family:var(--font-mono);font-weight:800;font-size:0.95rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.step-title{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--heading);}
+.step-sub{font-size:0.77rem;color:var(--muted);margin-top:2px;}
+.step-card-body{padding:18px 22px;}
+.step-card-body p{font-size:0.91rem;color:var(--muted);margin-bottom:12px;}
+.step-card-body p:last-child{margin-bottom:0;}
+
+/* PRICING SECTION STYLES */
+.pricing-section{margin:32px 0 48px;}
+.pricing-header{text-align:center;margin-bottom:32px;}
+.pricing-header h3{font-family:var(--font-display);font-size:1.6rem;color:var(--heading);margin-bottom:8px;}
+.pricing-header p{color:var(--muted);font-size:0.95rem;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:20px;align-items:stretch;}
+@media(max-width:900px){.pricing-grid{grid-template-columns:1fr;}}
+.pricing-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px 22px;display:flex;flex-direction:column;justify-space-between;position:relative;transition:border-color 0.2s;}
+.pricing-card.recommended{border-color:var(--c-pr);background:linear-gradient(180deg, var(--c-pr-bg) 0%, var(--surface) 100%);box-shadow:0 0 25px rgba(245, 158, 11, 0.15);}
+.popular-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--c-pr);color:#1a0f00;font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;padding:3px 14px;border-radius:999px;white-space:nowrap;}
+.plan-name{font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:var(--heading);margin-bottom:4px;}
+.plan-desc{font-size:0.8rem;color:var(--muted);min-height:40px;margin-bottom:16px;line-height:1.4;}
+.plan-price{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--heading);margin-bottom:20px;}
+.plan-price span{font-size:0.85rem;color:var(--muted);font-family:var(--font-body);font-weight:400;}
+.plan-features{list-style:none;margin-bottom:24px;flex-grow:1;}
+.plan-features li{font-size:0.83rem;color:var(--text);margin-bottom:10px;display:flex;align-items:flex-start;gap:8px;}
+.plan-features li span.check{color:var(--success);font-weight:bold;}
+.btn-pricing{display:block;width:100%;text-align:center;padding:10px 0;border-radius:var(--r-sm);font-weight:700;font-size:0.85rem;text-decoration:none;transition:all 0.18s;}
+.btn-pricing.outline{border:1px solid var(--border);color:var(--heading);background:var(--surface-2);}
+.btn-pricing.outline:hover{background:var(--border);}
+.btn-pricing.accent{background:var(--c-pr);color:#1a0f00;}
+.btn-pricing.accent:hover{opacity:0.9;}
+.disclaimer{font-size:0.75rem;color:var(--muted);margin-top:16px;font-style:italic;line-height:1.4;}
+
+/* TABLES */
+.data-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--border);border-radius:var(--r-md);}
+table{width:100%;border-collapse:collapse;font-size:0.84rem;}
+thead th{background:var(--surface);color:var(--muted);font-size:0.66rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:11px 13px;text-align:left;border-bottom:1px solid var(--border);}
+tbody td{padding:11px 13px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover td{background:var(--surface);}
+
+/* PULL QUOTE & CTA */
+.pull-quote{border-left:4px solid var(--c-pr);padding:16px 24px;margin:30px 0;background:var(--c-pr-bg);border-radius:0 var(--r-md) var(--r-md) 0;}
+.pull-quote p{font-family:var(--font-display);font-size:1.08rem;color:var(--heading);line-height:1.55;font-style:italic;margin:0;}
+.pull-quote cite{display:block;font-size:0.75rem;color:var(--muted);margin-top:10px;font-style:normal;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;}
+
+.article-cta{background:linear-gradient(135deg,var(--accent-glow) 0%,#181c27 100%);border:1px solid var(--accent-lt);border-radius:var(--r-lg);padding:28px 32px;text-align:center;margin-top:44px;}
+.article-cta h3{font-family:var(--font-display);font-size:1.2rem;color:var(--heading);margin-bottom:8px;}
+.article-cta p{color:var(--muted);font-size:0.875rem;margin-bottom:18px;}
+.btn-primary{display:inline-block;background:var(--c-pr);color:#1a0f00;font-weight:700;font-size:0.875rem;padding:11px 26px;border-radius:var(--r-sm);text-decoration:none;transition:opacity 0.18s;}
+.btn-primary:hover{opacity:0.85;}
+
+/* SIDEBAR */
+.sidebar{padding-top:52px;}
+.sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;margin-bottom:18px;}
+.sidebar-card h4{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--muted);margin-bottom:12px;}
+.toc-list{list-style:none;}
+.toc-list li{margin-bottom:2px;}
+.toc-list a{font-size:0.79rem;color:var(--muted);text-decoration:none;display:block;padding:4px 0 4px 12px;border-left:2px solid transparent;transition:all 0.15s;line-height:1.35;}
+.toc-list a:hover,.toc-list a.active{color:var(--text);border-color:var(--c-pr);}
+
+.site-footer{border-top:1px solid var(--border);margin-top:80px;padding:32px 24px;text-align:center;color:var(--muted);font-size:0.82rem;}
+.site-footer a{color:var(--muted);text-decoration:none;}
+.site-footer a:hover{color:var(--text);}
+</style>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xlrtp9eqdq");
+</script>
+</head>
+<body>
+<div id="read-progress" role="progressbar" aria-label="Reading progress"></div>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="/" class="logo">Prevent<span>Loss</span>.org</a>
+  <ul class="nav-links">
+    <li><a href="/articles/">Articles</a></li>
+    <li><a href="https://opsreveal.preventloss.org" target="_blank">Launch OpsReveal ↗</a></li>
+    <li><a href="/about.html">About</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+<main id="main-content">
+
+<header class="article-header">
+  <div class="breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/articles/">Articles</a><span>›</span>
+    <a href="/articles/?cat=tools">Audit Tools</a>
+  </div>
+  <div class="dual-category">
+    <span class="article-category">🛠️ Software Launch</span>
+    <span class="article-category blue">🔒 Zero-Data-Retention</span>
+  </div>
+  <h1>Introducing OpsReveal: Zero-Data-Retention Audit Engine for Operational Leakage</h1>
+  <p class="article-deck">Managing retail loss prevention and audit trails shouldn't force you to upload sensitive vendor invoices, cost prices, or store-level sales registers to third-party cloud servers. Today, we are launching OpsReveal — an ultra-fast, 100% browser-side operational leakage scanner designed for retail and supply chain auditors.</p>
+  <div class="article-meta">
+    <span>🗓 September 2, 2026</span>
+    <span>⏱ 7 min read</span>
+    <span>✍️ By <a href="https://www.linkedin.com/in/mithun-gs/" target="_blank" rel="noopener noreferrer" style="color:var(--c-pr);text-decoration:underline;text-underline-offset:3px;">Mithun GS</a></span>
+    <span>📂 Tools & Systems</span>
+  </div>
+</header>
+
+<div class="article-stats">
+  <div class="stat-item"><div class="s-val green">0 Bytes</div><div class="s-lbl">Raw data uploaded to servers</div></div>
+  <div class="stat-item"><div class="s-val blue">5</div><div class="s-lbl">Core Audit Engines</div></div>
+  <div class="stat-item"><div class="s-val amber">115%</div><div class="s-lbl">ROI Guarantee</div></div>
+  <div class="stat-item"><div class="s-val">Cloudflare EU</div><div class="s-lbl">Summary telemetry hosting</div></div>
+</div>
+
+<article class="article-body" itemscope itemtype="https://schema.org/Article">
+<meta itemprop="headline" content="Introducing OpsReveal: Zero-Data-Retention Audit Engine for Operational Leakage" />
+<meta itemprop="datePublished" content="2026-09-02" />
+
+<!-- INTRO -->
+<section id="introduction">
+  <h2 style="border-top:none;padding-top:0;margin-top:0;">The Data Security Dilemma in Retail Auditing</h2>
+  <p>Operational leakage — whether through Goods Receiving Note (GRN) price variances, unexplained inventory write-offs, margin erosion, or aged stock — costs retail networks millions every year. However, auditing these leakages historically meant uploading massive, sensitive Excel files to SaaS platforms, creating security and privacy hurdles for enterprise IT teams.</p>
+  <p>We built <a href="https://opsreveal.preventloss.org" target="_blank">OpsReveal</a> to break this compromise. OpsReveal is a dedicated operational leakage discovery tool hosted under PreventLoss.org. It parses Excel/CSV files directly inside your computer's local memory (using client-side Web Workers), flags financial anomalies instantly, and generates downloadable audit cards — without sending your raw ERP records across the network.</p>
+</section>
+
+<!-- PRIVACY ARCHITECTURE -->
+<div class="tier-divider what"><div class="td-line"></div><div class="td-label">🔒 Zero Raw Data Cloud Footprint</div><div class="td-line"></div></div>
+
+<section id="privacy">
+  <h2>Strict Data Privacy & Browser Architecture</h2>
+  <p>When you drop your receiving logs or sales margin reports into OpsReveal, the parsing engine runs locally within your web browser environment. </p>
+
+  <div class="callout callout-tip">
+    <div class="callout-label">🛡️ Enterprise-Grade Privacy by Design</div>
+    <p><strong>Your raw transactional data never leaves your device.</strong> Excel parsing, mathematical comparison, and exception tagging occur locally inside your browser tab. Once you download your localized audit report, only top-level, aggregated summary telemetry (such as total dollar exposure identified and overall line counts) is optionally stored on our secure Cloudflare (EU) infrastructure to support your historical dashboard.</p>
+  </div>
+</section>
+
+<!-- CORE AUDIT MODULES -->
+<div class="tier-divider how"><div class="td-line"></div><div class="td-label">⚡ The 4 Core Tool Pages</div><div class="td-line"></div></div>
+
+<section id="modules">
+  <h2>Inside OpsReveal: Module-by-Module Breakdown</h2>
+  <p>OpsReveal consists of four intuitive interface pages designed to streamline the workflow from raw data ingestion to actionable root cause analysis (RCA).</p>
+
+  <!-- PAGE 1: UPLOADS -->
+  <div class="step-card">
+    <div class="step-card-header">
+      <div class="step-badge">01</div>
+      <div><div class="step-title">Uploads Page: 5 Specialized Audit Engines</div><div class="step-sub">Format-driven automated client-side ingestion</div></div>
+    </div>
+    <div class="step-card-body">
+      <p>The Uploads tab provides downloadable pre-formatted template files for 5 specific audit types. Simply select the target audit type, download the required format template, append your records, and re-upload:</p>
+      
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h4>1. GRN / Receiving Audit</h4>
+          <p>Flags cost price mismatches, vendor overcharges, and short-shelf-life deliveries during inward receiving.</p>
+        </div>
+        <div class="feature-card">
+          <h4>2. Sales Margin Audit</h4>
+          <p>Scans sales logs to uncover transactions sold below target margin thresholds or cost price variance erosion.</p>
+        </div>
+        <div class="feature-card">
+          <h4>3. Write-Off & Shrink Audit</h4>
+          <p>Tracks shrinkage velocity and highlights abnormal inventory scrap or write-off spikes across locations.</p>
+        </div>
+        <div class="feature-card">
+          <h4>4. Stock Ageing Audit</h4>
+          <p>Identifies slow-moving inventory capital tied up past designated shelf-life or holding day parameters.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:14px;"><strong>5. GRN vs. Write-Off Cross-Audit:</strong> Performs multi-dataset cross-matching to catch goods written off shortly after arrival, exposing potential systemic vendor fraud or receiving-bay theft.</p>
+
+      <div class="callout callout-amber">
+        <div class="callout-label">⚙️ Dynamic Parameter Configuration</div>
+        <p>When selecting the <strong>GRN Audit</strong> engine, customizable rule triggers appear directly on the upload pane:</p>
+        <ul style="margin-left:20px;margin-top:6px;font-size:0.9rem;">
+          <li><strong>Min Target Shelf Life %:</strong> Set custom minimum remaining shelf-life requirements upon inward receipt (Default: <code>60%</code>).</li>
+          <li><strong>Target Margin %:</strong> Define minimum acceptable gross margin thresholds to catch under-margin receiving (Default: <code>20%</code>).</li>
+          <li><strong>Ageing Days Threshold:</strong> For Ageing audits, specify custom cutoffs (e.g., 60, 90, or 180 days) to flag stuck inventory value.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: DASHBOARD -->
+  <div class="step-card">
+    <div class="step-card-header">
+      <div class="step-badge">02</div>
+      <div><div class="step-title">Dashboard Overview: Executive Risk Telemetry</div><div class="step-sub">Real-time consolidated operational leakage metrics</div></div>
+    </div>
+    <div class="step-card-body">
+      <p>The Dashboard displays an instant high-level overview of accumulated financial exposure across your audited operational logs:</p>
+      
+      <div class="data-table-wrap">
+        <table>
+          <thead>
+            <tr><th>Metric Box</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Total Accumulated Leakages</strong></td><td>Global aggregated financial exposure ($) identified across all completed audit runs.</td></tr>
+            <tr><td><strong>Audited Reports Count</strong></td><td>Total number of audit datasets processed in the workspace.</td></tr>
+            <tr><td><strong>Total Lines Analyzed</strong></td><td>Cumulative line-item transaction count audited locally across your files.</td></tr>
+            <tr><td><strong>Receiving / GRN Leakage</strong></td><td>Total dollar loss flagged from inward receiving cost variances and shelf-life failures.</td></tr>
+            <tr><td><strong>Sales Margin Erosion</strong></td><td>Consolidated financial impact of under-margin sales transactions.</td></tr>
+            <tr><td><strong>Write-Off Loss Audit</strong></td><td>Total value of scrapped or written-off inventory flagged for review.</td></tr>
+            <tr><td><strong>Ageing Inventory Loss</strong></td><td>Capital tied up in aging stock exceeding configured holding parameters.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The dashboard also features a <strong>Recent Audit History</strong> table recording timestamps, file names, lines analyzed, flagged exceptions, risk assessment levels (e.g., NONE, HIGH RISK), and total financial leakage.</p>
+    </div>
+  </div>
+
+  <!-- PAGE 3: EXCEPTION CARDS -->
+  <div class="step-card">
+    <div class="step-card-header">
+      <div class="step-badge">03</div>
+      <div><div class="step-title">Audit Exception Cards: Root Cause Analysis</div><div class="step-sub">Granular breakdown of operational leakages and remediation</div></div>
+    </div>
+    <div class="step-card-body">
+      <p>The Exception Cards interface breaks down flagged files into detailed, actionable root cause cards:</p>
+      <ul style="margin-left:20px;font-size:0.92rem;color:var(--muted);">
+        <li><strong>Leakage Breakdown:</strong> Categorizes flagged items by exception type (e.g., Margin Leakages, CP Leakage Whole, CP Leakage Same Day/Mo, and Shelf Life Exceptions).</li>
+        <li><strong>Audit Insights & Remediation Strategy:</strong> Automates actionable RCA strategies—such as setting automated PO vs. GRN cost matching or issuing debit notes for vendor cost overcharges.</li>
+        <li><strong>Card Exporting:</strong> Download full underlying card data locally or export findings directly into Gemini AI for deeper analytical summarization.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PAGE 4: SETTINGS -->
+  <div class="step-card">
+    <div class="step-card-header">
+      <div class="step-badge">04</div>
+      <div><div class="step-title">Settings Page: Configuration & Management</div><div class="step-sub">Tailor thresholds and data retention policies</div></div>
+    </div>
+    <div class="step-card-body">
+      <p>Manage your auditing workspace parameters, default tolerance thresholds (Margin targets, Shelf Life percentages), and Cloudflare summary telemetry preferences seamlessly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING & ROI GUARANTEE SECTION -->
+<div class="tier-divider pricing"><div class="td-line"></div><div class="td-label">💎 Transparent Pricing & ROI Guarantee</div><div class="td-line"></div></div>
+
+<section id="pricing">
+  <h2>Plans and Pricing</h2>
+  
+  <div class="callout callout-info" style="margin-bottom:32px;">
+    <div class="callout-label">🛡️ Professional Plan Commitment: 115% ROI Guarantee</div>
+    <p><strong>We guarantee the Professional Plan pays for itself—and then some.</strong> If OpsReveal Professional does not uncover financial leakage exceeding 115% of your subscription cost, your next month is <strong>100% free</strong>.</p>
+  </div>
+
+  <div class="pricing-section">
+    <div class="pricing-header">
+      <h3>Start Stopping Retail Losses Today</h3>
+      <p>Choose the tier that fits your retail operational footprint.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Starter Plan -->
+      <div class="pricing-card">
+        <div>
+          <div class="plan-name">Starter</div>
+          <div class="plan-desc">For single store locations conducting baseline audits.</div>
+          <div class="plan-price">Free</div>
+        </div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span> 4 Uploads or 20,000 Rows / Mo</li>
+          <li><span class="check">✓</span> 2 Report Analyses (GRN & Sales)</li>
+          <li><span class="check">✓</span> Local Browser Processing</li>
+          <li><span class="check">✓</span> Standard Discrepancy Reports</li>
+        </ul>
+        <a href="https://opsreveal.preventloss.org" target="_blank" class="btn-pricing outline">Start Free Audit</a>
+      </div>
+
+      <!-- Professional Plan -->
+      <div class="pricing-card recommended">
+        <div class="popular-badge">Recommended</div>
+        <div>
+          <div style="font-size:0.75rem;color:var(--c-pr);font-weight:700;margin-bottom:2px;">🔥 Limited to First 100 Customers</div>
+          <div class="plan-name">Professional</div>
+          <div class="plan-desc">Full loss prevention engine for growing retail businesses.</div>
+          <div class="plan-price">$99 <span>/ month</span></div>
+        </div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span> Unlimited Uploads & Rows</li>
+          <li><span class="check">✓</span> All 5 Report Analyses (GRN, Sales, WO, Ageing, GRN vs WO)</li>
+          <li><span class="check">✓</span> Local Wasm Browser Engine</li>
+          <li><span class="check">✓</span> 115% ROI Guarantee Included*</li>
+        </ul>
+        <a href="https://opsreveal.preventloss.org" target="_blank" class="btn-pricing accent">Upgrade to Professional</a>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="pricing-card">
+        <div>
+          <div style="font-size:0.75rem;color:var(--accent-lt);font-weight:700;margin-bottom:2px;">Yearly Only</div>
+          <div class="plan-name">Enterprise</div>
+          <div class="plan-desc">For multi-location retail chains and custom enterprise workflows.</div>
+          <div class="plan-price">Custom</div>
+        </div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span> Everything in Professional</li>
+          <li><span class="check">✓</span> Multi-Location Cross Analysis</li>
+          <li><span class="check">✓</span> Custom Rules & Audit Scripts</li>
+          <li><span class="check">✓</span> Dedicated Account Audit Lead</li>
+        </ul>
+        <a href="mailto:contact@preventloss.org?subject=OpsReveal%20Enterprise%20Inquiry" class="btn-pricing outline">Contact Sales</a>
+      </div>
+    </div>
+
+    <p class="disclaimer">*115% ROI Guarantee Methodology: Based on average detected leakages across retail client benchmark datasets.</p>
+  </div>
+</section>
+
+<!-- CONCLUSION & CTA -->
+<div class="tier-divider controls"><div class="td-line"></div><div class="td-label">🚀 Get Started</div><div class="td-line"></div></div>
+
+<section id="conclusion">
+  <h2>Start Scanning Operational Leakages in Seconds</h2>
+  <p>OpsReveal requires zero installation, zero server setup, and zero credit card registration to start. It is live and engineered specifically for retail loss prevention leads, inventory controllers, and financial auditors who value data privacy.</p>
+
+  <div class="pull-quote">
+    <p>"Audit speed means nothing if it compromises data security. OpsReveal brings enterprise-grade leakage detection right inside your browser window."</p>
+    <cite>— Mithun GS, PreventLoss.org</cite>
+  </div>
+
+  <div class="article-cta">
+    <h3>Ready to Audit Your Operational Logs?</h3>
+    <p>Upload your receiving or sales data to OpsReveal now. Experience 100% browser-side, zero-data-retention auditing.</p>
+    <a href="https://opsreveal.preventloss.org" target="_blank" class="btn-primary">Launch OpsReveal App →</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Is my enterprise inventory data uploaded to any server when using OpsReveal?<span class="arrow">▾</span></button>
+      <div class="faq-a">No. OpsReveal processes all uploaded raw data files entirely inside your device's web browser using client-side JavaScript. Raw transactional files are never sent across the internet. Only high-level summary metrics are stored in secure Cloudflare (EU) infrastructure.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What audit modules are available in OpsReveal?<span class="arrow">▾</span></button>
+      <div class="faq-a">OpsReveal supports 5 specialized audit engines: Goods Receiving Note (GRN) / Receiving Audit, Sales Margin Audit, Write-Off & Shrink Audit, Stock Ageing Audit, and GRN vs. Write-Off Cross-Audit.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How does the 115% ROI Guarantee work for the Professional Plan?<span class="arrow">▾</span></button>
+      <div class="faq-a">We guarantee the Professional Plan pays for itself—and then some. If OpsReveal Professional does not uncover financial leakage exceeding 115% of your subscription cost, your next month of service is 100% free.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Can I customize thresholds like Target Margin % or Shelf Life requirements?<span class="arrow">▾</span></button>
+      <div class="faq-a">Yes. OpsReveal allows configurable parameters such as Minimum Target Shelf Life % (default 60%), Target Margin % (default 20%), and custom ageing day cutoffs to tailor exception flags specifically to your operational rules.</div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section id="related-articles">
+  <h2>Related Articles & Resources</h2>
+  <div class="related-grid">
+    <a class="related-card" href="https://preventloss.org/articles/abc-inventory-analysis.html"><span class="rc-icon">📦</span><div><div class="rc-cat">Inventory Management</div><div class="rc-title">ABC Inventory Analysis: The Complete Guide with Real Examples</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/cost-control-in-inventory-management.html"><span class="rc-icon">📉</span><div><div class="rc-cat">Inventory Management</div><div class="rc-title">Cost Control in Inventory Management: Strategies &amp; KPIs</div></div></a>
+    <a class="related-card" href="https://preventloss.org/articles/inventory-shrinkage-explained.html"><span class="rc-icon">🔍</span><div><div class="rc-cat">Loss Prevention</div><div class="rc-title">Inventory Shrinkage Explained: Causes, Costs &amp; Prevention</div></div></a>
+  </div>
+</section>
+
+</article>
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" aria-label="Article sidebar">
+  <div class="sidebar-card quickref" style="padding:0;overflow:hidden;">
+    <div class="qr-header" style="background:var(--accent-glow);border-bottom:1px solid var(--accent-lt);padding:14px 18px;display:flex;align-items:center;gap:8px;"><span>⚡</span><h4 style="color:var(--accent-lt);font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;">OpsReveal Quick Specs</h4></div>
+    <div class="qr-row" style="display:flex;justify-space-between;padding:10px 18px;border-bottom:1px solid var(--border);font-size:0.75rem;"><span style="color:var(--muted);">Privacy Model</span><span style="color:var(--success);font-weight:700;">Client-Side Only</span></div>
+    <div class="qr-row" style="display:flex;justify-space-between;padding:10px 18px;border-bottom:1px solid var(--border);font-size:0.75rem;"><span style="color:var(--muted);">ROI Guarantee</span><span style="color:var(--c-pr);font-weight:700;">115% Coverage</span></div>
+    <div class="qr-row" style="display:flex;justify-space-between;padding:10px 18px;border-bottom:1px solid var(--border);font-size:0.75rem;"><span style="color:var(--muted);">Starter Tier</span><span style="color:var(--success);font-weight:700;">Free ($0)</span></div>
+    <div class="qr-row" style="display:flex;justify-space-between;padding:10px 18px;border-bottom:1px solid var(--border);font-size:0.75rem;"><span style="color:var(--muted);">Pro Tier</span><span style="color:var(--heading);font-weight:700;">$99/month</span></div>
+    <div class="qr-row" style="display:flex;justify-space-between;padding:10px 18px;font-size:0.75rem;"><span style="color:var(--muted);">Audit Engines</span><span style="color:var(--heading);">5 Modules</span></div>
+  </div>
+
+  <div class="sidebar-card" style="margin-top:18px;">
+    <h4>In This Article</h4>
+    <ul class="toc-list">
+      <li><a href="#introduction">Data Security Dilemma</a></li>
+      <li><a href="#privacy">🔒 Zero Raw Data Cloud Footprint</a></li>
+      <li><a href="#modules">⚡ Core Tool Pages</a></li>
+      <li><a href="#pricing">💎 Plans & Pricing</a></li>
+      <li><a href="#conclusion">Get Started</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#related-articles">Related Articles</a></li>
+    </ul>
+  </div>
+</aside>
+</div>
+
+<footer class="site-footer">
+  <p>© 2026 <a href="/">PreventLoss.org</a> — Loss Prevention Resources for Business Owners</p>
+  <p style="margin-top:8px;"><a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@preventloss.org">Contact</a></p>
+</footer>
+
+<script>
+/* ── Read progress bar ── */
+window.addEventListener('scroll', () => {
+  const d = document.documentElement;
+  document.getElementById('read-progress').style.width =
+    ((d.scrollTop / (d.scrollHeight - d.clientHeight)) * 100) + '%';
+});
+
+/* ── FAQ accordion toggle ── */
+function toggleFaq(btn) {
+  const open = btn.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll('.faq-q').forEach(b => {
+    b.setAttribute('aria-expanded','false');
+    b.nextElementSibling.style.display = 'none';
+  });
+  if (!open) { 
+    btn.setAttribute('aria-expanded','true'); 
+    btn.nextElementSibling.style.display = 'block'; 
+  }
+}
+</script>
+<script src="/banner.js"></script>
+</body>
+</html>
